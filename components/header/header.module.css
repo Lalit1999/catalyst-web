@@ -65,7 +65,7 @@
 	}
 
 	.headerItem.selected p, .headerItem:hover p {
-		color: var(--pink);
+		color: var(--main);
 	}
 
 	.headerItem.selected p {

@@ -9,15 +9,15 @@ import { Menu } from '@comps' ;
 import { AppContext } from '@ac' ;
 import { logo } from '@images' ;
 import { HamburgerMenu, Back } from '@icons' ;
-import { usePSN } from '@utils' ;
 import styles from './header.module.css' ;
 
 const headerData = [
-	{	text: 'Home',			link: '/',				}, 
-	{	text: 'Art Gallery',	link: '/art-gallery',	}, 
-	{	text: 'Events',			link: '/events',		}, 
-	{	text: 'About Me',		link: '/about',		}, 
-	{	text: 'Blogs',		link: '/blogs',		}, 
+	{	text: 'Home',					link: '/',								}, 
+	{	text: 'Who we are',				link: '/who-we-are',					}, 
+	{	text: 'What we do',				link: '/what-we-do',					}, 
+	{	text: 'Therapeutic Expertise',	link: '/therapeutic-expertise',			}, 
+	{	text: 'Research Publications',	link: '/research-publications',			}, 
+	{	text: 'Training Programs',		link: '/training-programs',				}, 
 ] ; 
 
 const Header = () => {
@@ -26,7 +26,6 @@ const Header = () => {
 
 	const router = useRouter() ;
 	const pathname = usePathname() ;
-	const psn = usePSN() ;
 
 	return (
 		<div className={styles.header}>
@@ -41,7 +40,7 @@ const Header = () => {
 			<div className={styles.headerContent}>
 			{ 	headerData.map( ({link, text, hideOnLogin})=> (
 				!hideOnLogin || (!userToken) ? (
-					<Link key={text} href={link} className={`${psn} ${styles.headerItem} ${link===pathname?styles.selected:''}`}>
+					<Link key={text} href={link} className={`${styles.headerItem} ${link===pathname?styles.selected:''}`}>
 						<p>{text}</p>
 					</Link>
 				):null ))

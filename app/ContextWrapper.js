@@ -4,7 +4,7 @@ import { useContext } from 'react' ;
 // import { usePathname } from 'next/navigation' ;
 
 import { AppContext, AppContextProvider } from '@ac' ;
-import { /*Header, Downbar, Popup, SignIn, SignUp, ContactForm, ReportJob, CoinsPop*/ } from '@comps' ;
+import { Header, Downbar/*, Popup, SignIn, SignUp, ContactForm, ReportJob, CoinsPop*/ } from '@comps' ;
 
 // const Pop = () => {
 //     const { popOpen, setPopOpen, popContent } = useContext(AppContext) ;
@@ -48,7 +48,7 @@ const ContextWrapper = ({ children }) => {
     return (
         <>
             <AppContextProvider>
-                {/* <Header /> */}
+                <Header />
                 <AppBody >{children}</AppBody>
                 {/* <Pop /> */}
             </AppContextProvider>

@@ -1,5 +1,5 @@
 import myarth from '@p/logo-black.webp' ;
-// import logo from '@p/logo.png' ; 
+import logo from '@p/logo.png' ; 
 import def from '@p/default.webp' ;
 
 import blogBannerImage from '@p/blogImage1.png' ;
@@ -16,5 +16,5 @@ import titleLine from '@p/title-line.png' ;
 import portfolioBgLight from '@p/portfolio-bg-light.png' ;
 
 export {
-  def, myarth,  blogBannerImage, blog2, contact, titleLine, portfolioBgLight
+  def, myarth,  blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo
 };

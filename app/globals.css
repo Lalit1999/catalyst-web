@@ -1,14 +1,16 @@
 :root {
   /* Specific */
   
-  --main		      : #693EFE ;
-  --halfMain	    : rgba(105, 62, 254, 0.5) ;
-  --thodaMain	    : rgba(105, 62, 254, 0.2) ;
-  --mainBg        : rgba(105, 62, 254, 0.2) ;
-  --dark1		      : #4703d1 ;
-  --dark          : #120045 ;
-  --light		      : #d9d4ff ;
-  --bg            : #FFEFD5 ;
+  --main		      : #f36103 ;
+  --halfMain	    : rgba(243, 97, 3, 0.5) ;
+  --thodaMain	    : rgba(243, 97, 3, 0.2) ;
+  --second        : #003D4C ;
+  --third         : #4ae387 ;
+  --secondHalf    : rgba(0, 61, 76, 0.5) ;
+  --thirdHalf     : rgba(74, 227, 135, 0.5) ;
+  --dark          : #ff7300 ;
+  --light		      : #ffdfba ;
+  --bg            : #F2F1EF ;
 
   --blue          : #1967D2 ;
   --thodaBlue     : rgba(25, 103, 210, 0.1) ;
@@ -77,7 +79,7 @@ html, body {
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--white);
 }
 
 html a {
