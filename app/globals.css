@@ -1,0 +1,472 @@
+:root {
+  /* Specific */
+  
+  --main		      : #693EFE ;
+  --halfMain	    : rgba(105, 62, 254, 0.5) ;
+  --thodaMain	    : rgba(105, 62, 254, 0.2) ;
+  --mainBg        : rgba(105, 62, 254, 0.2) ;
+  --dark1		      : #4703d1 ;
+  --dark          : #120045 ;
+  --light		      : #d9d4ff ;
+  --bg            : #FFEFD5 ;
+
+  --blue          : #1967D2 ;
+  --thodaBlue     : rgba(25, 103, 210, 0.1) ;
+  --pink          : #CC0550 ;
+  --thodaPink     : rgba(204, 5, 80, 0.1) ;
+  --halfPink      : rgba(204, 5, 80, 0.5) ;
+  --yellow        : rgb(139, 170, 38) ;
+  --thodaYellow   : rgba(139, 170, 38, 0.1) ;
+  --halfYellow    : rgba(139, 170, 38, 0.5) ;
+  --cyan          : rgb(27, 167, 132) ;
+  --thodaCyan     : rgba(27, 167, 132, 0.1) ;
+  --halfCyan      : rgba(27, 167, 132, 0.5) ;
+
+  /* General */
+  --error         : darkred ;
+  --success       : #24963F ;
+  --high          : darkred;
+	--moderate      : orangered ;
+	--mild          : goldenrod ;
+	--low           : seagreen;
+  
+  /* Fixed Colors */  
+  --white         : white ;
+  --darkWhite     : #eeeeee ;
+  --halkaWhite    : rgba(255, 255, 255, 0.8) ;
+  --halfWhite     : rgba(255, 255, 255, 0.5) ;
+  --thodaWhite    : rgba(255, 255, 255, 0.3) ;
+  
+  --black         : #010101 ; 
+  --halkaBlack    : rgba(0, 0, 0, 0.8) ;
+  --halfBlack     : rgba(0, 0, 0, 0.5) ;
+  --thodaBlack    : rgba(0, 0, 0, 0.3) ;
+  --zaraBlack     : rgba(0, 0, 0, 0.05) ;
+
+  --red           : #FF2020 ;
+  --halfRed       : rgba(255, 32, 32, 0.1) ;
+  --green         : #31B757 ;
+  --halfGreen     : rgba(49, 183, 87, 0.2);
+  --blue          : dodgerblue ;
+  --gray          : #424242 ;
+  --medGray       : #8b8b8b ;
+  --lightGray     : #dddddd ;
+  --halfGray      : rgba(238, 238, 238, 0.5) ;
+  --darkGray      : #1e1e1e ;
+  --golden 			  : #FBBC55 ;
+  --golden2			  : #FFD700 ;
+
+
+  --toastify-toast-min-height: 50px !important ;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: none ;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh ;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+html a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  user-select: none ;
+}
+
+img {
+  pointer-events: none ;
+}
+
+label {
+  font-family: var(--font);
+  color: var(--black) ;
+  font-weight: 500;
+  /* font-size: .8rem ; */
+  /* Original ^, Specific to this project ⌄ */
+  font-size: .9rem ;
+  margin-bottom: .25em ;
+  display: flex;
+  justify-content: space-between;
+} 
+
+input, select {
+  /* border: 1px solid var(--medGray) ; */
+  /* padding: 10px; */
+  /* Original ^, Specific to this project ⌄ */
+  border: none ;
+  background-color: var(--white) ;
+  padding: 16px 12px;
+
+  border-radius: 8px;
+  width: 100%;
+  font-family: var(--font);
+  font-size: .9rem ;
+  color: var(--gray) ;
+}
+
+input::placeholder {
+  color: var(--medGray); 
+}
+
+input:focus {
+  box-shadow: none !important ;
+}
+
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  appearance: none ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%) ;
+  /* background-position: calc(100% - 17px) calc(1em + 3px), calc(100% - 12px) calc(1em + 3px) ; */
+  /* Original ^, Specific to this project ⌄ */
+  background-position: calc(100% - 17px) calc(1em + 9px), calc(100% - 12px) calc(1em + 9px) ;
+  background-size: 5px 5px, 5px 5px ;
+  background-repeat: no-repeat;
+  cursor: pointer ;
+}
+
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input[type="checkbox"] {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer ;
+  width: 20px ;
+  height: 20px ;
+  padding: 0 ;
+  border: 2px solid var(--main) ;
+  border-radius: 4px; 
+  background-color: var(--light) ;
+  flex-shrink: 0;
+}
+
+input[type='checkbox']:checked {
+  background-color: var(--halfMain) ;
+  border-color: var(--main) ;
+  position: relative ;
+}
+
+input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+
+}
+
+input[type="radio"] {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer ;
+  width: 20px ;
+  height: 20px ;
+  padding: 0 ;
+  border: 2px solid var(--main) ;
+  border-radius: 50% ;
+  background-color: var(--light) ;
+  flex-shrink: 0;
+
+}
+
+input[type='radio']:checked {
+  background-color: var(--halfMain) ;
+  border-color: var(--main) ;
+  position: relative ;
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px ;
+  height: 10px ;
+  border-radius: 50% ;
+  background-color: var(--main) ;
+}
+
+input[type="date"] {
+  cursor: pointer ;
+}
+
+textarea {
+  /* border: 1px solid var(--medGray) ; */
+  /* padding: 10px; */
+  /* Original ^, Specific to this project ⌄ */
+  border: none ;
+  background-color: var(--white) ;
+  padding: 16px 12px;
+
+  resize: none !important ;
+
+  color: var(--gray) ;
+  width: 100%;
+  font-size: .9rem ;
+  border-radius: 8px;
+}
+
+svg {
+  flex-shrink: 0 ;
+}
+
+/* ------ ANIMATIONS ------ */
+
+.shakeHorizontal {
+    animation: shakeHorizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes shakeHorizontal {
+  0%,   100% {
+    transform: translateX(0);
+  }
+  10%,  30%,    50%,    70% {
+    transform: translateX(-10px);
+  }
+  20%,  40%,    60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
+/* ---------------------------- */
+
+/* -------- inputBox ---------- */
+
+.inputBox {
+  display: flex ;
+  align-items: center ;
+  gap : 8px ;
+  
+  border: 1px solid var(--medGray);
+  border-radius: 8px;
+  padding: 10px;
+
+  flex-wrap: wrap ;
+}
+
+.inputBox.stretch {
+  width: 100% ;
+}
+
+.inputThin {
+  padding: 5px ;
+}
+
+.inputBox img {
+  height: 22px ;
+  border-radius: 2px ;
+}
+
+.inputBox p {
+  margin: 0 ;
+  color: var(--gray) ;
+  font-size: .9rem ;
+}
+
+.inputBox input {
+  padding: 0 10px ;
+  border-radius: 0 ;
+  border: none ;
+  border-left: 1px solid var(--darkWhite) ;
+  border-right: 1px solid var(--darkWhite) ;
+/*  flex : 1 ;*/
+}
+
+.inputBox input[type='number']::-webkit-inner-spin-button,
+.inputBox input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.inputBox input[type='number'] {
+  appearance: textfield ;
+  -moz-appearance: textfield;
+}
+
+.inputBox select {
+  padding: 0 2.5em 0 10px ;
+  border-radius: 0 ;
+  border: none ;
+  flex : 1 ;
+}
+
+.inputBox div {
+  display: flex ;
+  flex: 1 ;
+}
+
+.inputBox svg {
+  cursor: pointer ;
+  color: var(--main) ;
+}
+
+.formError {
+  display: inline-block ;
+  font-size: .8rem ;
+  color: var(--error) ;
+  width: 100% ;
+  padding: 0.2em 0 ;
+}
+
+.dropdown-item {
+  text-transform: capitalize !important;
+}
+
+.spacer {
+  /* Spacer Component for only occupying space */
+  flex: 1 ;
+}
+
+/* ---------------------------- */
+
+.body {
+  display: flex ;
+  flex-direction: column ;
+  position: relative ;
+
+  /* ↓ Remove if causes problem with scroll */
+  overflow: hidden;
+}
+
+.body-main {
+  flex-grow: 1 ;
+  overflow-y: scroll ;
+  padding: 0 4em ;
+}
+
+.body-no-scroll {
+  flex-grow: 1 ;
+  overflow-y: hidden ;
+}
+
+.form-control {
+  /* border-color: var(--medGray) !important ; */
+  /* padding: 10px !important ;  */
+  /* Original ^, Specific to this project ⌄ */
+  border: none !important ;
+  background-color: var(--darkWhite) !important ;
+  padding: 16px 12px !important ;
+}
+
+.form-control:focus, .rbt-input-multi.focus {
+  box-shadow: none !important ;
+}
+
+/* rbt = react-bootstrap-typeahead */
+.rbt-token {
+  color: var(--black) !important ;
+  background-color: var(--white) !important ;
+}
+
+.rbt {
+  width: 100% !important ;
+}
+
+.box {
+  background-color: var(--white);
+  border: 1px solid var(--lightGray) ;
+  border-radius: .3rem;
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.2);
+}
+
+.pac-logo::after {
+  display: none !important;
+}
+
+.offcanvas-header svg {
+  width: 24px ;
+  height: 24px ;
+}
+
+.offcanvas-body {
+  padding: 0 !important ;
+}
+
+.react-multi-carousel-list, .react-multi-carousel-track, .react-multi-carousel-item {
+  height: 100% ;
+}
+
+.otpText input {
+  text-align: center ;
+  letter-spacing: 5px ;
+}
+
+.high, .High { color: var(--high); }
+
+.low, .Low {  color: var(--low);  }
+
+.mild, .Mid { color: var(--mild) ;  }
+
+.moderate { color: var(--moderate) ;  }
+
+.gray { color: var(--medGray) ; }
+
+.green { color: var(--green) ; }
+
+/* For Mobile */
+@media (max-width: 600px) {
+  .body-main {
+    padding: 0 1em ;
+  }
+}
+
+/* ---- React Toastify -- */
+
+.Toastify__toast-container {
+  max-width: 60vw ;
+}
+
+.Toastify__toast {
+  font-family: var(--font) !important ;
+  font-weight: 500 ;
+  font-size: .9rem !important ;
+  border-radius: .7rem !important ;
+}
+
+/* -------------------- */
+
+
+/* ------------------ Specific ------------------ */
+
+.countryDropDown, .stateDropDown, .cityDropDown {
+  flex: 1 ;
+}
+
+/* ----------------------------------------------- */

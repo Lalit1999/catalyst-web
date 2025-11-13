@@ -1,0 +1,58 @@
+
+.mainMenuHead {
+	display: flex ;
+	gap: .75em ;
+	align-items: center ;
+}
+
+.menuBody {
+	background-color: var(--white) ;
+	border-top: 1px solid var(--darkWhite) ;
+}
+
+.mainMenu {
+	display: flex ;
+	flex-direction: column ;
+	height: 100% ;
+}
+
+.mainMenuTop {
+	display: flex; 
+	flex-direction: column ;
+	gap: 1em ;
+	padding: 1em ;
+	border-top: 1px solid var(--darkWhite) ;
+}
+
+.menuItem {
+	display: flex ;
+	align-items: center ;
+	gap: 1em ;
+	color: var(--medGray) ;
+	padding: .5em 1em ;
+	border-radius: .5rem ;
+	text-decoration: none ;
+	font-weight: 500;
+}
+
+.menuItem svg {
+	width: 24px ;
+	height: 24px ;
+}
+
+.menuItem.selected {
+	color: var(--pink) ;
+	background-color: var(--thodaPink) ;
+}
+
+.menuText {
+	font-size: 1.1rem ;
+	margin: 0 ;
+	flex-grow: 2;
+}
+
+@media (min-width: 600px) {
+	.menu {
+		display: none ;
+	}
+}

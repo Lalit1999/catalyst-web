@@ -1,0 +1,27 @@
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+}
+
+.heading {
+  font-size: 5em;
+  font-weight: 300;
+  text-align: center;
+  line-height: normal ;
+  color: var(--black) ;
+  text-transform: uppercase ;
+  margin: 0 ;
+}
+.subTitle {
+  text-align: center;
+  color: var(--gray);
+  margin: 0 ;
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 3em;
+  }
+}

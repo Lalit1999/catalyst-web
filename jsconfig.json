@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+      "paths": {
+          "@c/*": ["./components/*"],
+          "@p/*": ["./public/*"],
+          "@i/*": ["./public/icons/*"],
+          "@data" : ["./data/index.js"],
+          "@comps" : ["./components/index.js"],
+          "@images" : ["./data/images.js"],
+          "@icons" : ["./data/icons.js"],
+          "@utils" : ["./utils/index.js"],
+          "@ac" : ["./context/AppContext.js"]
+      }
+  }
+}

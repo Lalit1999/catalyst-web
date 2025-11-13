@@ -1,0 +1,264 @@
+.popCon {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background-color: white;
+    height: auto;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline-block;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.popupClose {
+    position: absolute;
+    z-index: 99;
+    top: 5px;
+    right: 5px;
+    font-size: 2rem;
+    color: darkred;
+    padding: 0 .35em;
+    font-weight: normal;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.popupClose svg {
+    fill: var(--medGray) ;
+    height: 24px ;
+    width: 24px ;
+    cursor: pointer ;
+}
+
+.popupClose:hover {
+    transform: scale(1.2);
+}
+
+.loginPopup {
+    padding: 2em ;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    gap: 1em ;
+    width: 90vw ;
+}
+
+.signUpPopup {
+    max-height: 98vh ;
+    overflow-y: scroll ;
+    gap: 1em ;
+}
+
+.signInForm {
+    width: 100% ;
+}
+
+.signUpForm {
+    width: 100% ;
+    gap: .75em ;
+}
+
+.modeBtns {
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    gap: 1em ;
+    width: 100% ;
+}
+
+.modeBtn {
+    background-color: var(--light) ;
+    color: var(--main) ;
+    border: 2px solid var(--light) ;
+    min-width: 50% ;
+    box-shadow: none ;
+    cursor: pointer ;
+    font-size: .9rem ;
+    border-radius: 0.5rem ;
+    padding: 0.75em ;
+    margin: 0 ;
+    width: max-content ;
+    transition: all 0.3s ;
+
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+}
+
+.modeBtn svg {
+    height: 20px ;
+    width: 20px ;
+    transition: all 0.3s ;
+}
+.modeBtn:focus, .modeBtn:active:focus, .modeBtn:hover {
+    outline: 0 ;
+    box-shadow: none ;
+    background-color: var(--light) ;
+    color: var(--main) ;
+    border: 2px solid var(--main) ;
+}
+
+.modeBtn.selected, .modeBtn.selected:focus, 
+.modeBtn.selected:active:focus, .modeBtn.selected:hover {
+    background-color: var(--main) ;
+    color: var(--white) ;
+    border: 2px solid var(--main) ;
+}
+
+.modeBtn.blueBtn {
+    background-color: transparent ;
+    color: var(--blue) ;
+    border: 1px solid var(--blue) ;
+}
+.modeBtn.blueBtn:focus, .modeBtn.blueBtn:active:focus, .modeBtn.blueBtn:hover {
+    background-color: var(--blue) ;
+    color: var(--white) ;
+    border: 1px solid var(--blue) ;
+}
+.modeBtn.blueBtn:focus svg, .modeBtn.blueBtn:active:focus svg, .modeBtn.blueBtn:hover svg {
+    color: var(--blue)
+}
+
+.modeBtn.redBtn {
+    background-color: transparent ;
+    color: var(--pink) ;
+    border: 1px solid var(--pink) ;
+}
+
+.modeBtn.redBtn:focus, .modeBtn.redBtn:active:focus, .modeBtn.redBtn:hover {
+    background-color: var(--pink) ;
+    color: var(--white) ;
+    border: 1px solid var(--pink) ;
+}
+
+.socialName {
+    display: none;
+}
+
+.liGuard {
+    background-color: var(--white) ;
+    border-radius: 4px ;
+}
+
+.sifText {
+    font-size: .8rem ;
+    margin: 0 ;
+    cursor: pointer ;
+    color: var(--medGray) ;
+    text-align: center ;
+    transition: all 0.2s ;
+}
+
+.sifText a:hover {
+    text-decoration: underline ;
+}
+
+.rtText {
+    align-self: stretch ;
+    text-align: right ;
+}
+
+.blueText {
+    color: var(--main) ;
+    cursor: pointer ;
+    font-weight: 600 ;
+}
+
+.lpHead {
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+}
+
+.lpTitle {
+    font-size: 1.5rem ;
+    font-weight: 600 ;
+    margin-bottom: .4em ;
+    text-align: center ;
+}
+
+.lpHr {
+    border: 1px solid var(--medGray) ;
+    width: 40% ;
+}
+
+.lpInput input {
+    text-align: center ;
+    letter-spacing: 5px ;
+}
+
+.lpBtns {
+    display: flex ;
+    gap: 1em ;
+}
+
+.blackBtn {
+    align-self: center ;
+    background-color: var(--dark);
+    color: var(--white) ;
+    min-width: 70%;
+    border: none;
+    box-shadow: none ;
+    cursor: pointer;
+    font-size: .9rem ;
+    font-weight: 500 ;
+    border-radius: 0.5rem ;
+    padding: 0.5em 1em ;
+    margin: 0 ; 
+    width: max-content ;
+    transition: all 0.3s ;
+}
+
+.blackBtn.hidden {
+    visibility: hidden ;
+}
+
+.blackBtn:focus, .blackBtn:active:focus, .blackBtn:hover {
+    outline: 0 ;
+    box-shadow: none ;
+    background-color: var(--dark1) ;
+    color: var(--white) ;
+}
+
+.em {
+    color: var(--main) ;
+}
+
+.orCon {
+    display: flex ;
+    align-items: center ;
+    gap: 1em ;
+    width: 100% ;
+}
+
+.orHr {
+    flex-grow: 2 ;
+    border: 1px solid var(--lightGray) ;
+}
+
+
+@media (min-width: 600px) {
+
+    .loginPopup, .signUpPopup {
+        width: 35vw ;
+    }
+
+    .socialName {
+        display: inline;
+    }
+}

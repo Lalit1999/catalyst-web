@@ -1,0 +1,13 @@
+.sortBtn {
+	font-size: .8rem !important ;
+	text-transform: capitalize !important ;
+	font-weight: 600 !important ;
+	display: flex;
+	align-items: center;
+}
+
+.sortBtn svg {
+	margin-left: 1rem ;
+	height: 16px ;
+	width: 16px ;
+}

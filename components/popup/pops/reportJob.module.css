@@ -1,0 +1,162 @@
+.listPopup { 
+    padding: 2em ;
+    display: flex ;
+    align-items: center;
+    flex-direction: column ;
+    gap: 1em ;
+    width: 40vw ;
+    user-select: none;
+}
+
+.listPopup p {
+    margin: 0;
+}
+
+.boxTitle {
+    font-size: 1.2rem ;
+    font-weight: 500 ;
+    color: var(--darkgray) ;
+}
+
+.listPopupContent {
+    display: flex ;
+    flex-direction: column ;
+    gap: 1em ;
+    max-height: 70vh ;
+    overflow-y: scroll ;
+}
+
+.sixBoxCon {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.sixBox {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--lightGray);
+    border-radius: 4px;
+    padding: 1em .5em ;
+    gap: .5em ;
+}
+
+.sixBoxTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0;
+}
+
+.sixBoxSubText {
+    font-size: 1rem ;
+    font-weight: 600;
+    user-select: none;
+}
+
+.sixBoxTextCon {
+    display: flex;
+    flex-direction: column;
+    gap: .5em ;
+}
+
+.sixBoxText {
+    font-size: .9rem;
+    color: var(--medGray);
+    text-align: justify;
+}
+
+.checkboxCon {
+    display: flex ;
+    align-items: center ;
+    gap: 1em ;
+}
+
+.checkboxCon input[type="radio"] {
+    width: 16px ;
+    height: 16px ;
+}
+
+.checkboxCon label {
+    margin: 0 ;
+    font-size: .9rem ;
+    color: var(--gray) ;
+    font-weight: 400 ;
+}
+
+.sixBoxOther {
+    display: flex;
+    flex-direction: column;
+    gap: .5em ;
+}
+
+.buttonCon {
+    display: flex ;
+    justify-content: center;
+    gap: 3em ;
+    max-width: 100% ;
+}
+
+.reportBtn {
+    align-self: center ;
+    background-color: var(--main);
+    color: var(--white) ;
+    border: none;
+    box-shadow: none ;
+    cursor: pointer;
+    font-weight: 500 ;
+    border-radius: 0.25rem ;
+    padding: 0.5em 1em ;
+    margin: 0 ; 
+    width: max-content ;
+    transition: all 0.3s ;
+}
+.reportBtn.deleteBtn {
+    background-color: var(--error) ;
+}
+.reportBtn.cancelBtn {
+    background-color: var(--darkWhite) ;
+    color: var(--medGray) ;
+}
+
+.reportBtn:focus, .reportBtn:active:focus, .reportBtn:hover  {
+    outline: 0 ;
+    box-shadow: none ;
+    background-color: var(--dark) ;
+    color: var(--white) ;
+}
+
+.reportBtn.deleteBtn:focus, .reportBtn.deleteBtn:active:focus, .reportBtn.deleteBtn:hover  {
+    outline: 0 ;
+    box-shadow: none ;
+    background-color: var(--red) ;
+    color: var(--white) ;
+}
+
+.reportBtn.cancelBtn:focus, .reportBtn.cancelBtn:active:focus, .reportBtn.cancelBtn:hover  {
+    outline: 0 ;
+    box-shadow: none ;
+    background-color: var(--lightGray) ;
+    color: var(--medGray) ;
+}
+
+@media (max-width: 600px) {
+
+    .listPopup { 
+        width: 90vw ;
+    }
+}
+
+/* For Large Screens */
+@media (min-width:1500px) {
+
+    .listPopup { 
+        width: 30vw ;
+    }
+
+    .listPopupContent {
+        max-height: 80vh ;
+    }
+}

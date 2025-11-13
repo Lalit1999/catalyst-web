@@ -1,0 +1,39 @@
+{
+  "name": "catalyst-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 11000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tiptap/extension-color": "^2.11.5",
+    "@tiptap/extension-list-item": "^2.11.5",
+    "@tiptap/extension-text-style": "^2.11.5",
+    "@tiptap/pm": "^2.11.5",
+    "@tiptap/react": "^2.11.5",
+    "@tiptap/starter-kit": "^2.11.5",
+    "bootstrap": "^5.3.3",
+    "crypto-js": "^4.2.0",
+    "next": "15.4.4",
+    "react": "19.1.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.52.2",
+    "react-multi-carousel": "^2.8.5",
+    "react-toastify": "^10.0.5",
+    "validator": "^13.15.15"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.17.0",
+    "@svgr/webpack": "^8.1.0",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "15.2.0-canary.74",
+    "globals": "^16.3.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4"
+  }
+}

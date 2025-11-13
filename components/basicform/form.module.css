@@ -1,0 +1,445 @@
+.basicForm {
+    display: flex ;
+    flex-direction: column ;
+    /* gap: 1em ; */
+    /* Original ^, Specific to this project ⌄ */
+    gap: 1.5em ;
+}
+
+.basicForm label {
+    display: inline-block ;
+}
+
+.formRow .inputField {
+    flex: 1 ;
+    width: 100% ;
+}
+
+.formRow .inputFieldCheckBox {
+    align-self: center;
+}
+
+.formError {
+    display: inline-block ;
+    font-size: .8rem ;
+    color: var(--error) ;
+    width: 100% ;
+    padding: 0.2em 0 ;
+}
+
+.formSucc {
+	display: inline-block ;
+    font-size: .9rem ;
+    color: var(--success) ;
+    width: 100% ;
+    padding: 0.2em 0 ;
+}
+
+.formDescr {
+    display: inline-block ;
+    font-size: .8rem ;
+    color: var(--medGray) ;
+    width: 100% ;
+    padding: 0.2em 0 ;
+}
+
+.formRow {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-evenly;
+    align-items: flex-start ;
+    /* gap: 1em ; */
+    /* Original ^, Specific to this project ⌄ */
+    gap: 1.5em ;
+}
+
+.disabled {
+    opacity: 0.5 ;
+    cursor: not-allowed !important ;
+}
+
+/* TagInput */
+
+.tagFlex {
+	display: flex;
+	flex-wrap: wrap;
+    gap: .25em ;
+    padding-top: .25em ;
+}
+
+.tagCon {
+	background-color: var(--light);
+	color: var(--main);
+	padding: .3em .5em;
+	border-radius: .2rem;
+    text-transform: capitalize;
+}
+
+.tagCross {
+	cursor: pointer;
+	color: var(--error);
+	font-weight: bold;
+	user-select: none;
+}
+
+/* ------ */
+
+/* DPInput */
+
+.labelCon {
+    display: flex ;
+    flex-direction: column ;
+    color: var(--white);
+}
+
+.zoomCon {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    justify-content: center ;
+}
+
+.zoomCon input[type="range"] {
+  /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Set track styles */
+  width: 30%;
+  border: none ;
+  padding: 0 ;
+  height: 8px;
+  background-color: var(--lightGray) ;
+  border-radius: 20px;
+}
+
+/* Style the thumb (handle) */
+.zoomCon input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: var(--main);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Firefox */
+.zoomCon input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: var(--main);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.zoomCon svg {
+    color: var(--main);
+    height: 24px ;
+    width: 24px ;
+}
+
+.imageUploader {
+    text-align: center ;
+
+    /* Specific to this project ⌄ */
+    align-self: center ;
+}
+
+.defaultUploadBox {
+    padding: 1em ;
+    border-radius: .5rem ;
+    border: 3px dashed var(--lightGray);
+}
+
+.defaultLabel {
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    gap: .5em ;
+    cursor: pointer ;
+}
+
+.defaultLabel svg {
+    color: var(--medGray) ;
+    height: 32px ;
+    width: 32px ;
+    transform: rotate(-90deg);
+    transition: all .2s ;
+}
+
+.defaultLabel p {
+    margin: 0 ;
+    font-size: .9rem ;
+    color: var(--medGray);
+    text-align: center ;
+    font-weight: 500 ;
+    transition: all .2s ;
+}
+
+.defaultLabel:hover p, .defaultLabel:hover svg {
+    color: var(--main) ;
+}
+
+.text {
+    color: var(--black) ;
+}
+
+.prefixCon {
+    display: flex ;
+    align-items: center ;
+    gap: .25em ;
+}
+
+.prefix {
+    font-size: .9rem ;
+    color: var(--main) ;
+}
+
+.imageList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 1em 0 ;
+}
+
+.imageItem {
+    position: relative;
+    width: 100px ;
+    height: 100px ;
+    border-radius: .25rem ;
+}
+
+.imageItem img {
+    border-radius: .5rem ;
+    object-fit: cover ;
+}
+
+.imageClose {
+    position: absolute;
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+    font-size: 1.5rem;
+    fill: var(--error);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    line-height: 20px ;
+    transform: scale(0.8) ;
+}
+
+.imageClose:hover {
+    transform: rotate(90deg);
+}
+
+.imageClose svg {
+    fill: var(--medGray) ;
+    height: 24px ;
+    width: 24px ;
+    cursor: pointer ;
+    transform: scale(1.25) ;
+}
+
+.fileList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1em 0 ;
+    gap: .2em ;
+}
+
+.fileItem {
+    display: flex ;
+    justify-content: space-between;
+    padding: .2em .5em ;
+    border: 2px solid var(--lightGray) ;
+    width: calc(50% - 0.1em) ;
+}
+
+.fileItem p {
+    margin: 0 ;
+    font-size: .9rem ;
+    color: var(--black) ;
+    white-space: nowrap ;
+    text-overflow: ellipsis;
+    overflow: hidden ;
+    width: 100% ;
+}
+
+.fileName {
+    font-size: .9rem ;
+}
+
+.fileClose {
+    border-radius: 50%;
+    font-size: 1.5rem;
+    fill: var(--error);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    line-height: 20px ;
+    transform: scale(0.8) ;
+}
+
+.fileClose:hover {
+    transform: rotate(90deg);
+}
+
+.fileClose svg {
+    fill: var(--medGray) ;
+    height: 24px ;
+    width: 24px ;
+    cursor: pointer ;
+    transform: scale(1.25) ;
+}
+
+.saveBtn {
+    color: var(--error);
+    fill: var(--error);
+    font-weight: 600 ;
+}
+
+.saveBtn svg {
+    fill: var(--medGray) ;
+    height: 24px ;
+    width: 24px ;
+    cursor: pointer ;
+}
+
+.uploadBtnCon {
+    text-align: center; 
+}
+
+.basicForm .formBtn, .basicForm .uploadBtnCon .basicForm .formBtn {
+    align-self: center ;
+    background-color: var(--bg);
+    color: var(--white) ;
+    border: 2px solid var(--black);
+    box-shadow: none ;
+    cursor: pointer;
+    font-size: .9rem ;
+    font-weight: 500 ;
+    border-radius: 0.5rem ;
+    padding: 0.5em 1em ;
+    margin: 0 ; 
+    width: max-content ;
+    transition: all 0.3s ;
+}
+
+.basicForm .formBtn:focus,
+.basicForm .formBtn:active:focus {
+    outline: 0 ;
+    box-shadow: none ;
+    background-color: var(--darkGray) ;
+    border: 2px solid var(--darkGray) ;
+    color: var(--white) ;
+}
+
+.basicForm .formBtn:hover  {
+    border: 2px solid var(--darkGray) ;
+    background-color: var(--darkGray) ;
+    color: var(--white) ;
+}
+
+.disabledInput input {
+    cursor: not-allowed ;
+    background-color: var(--lightGray) ;
+}
+
+.avatarsCon {
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    gap: 1em ;
+    padding: 1em ;
+    justify-content: space-evenly ;
+}
+
+.avatarImg {
+    position: relative;
+    height: 40vw ;
+    width: 40vw ;
+}
+
+.checkboxCon {
+    display: flex ;
+    align-items: center ;
+    gap: 1em ;
+
+}
+
+.checkboxCon label {
+    margin: 0 ;
+}
+
+.reqd {
+    /* color: var(--red) ; */
+    /* Original ^, Specific to this project ⌄ */
+    color: var(--main) ;
+}
+
+.arrayInputContainer {
+    display: flex ;
+    flex-direction: column ;
+    gap: 1em ;
+}
+
+.arrayInputRow {
+    display: flex ;
+    align-items: center ;
+    gap: 1em ;
+}
+
+.arrayInputRow svg {
+    cursor: pointer ;
+    fill: var(--error) ;
+    height: 24px ;
+    width: 24px ;
+}
+
+.arrayInputRow > div {
+    flex-grow: 2 ;
+}
+
+.objectInputCon {
+    width: 30vw ;
+}
+
+@media (min-width: 600px) {
+
+    /* .imageItem {
+        height: 150px ;
+    } */
+
+    .avatarsCon {
+        max-width: calc( 48vw + 5em ) ;
+    }
+
+    .avatarImg {
+        height: 12vw ;
+        width: 12vw ;
+    }
+
+    .formRow {
+        flex-direction: row ;
+    }
+
+    .formRow .inputField {
+        width: unset ;
+    }
+
+    .arrayInputRow select {
+        width: 20vw ;
+    }
+    
+    .arrayInputRow > div {
+        flex-grow: 0 ;
+    }
+
+}
+
+
+/* ------ */

@@ -1,0 +1,51 @@
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.paginationNumber {
+    display: flex;
+    align-items: center;
+    gap: 2em ;
+}
+
+.paginationNumber p {
+    cursor: pointer;
+}
+
+.selectedNumber {
+    padding: .5em 1em ;
+    border-radius: 2rem;
+    background-color: var(--main);
+    color: var(--white) ;
+    margin: 0 -14px !important ;
+}
+
+.paginationArrowLeft, .paginationArrowRight {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.paginationArrowLeft svg {
+    color : var(--main) ;
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+}
+
+.paginationArrowRight svg {
+    color : var(--main) ;
+    width: 20px;
+    height: 20px;
+}
+
+.disabled svg {
+    width: 18px !important;
+    height: 18px !important;
+    color: var(--medGray) !important;
+    cursor: not-allowed ;
+}

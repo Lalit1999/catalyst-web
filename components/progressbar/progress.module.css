@@ -1,0 +1,90 @@
+.progressbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0 2.5em;
+}
+
+.pb {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-family: var(--pop);
+    font-weight: 500;
+    width: 80%;
+}
+
+.pb .numberCon {
+    border: 1px solid var(--lightGray);
+    padding: 3px;
+    border-radius: 50%;
+    position: relative;
+    width: 20px ;
+    height: 20px ;
+}
+
+.pb .numberCon.active {
+    border: 1px solid var(--main);
+    background-color: var(--main);
+}
+
+.pb .pbLine {
+/*    flex-grow: 1 ;*/
+    width: 50px ;
+    border-top: 3px dashed var(--lightGray);
+}
+
+.pb .pbLine.active {
+    border-top: 3px solid var(--main);
+}
+
+/* For Mobile */
+@media (max-width: 600px) { 
+    .progressbar {
+        padding: .5em 0 ;
+    }
+
+    .pb {
+        width: 95%;
+    }
+
+    .pb .numberCon {
+        border: 1px solid var(--lightGray);
+        padding: 2px;
+    }
+
+    .pb .numberCon.active {
+        border: 1px solid var(--main);
+    }
+
+    .pb .number {
+        width: 30px;
+        height: 30px;
+        font-size: .8rem;
+    }
+
+    .pbText {
+        bottom: -55px;
+        left: 50%;
+        font-size: .8rem;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .pbSmall {
+        font-size: .7rem;
+        transform: translateX(-65%);
+    }
+
+    .pb .pbLine {
+        border-top: 2px dashed var(--lightGray);
+    }
+
+    .pb .pbLine.active {
+        border-top: 2px solid var(--main);
+    }
+
+    .pbImg {
+        width: 100%;
+    }
+}

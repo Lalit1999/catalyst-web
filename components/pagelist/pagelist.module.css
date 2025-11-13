@@ -1,0 +1,14 @@
+.pageList {
+	margin: auto 2em 0 ;
+	display: flex;
+	align-items: center;
+	user-select: none ;
+}
+
+.pageList * {
+	font-size: .8rem ;
+}
+
+.pageList ul {
+	margin: 0;
+}

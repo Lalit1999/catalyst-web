@@ -1,0 +1,46 @@
+.editorCon {
+    display: flex;
+    flex-direction: column;
+    gap: 10px ;
+    padding: 10px ;
+    background-color: var(--darkWhite) ;
+    border-radius: .5em;
+    border: 1px solid var(--lightGray) ;
+}
+
+.buttonsCon {
+    display: flex ;
+    flex-wrap: wrap;
+    background-color: var(--white) ;
+    border-bottom: 1px solid var(--lightGray) ;
+    border-radius: .5em;
+    margin: -10px -10px 0 ;
+}
+
+.editorButton {
+    color: var(--gray);
+    border-radius: .5em;
+    cursor: pointer;
+    width: 40px ;
+    height: 40px ;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: all .3s;
+}
+
+.editorButton.active, .editorButton.active:hover {
+    background-color: var(--main) ;
+    color: var(--white) ;
+}
+
+.editorButton:hover {
+    background-color: var(--darkWhite);
+}
+
+.editorButton svg {
+    width: 20px;
+    height: 20px;
+}

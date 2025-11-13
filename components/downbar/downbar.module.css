@@ -1,0 +1,327 @@
+.downbar {
+	display: flex;
+	flex-direction: column;	
+	align-items: center ;
+	padding-top: 3em ;
+	margin: 0 -4em;
+}
+
+.downbar p {
+	margin: 0;
+}
+
+.downbarTitle {
+	display: flex;
+}
+
+.brTop {
+	display: flex;
+}
+
+.brTop p {
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: var(--black);
+}
+
+.brBottom {
+	display: flex;
+    gap: 1em;
+}
+
+.jobLookingBtn {
+    background-color: var(--transparent);
+    color: var(--white) ;
+    border: 1px solid var(--white);
+    box-shadow: none ;
+    cursor: pointer;
+    font-weight: 500 ;
+    font-size: 1rem ;
+    border-radius: 0.25rem ;
+    padding: 0.7em 2em ;
+    margin: 0 ; 
+    transition: all 0.3s ;
+}
+
+.jobLookingBtn:focus, .jobLookingBtn:active:focus, .jobLookingBtn:hover  {
+    outline: 0 ;
+    box-shadow: none ;
+    background-color: var(--dark) ;
+    border: 1px solid var(--dark);
+    color: var(--white) ;
+}
+
+.jobPostingBtn {
+    background-color: var(--main);
+    color: var(--white) ;
+	border: 1px solid var(--main);
+    box-shadow: none ;
+    cursor: pointer;
+    font-weight: 500 ;
+    font-size: 1rem ;
+    border-radius: 0.25rem ;
+    padding: 0.7em 2em ;
+    margin: 0 ; 
+    transition: all 0.3s ;
+}
+
+.jobPostingBtn:focus, .jobPostingBtn:active:focus, .jobPostingBtn:hover  {
+    outline: 0 ;
+    box-shadow: none ;
+    border: 1px solid var(--dark);
+    background-color: var(--dark) ;
+    color: var(--white) ;
+}
+
+.downbarMain {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--bg);
+	width: 100%;
+	padding: 2em 4em 1em;
+	gap: 1.5em ;
+}
+
+.dbLogo {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	width: max-content;
+	border-radius: 4px ;
+}
+
+.dbEmail p {
+	color: var(--main) ;
+	font-size: 1.1rem;
+}
+
+.dbText p {
+	color: var(--black);
+    font-size: 1.1rem;
+}
+
+.downbarMainImage {
+	align-self: center;
+}
+
+.dbContent {
+	display: flex;
+	justify-content: space-between;
+	gap: 5em ;
+}
+
+.dbContentLeft {
+	display: flex;
+    flex-direction: column;
+    gap: 1em;
+	flex-basis: 30%;
+}
+
+.downbarSocialIcons {
+	display: flex;
+	justify-content: flex-start;
+	gap: 1.5em;
+}
+
+.downbarSocialIcons svg {
+	width: 20px;
+	height: 20px;
+	color: var(--gray);
+	fill: var(--gray);
+}
+
+.dbContentRight {
+	display: flex;
+	justify-content: space-around;
+	flex-basis: 70%;
+}
+
+.dbService, .dbCompany, .dbSupport {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 30%;
+	gap: 1em;
+}
+
+.dbLinkCon {
+	display: flex;
+	flex-wrap: wrap;
+    gap: .5em;
+}
+
+.dbLinkCon2 {
+	display: flex;
+	flex-wrap: wrap;
+    gap: .5em;
+}
+
+.dbLinkItem {
+	position: relative;
+  	overflow: hidden;
+	width: 5vw;
+	height: 5vw;
+	cursor: pointer;
+}
+
+.img {
+	object-fit: cover;
+	object-position: center;
+}
+
+.qLinks {
+	color: var(--black);
+	font-size: 1.5rem;
+	letter-spacing: 0.3px ;
+}
+
+.qLink {
+	color: var(--gray);
+	margin: 0 ;
+	font-size: 1rem ;
+	letter-spacing: 0.3px ;
+	font-weight: 400 ;
+	padding: 4px ;
+	flex-basis: 50% ;
+	text-decoration: none ;
+}
+
+
+.dbCopyright {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.downbarCrText {
+	color: var(--black) ;
+	font-size: .75rem ;
+	margin-bottom: 0 ;
+}
+
+/* mobile css */
+/* For Mobile */
+@media (max-width: 600px) {
+	.downbar {
+		margin: 0 -1em;
+		padding: 1em 0 0 ;
+		gap: 1em;
+	}
+
+	.support {
+		gap: 1em ;
+		margin: 0;
+	}
+	
+	.supportText1 {
+		font-size: 1rem;
+	}
+	
+	.supportText2 {
+		font-size: 1rem;
+	}
+	
+	.brTop p {
+		font-size: 1rem;
+	}
+	
+	.jobLookingBtn {
+		font-size: .8rem ;
+		border-radius: 0.25rem ;
+		padding: 0.7em 2em ;
+	}
+	
+	.jobPostingBtn {
+		font-size: .8rem ;
+		border-radius: 0.25rem ;
+		padding: 0.7em 2em ;
+	}
+	
+	.downbarMain {
+		padding: 1em 1em 2em ;
+		gap: 1em ;
+	}	
+	
+	.dbLogo {
+		gap: 1em;
+		padding: 4px 8px ;
+	}
+	
+	.dbEmail p {
+		font-size: .9rem;
+	}
+	
+	.dbText p {
+		font-size: .9rem;
+	}
+	
+	.downbarMainImage {
+		align-self: center;
+	}
+	
+	.dbContent {
+		flex-direction: column;
+		gap: 2em ;
+	
+	}
+	
+	.dbContentLeft {
+		gap: 1em;
+		flex-basis: 100%;
+	}
+	
+	.downbarSocialIcons {
+		gap: 1.5em;
+	}
+	
+	.downbarSocialIcons svg {
+		width: 20px;
+		height: 20px;
+	}
+	
+	.dbContentRight {
+		flex-basis: 100%;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 0 ;
+		gap: 1em ;
+	}
+	
+	.dbService {
+		gap: 1em;
+		flex-basis: 100%;
+	}
+	.dbCompany, .dbSupport {
+		gap: 1em;
+		flex-basis: 45%;
+	}
+
+	.dbLinkCon {
+		gap: .5em;
+	}
+	
+	.dbLinkCon2 {
+		gap: .5em;
+	}
+	
+	.dbLinkItem {
+		width: 10vw;
+		height: 10vw;
+	}
+
+	.qLinks {
+		font-size: 1rem;
+	}
+	
+	.qLink {
+		font-size: .8rem ;
+		padding: 4px ;
+		flex-basis: 100% ;
+	}	
+
+	.dbCopyright {
+		align-self: center;
+	}
+
+	.downbarCrText {
+		font-size: .55rem ;
+	}
+}
