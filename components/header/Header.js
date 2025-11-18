@@ -32,7 +32,7 @@ const Header = () => {
 			<div className={styles.headerFirst}>
 				<Back className={pathname === '/'?styles.none:styles.backArrow} onClick={() => router.back()} />
 				<Link href="/" className={styles.logoCon}>
-					<Image priority src={logo} height={60} alt="purple-logo" loading="eager" quality={100}/>
+					<Image priority src={logo} height={60} alt="catalyst-logo" loading="eager" quality={100}/>
 				</Link>
 			</div>
 				
@@ -45,6 +45,10 @@ const Header = () => {
 					</Link>
 				):null ))
 			}
+			</div>
+			<div className={styles.headerActions}>
+				<button className={styles.contactBtn} onClick={() => router.push('/contact-us')}>Contact Us</button>
+				<button className={styles.proposalBtn} onClick={() => router.push('/request-proposal')}>Request a Proposal</button>
 			</div>
 			{/**/}
 			

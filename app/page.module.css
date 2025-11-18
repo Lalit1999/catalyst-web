@@ -4,6 +4,125 @@
   gap: 4em;
 }
 
+.home p {
+	margin: 0;
+}
+
+.homeSlider {
+  display: flex;
+  position: relative;
+  height: 25vw;
+  overflow: hidden;
+  margin: 0 -4em ;
+}
+
+.sectionTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 2em ;
+  align-items: center;
+}
+
+.sectionTwoHeadCon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 50%;
+	text-align: center;
+	gap: 1em ;
+}
+
+.sectionSubTitle {
+	font-size : .7rem ;
+	color: var(--third) ;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.sectionHeading {
+	font-size: 2rem ;
+	font-weight: 600 ;
+	color:  var(--second) ;
+}
+
+.sectionDescr {
+	color: var(--medGray) ;
+	font-size: .9rem ;
+	line-height: 1.6rem ;
+}
+
+.sectionTwoBoxesCon {
+	display: flex ;
+	justify-content: space-between ;
+}
+
+.sectionTwoBox {
+	flex-basis: 30%;
+	display: flex ;
+	flex-direction: column ;
+	justify-content: space-around;
+	gap: 3em ;
+	align-items: flex-start ;
+	padding: 3em 2em ;
+	border: 1px solid var(--lightGray) ;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	border-radius: 8px ;
+	/* width: 25vw;
+	height: 30vw; */
+}
+
+.sectionTwoBoxIcon {
+	display: flex ;
+	background-color: var(--main);
+	padding: .5em ;
+	border-radius: 8px ;
+}
+
+.sectionTwoBoxIcon svg {
+	width: 40px ;
+	height: 40px;
+	color: var(--white);
+}
+
+.sectionTwoBoxContentCon {
+	display: flex ;
+	flex-direction: column ;
+	gap: 1em ;
+}
+
+.sectionTwoBoxTitle {
+	font-size: 1.2rem ;
+	font-weight: 600 ;
+	color: var(--second) ;
+}
+
+.sectionTwoBoxDescr {
+	color: var(--medGray) ;
+	font-size: .9rem ;
+	line-height: 1.4rem ;
+}
+
+.sectionTwoBoxLink {
+	display: flex ;
+	border: 1px solid var(--halfMain) ;
+	align-items: center;
+	padding: .5em 2em ;
+	border-bottom-right-radius: 1rem ;
+	gap: 1em ;
+}
+
+.sectionTwoBoxLink span {
+	color : var(--main) ;
+	font-weight: 600 ;
+	font-size: .8rem;
+}
+
+.sectionTwoBoxLink svg {
+	width: 20px;
+	height: 20px ;
+	color : var(--main) ;
+}
+
 @media (min-width: 1500px) {
   .home {
     padding: 0 10em;
