@@ -36,4 +36,9 @@ import Whatsapp from '../public/icons/whatsapp.svg' ;
 import Website from '../public/icons/website.svg' ;
 import Youtube from '../public/icons/youtube.svg' ;
 
-export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette };
+import Expertise from '../public/icons/expertise.svg' ;
+import MultiLocation from '../public/icons/multiLocation.svg' ;
+import Partners from '../public/icons/partners.svg' ;
+import Patients from '../public/icons/patients.svg' ;
+
+export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients };
