@@ -56,6 +56,7 @@ const HomeSlider = () => {
   return (
     <div className={styles.homeSlider}>
 		<Image src={homeBanner} alt="Home Banner" />
+		<p className={styles.homeSliderText}>A partner as equally committed as you.</p>
     </div>
   );
 }

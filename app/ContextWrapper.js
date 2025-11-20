@@ -36,7 +36,7 @@ const AppBody = ({isSpecial, children}) => {
         return (
             <main className='body-main' ref={conRef}>
                 {children}
-                {/* <Downbar />  */}
+                <Downbar /> 
             </main>
         ) ;
 }

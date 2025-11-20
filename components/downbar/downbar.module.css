@@ -1,13 +1,57 @@
+.downbarMainCon {
+	display: flex;
+	flex-direction: column;
+	margin: 4em -4em 0;
+	
+}
+
+.downbarMainCon p {
+	margin: 0;
+}
+
+.downbarTop {
+	display: flex;
+	width: 100%;
+	background-color: var(--main);
+	align-items: center;
+	justify-content: center;
+	padding: 2em 0;
+	gap: 2em ;
+}
+
+.dbTopText {
+	color: var(--white);
+	font-size: .9rem;
+}
+
+.dbTopButton {
+	display: flex;
+	align-items: center;
+	background-color: var(--white);
+	color: var(--main) ;
+	border-radius: 2rem;
+	border: 1px solid var(--white);
+	padding: .5em 1em ; 	
+	transition: all .3s ;
+}
+
+.dbTopButton svg {
+	width: 16px ;
+	height: 16px ;
+}
+
+.dbTopButton:hover {
+	background-color: var(--main);
+	color: var(--white) ;
+	border: 1px solid var(--white);
+}
+
 .downbar {
 	display: flex;
 	flex-direction: column;	
 	align-items: center ;
-	padding-top: 3em ;
-	margin: 0 -4em;
-}
-
-.downbar p {
-	margin: 0;
+	width: 100% ;
+	background-color: var(--bg);
 }
 
 .downbarTitle {
@@ -29,54 +73,8 @@
     gap: 1em;
 }
 
-.jobLookingBtn {
-    background-color: var(--transparent);
-    color: var(--white) ;
-    border: 1px solid var(--white);
-    box-shadow: none ;
-    cursor: pointer;
-    font-weight: 500 ;
-    font-size: 1rem ;
-    border-radius: 0.25rem ;
-    padding: 0.7em 2em ;
-    margin: 0 ; 
-    transition: all 0.3s ;
-}
-
-.jobLookingBtn:focus, .jobLookingBtn:active:focus, .jobLookingBtn:hover  {
-    outline: 0 ;
-    box-shadow: none ;
-    background-color: var(--dark) ;
-    border: 1px solid var(--dark);
-    color: var(--white) ;
-}
-
-.jobPostingBtn {
-    background-color: var(--main);
-    color: var(--white) ;
-	border: 1px solid var(--main);
-    box-shadow: none ;
-    cursor: pointer;
-    font-weight: 500 ;
-    font-size: 1rem ;
-    border-radius: 0.25rem ;
-    padding: 0.7em 2em ;
-    margin: 0 ; 
-    transition: all 0.3s ;
-}
-
-.jobPostingBtn:focus, .jobPostingBtn:active:focus, .jobPostingBtn:hover  {
-    outline: 0 ;
-    box-shadow: none ;
-    border: 1px solid var(--dark);
-    background-color: var(--dark) ;
-    color: var(--white) ;
-}
-
 .downbarMain {
 	display: flex;
-	flex-direction: column;
-	background-color: var(--bg);
 	width: 100%;
 	padding: 2em 4em 1em;
 	gap: 1.5em ;
@@ -86,8 +84,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
-	width: max-content;
-	border-radius: 4px ;
+	flex-basis: 30%;
 }
 
 .dbEmail p {
@@ -96,25 +93,20 @@
 }
 
 .dbText p {
-	color: var(--black);
-    font-size: 1.1rem;
-}
-
-.downbarMainImage {
-	align-self: center;
+	color: var(--gray);
+    font-size: .9rem;
 }
 
 .dbContent {
 	display: flex;
 	justify-content: space-between;
-	gap: 5em ;
+	flex-basis: 70%;	
 }
 
 .dbContentLeft {
 	display: flex;
     flex-direction: column;
     gap: 1em;
-	flex-basis: 30%;
 }
 
 .downbarSocialIcons {
@@ -133,7 +125,6 @@
 .dbContentRight {
 	display: flex;
 	justify-content: space-around;
-	flex-basis: 70%;
 }
 
 .dbService, .dbCompany, .dbSupport {
@@ -149,18 +140,16 @@
     gap: .5em;
 }
 
-.dbLinkCon2 {
+.dbLinkItem {
 	display: flex;
-	flex-wrap: wrap;
-    gap: .5em;
+	align-items: center;
+	gap: 1em ;
 }
 
-.dbLinkItem {
-	position: relative;
-  	overflow: hidden;
-	width: 5vw;
-	height: 5vw;
-	cursor: pointer;
+.dbLinkItem svg {
+	width: 18px ;
+	height: 18px ;
+	color: var(--main);
 }
 
 .img {
@@ -170,18 +159,19 @@
 
 .qLinks {
 	color: var(--black);
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	font-weight: 500;
 	letter-spacing: 0.3px ;
 }
 
 .qLink {
 	color: var(--gray);
 	margin: 0 ;
-	font-size: 1rem ;
+	font-size: .7rem ;
 	letter-spacing: 0.3px ;
 	font-weight: 400 ;
 	padding: 4px ;
-	flex-basis: 50% ;
+	flex-basis: 95% ;
 	text-decoration: none ;
 }
 
@@ -250,7 +240,7 @@
 	}
 	
 	.dbText p {
-		font-size: .9rem;
+		font-size: .7rem;
 	}
 	
 	.downbarMainImage {
@@ -298,21 +288,12 @@
 		gap: .5em;
 	}
 	
-	.dbLinkCon2 {
-		gap: .5em;
-	}
-	
-	.dbLinkItem {
-		width: 10vw;
-		height: 10vw;
-	}
-
 	.qLinks {
 		font-size: 1rem;
 	}
 	
 	.qLink {
-		font-size: .8rem ;
+		font-size: .6rem ;
 		padding: 4px ;
 		flex-basis: 100% ;
 	}	
