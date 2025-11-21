@@ -45,7 +45,7 @@ const ContactForm = ( ) => {
 
 	return (
         <div className={styles.contactForm} >
-			<p className={styles.subPageContentHead}>Reach out to artist</p>
+			<p className={styles.subPageContentHead}>Have Querry?</p>
 			<BasicForm data={formData} onFormSubmit={onFormSubmit} reset />
         </div>
 	) ;

@@ -124,7 +124,7 @@
 
 .dbContentRight {
 	display: flex;
-	justify-content: space-around;
+	width: 100%;
 }
 
 .dbService, .dbCompany, .dbSupport {
@@ -136,7 +136,7 @@
 
 .dbLinkCon {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
     gap: .5em;
 }
 

@@ -32,7 +32,7 @@ const serviceLinks = [
 ] ;
 
 const pagesLinks = [
-	{	text: 'About Us',			link: '/about-us',	}, 
+	{	text: 'About Us',			link: '/about',	}, 
 	{	text: 'Terms & Conditions',	link: '/policy/terms-and-conditions',	}, 
 	{	text: 'Privacy Policy',		link: '/policy/privacy-policy',			}, 
 	{	text: 'Cookie Policy',		link: '/policy/cookie-policy',			}, 
@@ -96,41 +96,39 @@ const Downbar = () => {
 						</div>
 					</div>
 					<div className={styles.dbContent}>
-						<div className={styles.dbContentRight}>
-							<div className={styles.dbService}>
-								<p className={styles.qLinks}>Our Services</p>
-								<div className={styles.dbLinkCon}>
-								{
-									serviceLinks.map(({text, link})=>(
-										<Link className={styles.qLink} key={text} href={link}>{text}</Link>
-									))
-								}
-								</div>
+						<div className={styles.dbService}>
+							<p className={styles.qLinks}>Our Services</p>
+							<div className={styles.dbLinkCon}>
+							{
+								serviceLinks.map(({text, link})=>(
+									<Link className={styles.qLink} key={text} href={link}>{text}</Link>
+								))
+							}
 							</div>
-							<div className={styles.dbCompany}>
-								<p className={styles.qLinks}>Pages</p>
-								<div className={styles.dbLinkCon}>
-								{
-									pagesLinks.map(({text, link})=>(
-										<Link className={styles.qLink} key={text} href={link}>{text}</Link>
-									))
-								}
-								</div>
+						</div>
+						<div className={styles.dbCompany}>
+							<p className={styles.qLinks}>Pages</p>
+							<div className={styles.dbLinkCon}>
+							{
+								pagesLinks.map(({text, link})=>(
+									<Link className={styles.qLink} key={text} href={link}>{text}</Link>
+								))
+							}
 							</div>
-							<div className={styles.dbSupport}>
-								<p className={styles.qLinks}>Contact</p>
-								<div className={styles.dbLinkCon}>
-								{
-									contactData.map(({text, icon, link})=> {
-										return (
-											<div key={text} className={styles.dbLinkItem}>
-												{icon}
-												<Link className={styles.qLink} key={text} href={link}>{text}</Link>
-											</div>
-										)
-									})
-								}
-								</div>
+						</div>
+						<div className={styles.dbSupport}>
+							<p className={styles.qLinks}>Contact</p>
+							<div className={styles.dbLinkCon}>
+							{
+								contactData.map(({text, icon, link})=> {
+									return (
+										<div key={text} className={styles.dbLinkItem}>
+											{icon}
+											<Link className={styles.qLink} key={text} href={link}>{text}</Link>
+										</div>
+									)
+								})
+							}
 							</div>
 						</div>
 					</div>
