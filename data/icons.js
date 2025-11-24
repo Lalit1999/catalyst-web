@@ -33,6 +33,7 @@ import Plus from '../public/icons/plus.svg' ;
 import Search from '../public/icons/search.svg' ;
 import School from '../public/icons/school.svg' ;
 import Twitter from '../public/icons/twitter.svg' ;
+import Tick from '../public/icons/tick.svg' ;
 import Whatsapp from '../public/icons/whatsapp.svg' ;
 import Website from '../public/icons/website.svg' ;
 import Youtube from '../public/icons/youtube.svg' ;
@@ -44,4 +45,4 @@ import MultiLocation from '../public/icons/multiLocation.svg' ;
 import Partners from '../public/icons/partners.svg' ;
 import Patients from '../public/icons/patients.svg' ;
 
-export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients, Clock, History2, MapBold } ;
+export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients, Clock, History2, MapBold, Tick } ;

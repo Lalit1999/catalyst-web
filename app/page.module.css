@@ -329,7 +329,7 @@
 	font-size: .9rem ;
 	color: var(--white) ;
 	background-color: var(--main) ;
-	padding: .5em 1em ;
+	padding: .5em 2.5em ;
 	border: 1px solid var(--main) ;
 	transition: all .3s ;
 }
@@ -400,11 +400,268 @@
 
 /* stats css ends */
 
+/* Expertise */
+.expertiseMain {
+	display: flex ;
+	flex-direction: column ;
+	margin: 0 -4em ;
+	padding: 4em ;
+	gap: 2em ;
+	background-image: url('../public/expertisebg.png');
+	background-size: cover;
+}
+
+.expertiseSubHeading {
+	font-size: .7rem ;
+	color: var(--white) ;
+	text-transform: uppercase ;
+	font-weight: 500 ;
+	background-color: var(--halfWhite);
+	padding: .2em .5em;
+	width: max-content ;
+}
+
+.expertiseHeading {
+	font-size: 2.5rem ;
+	font-weight: 600 ;
+	color: var(--white) ;
+}
+
+.expertiseBoxesCon {
+	display: flex ;
+	flex-direction: column;
+	gap: 4em ;
+}
+
+.expertiseBox {
+	display: flex ;
+	background-color: var(--white) ;
+	border-radius: 2rem ;
+	overflow: hidden;
+}
+
+.expertiseBox:nth-child(even) {
+	flex-direction: row-reverse ;
+}
+
+.expertiseBoxContentCon {
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column ;
+	justify-content: space-between ;
+	align-items: flex-start;
+	padding: 4em ;
+}
+
+.expertiseBoxTitle {
+	font-size: 1.5rem ;
+	font-weight: 600 ;
+	color: var(--second) ;
+}
+
+.expertiseBoxDescr {
+	color: var(--second) ;
+	font-size: 1rem ;
+	line-height: 1.6rem ;
+	margin-top: 1em ;
+}
+
+.expertiseBoxLink {
+	align-self: center;
+	display: flex;
+	gap: 1.5em ;
+	align-items: center;
+	padding: .5em 2em ;
+	border: 1px solid var(--main) ;
+	color: var(--main) ;
+	border-radius: 2rem ;
+	transition: all .3s ;
+}
+
+.expertiseBoxLink svg {
+	width: 20px ;
+	height: 20px ;
+	color: var(--main) ;
+	transition: all .3s ;
+}
+
+.expertiseBoxLink:hover {
+	background-color: var(--main) ;
+	color: var(--white) ;
+}
+
+.expertiseBoxLink:hover svg {
+	color: var(--white) ;
+} 
+
+.expertiseBoxImageCon {
+	flex-basis: 50%;
+}
+
+.expertiseBoxImageCon img {
+	width: 100% ;
+	height: 100% ;
+	object-fit: cover;
+}
+/* expertise ends */
+
+/* publications */
+.pubMain {
+	display: flex ;
+	flex-direction: column ;
+	align-items: center;
+	gap: 4em ;
+}
+
+.pubHeadCon {
+	display: flex ;
+	justify-content: space-between ;
+	align-items: center ;
+	align-self: stretch;
+}
+
+.pubHeadTextCon {
+	display: flex ;
+	flex-direction: column ;
+	gap: 1em ;
+	max-width: 60% ;
+}
+
+.pubHeadLinkCon {
+	display: flex;
+}
+
+.pubBoxesCon {
+	display: flex ;
+	justify-content: space-between ;
+	width: 80%;
+}
+
+.pubBox {
+	flex-basis: 30% ;
+	display: flex;
+	flex-direction: column;
+	gap: 2em ;
+}
+
+.pubBoxImageCon {
+	width: 100% ;
+	overflow: hidden;
+	aspect-ratio: 1.5 / 1 ;
+}
+
+.pubBoxImageCon img {
+	width: 100% ;
+	height: 100% ;
+	object-fit: contain;
+}
+
+.pubBoxContentCon {
+	display: flex ;
+	flex-direction: column ;
+	gap: 1em ;
+}
+
+.pubBoxTitle {
+	font-size: 1.2rem ;
+	font-weight: 600 ;
+	color: var(--second) ;
+}
+
+.pubBoxDescr {
+	color: var(--second) ;
+	font-size: .9rem ;
+	line-height: 1.4rem ;
+}
+
+.pubBoxLink {
+	display: flex ;
+	align-items: center ;
+	gap: .5em ;
+	color: var(--main) ;
+	transition: all .3s ;
+}
+
+.pubBoxLink svg {
+	width: 20px ;
+	height: 20px ;
+	color: var(--main) ;
+	transition: all .3s ;
+}
+
+.pubBoxLink:hover, .pubBoxLink:hover svg {
+	color: var(--second) ;
+}
+/* publications ends*/
+
+/* bettter result section */
+.resultsMain {
+	display: flex ;
+	margin: 0 -4em ;
+	padding: 4em ;
+	background-image: url('../public/section.webp');
+	background-size: cover;	
+	justify-content: flex-end;
+}
+
+.resultInfoCon {
+	flex-basis: 50% ;
+	display: flex ;
+	flex-direction: column ;
+	gap: 1.5em ;
+	padding: 0 2em;
+}
+
+.resultsPointsDescrCon {
+	display: flex ;
+	flex-direction: column ;
+	gap: 2em ;
+}
+
+.resultsPointsDescr {
+	color: var(--medGray) ;
+	font-size: 1rem ;
+	line-height: 1.6rem ;
+}
+
+.resultPointsCon {
+	display: flex ;
+	flex-direction: column ;
+	gap: 1em ;
+}
+
+.resultPoint {
+	display: flex ;
+	gap: 1em ;
+}
+
+.resultPoint svg {
+	width: 16px ;
+	height: 16px ;
+	color: var(--second) ;
+}
+
+.resultPointText {
+	color: var(--second) ;
+	font-size: 1rem ;
+}
+/* bettter result section ends */
+
 @media (min-width: 1500px) {
-  .home {
-    padding: 0 10em;
-    gap: 4em;
-  }
+  	.home {
+		padding: 0 10em;
+		gap: 4em;
+  	}
+
+  	.homeSlider  {
+		margin: 0 -14em ;
+	}
+
+
+	.sectionThreeMain, .expertiseMain, .resultsMain {
+		margin: 0 -14em ;
+		padding: 4em 14em ;
+	}
 }
 
 @media (max-width: 600px) {

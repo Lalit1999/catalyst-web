@@ -1,0 +1,14 @@
+
+/* Main layout */
+.main {
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  /* padding: 0 4em; */
+  gap: 3em ;
+  min-height: 20vw;
+}
+
+.main p {
+  margin: 0;
+}
