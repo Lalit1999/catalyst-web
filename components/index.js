@@ -21,7 +21,5 @@ import Slider from './slider/Slider.js' ;
 import Text from './formelements/Text.js' ;
 import Title from './title/Title.js' ;
 import ToolTip from './toolTip/ToolTip.js' ;
-import Viewer from './editor/Viewer.js' ;
-import Editor from './editor/Editor.js' ;
 
-export { AnimProgBar, BasicForm, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip, Viewer, Editor } ;
+export { AnimProgBar, BasicForm, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip } ;

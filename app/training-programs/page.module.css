@@ -1,14 +1,101 @@
-
-/* Main layout */
-.main {
+.programsMain {
   display: flex;
   flex-direction: column;
-  color: var(--black);
-  /* padding: 0 4em; */
-  gap: 3em ;
-  min-height: 20vw;
+  gap: 4em;
 }
 
-.main p {
-  margin: 0;
+.programsMain p {
+	margin: 0;
+}
+
+/* home slider  */
+.homeSlider {
+  display: flex;
+  position: relative;
+  height: 25vw;
+  overflow: hidden;
+  margin: 0 -4em ;
+}
+
+.homeSliderText {
+	position: absolute ;
+	top: 50% ;
+	left: 50% ;
+	transform: translate(-50%, -50%) ;
+	color: var(--white) ;
+	font-size: 2rem ;
+	font-weight: 600 ;
+	text-align: center ;
+	width: max-content;
+}
+/* home slider ends */
+
+.coursesComp {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+}
+
+.coursesOne {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 600px;
+  text-align: center;
+}
+
+.subHead {
+  font-size: .8rem;
+  color: var(--third);
+  font-weight: 500;
+}
+
+.mainHead {
+  font-size: 2.5rem;
+  color: var(--second);
+  font-weight: 600;
+}
+
+.subDescr {
+  font-size: 1rem;
+  color: var(--medGray);
+  font-weight: 500;
+}
+
+.coursesTwo {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.courseCard {
+  display: flex;
+  gap: 1em;
+  width: 45%;
+}
+
+.courseCardImageCon {
+  display: flex;
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 1500px) {
+  	.programsMain {
+      padding: 0 10em;
+      gap: 4em;
+  	}
+
+  	.homeSlider  {
+      margin: 0 -14em ;
+    }
+}
+
+@media (max-width: 600px) {
+  .programsMain {
+    gap: 2em;
+  }
 }
