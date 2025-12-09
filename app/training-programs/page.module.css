@@ -68,20 +68,618 @@
   gap: 2em;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .courseCard {
   display: flex;
   gap: 1em;
-  width: 45%;
+  width: 48%;
+  border: 1px solid var(--medGray);
+  border-radius: 1.5rem;
+  padding: 1em;
 }
 
 .courseCardImageCon {
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 45%;
   position: relative;
   overflow: hidden;
 }
+
+.courseCardImageCon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.courseCardDetailsCon {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-basis: 50%;
+}
+
+.cardHead p {
+  font-size: 1.2rem;
+  color: var(--second);
+  font-weight: 600;
+}
+
+.cardIconCon {
+  display: flex;
+  gap: 1em;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.cardIcon svg {
+  width: 20px;
+  height: 20px;
+  color : var(--medGray)
+}
+
+.cardIcon p {
+  font-size: .8rem;
+  color: var(--medGray);
+  font-weight: 500;
+}
+
+.cardIconBar {
+  width: 2px;
+  height: 20px;
+  background-color: var(--medGray);
+}
+
+.cardText p {
+  font-size: .9rem;
+  color: var(--medGray);
+}
+
+.cardBtnCon {
+  display: flex;
+  gap: 1em;
+}
+
+.cardBtnFirst {
+  padding: .5em 1em;
+  border: 1px solid var(--main);
+  border-radius: 8px;
+  background-color: var(--main);
+  color: var(--white);
+  font-size: .8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ;
+}
+
+.cardBtnFirst:hover {
+  background-color: var(--white);
+  color: var(--main);
+
+}
+
+.cardBtnSecond {
+  padding: .5em 1em;
+  border: 1px solid var(--main);
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--main);
+  font-size: .8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ;
+}
+
+.cardBtnSecond:hover {
+  background-color: var(--main);
+  color: var(--white);
+}
+
+/* section four */
+.sectionFourMain {
+	display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  gap: 3em ;
+  margin: 0 -4em ;
+  padding: 4em  4em ;
+}
+
+.sectionFourMainFirst {
+  display: flex;
+}
+
+.fourFirst {
+	flex-basis: 60% ;
+	display: flex ;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	gap: 1em ;
+}
+
+.fourSubHeading {
+	font-size: .9rem ;
+	color: var(--third) ;
+	text-transform: uppercase ;
+	font-weight: 600 ;
+}
+
+.fourHeadingCon {
+	display: flex ;
+	flex-direction: column ;
+	width: 70%;
+	gap: 1em ;
+}
+
+.fourHeading {
+	font-size: 2.5rem ;
+	font-weight: 600 ;
+	color: var(--second) ;
+}
+
+.fourDescr {
+	color: var(--medGray) ;
+	font-size: 1rem ;
+	line-height: 1.6rem ;
+}
+
+.fourInfoCon {
+	display: flex ;
+	flex-direction: column;
+	gap: 1.5em ;
+	padding: 2em 0;
+}
+
+.fourInfoBox {
+	display: flex ;
+	align-items: center;
+	gap: 1em ;
+}
+
+.fourInfoIcon {
+	display: flex ;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--main);
+	border-radius: 50% ;
+	height: 48px;
+	width: 48px;
+}
+
+.fourInfoIcon svg {
+	width: 24px ;
+	height: 24px;
+	color: var(--white);
+}
+
+.fourInfoTextCon {
+	display: flex ;
+	flex-direction: column ;
+	gap: .5em ;
+}
+
+.fourInfoTextHead {
+	font-size: 1.3rem ;
+	font-weight: 600 ;
+	color: var(--second) ;
+}
+
+.fourInfoText {
+	color: var(--secondHalf) ;
+	font-size: .9rem ;
+	line-height: 1.4rem ;
+}
+
+.fourButton {
+	font-size: .9rem ;
+	color: var(--white) ;
+	background-color: var(--main) ;
+	padding: .5em 2.5em ;
+	border: 1px solid var(--main) ;
+	transition: all .3s ;
+}
+
+.fourButton:hover {
+	background-color: var(--white) ;
+	border: 1px solid var(--main) ;
+	color: var(--main);
+}
+
+.fourSecond {
+	flex-basis: 40% ;
+	display: flex ;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center ;
+}
+
+.fourImageCon {
+	display: flex;
+  position: relative;
+  width: 40vw;
+	height: 25vw;
+ 	overflow: hidden;
+}
+
+.fourImageCon img {
+  width: 100% ;
+  height: 100% ;
+  object-fit: cover ;
+  object-position: center;
+}
+
+.sectionFourMainSecond {
+  display: flex ;
+  justify-content: center ;
+}
+
+.fourStatBox {
+  display: flex;
+  gap: 1em ;
+  flex-basis: 45%;
+}
+
+.statsCircleCon {
+  --percent: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  flex-shrink: 0;
+  background: conic-gradient(
+    var(--main) calc(var(--percent) * 1%),
+    var(--white) 0
+  );
+}
+
+.statsCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+}
+
+.statsCircle p {
+  font-size: 1.5rem ;
+  color: var(--main) ;
+  font-weight: 600 ;  
+}
+
+.statsTextCon {
+  display: flex ;
+  flex-direction: column ;
+  justify-content: center ;
+  gap: .5em ;
+}
+
+.statsTextCon p {
+  font-size: .9rem ;
+  font-weight: 500;
+}
+
+.statsTextList {
+  display: flex;
+  flex-direction: column;
+  gap: 1em ;
+}
+
+.statsTextList li span {
+  color: var(--main) ;
+  font-weight: 600 ;
+}
+/* section four ends */
+
+/* awards start */
+.awardsMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.awardsTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.awardsTopLeft {
+  display: flex;
+  flex-direction: column;
+  gap: .5em ;
+}
+
+.awardsTopCenter {
+  width: 40%;
+}
+
+.subDescr2 {
+  font-size: .9rem;
+  color: var(--medGray);
+}
+
+.awardsTopBtn {
+  display: flex;
+  font-size: .9rem ;
+  gap: 1em ;
+  align-items: center;
+}
+
+.awardsTopBtn svg {
+  width: 16px ;
+  height: 16px ;
+}
+
+.awardsBottom {
+  display: flex;
+  gap: 2em;
+}
+
+.awardsBottomLeft {
+  display: flex;
+  flex-basis: 30%;
+  position: relative;
+  overflow: hidden;
+}
+
+.awardsBottomLeft img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.awardsBottomRight {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em ;
+  border-top: 1px solid var(--lightGray);
+}
+
+.awardDetail {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: .5em ;
+  padding: 1em ;
+}
+
+.awardHeadCon {
+  display: flex;
+  align-items: center;
+  gap: .5em ;
+  justify-content: space-between;
+}
+
+.awardHead {
+  font-size: 1.2rem ;
+  color: var(--second) ;
+  font-weight: 600 ;
+}
+
+.awardYear {
+  font-size: .9rem ;
+  color: var(--second) ;
+  font-weight: 600 ;
+}
+
+.awardSubHead {
+  font-size: 1rem ;
+  color: var(--medGray) ;
+  font-weight: 500 ;
+}
+
+.awardDescr {
+  font-size: .9rem ;
+  color: var(--medGray) ;
+}
+/* awards ends */
+
+/* Placements start*/
+
+.placementsMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  background-color: var(--bg);
+  margin: 0 -4em ;
+  padding: 4em ;
+}
+
+.placementsHead {
+  display: flex;
+  flex-direction: column;
+  gap: .5em ;
+  text-align: center ;
+}
+
+.placementsLogosCon {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.placementLogo {
+  display: flex;
+  flex-basis: 20%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.placementLogo img {
+  width: 50% ;
+  height: 50% ;
+  object-fit: cover ;
+  object-position: center;
+}
+/* Placements ends */
+
+/* Event Start */
+.eventMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2em ;
+}
+
+.eventHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eventHeadText {
+  display: flex;
+  flex-direction: column;
+  width: 70% ;
+  gap: .5em ;
+}
+
+.eventHeadLink {
+  display: flex;
+  align-self: flex-end;
+}
+
+.eventLink {
+  display: flex;
+  align-items: center;
+  gap: 1em ;
+  font-size: .9rem;
+  border: 1px solid var(--second);
+  color: var(--white);
+  background-color: var(--second);
+  padding: .5em 1em ;
+  border-radius: 8px;
+  transition: all 0.3s ;
+}
+
+.eventLink:hover {
+  background-color: var(--white);
+  color: var(--second);
+}
+
+.eventLink svg {
+  width: 16px ;
+  height: 16px ;
+}
+
+.eventCardCon {
+  display: flex;
+  gap: 2em ;
+  justify-content: center;
+}
+
+.eventCard {
+  flex-basis: 30%;
+  gap: 2em ;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--lightGray) ;
+  border-radius: 1rem  ;
+  padding: 1em ;
+}
+
+.eventCardImageCon {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventCardImageCon img {
+  width: 100% ;
+  height: 100% ;
+  object-fit: cover ;
+  object-position: center;
+}
+
+.eventDate {
+  position: absolute ;
+  bottom: 30px ;
+  left: 30px ;
+  background-color: var(--white) ;
+  color: var(--second) ;
+  padding: .3em .6em ;
+  border-radius: 8px ;
+  font-size: .8rem ;
+}
+
+.eventCardTextCon {
+  display: flex ;
+  flex-direction: column ;
+  gap: 1em ;
+}
+
+.eventCardTitle {
+  font-size: 1.2rem ;
+  color: var(--second) ;
+  font-weight: 600 ;
+}
+
+.eventCardDetails {
+  display: flex ;
+  align-items: center ;
+  gap: 1em ;
+}
+
+.eventCardDetails svg {
+  width: 16px ;
+  height: 16px ;
+  color: var(--medGray) ;
+}
+
+.eventCardDetails p {
+  font-size: .9rem ;
+  color: var(--medGray) ;
+}
+
+.eventCardBtn {
+  display: flex;
+}
+
+.eventCardBtnLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em ;
+  font-size: .9rem ;
+  color: var(--white) ;
+  background-color: var(--second) ;
+  padding: .5em 1.5em ;
+  border: 1px solid var(--second) ;
+  border-radius: 8px ;
+  cursor: pointer ;
+  transition: all 0.3s ;
+  width: 100%;
+}
+
+.eventCardBtnLink:hover {
+  background-color: var(--white) ;
+  color: var(--second) ;
+}
+
+.eventCardBtnLink svg {
+  width: 16px ;
+  height: 16px ;
+}
+/* Event End */
 
 @media (min-width: 1500px) {
   	.programsMain {
@@ -92,6 +690,11 @@
   	.homeSlider  {
       margin: 0 -14em ;
     }
+
+    .sectionFourMain, .placementsMain {
+      margin: 0 -14em ;
+      padding: 4em  14em ;
+  }
 }
 
 @media (max-width: 600px) {

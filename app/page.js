@@ -122,8 +122,8 @@ const SectionTwo = () => {
   return(
     <div className={styles.sectionTwo}>
         <div className={styles.sectionTwoHeadCon}>
-			<p className={styles.sectionSubTitle}>Focus Area</p>
-			<p className={styles.sectionHeading}>Our Practice Areas</p>
+			<p className={styles.fourSubHeading}>Focus Area</p>
+			<p className={styles.fourHeading}>Our Practice Areas</p>
 			<p className={styles.sectionDescr}>The healthcare arena there was a felt need of developing new as well as upgrading the existing functioning and processes.</p>
         </div>
         <div className={styles.sectionTwoBoxesCon}>
