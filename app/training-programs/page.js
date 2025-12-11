@@ -113,7 +113,7 @@ const Card = () => {
                     <p>Its done really well. Perfect for my brain in the way it learns. Lectures are great and the great</p>
                 </div>
                 <div className={styles.cardBtnCon}>
-                    <button className={styles.cardBtnFirst}>View Details</button>
+                    <Link href={`/training-programs/${123}`} className={styles.cardBtnFirst}>View Details</Link>
                     <button className={styles.cardBtnSecond}>Register Now</button>
                 </div>
             </div>

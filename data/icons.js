@@ -46,5 +46,6 @@ import Expertise from '../public/icons/expertise.svg' ;
 import MultiLocation from '../public/icons/multiLocation.svg' ;
 import Partners from '../public/icons/partners.svg' ;
 import Patients from '../public/icons/patients.svg' ;
+import Principal from '../public/icons/principal.svg' ;
 
-export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients, Clock, History2, MapBold, Tick, Menu, User } ;
+export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients, Clock, History2, MapBold, Tick, Menu, User, Principal } ;

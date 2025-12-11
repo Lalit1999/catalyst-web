@@ -31,10 +31,11 @@ import dummyLogo from '@p/dummyLogo.png' ;
 import event1 from '@p/event1.png' ;
 import event2 from '@p/event2.png' ;
 import event3 from '@p/event3.png' ;
+import course from '@p/course.png' ;
 
 /* Being used in CSS, not directly */
 
 import portfolioBgLight from '@p/portfolio-bg-light.png' ;
 
 export {
-  def, myarth,  blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo, homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3, expertiseBg, cardImage, pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3};
+  def, myarth,  blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo, homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3, expertiseBg, cardImage, pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, course};
