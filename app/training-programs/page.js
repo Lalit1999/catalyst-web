@@ -277,7 +277,8 @@ const Event = () => {
                                     </div>
                                 </div>
                                 <div className={styles.eventCardBtn}>
-                                    <Link href={`/events/${one.id}`} className={styles.eventCardBtnLink}>Event Details <ArrowLong /></Link>
+                                    <Link href="/" className={styles.eventCardBtnLink}>Event Details <ArrowLong /></Link>
+                                    {/* <Link href={`/events/${one.id}`} className={styles.eventCardBtnLink}>Event Details <ArrowLong /></Link> */}
                                 </div>
                             </div>
                         ) ;
