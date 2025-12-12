@@ -1,8 +1,7 @@
 .courseMain {
     display: flex;
     flex-direction: column;
-    gap: 2em ;
-    
+    gap: 2em ;    
 }
 
 .courseMain p {
@@ -126,14 +125,13 @@
     flex-basis: 75%;
     display: flex;
     flex-direction: column;
-    gap : 1em ;
+    gap : 3em ;
 }
 
 .descrCon {
     display: flex;
     flex-direction: column;
-    text-align: justify;
-    gap: 1em ;
+    gap: 2em ;
 }
 
 .descrHead {
@@ -167,6 +165,124 @@
     color: var(--main) ;
 }
 
+.whyChooseCon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em ;
+}
+
+.whyChooseOne {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: .5em ;
+    flex-basis: 30% ;
+    border: 1px solid var(--lightGray) ;
+    border-radius: 1.2rem;
+    padding: 1em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.whyChooseOne svg {
+    width: 48px;
+    height: 48px;
+    color: var(--medGray) ;
+}
+
+.whyChooseHead {
+    font-size: 1.2rem ;
+    font-weight: 600 ;
+}
+
+.whyChooseText {
+    font-size: .9rem ;
+    color: var(--medGray) ;
+}
+
+.brochureBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.2rem;
+    padding: 1em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.brochureTextCon {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.brochureHead {
+    font-size: 1.2rem ;
+    font-weight: 600 ;
+    color: var(--main);
+}
+
+.brochureText {
+    font-size: .9rem ;
+    color: var(--medGray) ;
+}
+
+.brochureLink {
+    font-size: .9rem ;
+    color: var(--white) ;
+    font-weight: 600 ;
+    border: 1px solid var(--main) ;
+    background-color: var(--main);
+    padding: 0.5em 1em ;
+    border-radius: 5px ;
+    width: max-content ;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.brochureLink:hover {
+    background-color: var(--white) ;
+    color: var(--main) ;
+    border: 1px solid var(--main) ;
+}
+
+.brochureIcon {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.brochureIcon svg {
+    width: 150px;
+    height: 150px;
+    color: var(--medGray);
+}
+
+.reqCon {
+    display: flex;
+    flex-direction: column;
+    gap: 1em ;
+}
+
+.reqOne {
+    display: flex;
+    align-items: center;
+    gap: 1em ;
+}
+
+.reqOne svg {
+    width: 20px;
+    height: 20px;
+    color: var(--main) ;
+}
+
+.reqOne p {
+    font-size: .9rem ;
+    color: var(--medGray) ;
+}
+
 .detailsRight {
     flex-basis: 25%;
     display: flex;
@@ -176,6 +292,7 @@
     border-radius: 1.2rem;
     padding: 1em 1em 0 1em ;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: fit-content;
 }
 
 .priceBox {
@@ -393,4 +510,74 @@
 .contactBtn svg {
     width: 20px;
     height: 20px;
+}
+
+.courseDetailBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2em ;
+    width: 100% ;
+}
+
+.testimonialsCon {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em ;
+    padding-bottom: 2em ;
+}
+
+.testimonialOne {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--lightGray) ;
+    border-radius: 1rem;
+    gap: 2em ;
+    padding: 1em ;
+}
+
+.testimonialOne svg {
+    width: 30px;
+    height: 30px;
+}
+
+.testimonialFeedback {
+    font-size: .7rem ;
+    color: var(--medGray) ;
+    line-height: 1.2rem ;
+    margin: 1em 0 ;
+    flex-grow: 1 ;
+}
+
+.testimonialNameCon {
+    display: flex;
+    align-items: center;
+    gap: 1em ;
+}
+
+.testimonialNameCircle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50% ;
+    background-color: var(--lightGray) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600 ;
+    font-size: .9rem;
+}
+
+.testimonialName {
+    font-size: .8rem ;
+    font-weight: 600 ;
+    color: var(--main) ;
+}
+
+.relatedCoursesCon {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }

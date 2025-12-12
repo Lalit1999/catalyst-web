@@ -1,5 +1,6 @@
 import AnimProgBar from './animprogbar/AnimProgBar.js';
 import BasicForm from './basicform/BasicForm.js' ;
+import Card from './card/Card.js' ;
 import ContactBtn from './contact/ContactBtn.js' ;
 import ContactForm from './contact/ContactForm.js' ;
 import CountUp from './countup/CountUp.js';
@@ -22,4 +23,4 @@ import Text from './formelements/Text.js' ;
 import Title from './title/Title.js' ;
 import ToolTip from './toolTip/ToolTip.js' ;
 
-export { AnimProgBar, BasicForm, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip } ;
+export { AnimProgBar, BasicForm, Card, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip } ;

@@ -47,5 +47,10 @@ import MultiLocation from '../public/icons/multiLocation.svg' ;
 import Partners from '../public/icons/partners.svg' ;
 import Patients from '../public/icons/patients.svg' ;
 import Principal from '../public/icons/principal.svg' ;
+import ActivityLine from '../public/icons/activityLine.svg' ;
+import Prog from '../public/icons/prog.svg' ;
+import StarLine from '../public/icons/starLine.svg' ;
+import Doc from '../public/icons/doc.svg' ;
+import Quote from '../public/icons/quote.svg' ;
 
-export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients, Clock, History2, MapBold, Tick, Menu, User, Principal } ;
+export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients, Clock, History2, MapBold, Tick, Menu, User, Principal, ActivityLine, Prog, StarLine, Doc, Quote } ;
