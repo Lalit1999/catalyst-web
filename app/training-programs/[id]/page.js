@@ -1,11 +1,11 @@
 'use client'
-
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { pragramBanner, course } from "@images";
 import { Card } from '@comps' ;
-import { Call2, Whatsapp, Tick, Clock, Menu, Person, Website, Principal, Facebook, Twitter, Instagram, Li, ActivityLine, Prog, StarLine, Doc, Quote } from "@icons";
+import { Call2, Whatsapp, Tick, Clock, Menu, Person, Website, Principal, Facebook, Twitter, Instagram, Li, ActivityLine, Prog, StarLine, Doc, Quote, Arrow } from "@icons";
 import styles from './page.module.css';
 
 const learnArr = [
@@ -124,6 +124,37 @@ const includesArr = [
     }
 ] ;
 
+const courseDetail = [
+    {
+        title: 'Advanced Clinical Research Program',
+        descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
+        duration: '5 weeks',
+        chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
+        skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
+    },
+    {
+        title: 'Advanced Clinical Research Program',
+        descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
+        duration: '5 weeks',
+        chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
+        skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
+    },
+    {
+        title: 'Advanced Clinical Research Program',
+        descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
+        duration: '5 weeks',
+        chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
+        skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
+    }, 
+    {
+        title: 'Advanced Clinical Research Program',
+        descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
+        duration: '5 weeks',
+        chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
+        skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
+    }
+] ;
+
 const HomeSlider = () => {
     return (
         <div className={styles.homeSlider}>
@@ -212,11 +243,66 @@ const BrouchureBox = () => {
     ) ;
 }
 
+const SectionCon = ({one}) => {
+
+    const [open, setOpen] = useState(false) ;
+
+    return (
+        <div className={styles.courseDetailOne} >
+            <div className={styles.courseDetailTop}>
+                <div className={styles.courseDetailLeft}>
+                    <p className={styles.courseDetailTitle}>{one.title}</p>
+                    <div className={`${open ? styles.openArrowConOpen : styles.openArrowConClose}`} onClick={()=>setOpen(!open)}>
+                        <Arrow />
+                    </div>
+                </div>
+                <div>
+                    <p className={styles.courseDetailDuration}>{one.duration}</p>
+                </div>
+            </div>
+            <div className={`${styles.courseDetailDescr} ${open ? '' : styles.hidden}`}>
+                <div className={styles.courseDetailDescrChild}>
+                    <p className={styles.courseDetailDescrHead}>Topic Covered</p>
+                    <div className={styles.courseDetailDescrContent}>
+                    {
+                        one.chapters.map((chapter,j) => {
+                            return (
+                                <p className={styles.courseDetailDescrPoint} key={j}><Tick />{chapter}</p>
+                            ) ;
+                        })
+                    }
+                    </div>
+                </div>
+                <div className={styles.courseDetailDescrChild}>
+                    <p className={styles.courseDetailDescrHead}>Skills Acquired</p>
+                    <div className={styles.courseDetailDescrContent2}>
+                    {
+                        one.skills.map((skill,k) => {
+                            return (
+                                <p className={styles.courseDetailDescrPoint2} key={k}>{skill}</p>
+                            ) ;
+                        })
+                    }
+                    </div>
+                </div>
+            </div> 
+        </div>
+    )
+}
+
 const CourseDetailSection = () => {
     return (
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>Course Details</p>
-            <p className={styles.descrText}>This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you'll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you'll have the confidence to build complex React applications from scratch.</p>
+            <div className={styles.CourseSectionMain}>
+            {
+                courseDetail.map((one,i) => {
+                    return (
+                        <SectionCon one={one} key={i} />
+                    );
+                })
+            }
+            </div>
         </div>
     ) ;
 }

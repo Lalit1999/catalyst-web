@@ -283,6 +283,147 @@
     color: var(--medGray) ;
 }
 
+.CourseSectionMain {
+    display: flex;
+    flex-direction: column;
+    padding: 1em ;
+    background-color: var(--bg);
+    border-radius: 1rem ;
+    gap: 1em ;
+}
+
+.courseDetailOne {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 1rem ;
+    gap: .5em ;
+}
+
+.courseDetailTop {
+    display: flex;
+    flex-direction: column;
+    gap: .5em ;
+    padding: 1em ;
+}
+
+.courseDetailLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em ;
+}
+
+.courseDetailTitle {
+    font-size: 1.1rem ;
+    font-weight: 600 ;
+}
+
+.courseDetailTitle span {
+    font-weight: 500 ;
+    font-size: 1rem ;
+}
+
+.openArrowConOpen, .openArrowConClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3em ;
+    background-color: var(--thodaMain);
+    border-radius: 50% ;
+}
+
+.openArrowConOpen svg {
+    width: 24px;
+    height: 24px;
+    color: var(--medGray) ;
+    rotate: 270deg ;
+    cursor: pointer;
+}
+
+.openArrowConClose svg {
+    width: 24px;
+    height: 24px;
+    color: var(--medGray) ;
+    cursor: pointer;
+    rotate: 90deg ;
+}
+
+.courseDetailDuration {
+    font-size: .9rem ;
+    color: var(--medGray) ;
+}
+
+.courseDetailDescr {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1em;
+    border-top: 1px solid var(--lightGray);
+    overflow: hidden;
+    max-height: 1200px; /* large enough to contain content */
+    opacity: 1;
+    transform: translateY(0);
+    transition: max-height 350ms ease, opacity 250ms ease, transform 300ms ease, padding 300ms ease;
+}
+
+.hidden {
+    /* animated collapse instead of display:none */
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    overflow: hidden;
+    border-top: 0;
+}
+
+.courseDetailDescrChild {
+    flex-basis: 48% ;
+    display: flex;
+    flex-direction: column;
+    gap: 1em ;
+}
+
+.courseDetailDescrHead {
+    font-size: 1rem ;
+    font-weight: 600 ;
+}
+
+.courseDetailDescrContent {
+    display: flex;
+    flex-direction: column;
+    gap: .5em ;
+}
+
+.courseDetailDescrPoint {
+    display: flex;
+    font-size: .9rem ;
+    color: var(--medGray) ;
+    align-items: center;
+    gap: 1em ;
+}
+
+.courseDetailDescrPoint svg {
+    width: 16px;
+    height: 16px;
+    color: var(--medGray) ;
+}
+
+.courseDetailDescrContent2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em ;
+}
+
+.courseDetailDescrPoint2 {
+    font-size: .8rem ;
+    border: 1px solid var(--lightGray) ;
+    border-radius: 8px ;
+    padding: .2em .8em ;
+    background-color: var(--lightGray);
+}
+
 .detailsRight {
     flex-basis: 25%;
     display: flex;
