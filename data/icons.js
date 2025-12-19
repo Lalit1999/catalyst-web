@@ -52,5 +52,10 @@ import Prog from '../public/icons/prog.svg' ;
 import StarLine from '../public/icons/starLine.svg' ;
 import Doc from '../public/icons/doc.svg' ;
 import Quote from '../public/icons/quote.svg' ;
-
-export { Arrow, ArrowLong, Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients, Clock, History2, MapBold, Tick, Menu, User, Principal, ActivityLine, Prog, StarLine, Doc, Quote } ;
+import D1 from '../public/icons/d11.svg'
+import C1 from '../public/icons/c11.svg'
+import H1 from '../public/icons/h11.svg'
+import N1 from '../public/icons/n11.svg'
+import O1 from '../public/icons/o11.svg'
+import P1 from '../public/icons/p11.svg'
+export { Arrow, ArrowLong, D1,C1,H1,N1,O1,P1,Back, Call2, Chat, Close, Contact, Email, Eye, Facebook, Google, GPS, Graph, HamburgerMenu, Home, Home2, Instagram, Job, Li, LineArrowBoth, LineArrowDown, LineArrowUp, Linkedin, Location, Lock, Logout, Minus, Person, Plus, Search, School, Twitter, Website, Whatsapp, Youtube, Brush, Palette, Expertise, MultiLocation, Partners, Patients, Clock, History2, MapBold, Tick, Menu, User, Principal, ActivityLine, Prog, StarLine, Doc, Quote } ;

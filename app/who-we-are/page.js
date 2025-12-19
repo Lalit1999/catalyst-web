@@ -3,8 +3,10 @@ import styles from './page.module.css';
 
 export default function WhoWeAre() {
   return (
+    <>
     <main className={styles.main}>
-      This is who we are page
+      	<div className={styles.downbarTop}>
+			</div>
     </main>
-  );
+  </>);
 }

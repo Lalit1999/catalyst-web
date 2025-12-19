@@ -372,6 +372,7 @@ svg {
   flex-grow: 1 ;
   overflow-y: scroll ;
   padding: 0 4em ;
+  overflow-x: hidden;
 }
 
 .body-no-scroll {

@@ -37,5 +37,14 @@ import course from '@p/course.png' ;
 
 import portfolioBgLight from '@p/portfolio-bg-light.png' ;
 
+// services
+import DentalClinic from '@p/services/DentalClinic.png'
+import Cardiomyopathy from "@p/services/Cardiomyopathy.png"
+import Hematology from '@p/services/Hematology.png'
+import Neurology from '@p/services/Neurology.png'
+import Orthopedics from '@p/services/Orthopedics.png'
+import Pharmacology from '@p/services/Pharmacology.png'
+// services icon
+
 export {
-  def, myarth,  blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo, homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3, expertiseBg, cardImage, pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, course};
+  def, myarth,DentalClinic,Cardiomyopathy,Hematology,Neurology,Orthopedics,Pharmacology ,blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo, homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3, expertiseBg, cardImage, pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, course};
