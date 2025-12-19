@@ -1,16 +1,16 @@
 
-import { self1, blog2 } from '@images';
+import { about1, about2 } from '@images';
 
 const data = [
   {
     title: 'The Power of Creativity: How Art Inspires Change',
     slug: 'the-power-of-creativity-how-art-inspires-change',
     subtitle: 'Explore how art and creativity have shaped societies, inspired individuals, and sparked movements throughout history.',
-    image: blog2,
+    image: about2,
     // image: 'https://fastly.picsum.photos/id/1011/1500/1000.jpg?hmac=Q1w8Qw1w8Qw1w8Qw1w8Qw1w8Qw1w8Qw1w8Qw1w8Qw1w',
     publishDate: '2025-04-10T00:00:00.000Z',
     authorName: 'Moni Kumari',
-    authorImage: self1,
+    authorImage: about1,
     authorProfile: 'https://brushroute.com/blogs',
   content: '<h2><strong>The Power of Creativity</strong></h2><p>Art has always been a driving force for change, giving voice to new ideas and challenging the status quo. From the cave paintings of early humans to the digital masterpieces of today, creativity has shaped the way we see the world. The creative process is not just about making something beautiful; it is about expressing thoughts, emotions, and ideas that can influence others and even change the course of history.</p><p>Throughout history, artists have inspired revolutions, brought communities together, and helped us process complex emotions. Whether through painting, music, sculpture, or dance, art has the power to move us and ignite our imagination. The Renaissance, for example, was a period of immense creativity that led to advancements in science, philosophy, and the arts. Artists like Leonardo da Vinci and Michelangelo not only created masterpieces but also pushed the boundaries of what was possible in their time.</p><p>Art is also a reflection of society. It captures the spirit of the times and provides a window into the hopes, fears, and dreams of people from different eras. In times of turmoil, art has served as a form of protest and resistance. During the civil rights movement, artists used their work to highlight injustice and inspire hope. Graffiti and street art have become powerful tools for marginalized communities to make their voices heard.</p><p>But creativity is not limited to the great masters or to moments of crisis. Everyday acts of creativity, from doodling in a notebook to designing a new recipe, contribute to the richness of our lives. Creativity helps us solve problems, adapt to change, and see the world from new perspectives. It encourages us to take risks, embrace uncertainty, and find joy in the process of making something new.</p><hr><h3><strong>Art as a Catalyst for Social Change</strong></h3><p>Many social movements have used art to communicate their message and inspire action. Murals, posters, and performances have all played a role in raising awareness and uniting people for a cause. The AIDS Memorial Quilt, for example, is a powerful work of collective art that honors those lost to the epidemic and brings attention to the ongoing fight against HIV/AIDS. Similarly, music has been a unifying force in movements for peace and justice around the world.</p><p>By expressing what words sometimes cannot, art continues to be a powerful tool for change in our world. It can challenge our assumptions, open our minds, and inspire us to imagine a better future. Whether in a gallery, on a city wall, or in the privacy of our own homes, art invites us to connect with ourselves and with others in meaningful ways. The power of creativity lies in its ability to transform not only the world around us but also the way we see ourselves and our place in it.</p>'
   },
@@ -18,11 +18,11 @@ const data = [
     title: 'Unlocking Your Inner Artist: Tips for Everyday Creativity',
     slug: 'unlocking-your-inner-artist-tips-for-everyday-creativity',
     subtitle: 'Simple ways to bring more creativity into your daily life, no matter your skill level.',
-    image: blog2,
+    image: about2,
     // image: 'https://fastly.picsum.photos/id/1025/1500/1000.jpg?hmac=Q2w8Qw2w8Qw2w8Qw2w8Qw2w8Qw2w8Qw2w8Qw2w8Qw2w',
     publishDate: '2025-04-12T00:00:00.000Z',
     authorName: 'Moni Kumari',
-    authorImage: self1,
+    authorImage: about1,
     authorProfile: 'https://brushroute.com/blogs',
   content: '<h2><strong>Unlocking Your Inner Artist</strong></h2><p>Everyone has the potential to be creative. You don’t need to be a professional painter or musician to enjoy the benefits of artistic expression. Creativity is a skill that can be nurtured and developed, no matter your background or experience. In fact, some of the most innovative ideas come from people who are willing to experiment and try new things without worrying about the outcome.</p><p>One of the best ways to unlock your inner artist is to give yourself permission to play. Set aside time each day or week to explore different forms of art, whether it’s drawing, painting, photography, or even cooking. The key is to approach these activities with curiosity and an open mind. Don’t be afraid to make mistakes or create something imperfect—often, the most interesting work comes from happy accidents and unexpected discoveries.</p><ul><li>Try a new art form, like sketching, photography, or collage. Experimenting with different mediums can help you find what resonates with you and spark new ideas.</li><li>Keep a journal to jot down ideas, doodles, or poems. Journaling is a great way to capture fleeting thoughts and inspirations that might otherwise be forgotten.</li><li>Visit a local gallery or museum for inspiration. Seeing the work of other artists can motivate you to try new techniques and push your own boundaries.</li><li>Collaborate with friends on creative projects. Working with others can introduce you to new perspectives and make the creative process more enjoyable.</li><li>Take a walk in nature and observe the colors, shapes, and patterns around you. Nature is a constant source of inspiration for artists of all kinds.</li><li>Set small, achievable goals for your creative practice. For example, challenge yourself to draw something every day for a month or write a short poem each week.</li></ul><p>Remember, creativity is about the process, not the result. The act of making art can be meditative and fulfilling, even if you never share your work with anyone else. Over time, you may find that your confidence grows and your skills improve, but the most important thing is to enjoy the journey. Embrace your unique perspective and let your imagination guide you. The world needs your creativity!</p>'
   },
@@ -30,11 +30,11 @@ const data = [
     title: 'The Healing Power of Art: How Creativity Supports Wellbeing',
     slug: 'the-healing-power-of-art-how-creativity-supports-wellbeing',
     subtitle: 'Discover how engaging in creative activities can improve mental health and overall happiness.',
-    image: blog2,
+    image: about2,
     // image: 'https://fastly.picsum.photos/id/1035/1500/1000.jpg?hmac=Q3w8Qw3w8Qw3w8Qw3w8Qw3w8Qw3w8Qw3w8Qw3w8Qw3w',
     publishDate: '2025-04-15T00:00:00.000Z',
     authorName: 'Moni Kumari',
-    authorImage: self1,
+    authorImage: about1,
     authorProfile: 'https://brushroute.com/blogs',
   content: '<h2><strong>The Healing Power of Art</strong></h2><p>Engaging in creative activities like painting, writing, or playing music can have a profound impact on our wellbeing. Studies show that making art reduces stress, boosts mood, and helps us process emotions. The act of creating allows us to express feelings that may be difficult to put into words, providing a healthy outlet for stress and anxiety.</p><p>Art therapy is used around the world to support mental health, offering a safe space for self-expression and healing. In art therapy sessions, individuals are encouraged to explore their thoughts and emotions through various artistic mediums, such as drawing, sculpture, or collage. This process can help people gain insight into their experiences, build self-esteem, and develop coping skills.</p><p>But you don’t need to attend formal therapy to experience the healing benefits of art. Simply taking time to create something—whether it’s a quick sketch, a handmade card, or a song—can help you relax and reconnect with yourself. Many people find that engaging in creative hobbies provides a sense of accomplishment and purpose, which can be especially important during challenging times.</p><p>Art also has the power to bring people together. Community art projects, group workshops, and collaborative murals foster a sense of belonging and connection. Sharing your work with others, even in informal settings, can lead to meaningful conversations and new friendships. In this way, art not only supports individual wellbeing but also strengthens the fabric of our communities.</p><p>Whether you’re creating or simply enjoying art, it can be a powerful tool for personal growth and happiness. Next time you’re feeling overwhelmed or in need of inspiration, try picking up a paintbrush, writing a poem, or listening to your favorite music. You might be surprised by how much better you feel.</p>'
   }

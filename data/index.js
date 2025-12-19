@@ -1,3 +1,4 @@
 import blogData from './blogData.js';
+import homePageData from './appData.js';
 
-export { blogData } ;
+export { blogData, homePageData }; ;
