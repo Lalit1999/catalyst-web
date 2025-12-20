@@ -6,7 +6,7 @@ import ContextWrapper from './ContextWrapper.js' ;
 import './globals.css' ;
 import './tiptap.css' ;
 
-import { Lexend, Poppins } from "next/font/google";
+import { Inter, Lexend, Poppins } from "next/font/google";
   
 const poppins = Poppins({
     subsets: ["latin"],
@@ -17,7 +17,10 @@ const lexend = Lexend({
   display: 'swap',
   variable: '--font-lexend', // Define a CSS variable
 })
-
+const inter = Inter({
+    subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+})
 export const metadata = {
     title: "Catalyst Clinical Services",
     description: "Web App created by Myarth Tech ( https://myarth.in )",
@@ -26,7 +29,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`body ${poppins.className} ${lexend.variable}`}>
+            <body className={`body ${poppins.className} ${lexend.variable} ${inter.variable}`}>
                 <ContextWrapper>{children}</ContextWrapper>
                 {/* <ToastContainer /> */}
             </body>
