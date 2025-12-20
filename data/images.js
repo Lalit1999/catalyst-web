@@ -45,6 +45,13 @@ import Neurology from '@p/services/Neurology.png'
 import Orthopedics from '@p/services/Orthopedics.png'
 import Pharmacology from '@p/services/Pharmacology.png'
 // services icon
-
+import d1 from '@p/services/d1.png'
+import c1 from '@p/services/c1.png'
+import h1 from '@p/services/h1.png'
+import n1 from '@p/services/n1.png'
+import o1 from '@p/services/o1.png'
+import p1 from '@p/services/p1.png'
+// services data images
+import Ortho from '@p/serviceContent/Orthopedics.jpg'
 export {
-  def, myarth,DentalClinic,Cardiomyopathy,Hematology,Neurology,Orthopedics,Pharmacology ,blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo, homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3, expertiseBg, cardImage, pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, course};
+  def, myarth,DentalClinic,Cardiomyopathy,Ortho,d1,c1,h1,n1,o1,p1,Hematology,Neurology,Orthopedics,Pharmacology ,blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo, homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3, expertiseBg, cardImage, pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, course};

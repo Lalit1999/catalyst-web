@@ -221,29 +221,35 @@
   border-radius: 20px;
 }
 
-/* --- ICON BADGE UPDATED --- */
+/* Container for the black circle */
 .iconBadge {
   position: absolute;
   bottom: 15px;
   right: 15px;
-  width: 56px;
-  height: 56px;
-  background-color: #1a1a1a; /* Black background */
+  width: 80px;
+  height: 80px;
+  background-color: #101820; 
   border-radius: 50%;
+  
+  /* --- CENTERING MAGIC --- */
   display: flex;
   align-items: center;
   justify-content: center;
+  /* ----------------------- */
+  
   z-index: 2;
+  overflow: hidden; /* Keeps image inside the circle if it's too big */
 }
 
-/* Target the SVG component inside the badge */
-.iconBadge svg {
- width: 40px ;
-	height: 40px;
-  color: #ffffff; /* Sets the icon color to white */
-  fill: currentColor; /* Ensures the SVG uses the color property */
+/* Style for the icon image itself */
+.iconImg {
+  width: 60px;   /* Adjust size as needed */
+  height: 60px;
+  object-fit: contain;
+  
+  /* OPTIONAL: If your icons are black PNGs and you want them white, uncomment line below: */
+  /* filter: brightness(0) invert(1); */
 }
-
 .content {
   display: flex;
   flex-direction: column;
