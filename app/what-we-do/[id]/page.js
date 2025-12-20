@@ -177,7 +177,9 @@ export default async function ServiceDetailPage({ params }) {
           <div className={styles.rightColumn}>
             {/* Services Widget */}
             <div className={styles.sidebarCard}>
-              <div className={styles.sidebarHeader}>Services</div>
+              <div className={styles.sidebarCard_round} >
+                <div className={styles.sidebarHeader}>Services</div>
+              </div>
               <ul className={styles.sidebarList}>
                 {serviceArray.map((item) => (
                   <li key={item.id} className={styles.sidebarItem}>
@@ -194,7 +196,7 @@ export default async function ServiceDetailPage({ params }) {
 
             {/* Quick Links Widget */}
             <div className={styles.sidebarCard}>
-              <div className={styles.sidebarHeader}>Quick Links</div>
+              <div className={styles.sidebarCard_round} ><div className={styles.sidebarHeader}>Quick Links</div></div>
               <ul className={styles.sidebarList}>
                 {quickLinks.map((link, idx) => (
                   <li key={idx} className={styles.sidebarItem}>

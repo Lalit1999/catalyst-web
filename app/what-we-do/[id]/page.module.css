@@ -188,19 +188,22 @@
   overflow: hidden; /* Ensures header stays inside radius */
   background: white;
 }
-
+.sidebarCard_round{
+  padding: 6px;
+}
 .sidebarHeader {
   background-color: #111827; /* Dark Background like screenshot */
   color: white;
   padding: 1.2rem 1.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 20px;
 }
 
 .sidebarList {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 2.4rem;
 }
 
 .sidebarItem {
@@ -217,8 +220,8 @@
   padding: 1rem 1.5rem;
   color: #4b5563;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 400;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -249,6 +252,13 @@
   display: flex;
   align-items: center;
   color: #111827;
+}
+.quickLinkText {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #101820; /* Dark Grey */
+  transition: color 0.2s ease;
 }
 
 /* --- RESPONSIVE --- */
@@ -294,15 +304,15 @@
 }
 
 .featureCard h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1a1a1a;
+    font-size: 19px;
+    font-weight: 500;
+    color: #101820;
     margin: 0;
 }
 
 .featureCard p {
-    font-size: 0.95rem;
-    color: #555;
+    font-size: 15px;
+    color: #68747A;
     line-height: 1.6;
 }
 
@@ -318,10 +328,12 @@
 
 .checkItem {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: start;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
     color: #4b5563;
+    font-weight: 400;
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -340,18 +352,20 @@
 
 /* 3. Industry Expertise */
 .expertiseBlock h2 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 31px;
+    font-weight: 500;
     color: #1a1a1a;
     margin-bottom: 1rem;
 }
 
 .subText {
-    font-size: 1rem;
-    color: #6b7280;
+    font-size: 15px;
+    line-height: 25px;
+    color: #68747A;
     line-height: 1.6;
     margin-bottom: 2rem;
     max-width: 900px;
+    font-weight: 400;
 }
 
 .expertiseGrid {
@@ -361,8 +375,8 @@
 }
 
 .expertiseItem {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
     color: #374151;
 }
 
@@ -371,7 +385,15 @@
 .faqBlock {
     margin-top: 4rem;
 }
-
+.faqBlock h2{
+  color: #101820;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.faqBlock p{
+  margin-top: 1rem;
+}
 .faqList {
     display: flex;
     flex-direction: column;
@@ -401,10 +423,16 @@
     list-style: none; /* Hide default triangle */
     font-weight: 700;
     color: #1f2937;
-    font-size: 1.1rem;
+    font-size: 19px;
     cursor: pointer;
 }
-
+.faqQuestion {
+  font-size: 19px;
+  font-weight: 500;
+  color: #111827; /* Dark Black/Gray */
+  line-height: 30px;
+  font-family: 'Lexend';
+}
 /* Hide default marker in Safari/Chrome */
 .faqSummary::-webkit-details-marker {
     display: none;
@@ -429,7 +457,8 @@
     margin-top: 1rem;
     color: #6b7280;
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: 15px;
+    line-height: 25px;
     border-top: 1px solid #f0f0f0; /* Optional separator line */
     padding-top: 1rem;
     animation: fadeIn 0.3s ease-in-out;
