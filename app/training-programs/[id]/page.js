@@ -1,61 +1,64 @@
 'use client'
+
+import { useParams } from 'next/navigation' ;
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { pragramBanner, course } from "@images";
+import { pragramBanner, course, cardImage } from "@images";
 import { Card } from '@comps' ;
-import { Call2, Whatsapp, Tick, Clock, Menu, Person, Website, Principal, Facebook, Twitter, Instagram, Li, ActivityLine, Prog, StarLine, Doc, Quote, Arrow } from "@icons";
+import { programsDetailsArr } from '@data' ;
+import { Call2, Whatsapp, Tick, Clock, Menu, Person, Website, Principal, Facebook, Twitter, Instagram, Li, Quote, Arrow } from "@icons";
 import styles from './page.module.css';
 
-const learnArr = [
-    'Modern React with Hooks and Context API',
-    'React Router for navigation',
-    'Performance optimization techniques',
-    'State management with Redux Toolkit',
-    'Testing with Jest and React Testing Library',
-    'Deployment to production environments',
-] ;
-
-const whyChooseArr = [
+const programsArr = [
     {
-        icon: <ActivityLine />,
-        head: 'Personalized Learning',
-        text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+        image: cardImage, 
+        heading: "Professional Diploma in Clinical Research (PDCR)", 
+        lessons: 4, 
+        students: 100, 
+        description: "PDCR is India’s largest and widely recognized clinical research training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        id: 'professional-diploma-in-clinical-research-pdcr',
     },
     {
-        icon: <Prog />,
-        head: '30+ Projects',
-        text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-1'
     },
     {
-        icon: <StarLine />,
-        head: 'Capstone Project',
-        text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-2'
     },
     {
-        icon: <Principal />,
-        head: 'A standout portfolio',
-        text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-3'
     },
     {
-        icon: <Doc />,
-        head: 'Complete career support',
-        text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-4'
+    },{
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-5'
     },
-    {
-        icon: <Person />,
-        head: 'Best Faculty',
-        text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
-    },
-] ;
-
-const reqArr = [
-    'Basic understanding of HTML, CSS, and JavaScript',
-    'Familiarity with programming concepts like variables, loops, and functions',
-    'A computer with internet access to set up the development environment',
-    'A computer with internet access to set up the development environment',
-    'Willingness to learn and practice coding regularly'
 ] ;
 
 const testimonialsArr = [
@@ -96,65 +99,6 @@ const socialArr = [
     }
 ] ;
 
-const includesArr = [
-    {
-        icon: <Clock />,
-        text: 'Duration',
-        value: '12 Weeks'
-    },
-    {
-        icon: <Menu />,
-        text: 'Lessons',
-        value: '10'
-    },
-    {
-        icon: <Person />,
-        text: 'Students',
-        value: '50+'
-    },
-    {
-        icon: <Website />,
-        text: 'Language',
-        value: 'English'
-    },
-    {
-        icon: <Principal />,
-        text: 'Certificate',
-        value: 'Yes'
-    }
-] ;
-
-const courseDetail = [
-    {
-        title: 'Advanced Clinical Research Program',
-        descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
-        duration: '5 weeks',
-        chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
-        skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
-    },
-    {
-        title: 'Advanced Clinical Research Program',
-        descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
-        duration: '5 weeks',
-        chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
-        skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
-    },
-    {
-        title: 'Advanced Clinical Research Program',
-        descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
-        duration: '5 weeks',
-        chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
-        skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
-    }, 
-    {
-        title: 'Advanced Clinical Research Program',
-        descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
-        duration: '5 weeks',
-        chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
-        skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
-    }
-] ;
-
 const HomeSlider = () => {
     return (
         <div className={styles.homeSlider}>
@@ -178,36 +122,37 @@ const HomeSlider = () => {
     );
 }
 
-const DescrCon = () => {
+const DescrCon = ({heading, description}) => {
     return (
         <div className={styles.descrCon}>
-            <p className={styles.descrHead}>Course Description</p>
-            <p className={styles.descrText}>This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you'll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you'll have the confidence to build complex React applications from scratch.</p>
+            <p className={styles.descrHead}>{heading}</p>
+            <p className={styles.descrText}>{description}</p>
         </div>
     ) ;
 }
 
-const LearnSection = () => {
+const LearnSection = ({learnArr}) => {
+    console.log(learnArr) ;
     return (
-    <div className={styles.descrCon}>
-        <p className={styles.descrHead}>What you'll learn</p>
-        <div className={styles.learnCon}>
-        {
-            learnArr.map((one,i) => {
-                return (
-                    <div className={styles.learnOne} key={i}>
-                        <Tick />
-                        <p>{one}</p>
-                    </div>
-                ) ;
-            })
-        }
+        <div className={styles.descrCon}>
+            <p className={styles.descrHead}>What you'll learn</p>
+            <div className={styles.learnCon}>
+            {
+                learnArr.map((one,i) => {
+                    return (
+                        <div className={styles.learnOne} key={i}>
+                            <Tick />
+                            <p>{one}</p>
+                        </div>
+                    ) ;
+                })
+            }
+            </div>
         </div>
-    </div>
     ) ;
 } 
 
-const CourseSection = () => {
+const CourseSection = ({whyChooseArr}) => {
     return (
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>Why choose this Course?</p>
@@ -228,13 +173,13 @@ const CourseSection = () => {
     ) ;
 }
 
-const BrouchureBox = () => {
+const BrouchureBox = ({brochureLink}) => {
     return (
         <div className={styles.brochureBox}>
             <div className={styles.brochureTextCon}>
                 <p className={styles.brochureHead}>Need to know more?</p>
                 <p className={styles.brochureText}>Get all the details in our comprehensive brochure.</p>
-                <Link href="/" className={styles.brochureLink}>Download Brochure</Link>
+                <Link href={`${brochureLink}`} className={styles.brochureLink}>Download Brochure</Link>
             </div>
             <div className={styles.brochureIcon}>
                 <Menu />
@@ -290,13 +235,13 @@ const SectionCon = ({one}) => {
     )
 }
 
-const CourseDetailSection = () => {
+const CourseDetailSection = ({courseDetailArr}) => {
     return (
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>Course Details</p>
             <div className={styles.CourseSectionMain}>
             {
-                courseDetail.map((one,i) => {
+                courseDetailArr.map((one,i) => {
                     return (
                         <SectionCon one={one} key={i} />
                     );
@@ -307,7 +252,7 @@ const CourseDetailSection = () => {
     ) ;
 }
 
-const ReqSection = () => {
+const ReqSection = ({reqArr}) => {
     return (
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>Requirements</p>
@@ -327,17 +272,46 @@ const ReqSection = () => {
     ) ;
 }
 
-const SideBar = () => {
+const SideBar = ({usd, inr, duration, lessons, students, language, certificate}) => {
+
+    const includesArr = [
+        {
+            icon: <Clock />,
+            text: 'Duration',
+            value: duration
+        },
+        {
+            icon: <Menu />,
+            text: 'Lessons',
+            value: lessons
+        },
+        {
+            icon: <Person />,
+            text: 'Students',
+            value: students
+        },
+        {
+            icon: <Website />,
+            text: 'Language',
+            value: language.join(", ")
+        },
+        {
+            icon: <Principal />,
+            text: 'Certificate',
+            value: certificate ? 'Yes' : 'No'
+        }
+    ] ; 
+
     return (
         <div className={styles.detailsRight}>
             <div className={styles.priceBox}>
                 <div className={styles.moneyBox}>
                     <p className={styles.headPrice}>USD</p>
-                    <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>$80</p>
+                    <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p>
                 </div>
                 <div className={styles.moneyBox}>
                     <p className={styles.headPrice}>INR</p>
-                    <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹7200</p>
+                    <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹{inr}</p>
                 </div>
             </div>
             <div className={styles.registerBtnCon}>
@@ -390,18 +364,18 @@ const SideBar = () => {
     ) ;
 }
 
-const DetailMain = () => {
+const DetailMain = (data) => {
     return (
         <div className={styles.courseDetailMain}>
             <div className={styles.detailsLeft}>
-                <DescrCon />
-                <LearnSection />
-                <CourseSection />
-                <BrouchureBox />
-                <CourseDetailSection />
-                <ReqSection />
+                <DescrCon {...data} />
+                <LearnSection {...data} />
+                <CourseSection {...data} />
+                <BrouchureBox {...data} />
+                <CourseDetailSection {...data} />
+                <ReqSection {...data} />
             </div>
-            <SideBar />
+            <SideBar {...data} />
         </div>
     ) ;
 }
@@ -435,10 +409,13 @@ const RelatedCourseSection = () => {
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>Related Courses</p>
             <div className={styles.relatedCoursesCon}>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+            {
+                programsArr.slice(0,4).map( (one, i) => {
+                    return (
+                        <Card key={i} {...one} />
+                    ) ;
+                })
+            }
             </div>
         </div>
     ) ;
@@ -456,11 +433,18 @@ const DetailBottom = () => {
 
 const program = () => {
 
+    const params = useParams() ;
+    const { id } = params ;
+    const decodedId = id ? decodeURIComponent(id) : id;
+
+    const data = programsDetailsArr[decodedId];
+    console.log(data) ;
+
     return (
         <div className={styles.courseMain}>
             <HomeSlider />
             <div className={styles.courseDetails}>
-                <DetailMain />
+                <DetailMain {...data} />
                 <DetailBottom />
             </div>
         </div>
