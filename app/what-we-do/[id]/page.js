@@ -95,7 +95,8 @@ export default async function ServiceDetailPage({ params }) {
     <main className={styles.main}>
       {/* Inside your ServiceDetailPage return statement */}
 
-      <div className={styles.downbarTop}>
+      <div className={styles.downbarMainCon} >
+        <div className={styles.downbarTop}>
         {/* Wrapper to keep content aligned in the center of the screen */}
         <div className={styles.contentContainer}>
           {/* Breadcrumbs */}
@@ -130,6 +131,7 @@ export default async function ServiceDetailPage({ params }) {
             {/* main content start  from here */}
           </div>
         </div>
+      </div>
       </div>
       {/* ****************** */}
       <section className={styles.detailsSection}>

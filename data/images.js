@@ -39,7 +39,7 @@ import portfolioBgLight from '@p/portfolio-bg-light.png' ;
 
 // services
 import DentalClinic from '@p/services/DentalClinic.png'
-import Cardiomyopathy from "@p/services/Cardiomyopathy.png"
+import Cardiomyopathy from '@p/services/Cardiomyopathy.png'
 import Hematology from '@p/services/Hematology.png'
 import Neurology from '@p/services/Neurology.png'
 import Orthopedics from '@p/services/Orthopedics.png'

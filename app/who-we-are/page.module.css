@@ -3,48 +3,53 @@
   display: flex;
   flex-direction: column;
   color: var(--black);
-  gap: 3em;
-  min-height: 20vw;
+  gap: 3em 0em;
 }
 
 .main p {
   margin: 0;
 }
+
 .downbarMainCon {
-	display: flex;
-	flex-direction: column;
-	margin: 0 -4em;
-	
-}
-.downbarTop {
-	display: flex;
-	width: 100%;
-	background-color: var(--main);
-	align-items: center;
+  display: flex;
   flex-direction: column;
-	justify-content: center;
-	padding: 2em 0;
-	gap: 2em ;
+  margin: 0 -4em;
+
 }
-.main_bread{
+
+.downbarTop {
+  display: flex;
+  width: 100%;
+  background-color: var(--main);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em 0;
+  gap: 2em;
+}
+
+.main_bread {
   font-size: 16px;
   font-weight: 600;
   line-height: 20.8px;
   color: white;
 }
-.breadContent{
+
+.breadContent {
   font-weight: 700;
   font-size: 36px;
   line-height: 50.4px;
   color: white;
   margin-top: 10px;
 }
-.downHead{
+
+.downHead {
   display: flex;
   flex-direction: row;
   gap: 0px 15px;
   margin-top: 20px;
 }
+
 .section {
   padding: 4rem 0;
   display: flex;
@@ -53,19 +58,22 @@
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
 }
+
 
 /* --- 2. MISSION & VISION --- */
 .mvGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem;
+  gap: 0em 1.5rem;
+  width: 100%;
   align-items: stretch;
 }
 
 .mvCard {
-  background-color: var(--main); /* Uses main color */
+  background-color: var(--main);
+  /* Uses main color */
   color: white;
   padding: 3rem 2rem;
   border-radius: 20px;
@@ -76,15 +84,16 @@
 }
 
 .mvCard h3 {
-  color: #fbbf24; /* Gold/Yellow Text */
+  color: #fbbf24;
+  /* Gold/Yellow Text */
   margin-bottom: 1.5rem;
   font-size: 22px;
   line-height: 32px;
   font-weight: 500;
 }
+
 .mvCard p {
   font-size: 15px;
-  font-family: "Inter";
 }
 
 .mvImageWrapper {
@@ -115,20 +124,25 @@
 }
 
 .miniTag {
-    font-size: 1rem; /* Base text size */
-    color: #000;     /* Adjust color as needed */
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center; /* This vertically centers the icon with text */
-    gap: 10px;           /* Space between image and text */
-    font-weight: 500;
+  font-size: 1rem;
+  /* Base text size */
+  color: #000;
+  /* Adjust color as needed */
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  /* This vertically centers the icon with text */
+  gap: 10px;
+  /* Space between image and text */
+  font-weight: 500;
 }
 
 /* New class for the icon to match text size */
 .miniTagIcon {
-    width: 1.2em;  /* 1.2em means 1.2x the current font-size */
-    height: 1.2em; 
-    object-fit: contain;
+  width: 1.2em;
+  /* 1.2em means 1.2x the current font-size */
+  height: 1.2em;
+  object-fit: contain;
 }
 
 
@@ -136,14 +150,14 @@
   font-size: 32px;
   font-weight: 500;
   color: #1a1a1a;
-  font-family: "Lexend";
+
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
 .desc {
   color: #4b535d;
-  font-family: "Inter";
+
   line-height: 1.6;
   font-weight: 400;
   padding-bottom: 2rem;
@@ -172,14 +186,16 @@
 
 .progressFill {
   height: 100%;
-  background-color: #09243c; /* Uses Main Color */
+  background-color: #09243c;
+  /* Uses Main Color */
 }
 
 /* --- 4. TIMELINE SECTION (DARK BG) --- */
 .timelineSection {
-  background-color: var(--main); /* Dark BG */
-  padding: 5rem 0;
- border-radius: 20px;
+  background-color: var(--main);
+  /* Dark BG */
+  padding: 5em;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,7 +214,8 @@
 .timelineGrid::before {
   content: "";
   position: absolute;
-  top: 192px; /* Adjust based on image size */
+  top: 192px;
+  /* Adjust based on image size */
   left: 10%;
   right: 10%;
   height: 1px;
@@ -229,25 +246,28 @@
 }
 
 .timelineYear {
-  background-color: #fbbf24; /* Yellow bubble */
+  background-color: #fbbf24;
+  /* Yellow bubble */
   color: #101820;
   font-weight: 500;
-  font-family: "Inter";
+
   padding: 5px 15px;
   border-radius: 20px;
   margin-bottom: 1.5rem;
 }
 
 .timelineItem h4 {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
   color: white;
 }
 
 .timelineItem p {
   font-size: 15px;
-  font-family: "Inter";
   color: #b3c0ce;
   line-height: 1.5;
 }
@@ -282,24 +302,24 @@
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: #101820;
-  font-family: "Lexend";
+
 }
 
 .iconContent p {
   font-size: 15px;
-  font-family: "Inter";
+
   font-weight: 400;
   color: #68747a;
 }
 
 /* --- 6. STATS SECTION (DARK BG) --- */
 .statsSection {
-  background-color: var(--main); /* Dark BG */
-  padding: 4rem 0;
-  padding-left: 0.8rem;
-  width: 90%;
+  background-color: var(--main);
+  /* Dark BG */
+  padding: 4rem 1em;
+
   display: flex;
-  margin-left: 4.8rem;
+
   border-radius: 20px;
   justify-content: center;
   align-items: center;
@@ -343,10 +363,11 @@
 .statNumber {
   font-size: 50px;
   font-weight: 500;
-  font-family: "Lexend";
-  color: #fbbf24; /* Yellow Numbers matching the icon stroke */
+
+  color: #fbbf24;
+  /* Yellow Numbers matching the icon stroke */
   line-height: 1;
-  font-family: 'Inter';
+
 }
 
 .statLabel {
@@ -354,11 +375,12 @@
   color: white;
   font-weight: 400;
   font-size: 12px;
-  font-family: 'Inter';
+
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
+
   .mvGrid,
   .splitGrid,
   .timelineGrid,
@@ -371,7 +393,8 @@
   }
 
   .timelineGrid::before {
-    display: none; /* Hide line on mobile */
+    display: none;
+    /* Hide line on mobile */
   }
 
   .statItem {
