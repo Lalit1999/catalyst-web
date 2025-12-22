@@ -102,7 +102,8 @@ export default function WhoWeAre() {
   return (
     <>
       <main className={styles.main}>
-        <div className={styles.downbarTop}>
+        <div className={styles.downbarMainCon} >
+          <div className={styles.downbarTop}>
           <div className={styles.downHead}>
             <h1 className={styles.main_bread}>Home</h1>
             <h1 className={styles.main_bread}>&rarr;</h1>
@@ -112,6 +113,7 @@ export default function WhoWeAre() {
           <p className={styles.breadContent}>
             About Catalyst Clinical Services Private Limited
           </p>
+        </div>
         </div>
         {/* ******************************************************** */}
         {/* 2. MISSION & VISION SECTION */}
@@ -166,16 +168,10 @@ export default function WhoWeAre() {
                 </div>
               </div>
               <div className={styles.textCol}>
-                <div className={styles.miniTag}>
-                  <Image
-                    src={headIcon}
-                    alt="icon"
-                    width={20}
-                    height={20}
-                    className={styles.miniTagIcon}
-                  />
+             
+                 
                   <span>Working Together for a Healthy Life</span>
-                </div>
+               
                 <h2 className={styles.heading}>
                   Committed To Build A Positive, Safe, Patient Focused Culture.
                 </h2>
@@ -189,7 +185,7 @@ export default function WhoWeAre() {
                 <div className={styles.progressBar}>
                   <div className={styles.progressHeader}>
                     <span>Strategic Analysis</span>
-                    <span>80%</span>
+                    
                   </div>
                   <div className={styles.progressTrack}>
                     <div
@@ -201,7 +197,7 @@ export default function WhoWeAre() {
                 <div className={styles.progressBar}>
                   <div className={styles.progressHeader}>
                     <span>Research On Diseases</span>
-                    <span>90%</span>
+                  
                   </div>
                   <div className={styles.progressTrack}>
                     <div
@@ -213,7 +209,7 @@ export default function WhoWeAre() {
                 <div className={styles.progressBar}>
                   <div className={styles.progressHeader}>
                     <span>Healing Solution</span>
-                    <span>95%</span>
+                  
                   </div>
                   <div className={styles.progressTrack}>
                     <div

@@ -11,7 +11,8 @@ export default function WhatWeDo() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.downbarTop}>
+      <div className={styles.downbarMainCon} >
+        <div className={styles.downbarTop}>
         <div className={styles.downHead}>
           <h1 className={styles.main_bread}>Home</h1>
           <h1 className={styles.main_bread}>&rarr;</h1>
@@ -21,13 +22,14 @@ export default function WhatWeDo() {
         <p className={styles.breadContent}>Services Offered by Catalyst</p>
       </div>
 
+      </div>
       
       {/* main Content Starts from here */}
 
        <section className={styles.section}>
       <div className={styles.container}>
         {serviceArray.map((service, index) => (
-  <div key={index} className={styles.card}>
+      <div key={index} className={styles.card}>
     
     {/* Image Wrapper */}
     <div className={styles.imageContainer}>

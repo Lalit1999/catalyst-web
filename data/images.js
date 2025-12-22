@@ -62,4 +62,4 @@ import Round2 from '@p/About/round2.png'
 import Round3 from '@p/About/round3.png'
 import headIcon from '@p/About/headIcon.png'
 export {
-  def, myarth,DentalClinic,headIcon,Cardiomyopathy,Round,Round1,Round2,Round3,Ortho,Doctor,d1,c1,h1,n1,o1,p1,Nurses,Hematology,Neurology,Orthopedics,Pharmacology ,blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo, homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3, expertiseBg, cardImage, pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, course};
+  def, myarth,DentalClinic, headIcon, Cardiomyopathy ,Round , Round1 ,Round2 ,Round3 ,Ortho ,Doctor ,d1 ,c1 ,h1 ,n1 ,o1 ,p1 ,Nurses ,Hematology ,Neurology ,Orthopedics ,Pharmacology ,blogBannerImage, blog2, contact, titleLine, portfolioBgLight, logo, homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3, expertiseBg, cardImage, pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, course};

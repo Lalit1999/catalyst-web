@@ -5,29 +5,26 @@
   flex-direction: column;
   color: var(--black);
   /* Keep your parent padding if you need it for other elements */
-  padding: 0 2rem; 
   gap: 3em;
-  min-height: 20vw;
   position: relative;  
+
   /* overflow-x: hidden;   */
 }
-
+.downbarMainCon {
+	display: flex;
+	flex-direction: column;
+	margin: 0 -4em;
+	
+}
 .downbarTop {
-
-  width:100vw; 
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  display: flex;
-  background-color: var(--main);
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	width: 100%;
+	background-color: var(--main);
+	align-items: center;
   flex-direction: column;
-  padding: 5em 0;
-  gap: 2em;
-  margin-top: -4rem; 
+	justify-content: center;
+	padding: 2em 0;
+	gap: 2em ;
 }
 .main_bread{
   font-size: 16px;
@@ -47,12 +44,6 @@
   flex-direction: row;
   gap: 0px 15px;
   margin-top: 20px;
-}
-.section {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
 }
 
 .container {
@@ -164,7 +155,7 @@
   text-decoration: underline;
 }
 .section {
-  padding: 4rem 2rem;
+  padding: 4rem 0;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
