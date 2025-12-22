@@ -15,6 +15,7 @@
   height: 25vw;
   overflow: hidden;
   margin: 0 -4em ;
+  justify-content: space-around;
 }
 
 .homeSliderMain {
@@ -95,7 +96,7 @@
     flex-basis: 50% ;
     display: flex;
     justify-content: center;
-    width: 20vw;
+    width: 10vw;
     height: 20vw;
     overflow: hidden;
     border: 5px solid var(--white) ;
@@ -721,4 +722,21 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 1500px) {
+  	.courseMain {
+      padding: 0 10em;
+      gap: 4em;
+  	}
+
+    .homeSlider  {
+      margin: 0 -14em ;
+    }
+}
+
+@media (max-width: 600px) {
+  .courseMain {
+    gap: 2em;
+  }
 }

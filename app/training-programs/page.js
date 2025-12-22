@@ -3,11 +3,61 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3 } from "@images";
+import { pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, cardImage  } from "@images";
 import { School, ArrowLong, Clock, Location } from '@icons' ;
 import { Card } from '@comps' ;
 
 import styles from './page.module.css';
+
+const programsArr = [
+    {
+        image: cardImage, 
+        heading: "Professional Diploma in Clinical Research (PDCR)", 
+        lessons: 4, 
+        students: 100, 
+        description: "PDCR is India’s largest and widely recognized clinical research training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        id: 'professional-diploma-in-clinical-research-pdcr',
+    },
+    {
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-1'
+    },
+    {
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-2'
+    },
+    {
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-3'
+    },
+    {
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-4'
+    },{
+        image: cardImage, 
+        heading: "Sample Heading", 
+        lessons: 10, 
+        students: 100, 
+        description: "Sample description",
+        id: 'sample-heading-5'
+    },
+] ;
 
 const awardsArr = [
     {
@@ -98,12 +148,13 @@ const CoursesComp = () => {
                 <p className={styles.subDescr}>The healthcare arena there was a felt need of developing new as well as upgrading the existing functioning and processes.</p>
             </div>
             <div className={styles.coursesTwo}>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+            {
+                programsArr.map( (one, i) => {
+                    return (
+                        <Card key={i} {...one} />
+                    ) ;
+                })
+            }
             </div>
         </div>
     ) ;
