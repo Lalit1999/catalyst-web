@@ -146,6 +146,7 @@
 .descrTextCon {
     display: flex;
     flex-direction: column;
+    text-align: justify;
     gap: 1em ;
 }
 

@@ -856,7 +856,7 @@ const programsDetailsArr = {
         lessons: 10,
         students: `500+`,
         language: ['English'],
-        certificate: true
+        certificate: true 
     },
 } ;
 
