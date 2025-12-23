@@ -6,74 +6,70 @@ const programsDetailsArr = {
         heading: "Professional Diploma in Clinical Research (PDCR)",
         description: "PDCR is India's largest and widely recognized clinical research training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
         learnArr: [
-            'Modern React with Hooks and Context API',
-            'React Router for navigation',
-            'Performance optimization techniques',
-            'State management with Redux Toolkit',
-            'Testing with Jest and React Testing Library',
-            'Deployment to production environments',
+            'Drug development phases, GCP, and global trial norms',
+            'Clinical trial conduct, monitoring, and documentation',
+            'Regulatory pathways including IND/NDA and Indian CT rules',
+            'Stakeholder roles across sponsor, investigator, CRA/CRC, etc.',
+            'Data management, safety reporting, and core biostatistics',
+            'Ethics compliance and quality systems for trial integrity',
         ],
         whyChooseArr: [
             {
                 icon: <ActivityLine />,
-                head: 'Personalized Learning',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'Self-Paced Learning',
+                text: 'Flexible format that fits around professional or academic schedules.'
             },
             {
                 icon: <Prog />,
-                head: '30+ Projects',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: '24/7 Expert Academic Support',
+                text: '24/7 faculty guidance for queries, feedback, and learning clarity.'
             },
             {
                 icon: <StarLine />,
-                head: 'Capstone Project',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'Industry-Ready Content',
+                text: 'Curriculum mapped to current industry practices and GCP standards.'
             },
             {
                 icon: <Principal />,
-                head: 'A standout portfolio',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'A Standout Portfolio',
+                text: 'Assignments that showcase trial design and operational know-how.'
             },
             {
                 icon: <Doc />,
-                head: 'Complete career support',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'Real-World Projects & Case Studies',
+                text: 'Applied real-world case studies reflecting actual scenarios.'
             },
             {
                 icon: <Person />,
-                head: 'Best Faculty',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'Placement Assistance',
+                text: 'Career guidance and interview readiness for industry roles.'
             },
         ],
         brochureLink: "/",
         courseDetailArr: [
             {
-                title: 'Advanced Clinical Research Program',
-                descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
-                duration: '5 weeks',
-                chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
-                skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
+                title: 'Unit 1 : Introduction to Pharmaceutical Medicine',
+                duration: 'Duration: Self-Paced',
+                chapters: ['The Drug Development Process', 'New Drug Discovery', 'Clinical Development of Drug', 'Essential Clinical Trial Documents', 'Clinical Trials Terminology'],
+                skills: ['Clinical research fundamentals', 'Drug discovery lifecycle', 'Clinical trial documentation', 'Trial terminology literacy', 'Development process insight'],
             },
             {
-                title: 'Advanced Clinical Research Program',
-                descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
-                duration: '5 weeks',
-                chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
-                skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
+                title: 'Unit 2 : Good Clinical Practice (GCP) Foundations',
+                duration: 'Duration: Self-Paced',
+                chapters: ['History of GCP - milestones in the evolution of GCP', 'Principles of GCP', 'Applicable GCP Guidelines', 'Declaration of Helsinki', 'Clinical Study Process', 'The Management of Clinical Studies (Sponsor)', 'Ethics in Clinical Research', 'Informed Consent', 'Serious Adverse Event (SAE)', 'Challenges in the Implementation of GCP Guidelines', 'Biostatistics'],
+                skills: ['GCP compliance', 'Ethics and informed consent', 'SAE reporting discipline', 'Study management fundamentals', 'Biostatistics basics'],
             },
             {
-                title: 'Advanced Clinical Research Program',
-                descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
-                duration: '5 weeks',
-                chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
-                skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
+                title: 'Unit 3 : Drug Regulatory Affairs (Clinical Trials)',
+                duration: 'Duration: Self-Paced',
+                chapters: ['Overview of Regulatory Environment in USA, Australia, Europe and India', 'Clinical Trial Application Requirements in India', 'Import- Export of Clinical Trial Drugs in India', 'Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule', 'IND/ANDA/New Drug Application'],
+                skills: ['Global clinical regulations', 'IND/ANDA submission know-how', 'Indian CT application prep', 'Import-export compliance', 'HIPAA and privacy readiness'],
             }, 
             {
-                title: 'Advanced Clinical Research Program',
-                descr: ' This React course takes you from beginner to advanced developer. Learn modern React, hooks, state management, and build real-world projects. Gain hands-on experience, master essential concepts, and create portfolio-ready applications to showcase your skills for career growth. Throughout this course, you\'ll work on hands-on projects including a social media app, e- commerce platform, and task management system. By the end, you\'ll have the confidence to build complex React applications from scratch.',
-                duration: '5 weeks',
-                chapters: ['Data Analysis', 'Data Mining', 'Data Restructuring', 'Data Handling', 'Data Visualization'],
-                skills: ['Phyton', 'MongoDb', 'Nextjs', 'Al', 'Machine Learning'],
+                title: 'Unit 4 : Roles & Responsibilities of Clinical Trial Personnel',
+                duration: 'Duration: Self-Paced',
+                chapters: ['Roles & Responsibilities of Sponsor', 'Roles & Responsibilities of Investigator', 'Roles & Responsibilities of ERB/IRB/IEC', 'Roles & Responsibilities of CRA /Monitor', 'Roles & Responsibilities of Auditor', 'Roles & Responsibilities of Clinical Research Coordinator', 'Roles & Responsibilities of CRO\'s', 'Roles & Responsibilities of Regulatory Authorities', 'Roles & Responsibilities of Clinical Data Manager (CDM)', 'Roles & Responsibilities of Clinical Biostatistician'],
+                skills: ['Stakeholder coordination', 'Site and investigator management', 'Monitoring and auditing practice', 'Data management collaboration', 'Biostatistics partnership'],
             }
         ],
         reqArr: [

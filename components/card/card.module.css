@@ -66,6 +66,7 @@
 .cardText p {
   font-size: .9rem;
   color: var(--medGray);
+  
   display: -webkit-box ;
   -webkit-line-clamp: 3;
   line-clamp: 3;
