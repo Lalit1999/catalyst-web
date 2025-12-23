@@ -4,7 +4,9 @@ const programsDetailsArr = {
     'professional-diploma-in-clinical-research-pdcr': {
         id: 'professional-diploma-in-clinical-research-pdcr',
         heading: "Professional Diploma in Clinical Research (PDCR)",
-        description: "PDCR is India's largest and widely recognized clinical research training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        description: [
+            "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        ],
         learnArr: [
             'Modern React with Hooks and Context API',
             'React Router for navigation',
@@ -94,7 +96,9 @@ const programsDetailsArr = {
     'professional-certificate-in-pharmacovigilance-pcpv': {
         id: 'professional-certificate-in-pharmacovigilance-pcpv',
         heading: "Professional Certificate in Pharmacovigilance (PCPV)",
-        description: "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        description: [
+            "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        ],
         learnArr: [
             'Understand global regulatory guidelines governing drug safety',
             'Identify and collect safety events in line with international standards',
@@ -139,21 +143,18 @@ const programsDetailsArr = {
         courseDetailArr: [
             {
                 title: 'Introduction to Pharmacovigilance and Risk Management',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Standard Terms and Definition of Pharmacovigilance',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Global Perspectives PV and ADR Reporting',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'Functions of a National Pharmacovigilance System', 
@@ -169,7 +170,6 @@ const programsDetailsArr = {
             }, 
             {
                 title: 'Guidelines and Standard Governing PV',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'ICH Guidelines', 
@@ -186,7 +186,6 @@ const programsDetailsArr = {
             },
             {
                 title: 'Global AE Reporting System and Reporting Forms',
-                descr: '',
                 duration: '1 week',
                 chapters: [
                     'Definitions and Terminology Associated with Clinical Safety',
@@ -212,7 +211,9 @@ const programsDetailsArr = {
     'advanced-certificate-program-in-scientific-writing-sw': {
         id: 'advanced-certificate-program-in-scientific-writing-sw',
         heading: "Advanced Certificate Program in Scientific Writing (SW)",
-        description: "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        description: [
+            "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        ],
         learnArr: [
             'Understand global regulatory guidelines governing drug safety',
             'Identify and collect safety events in line with international standards',
@@ -257,21 +258,18 @@ const programsDetailsArr = {
         courseDetailArr: [
             {
                 title: 'Introduction to Pharmacovigilance and Risk Management',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Standard Terms and Definition of Pharmacovigilance',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Global Perspectives PV and ADR Reporting',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'Functions of a National Pharmacovigilance System', 
@@ -287,7 +285,6 @@ const programsDetailsArr = {
             }, 
             {
                 title: 'Guidelines and Standard Governing PV',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'ICH Guidelines', 
@@ -304,7 +301,6 @@ const programsDetailsArr = {
             },
             {
                 title: 'Global AE Reporting System and Reporting Forms',
-                descr: '',
                 duration: '1 week',
                 chapters: [
                     'Definitions and Terminology Associated with Clinical Safety',
@@ -330,7 +326,9 @@ const programsDetailsArr = {
     'advanced-certificate-program-in-project-management-pm': {
         id: 'advanced-certificate-program-in-project-management-pm',
         heading: "Advanced Certificate Program in Project Management (PM)",
-        description: "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        description: [
+            "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        ],
         learnArr: [
             'Understand global regulatory guidelines governing drug safety',
             'Identify and collect safety events in line with international standards',
@@ -375,21 +373,18 @@ const programsDetailsArr = {
         courseDetailArr: [
             {
                 title: 'Introduction to Pharmacovigilance and Risk Management',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Standard Terms and Definition of Pharmacovigilance',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Global Perspectives PV and ADR Reporting',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'Functions of a National Pharmacovigilance System', 
@@ -405,7 +400,6 @@ const programsDetailsArr = {
             }, 
             {
                 title: 'Guidelines and Standard Governing PV',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'ICH Guidelines', 
@@ -422,7 +416,6 @@ const programsDetailsArr = {
             },
             {
                 title: 'Global AE Reporting System and Reporting Forms',
-                descr: '',
                 duration: '1 week',
                 chapters: [
                     'Definitions and Terminology Associated with Clinical Safety',
@@ -448,7 +441,9 @@ const programsDetailsArr = {
     'advanced-certificate-program-in-clinical-trial-monitoring-ctm': {
         id: 'advanced-certificate-program-in-clinical-trial-monitoring-ctm',
         heading: "Advanced Certificate Program in Clinical Trial Monitoring (CTM)",
-        description: "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        description: [
+            "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        ],
         learnArr: [
             'Understand global regulatory guidelines governing drug safety',
             'Identify and collect safety events in line with international standards',
@@ -493,21 +488,18 @@ const programsDetailsArr = {
         courseDetailArr: [
             {
                 title: 'Introduction to Pharmacovigilance and Risk Management',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Standard Terms and Definition of Pharmacovigilance',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Global Perspectives PV and ADR Reporting',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'Functions of a National Pharmacovigilance System', 
@@ -523,7 +515,6 @@ const programsDetailsArr = {
             }, 
             {
                 title: 'Guidelines and Standard Governing PV',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'ICH Guidelines', 
@@ -540,7 +531,6 @@ const programsDetailsArr = {
             },
             {
                 title: 'Global AE Reporting System and Reporting Forms',
-                descr: '',
                 duration: '1 week',
                 chapters: [
                     'Definitions and Terminology Associated with Clinical Safety',
@@ -566,7 +556,9 @@ const programsDetailsArr = {
     'oncology-clinical-trials-training-octt': {
         id: 'oncology-clinical-trials-training-octt',
         heading: "Oncology Clinical Trials Training (OCTT)",
-        description: "The Oncology Clinical Trials Training (OCTT) program is a specialized, competency-driven course designed to equip participants with the knowledge, skills, and practical expertise required to manage and oversee oncology clinical trials. ",
+        description: [
+            "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+        ],
         learnArr: [
             'Understand global regulatory guidelines governing drug safety',
             'Identify and collect safety events in line with international standards',
@@ -611,21 +603,18 @@ const programsDetailsArr = {
         courseDetailArr: [
             {
                 title: 'Introduction to Pharmacovigilance and Risk Management',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Standard Terms and Definition of Pharmacovigilance',
-                descr: '',
                 duration: '1 week',
                 chapters: [''],
                 skills: [''],
             },
             {
                 title: 'Global Perspectives PV and ADR Reporting',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'Functions of a National Pharmacovigilance System', 
@@ -641,7 +630,6 @@ const programsDetailsArr = {
             }, 
             {
                 title: 'Guidelines and Standard Governing PV',
-                descr: '',
                 duration: '5 weeks',
                 chapters: [
                     'ICH Guidelines', 
@@ -658,7 +646,6 @@ const programsDetailsArr = {
             },
             {
                 title: 'Global AE Reporting System and Reporting Forms',
-                descr: '',
                 duration: '1 week',
                 chapters: [
                     'Definitions and Terminology Associated with Clinical Safety',

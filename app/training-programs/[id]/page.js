@@ -127,7 +127,15 @@ const DescrCon = ({heading, description}) => {
     return (
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>{heading}</p>
-            <p className={styles.descrText}>{description}</p>
+            <div className={styles.descrTextCon}>
+            {
+                description.map((para, i) => {
+                    return (
+                        <p className={styles.descrText} key={i}>{para}</p>
+                    ) ;
+                })
+            }
+            </div>
         </div>
     ) ;
 }
@@ -213,7 +221,7 @@ const SectionCon = ({one}) => {
                     {
                         one.chapters.map((chapter,j) => {
                             return (
-                                <p className={styles.courseDetailDescrPoint} key={j}><Tick />{chapter}</p>
+                                <p className={styles.courseDetailDescrPoint} key={j}>{chapter?<Tick />:null}{chapter}</p>
                             ) ;
                         })
                     }

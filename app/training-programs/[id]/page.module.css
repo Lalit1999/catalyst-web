@@ -140,6 +140,12 @@
     font-weight: 600 ;
 }
 
+.descrTextCon {
+    display: flex;
+    flex-direction: column;
+    gap: 1em ;
+}
+
 .descrText {
     font-size: 1rem ;
     line-height: 1.5rem ;
