@@ -20,42 +20,43 @@ const programsArr = [
     },
     {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Professional Certificate in Pharmacovigilance (PCPV)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-1'
+        description: "The Professional Certificate in Pharmacovigilance (PCPV) is an industry-aligned drug safety training program that equips learners with essential skills in pharmacovigilance, case processing, signal detection, and global safety regulations.",
+        id: 'professional-certificate-in-pharmacovigilance-pcpv'
     },
     {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Advanced Certificate Program in Scientific Writing (SW)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-2'
+        description: "The Advanced Certificate Program in Scientific Writing is a comprehensive, competency-building training program designed to prepare participants for specialized roles in scientific and medical writing within the biopharmaceutical, healthcare, and clinical research industries. ",
+        id: 'advanced-certificate-program-in-scientific-writing-sw'
     },
     {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Advanced Certificate Program in Project Management (PM)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-3'
+        description: "The Advanced Certificate Program in Project Management is a structured, competency-building course designed to equip participants with the core skills, practical knowledge, and operational insight required for specialized clinical trial project management roles",
+        id: 'advanced-certificate-program-in-project-management-pm'
     },
     {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Advanced Certificate Program in Clinical Trial Monitoring (CTM)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-4'
-    },{
+        description: "The Advanced Certificate Program in Clinical Trial Monitoring is a focused, competency-driven training designed to develop specialized expertise in the oversight and monitoring of clinical trials. ",
+        id: 'advanced-certificate-program-in-clinical-trial-monitoring-ctm'
+    },
+    {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Oncology Clinical Trials Training (OCTT)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-5'
+        description: "The Oncology Clinical Trials Training (OCTT) program is a specialized, competency-driven course designed to equip participants with the knowledge, skills, and practical expertise required to manage and oversee oncology clinical trials. ",
+        id: 'oncology-clinical-trials-training-octt'
     },
 ] ;
 
