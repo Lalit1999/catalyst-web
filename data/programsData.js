@@ -78,13 +78,45 @@ const programsDetailsArr = {
                 skills: ['Stakeholder coordination', 'Site and investigator management', 'Monitoring and auditing practice', 'Data management collaboration', 'Biostatistics partnership'],
             }
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -176,13 +208,45 @@ const programsDetailsArr = {
                 skills: ['MedDRA coding accuracy', 'PSUR drafting fundamentals', 'Expedited reporting criteria', 'Inspection readiness', 'Case quality review'],
             },
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -274,13 +338,45 @@ const programsDetailsArr = {
                 skills: ['CRF development practice', 'SOP drafting practice', 'Applied documentation quality review'],
             },
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -365,13 +461,45 @@ const programsDetailsArr = {
                 skills: ['Milestone plan drafting', 'Trial budgeting practice', 'ISF quality review', 'Issue identification and remediation'],
             },
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -457,13 +585,45 @@ const programsDetailsArr = {
                 skills: ['Monitoring kit handling', 'CRF completion accuracy', 'Protocol deviation detection', 'ISF quality control'],
             },
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -544,20 +704,52 @@ const programsDetailsArr = {
                 skills: ['Oncology CRF completion', 'Monitoring visit execution', 'Protocol deviation detection', 'Oncology ISF quality review'],
             }, 
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
-        duration: '12 Weeks',
+        duration: 'Self-Paced',
         lessons: 10,
         students: `500+`,
         language: ['English'],
-        certificate: true
+        certificate: true 
     },
 } ;
 

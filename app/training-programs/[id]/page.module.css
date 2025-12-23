@@ -138,9 +138,15 @@
     font-weight: 600 ;
 }
 
+.descrSubHead {
+    font-size: 1.1rem ;
+    font-weight: 500 ;
+}
+
 .descrTextCon {
     display: flex;
     flex-direction: column;
+    text-align: justify;
     gap: 1em ;
 }
 
@@ -271,21 +277,41 @@
     gap: 1em ;
 }
 
-.reqOne {
+.reqOneBox {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1em ;
 }
 
-.reqOne svg {
-    width: 20px;
-    height: 20px;
-    color: var(--main) ;
+.reqOneNum {
+    font-size: .7rem ;
+    background-color: var(--main);
+    color: var(--white);
+    padding: .5em ;
+    border-radius: 50% ;
+    width: 30px ;
+    height: 30px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.reqOne p {
+.reqOne {
+    display: flex;
+    flex-direction: column;
+}
+
+.reqOneHead {
     font-size: .9rem ;
+    font-weight: 600 ;
+    display: flex;
+    align-items: center;
+}
+
+.reqOneText {
+    font-size: .8rem ;
     color: var(--medGray) ;
+    line-height: 1.4rem ;
 }
 
 .CourseSectionMain {
