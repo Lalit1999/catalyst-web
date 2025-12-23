@@ -1,14 +1,270 @@
+/* page.module.css */
 
-/* Main layout */
 .main {
   display: flex;
   flex-direction: column;
   color: var(--black);
-  /* padding: 0 4em; */
-  gap: 3em ;
-  min-height: 20vw;
+  /* Keep your parent padding if you need it for other elements */
+  gap: 3em;
+  position: relative;  
+
+  /* overflow-x: hidden;   */
+}
+.downbarMainCon {
+	display: flex;
+	flex-direction: column;
+	margin: 0 -4em;
+	
+}
+.downbarTop {
+	display: flex;
+	width: 100%;
+	background-color: var(--main);
+	align-items: center;
+  flex-direction: column;
+	justify-content: center;
+	padding: 2em 0;
+	gap: 2em ;
+}
+.main_bread{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+  color: white;
+}
+.breadContent{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50.4px;
+  color: white;
+  margin-top: 10px;
+}
+.downHead{
+  display: flex;
+  flex-direction: row;
+  gap: 0px 15px;
+  margin-top: 20px;
 }
 
-.main p {
-  margin: 0;
+/* Responsive Grid: 2 columns on tablet, 3 on desktop */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid #f0f0f0;
+  border-radius: 30px; /* Large rounded corners for the card itself */
+  padding: 1.5rem; /* Creates the whitespace between edge and image */
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 220px; /* Fixed height for consistency */
+  border-radius: 20px; /* Rounded corners for the image */
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* The Black Circle with Icon */
+.iconBadge {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: #1a1a1a; /* Dark black/grey */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Ensure the icon inside is white (if your SVG is black, use invert) */
+.iconSvg {
+  filter: invert(1) brightness(100); 
+  width: 24px;
+  height: 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.75rem;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Pushes Read More to bottom if descriptions vary in length */
+}
+
+.readMore {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.readMore:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid #f0f0f0;
+  border-radius: 30px;
+  padding: 1.5rem;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Container for the black circle */
+.iconBadge {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 80px;
+  height: 80px;
+  background-color: #101820; 
+  border-radius: 50%;
+  
+  /* --- CENTERING MAGIC --- */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* ----------------------- */
+  
+  z-index: 2;
+  overflow: hidden; /* Keeps image inside the circle if it's too big */
+}
+
+/* Style for the icon image itself */
+.iconImg {
+  width: 60px;   /* Adjust size as needed */
+  height: 60px;
+  object-fit: contain;
+  
+  /* OPTIONAL: If your icons are black PNGs and you want them white, uncomment line below: */
+  /* filter: brightness(0) invert(1); */
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.75rem;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.readMore {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between text and arrow if you add one */
+  transition: color 0.2s;
+}
+
+.readMore:hover {
+  color: #000;
+  text-decoration: underline;
 }
