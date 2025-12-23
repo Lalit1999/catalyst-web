@@ -343,11 +343,13 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate})
             <div className={styles.priceBox}>
                 <div className={styles.moneyBox}>
                     <p className={styles.headPrice}>USD</p>
-                    <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p>
+                    <p className={styles.offerPrice}>${usd}</p>
+                    {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p> */}
                 </div>
                 <div className={styles.moneyBox}>
                     <p className={styles.headPrice}>INR</p>
-                    <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹{inr}</p>
+                    <p className={styles.offerPrice}>₹{inr}</p>
+                    {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹{inr}</p> */}
                 </div>
             </div>
             <div className={styles.registerBtnCon}>
