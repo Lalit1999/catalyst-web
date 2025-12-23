@@ -78,13 +78,45 @@ const programsDetailsArr = {
                 skills: ['Stakeholder coordination', 'Site and investigator management', 'Monitoring and auditing practice', 'Data management collaboration', 'Biostatistics partnership'],
             }
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -193,13 +225,45 @@ const programsDetailsArr = {
                 skills: [''],
             }
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -308,13 +372,45 @@ const programsDetailsArr = {
                 skills: [''],
             }
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -423,13 +519,45 @@ const programsDetailsArr = {
                 skills: [''],
             }
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -538,13 +666,45 @@ const programsDetailsArr = {
                 skills: [''],
             }
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
         duration: '12 Weeks',
@@ -556,8 +716,12 @@ const programsDetailsArr = {
     'oncology-clinical-trials-training-octt': {
         id: 'oncology-clinical-trials-training-octt',
         heading: "Oncology Clinical Trials Training (OCTT)",
+        subHeading: "Specialized Training for Excellence in Oncology Clinical Trials",
         description: [
-            "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+            'The Oncology Clinical Trials Training (OCTT) program is a specialized, competency-driven course designed to equip participants with the knowledge, skills, and practical expertise required to manage and oversee oncology clinical trials. The program focuses on the unique scientific, operational, and regulatory complexities of cancer research, enabling learners to develop proficiency in oncology trial conduct through a structured and hands-on training approach.',
+            'Structured as a six-month, distance-learning program, the course offers the flexibility of a self-paced format, enabling participants to complete the training within a typical 3-6 month timeframe. Learners are provided with two comprehensive self-learning modules, an assignment workbook, and hands-on training materials designed to ensuring a strong foundation in oncology-specific clinical research principles.',
+            'Practical training is reinforced through realistic case studies and a detailed dummy clinical trial monitoring kit, which includes a protocol synopsis, Case Report Forms (CRFs), source documents, and an Investigator Site File (ISF). Learners are required to critically review these materials and identify intentionally embedded deficiencies, closely simulating real-world oncology trial oversight scenarios.',
+            'Upon successful completion of all required assessments and fulfillment of the minimum qualification criteria, participants are awarded a professional certificate, recognizing their readiness to contribute effectively to oncology clinical trial operations and monitoring.',
         ],
         learnArr: [
             'Understand global regulatory guidelines governing drug safety',
@@ -565,104 +729,130 @@ const programsDetailsArr = {
             'Evaluate and document safety data accurately and consistently',
             'Apply standard medical terminologies for harmonized safety reporting',
             'Detect emerging safety signals and analyze trends',
-            'Support informed risk–benefit assessment and decision-making',
+            'Support informed risk-benefit assessment and decision-making',
         ],
         whyChooseArr: [
             {
                 icon: <ActivityLine />,
-                head: 'Personalized Learning',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'Self-Paced Learning',
+                text: 'Flexible format that fits around professional or academic schedules.'
             },
             {
                 icon: <Prog />,
-                head: '30+ Projects',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: '24/7 Expert Academic Support',
+                text: '24/7 faculty guidance for queries, feedback, and learning clarity.'
             },
             {
                 icon: <StarLine />,
-                head: 'Capstone Project',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'Industry-Ready Content',
+                text: 'Curriculum mapped to current industry practices and GCP standards.'
             },
             {
                 icon: <Principal />,
-                head: 'A standout portfolio',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'A Standout Portfolio',
+                text: 'Assignments that showcase trial design and operational know-how.'
             },
             {
                 icon: <Doc />,
-                head: 'Complete career support',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'Real-World Projects & Case Studies',
+                text: 'Applied real-world case studies reflecting actual scenarios.'
             },
             {
                 icon: <Person />,
-                head: 'Best Faculty',
-                text: 'Comprehensive Curriculum covering all essential React topics from basics to advanced concepts.'
+                head: 'Placement Assistance',
+                text: 'Career guidance and interview readiness for industry roles.'
             },
         ],
         brochureLink: "/",
         courseDetailArr: [
             {
-                title: 'Introduction to Pharmacovigilance and Risk Management',
-                duration: '1 week',
-                chapters: [''],
-                skills: [''],
-            },
-            {
-                title: 'Standard Terms and Definition of Pharmacovigilance',
-                duration: '1 week',
-                chapters: [''],
-                skills: [''],
-            },
-            {
-                title: 'Global Perspectives PV and ADR Reporting',
-                duration: '5 weeks',
+                title: 'Fundamentals of Oncology Clinical Trials',
+                duration: 'Duration: Self-Paced',
                 chapters: [
-                    'Functions of a National Pharmacovigilance System', 
-                    'Minimum Requirements for a Functional National Pharmacovigilance System', 
-                    'Basic Steps in Setting up a Pharmacovigilance Centre', 
-                    'How to Join the WHO Program for International Drug Monitoring?', 
-                    'Procedure for Joining the WHO Drug Monitoring Program',
-                    'Pharmacovigilance Methods',
-                    'Relationship/Casualty Assessment',
-                    'Signal Generation in Pharmacovigilance',
-                ],
-                skills: [''],
-            }, 
-            {
-                title: 'Guidelines and Standard Governing PV',
-                duration: '5 weeks',
-                chapters: [
-                    'ICH Guidelines', 
-                    'US-FDA Guidelines', 
-                    'CFR Guidelines', 
-                    'European Union Guidelines', 
-                    'CIOMS Guidelines',
-                    'Joint CIOMS-WHO Working Group on Drug Development Research and Pharmacovigilance in Resource-Poor Countries (2006)',
-                    'CIOMS-WHO Working Group on Vaccine Pharmacovigilance',
-                    'Pharmacovigilance Program of India (PVPI)',
-                    'List of ADR Monitoring Centres under PVPI',
+                    'Introduction to Drug Discovery Process',
+                    'Guidelines and Standards Governing Clinical Research',
+                    'Essential Clinical Trial Documents',
+                    'Ethics Committee/Ethics Review Board',
+                    'Informed Consent Process',
+                    'Overview of Cancer and Oncology Clinical Trials',
+                    'Diagnosing Cancer: Staging and Disease Assessment',
+                    'Safety Evaluation in Oncology Clinical Trials (WHO, CTC)',
+                    'Efficacy Evaluation in Oncology Clinical Trials (WHO, SWOG, RECIST)',
+                    'Glossary',
                 ],
                 skills: [''],
             },
             {
-                title: 'Global AE Reporting System and Reporting Forms',
-                duration: '1 week',
+                title: 'Oncology Clinical Trials Monitoring',
+                duration: 'Duration: Self-Paced',
                 chapters: [
-                    'Definitions and Terminology Associated with Clinical Safety',
+                    'Development of a Monitoring Plan',
+                    'Site Initiation, Review of Essential Trial Documents, Delegation of Duties and',
+                    'Responsibilities at Individual Site',
+                    'Clinical Trial Monitoring',
+                    'Inventory Planning and Tracking',
+                    'Source Document Verification (SDV)',
+                    'CRF Review, and Coordination of Data Management Activities',
+                    'Serious Adverse Event (SAE) review and Regulatory Compliance',
+                    'Investigational Product (IP) Accountability and Management',
+                    'Management and Prevention of Deviations',
+                    'Site Closure Monitoring Visit',
                 ],
                 skills: [''],
-            }
+            },
+            {
+                title: 'Hands-on Training',
+                duration: 'Duration: Self-Paced',
+                chapters: [
+                    'Review a simulated oncology clinical trial monitoring kit and accurately complete oncology-specific Case Report Forms (CRFs)',
+                    'Conduct an oncology trial monitoring visit and systematically identify, assess, and document discrepancies or protocol deviations',
+                    'Identify and evaluate discrepancies or deviations within the Investigator Site File (ISF) in the context of oncology clinical trials',
+                ],
+                skills: [''],
+            },
         ],
-        reqArr: [
-            'Basic understanding of HTML, CSS, and JavaScript',
-            'Familiarity with programming concepts like variables, loops, and functions',
-            'A computer with internet access to set up the development environment',
-            'A computer with internet access to set up the development environment',
-            'Willingness to learn and practice coding regularly'
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
         ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
         usd: 350,
         inr: 14000,
-        duration: '12 Weeks',
+        duration: 'Self-Paced',
         lessons: 10,
         students: `500+`,
         language: ['English'],

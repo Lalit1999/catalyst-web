@@ -261,17 +261,44 @@ const CourseDetailSection = ({courseDetailArr}) => {
     ) ;
 }
 
-const ReqSection = ({reqArr}) => {
+const ReqSection = ({courseSchedule}) => {
     return (
         <div className={styles.descrCon}>
-            <p className={styles.descrHead}>Requirements</p>
+            <p className={styles.descrHead}>Course Schedule</p>
             <div className={styles.reqCon}>
             {
-                reqArr.map((one,i) => {
+                courseSchedule.map((one,i) => {
                     return (
-                        <div className={styles.reqOne} key={i}>
-                            <Tick />
-                            <p>{one}</p>
+                        <div className={styles.reqOneBox} key={i}>
+                            <p className={styles.reqOneNum}>{i+1}</p>
+                            <div className={styles.reqOne}>
+                                <p className={styles.reqOneHead}>{one.head}</p>
+                                <p className={styles.reqOneText}>{one.value}</p>
+                            </div>
+                        </div>
+                    ) ;
+                })
+            }
+            </div>
+        </div>
+    ) ;
+}
+
+const RegProcessSection = ({regProcess}) => {
+    return (
+        <div className={styles.descrCon}>
+            <p className={styles.descrHead}>Registration Process</p>
+            <p className={styles.descrSubHead}>{regProcess.head}</p>
+            <div className={styles.reqCon}>
+            {
+                regProcess.steps.map((one,i) => {
+                    return (
+                        <div className={styles.reqOneBox} key={i}>
+                            <p className={styles.reqOneNum}>{i+1}</p>
+                            <div className={styles.reqOne}>
+                                <p className={styles.reqOneHead}>{one.head}</p>
+                                <p className={styles.reqOneText}>{one.value}</p>
+                            </div>
                         </div>
                     ) ;
                 })
@@ -380,9 +407,10 @@ const DetailMain = (data) => {
                 <DescrCon {...data} />
                 <LearnSection {...data} />
                 <CourseSection {...data} />
-                <BrouchureBox {...data} />
                 <CourseDetailSection {...data} />
                 <ReqSection {...data} />
+                <BrouchureBox {...data} />
+                <RegProcessSection {...data} />
             </div>
             <SideBar {...data} />
         </div>
