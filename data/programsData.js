@@ -4,8 +4,12 @@ const programsDetailsArr = {
     'professional-diploma-in-clinical-research-pdcr': {
         id: 'professional-diploma-in-clinical-research-pdcr',
         heading: "Professional Diploma in Clinical Research (PDCR)",
+        subHeading: "India's Largest Clinical Research Training Program",
         description: [
-            "PCPV is India's largest and widely recognized pharmacovigilance training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+            "The Professional Diploma in Clinical Research (PDCR) is India's largest and widely recognized clinical research training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
+            "This comprehensive skill-development programme offers a robust understanding of drug discovery, clinical trial operations, regulatory frameworks, and internationally accepted Good Clinical Practice (GCP) standards.",
+            "Participants receive four meticulously curated learning modules along with an Assignment Workbook that together provide a comprehensive grounding in clinical trial methodology. Delivered over six months through a flexible distance-learning model, the PDCR programme enables learners to progress at their own pace while balancing demanding professional or academic commitments.",
+            "Ideal for graduates and working professionals seeking a distinguished entry or advancement in the clinical research domain, PDCR equips participants with industry-ready competencies and a competitive edge in a rapidly evolving global landscape.",
         ],
         learnArr: [
             'Drug development phases, GCP, and global trial norms',

@@ -100,14 +100,14 @@ const socialArr = [
     }
 ] ;
 
-const HomeSlider = () => {
+const HomeSlider = ({ heading }) => {
     return (
         <div className={styles.homeSlider}>
             <Image src={pragramBanner} alt="Program Banner" />
             <div className={styles.homeSliderMain}>
                 <div className={styles.homeSliderLeft}>
                     <div className={styles.sliderLeftText}>
-                        <p>Design Thinking Researching for Better UX</p>
+                        <p>{heading}</p>
                     </div>
                     <div className={styles.sliderLeftBtnCon}>
                         <Link href="/" className={styles.homeSliderButton1}>Register Now</Link>
@@ -116,17 +116,17 @@ const HomeSlider = () => {
                     </div>
                 </div>
                 <div className={styles.homeSliderRight}>
-                    <Image src={course} alt="course placeholder" />
+                    <Image src={course} alt="course placeholder" fill />
                 </div>
             </div>
         </div>
     );
 }
 
-const DescrCon = ({heading, description}) => {
+const DescrCon = ({subHeading, description}) => {
     return (
         <div className={styles.descrCon}>
-            <p className={styles.descrHead}>{heading}</p>
+            <p className={styles.descrHead}>{subHeading}</p>
             <div className={styles.descrTextCon}>
             {
                 description.map((para, i) => {
@@ -450,7 +450,7 @@ const program = () => {
 
     return (
         <div className={styles.courseMain}>
-            <HomeSlider />
+            <HomeSlider heading={data.heading} />
             <div className={styles.courseDetails}>
                 <DetailMain {...data} />
                 <DetailBottom />
