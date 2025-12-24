@@ -46,13 +46,14 @@ export default function WhatWeDo() {
       {/* Icon Badge: Updated for Images */}
       <div className={styles.iconBadge}>
         {service.imgicon && (
-          <Image 
-            src={service.imgicon} 
-            alt="service icon"
-            width={24} 
-            height={24} 
-            className={styles.iconImg} 
-          />
+          // <Image 
+          //   src={service.imgicon} 
+          //   alt="service icon"
+          //   width={24} 
+          //   height={24} 
+          //   className={styles.iconImg} 
+          // />
+          <div><service.imgicon/></div>
         )}
       </div>
     </div>
