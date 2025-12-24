@@ -434,11 +434,10 @@ const DetailBottom = () => {
 const program = () => {
 
     const params = useParams() ;
-    const { id } = params ;
+    const { id } = params;
     const decodedId = id ? decodeURIComponent(id) : id;
 
     const data = programsDetailsArr[decodedId];
-    console.log(data) ;
 
     return (
         <div className={styles.courseMain}>

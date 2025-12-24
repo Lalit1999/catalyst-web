@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { serviceArray } from "../../../data/serviceData";
 import styles from "./page.module.css";
 import { Ortho } from "@images";
@@ -73,19 +74,11 @@ const faqList = [
 ];
 
 
-export default async function ServiceDetailPage({ params }) {
-  const resolvedParams = await params;
+export default function ServiceDetailPage() {
+  const params = useParams()
+  const service = serviceArray.find((item) => item.slug == params.id);
 
-  const urlId = resolvedParams.id;
-
-  const idToFind = Number(urlId);
-  const service = serviceArray.find((item) => item.id === idToFind);
-
-  if (service) {
-    console.log("✅ Found Service:", service.title);
-  } else {
-    console.error("❌ Service NOT FOUND.");
-  }
+ 
 
   if (!service) {
     return notFound();
@@ -203,7 +196,6 @@ export default async function ServiceDetailPage({ params }) {
                 {quickLinks.map((link, idx) => (
                   <li key={idx} className={styles.sidebarItem}>
                     <div className={styles.quickLinkRow}>
-                      <span className={styles.quickLinkIcon}>{link.icon}</span>
                       <span className={styles.quickLinkText}>{link.text}</span>
                     </div>
                   </li>
@@ -274,7 +266,7 @@ export default async function ServiceDetailPage({ params }) {
                             <summary className={styles.faqSummary}>
                                 <span className={styles.faqQuestion}>{faq.question}</span>
                                 {/* Text-based Icon */}
-                                <span className={styles.faqIcon}>+</span>
+                                <span className={styles.faqIcon}></span>
                             </summary>
                             <div className={styles.faqAnswer}>
                                 {faq.answer}

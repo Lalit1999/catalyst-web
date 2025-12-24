@@ -59,10 +59,10 @@ export default function WhatWeDo() {
 
     {/* Content */}
     <div className={styles.content}>
-      <h3 className={styles.title}>{service.title}</h3>
+      <Link href={`/what-we-do/${service.slug}`} className={styles.title}>{service.title}</Link>
       <p className={styles.desc}>{service.desc}</p>
       
-       <Link href={`/what-we-do/${service.id}`} className={styles.readMore}>
+       <Link href={`/what-we-do/${service.slug}`} className={styles.readMore}>
                   <span>Read More</span>
                 </Link>
     </div>
