@@ -22,42 +22,43 @@ const programsArr = [
     },
     {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Professional Certificate in Pharmacovigilance (PCPV)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-1'
+        description: "The Professional Certificate in Pharmacovigilance (PCPV) is an industry-aligned drug safety training program that equips learners with essential skills in pharmacovigilance, case processing, signal detection, and global safety regulations.",
+        id: 'professional-certificate-in-pharmacovigilance-pcpv'
     },
     {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Advanced Certificate Program in Scientific Writing (SW)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-2'
+        description: "The Advanced Certificate Program in Scientific Writing is a comprehensive, competency-building training program designed to prepare participants for specialized roles in scientific and medical writing within the biopharmaceutical, healthcare, and clinical research industries. ",
+        id: 'advanced-certificate-program-in-scientific-writing-sw'
     },
     {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Advanced Certificate Program in Project Management (PM)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-3'
+        description: "The Advanced Certificate Program in Project Management is a structured, competency-building course designed to equip participants with the core skills, practical knowledge, and operational insight required for specialized clinical trial project management roles",
+        id: 'advanced-certificate-program-in-project-management-pm'
     },
     {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Advanced Certificate Program in Clinical Trial Monitoring (CTM)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-4'
-    },{
+        description: "The Advanced Certificate Program in Clinical Trial Monitoring is a focused, competency-driven training designed to develop specialized expertise in the oversight and monitoring of clinical trials. ",
+        id: 'advanced-certificate-program-in-clinical-trial-monitoring-ctm'
+    },
+    {
         image: cardImage, 
-        heading: "Sample Heading", 
+        heading: "Oncology Clinical Trials Training (OCTT)", 
         lessons: 10, 
         students: 100, 
-        description: "Sample description",
-        id: 'sample-heading-5'
+        description: "The Oncology Clinical Trials Training (OCTT) program is a specialized, competency-driven course designed to equip participants with the knowledge, skills, and practical expertise required to manage and oversee oncology clinical trials. ",
+        id: 'oncology-clinical-trials-training-octt'
     },
 ] ;
 
@@ -99,14 +100,14 @@ const socialArr = [
     }
 ] ;
 
-const HomeSlider = () => {
+const HomeSlider = ({ heading }) => {
     return (
         <div className={styles.homeSlider}>
             <Image src={pragramBanner} alt="Program Banner" />
             <div className={styles.homeSliderMain}>
                 <div className={styles.homeSliderLeft}>
                     <div className={styles.sliderLeftText}>
-                        <p>Design Thinking Researching for Better UX</p>
+                        <p>{heading}</p>
                     </div>
                     <div className={styles.sliderLeftBtnCon}>
                         <Link href="/" className={styles.homeSliderButton1}>Register Now</Link>
@@ -115,18 +116,26 @@ const HomeSlider = () => {
                     </div>
                 </div>
                 <div className={styles.homeSliderRight}>
-                    <Image src={course} alt="course placeholder" />
+                    <Image src={course} alt="course placeholder" fill />
                 </div>
             </div>
         </div>
     );
 }
 
-const DescrCon = ({heading, description}) => {
+const DescrCon = ({subHeading, description}) => {
     return (
         <div className={styles.descrCon}>
-            <p className={styles.descrHead}>{heading}</p>
-            <p className={styles.descrText}>{description}</p>
+            <p className={styles.descrHead}>{subHeading}</p>
+            <div className={styles.descrTextCon}>
+            {
+                description.map((para, i) => {
+                    return (
+                        <p className={styles.descrText} key={i}>{para}</p>
+                    ) ;
+                })
+            }
+            </div>
         </div>
     ) ;
 }
@@ -212,7 +221,7 @@ const SectionCon = ({one}) => {
                     {
                         one.chapters.map((chapter,j) => {
                             return (
-                                <p className={styles.courseDetailDescrPoint} key={j}><Tick />{chapter}</p>
+                                <p className={styles.courseDetailDescrPoint} key={j}>{chapter?<Tick />:null}{chapter}</p>
                             ) ;
                         })
                     }
@@ -252,17 +261,44 @@ const CourseDetailSection = ({courseDetailArr}) => {
     ) ;
 }
 
-const ReqSection = ({reqArr}) => {
+const ReqSection = ({courseSchedule}) => {
     return (
         <div className={styles.descrCon}>
-            <p className={styles.descrHead}>Requirements</p>
+            <p className={styles.descrHead}>Course Schedule</p>
             <div className={styles.reqCon}>
             {
-                reqArr.map((one,i) => {
+                courseSchedule.map((one,i) => {
                     return (
-                        <div className={styles.reqOne} key={i}>
-                            <Tick />
-                            <p>{one}</p>
+                        <div className={styles.reqOneBox} key={i}>
+                            <p className={styles.reqOneNum}>{i+1}</p>
+                            <div className={styles.reqOne}>
+                                <p className={styles.reqOneHead}>{one.head}</p>
+                                <p className={styles.reqOneText}>{one.value}</p>
+                            </div>
+                        </div>
+                    ) ;
+                })
+            }
+            </div>
+        </div>
+    ) ;
+}
+
+const RegProcessSection = ({regProcess}) => {
+    return (
+        <div className={styles.descrCon}>
+            <p className={styles.descrHead}>Registration Process</p>
+            <p className={styles.descrSubHead}>{regProcess.head}</p>
+            <div className={styles.reqCon}>
+            {
+                regProcess.steps.map((one,i) => {
+                    return (
+                        <div className={styles.reqOneBox} key={i}>
+                            <p className={styles.reqOneNum}>{i+1}</p>
+                            <div className={styles.reqOne}>
+                                <p className={styles.reqOneHead}>{one.head}</p>
+                                <p className={styles.reqOneText}>{one.value}</p>
+                            </div>
                         </div>
                     ) ;
                 })
@@ -307,11 +343,13 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate})
             <div className={styles.priceBox}>
                 <div className={styles.moneyBox}>
                     <p className={styles.headPrice}>USD</p>
-                    <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p>
+                    <p className={styles.offerPrice}>${usd}</p>
+                    {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p> */}
                 </div>
                 <div className={styles.moneyBox}>
                     <p className={styles.headPrice}>INR</p>
-                    <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹{inr}</p>
+                    <p className={styles.offerPrice}>₹{inr}</p>
+                    {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹{inr}</p> */}
                 </div>
             </div>
             <div className={styles.registerBtnCon}>
@@ -371,9 +409,10 @@ const DetailMain = (data) => {
                 <DescrCon {...data} />
                 <LearnSection {...data} />
                 <CourseSection {...data} />
-                <BrouchureBox {...data} />
                 <CourseDetailSection {...data} />
                 <ReqSection {...data} />
+                <BrouchureBox {...data} />
+                <RegProcessSection {...data} />
             </div>
             <SideBar {...data} />
         </div>
@@ -441,7 +480,7 @@ const program = () => {
 
     return (
         <div className={styles.courseMain}>
-            <HomeSlider />
+            <HomeSlider heading={data.heading} />
             <div className={styles.courseDetails}>
                 <DetailMain {...data} />
                 <DetailBottom />

@@ -79,6 +79,7 @@ const SectionThree = () => {
 								) ;
 							} )
 						}
+						<Link href={homePageData.sectionThree.box2.buttonLink||'#'} className={styles.sectionThreeButton}>Read More...</Link>
 					</div>
 					<div className={styles.sectionDark}>
 						<p className={styles.sectionThreeHead}>{homePageData.sectionThree.box3.head}</p>
@@ -89,6 +90,7 @@ const SectionThree = () => {
 								) ;
 							} )
 						}
+						<Link href={homePageData.sectionThree.box2.buttonLink||'#'} className={styles.sectionThreeButton}>Read More...</Link>
 					</div>
 				</div>
 			</div>
