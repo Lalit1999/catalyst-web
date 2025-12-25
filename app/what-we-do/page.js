@@ -46,23 +46,24 @@ export default function WhatWeDo() {
       {/* Icon Badge: Updated for Images */}
       <div className={styles.iconBadge}>
         {service.imgicon && (
-          <Image 
-            src={service.imgicon} 
-            alt="service icon"
-            width={24} 
-            height={24} 
-            className={styles.iconImg} 
-          />
+          // <Image 
+          //   src={service.imgicon} 
+          //   alt="service icon"
+          //   width={24} 
+          //   height={24} 
+          //   className={styles.iconImg} 
+          // />
+          <div><service.imgicon/></div>
         )}
       </div>
     </div>
 
     {/* Content */}
     <div className={styles.content}>
-      <h3 className={styles.title}>{service.title}</h3>
+      <Link href={`/what-we-do/${service.slug}`} className={styles.title}>{service.title}</Link>
       <p className={styles.desc}>{service.desc}</p>
       
-       <Link href={`/what-we-do/${service.id}`} className={styles.readMore}>
+       <Link href={`/what-we-do/${service.slug}`} className={styles.readMore}>
                   <span>Read More</span>
                 </Link>
     </div>
