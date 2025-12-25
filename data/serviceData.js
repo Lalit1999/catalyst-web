@@ -3,7 +3,7 @@ import { c1, Cardiomyopathy, d1, DentalClinic, h1, Hematology, n1, Neurology, o1
 
 export const serviceArray = [
  {
-   id: 1,
+   id: 10,
    slug: "dental-care",
    img: DentalClinic,
    title: "Dental Care",
