@@ -4,42 +4,39 @@
   display: flex;
   flex-direction: column;
   color: var(--black);
-  /* Keep your parent padding if you need it for other elements */
   gap: 3em;
-  position: relative;  
-
-  /* overflow-x: hidden;   */
+  position: relative;
 }
 .downbarMainCon {
-	display: flex;
-	flex-direction: column;
-	margin: 0 -4em;
-	
+  display: flex;
+  flex-direction: column;
+  margin: 0 -4em;
+  background-image: url("/expertisebg.png");
+  background-size: cover;
 }
 .downbarTop {
-	display: flex;
-	width: 100%;
-	background-color: var(--main);
-	align-items: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
   flex-direction: column;
-	justify-content: center;
-	padding: 2em 0;
-	gap: 2em ;
+  justify-content: center;
+  padding: 2em 0;
+  gap: 2em;
 }
-.main_bread{
+.main_bread {
   font-size: 16px;
   font-weight: 600;
   line-height: 20.8px;
   color: white;
 }
-.breadContent{
+.breadContent {
   font-weight: 700;
   font-size: 36px;
   line-height: 50.4px;
   color: white;
   margin-top: 10px;
 }
-.downHead{
+.downHead {
   display: flex;
   flex-direction: row;
   gap: 0px 15px;
@@ -58,7 +55,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 
 .section {
   padding: 4rem 0;
@@ -89,7 +85,6 @@
 .card {
   border: 1px solid #f0f0f0;
   border-radius: 30px;
-  padding: 1rem;
   background-color: #fff;
   transition: box-shadow 0.3s ease;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -107,7 +102,6 @@
   height: 220px;
   border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 1.5rem;
 }
 
 .mainImage {
@@ -124,15 +118,15 @@
   right: 15px;
   width: 80px;
   height: 80px;
-  background-color: #101820; 
+  background-color: #101820;
   border-radius: 50%;
-  
+
   /* --- CENTERING MAGIC --- */
   display: flex;
   align-items: center;
   justify-content: center;
   /* ----------------------- */
-  
+
   z-index: 2;
   overflow: hidden; /* Keeps image inside the circle if it's too big */
 }
@@ -140,9 +134,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-
   padding: 1rem 2rem;
-  
 }
 
 .title {
@@ -150,9 +142,10 @@
   font-weight: 600;
   color: #111;
   margin-bottom: 0.75rem;
+  transition: all ease 0.4s;
 }
-.title:hover{
-  color:var(--main);
+.title:hover {
+  color: var(--main);
 }
 .desc {
   font-size: 0.95rem;
@@ -160,7 +153,7 @@
 
   max-height: 3.05rem;
   overflow: hidden;
-
+color: #4b535d;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
