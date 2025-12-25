@@ -38,21 +38,18 @@ const homePageData = {
             para: [
                 'Catalyst Clinical Services brings over two decades of hands-on experience across global clinical development.',
                 'We have supported studies from Phase I to Phase IV, enabling sponsors to navigate regulatory expectations, accelerate timelines, and strengthen data quality.',
-                // 'Our team combines scientific insight, operational excellence, and a deep understanding of therapeutic areas to ensure every project moves forward with confidence.',
             ]
         },
         box2: {
             head : 'Pan-India Site Network',
             para : [
                 'We support clinical research across all major zones of India - North, South, East, and West, ensuring efficient study operations through strong investigator networks, diverse patient populations, and reliable site performance.',
-                'We operate a comprehensive clinical trial site network across India’s major metros and key regional hubs. '
             ],
         },
         box3: {
             head : 'Types of Trial Sites ',
             para : [
                 'Our trials are conducted across a diverse spectrum of site types, including government and academic hospitals, private and corporate hospital networks, and specialist clinics. ',
-                'This broad site ecosystem enhances study feasibility, expands patient access, and ensures the generation of robust, high-quality data. '
             ],
         },
     },
@@ -108,13 +105,13 @@ const homePageData = {
     ],
     expertise : {
         subTitle: 'Featured Solutions',
-        title: 'Deep Expertise',
+        title: 'Specialized Expertise',
         expertiseArr :[
             {
                 title: 'Robotic-Assisted Surgery',
                 descr: [
-                    'Our therapeutic expertise spans a wide range of disease areas, including oncology, cardiology, neurology, and infectious diseases. We have a deep understanding of the unique challenges and requirements of each therapeutic area, allowing us to design and execute clinical trials that are tailored to the specific needs of our clients.',
-                    'Our expertise in robotic-assisted surgery enables sponsors to advance next-generation surgical solutions with confidence. We support the entire clinical development pathway - from protocol design and feasibility assessment to multi-centre trial execution and post-market evidence generation. '
+                    'Our expertise in robotic-assisted surgery enables sponsors to advance next-generation surgical solutions with confidence. We support the entire clinical development pathway - from protocol design and feasibility assessment to multi-centre trial execution and post-market evidence generation.',
+                    'With deep understanding of robotic systems, performance metrics, and real-world surgical workflows, we help deliver high-quality data on precision, safety, and patient recovery outcomes. Our robust operational frameworks ensure faster study timelines and accelerated adoption of minimally invasive technologies. '
                 ],
                 link: '/',
                 image: exp1
@@ -122,8 +119,8 @@ const homePageData = {
             {
                 title: 'Oncology',
                 descr: [
-                    'Our therapeutic expertise spans a wide range of disease areas, including oncology, cardiology, neurology, and infectious diseases. We have a deep understanding of the unique challenges and requirements of each therapeutic area, allowing us to design and execute clinical trials that are tailored to the specific needs of our clients.',
                     'In oncology research, we combine scientific depth with operational excellence to manage some of the most complex and time-sensitive clinical trials. Our capabilities span solid tumours and haematological malignancies, immuno-oncology, precision medicine, and novel targeted therapies.',
+                    'Through strong investigator networks, biomarker-driven approaches, and patient-centric study designs, we help sponsors generate high-impact clinical evidence while navigating regulatory complexities. Our focus remains on accelerating breakthroughs that improve survival, quality of life, and global access to advanced cancer therapies.',
                 ],
                 link: '/',
                 image: exp2
@@ -131,8 +128,8 @@ const homePageData = {
             {
                 title: 'RWE Scientific Expertise',
                 descr: [
-                    `We offer cross-therapeutic expertise in designing and executing real-world evidence (RWE) studies across the research continuum, using robust clinical, epidemiological, and biostatistical methods to generate high-quality, decision-ready insights from diverse real-world data sources.`,
-                    `We bring deep, cross-therapeutic expertise in designing and executing real-world evidence studies across prospective and retrospective designs, delivering high-quality, decision-grade insights by integrating clinical expertise, advanced analytics, and diverse real-world data sources.`,
+                    `We possess deep, cross-therapeutic expertise in the conceptualization, design, and execution of real-world evidence (RWE) studies, supporting evidence generation across the entire research continuum.`,
+                    `Our experience encompasses prospective and retrospective study designs, including sponsor-initiated and investigator-initiated research, enabling the generation of evidence tailored to diverse scientific, regulatory, and market-access objectives.`,
                 ],
                 link: '/',
                 image: exp3
@@ -142,7 +139,7 @@ const homePageData = {
     publications: {
         subTitle: 'Latest Publications',
         title: 'Most Influential Publications',
-        descr: 'Some publications are not just evidence—they are breakthroughs. Our most influential work reflects studies that reshaped understanding, informed clinical decision-making, and advanced innovation across complex therapeutic areas. These featured papers represent the science that has defined our journey and strengthened our role as a trusted partner in clinical research.',
+        descr: 'Our most influential work reflects the science that has defined our journey and strengthened our role as a trusted partner in clinical research. These studies have reshaped understanding and advanced innovation across complex therapeutic areas.',
         buttonText: 'View All',
         buttonLink: '/',
         pubArr : [

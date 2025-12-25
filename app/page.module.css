@@ -213,9 +213,10 @@
 }
 
 .sectionThreeSecond {
+	align-self: flex-end ;
 	flex-basis: 65% ;
 	display: flex ;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center ;
 }
 
@@ -239,6 +240,12 @@
 .sectionThreePara {
 	color: var(--darkWhite) ;
 	font-size: .9rem ;
+
+	display: -webkit-box ;
+	-webkit-line-clamp: 5 ;
+	line-clamp: 5 ;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .sectionDark {
@@ -251,6 +258,19 @@
 	flex-basis: 50%;
 	gap: 2em ;
 }
+
+.sectionThreeButton {
+	font-size: .9rem ;
+	font-weight: 500 ;
+	color: var(--white) ;
+	transition: all .3s ;
+	align-self: flex-start ;
+}
+
+.sectionThreeButton:hover {
+	color: var(--main) ;
+}
+
 /* section three ends */
 
 /* section four */
