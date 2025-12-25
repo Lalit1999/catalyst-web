@@ -2,8 +2,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  color: var(--black);
-  gap: 3em 0em;
 }
 
 .main p {
@@ -50,8 +48,9 @@
   margin-top: 20px;
 }
 
+
 .section {
-  padding: 4rem 0;
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
 }
@@ -59,6 +58,10 @@
 .container {
   width: 100%;
   max-width: 100%;
+  display: flex;
+    margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -72,7 +75,7 @@
 }
 
 .mvCard {
-  background-color: var(--main);
+  background-color: var(--second);
   /* Uses main color */
   color: white;
   padding: 3rem 2rem;
@@ -145,12 +148,14 @@
   object-fit: contain;
 }
 
-
+.textCol{
+  color: var(--third);
+}
 .heading {
   font-size: 32px;
   font-weight: 500;
   color: #1a1a1a;
-
+color: var(--second);
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
@@ -192,9 +197,10 @@
 
 /* --- 4. TIMELINE SECTION (DARK BG) --- */
 .timelineSection {
-  background-color: var(--main);
+  margin-top: 1rem;
+  background-color: var(--second);
   /* Dark BG */
-  padding: 5em;
+  padding: 5rem;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -277,6 +283,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
+  max-width: 80%;
 }
 
 .iconCard {
@@ -314,7 +321,7 @@
 
 /* --- 6. STATS SECTION (DARK BG) --- */
 .statsSection {
-  background-color: var(--main);
+  background-color: var(--second);
   /* Dark BG */
   padding: 4rem 1em;
 
@@ -402,4 +409,21 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 1.5rem;
   }
+}
+.statcontainer{
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  align-items: center;
+}
+.analysissection{
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -0.1rem;
+  margin-bottom: 2rem;
+  align-items: center;
 }

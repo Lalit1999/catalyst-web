@@ -154,7 +154,7 @@ export default function WhoWeAre() {
         </section>
 
         {/* 3. PROGRESS / CULTURE SECTION */}
-        <section className={styles.section}>
+        <section className={styles.analysissection}>
           <div className={styles.container}>
             <div className={styles.splitGrid}>
               <div className={styles.imgCol}>
@@ -167,10 +167,10 @@ export default function WhoWeAre() {
                   />
                 </div>
               </div>
-              <div className={styles.textCol}>
+              <div>
              
                  
-                  <span>Working Together for a Healthy Life</span>
+                  <span  className={styles.textCol}>Working Together for a Healthy Life</span>
                
                 <h2 className={styles.heading}>
                   Committed To Build A Positive, Safe, Patient Focused Culture.
@@ -250,7 +250,7 @@ export default function WhoWeAre() {
 
         {/* 5. EXPERTISE GRID */}
         <section className={styles.section}>
-          <div className={styles.container}>
+          <div className={styles.statcontainer}>
             <div className={styles.iconGrid}>
               {expertiseData.map((item, idx) => (
                 <div key={idx} className={styles.iconCard}>

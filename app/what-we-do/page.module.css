@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   color: var(--black);
-  gap: 3em;
   position: relative;
 }
 .downbarMainCon {
@@ -34,13 +33,12 @@
   font-size: 36px;
   line-height: 50.4px;
   color: white;
-  margin-top: 10px;
 }
 .downHead {
   display: flex;
   flex-direction: row;
   gap: 0px 15px;
-  margin-top: 20px;
+
 }
 
 /* Responsive Grid: 2 columns on tablet, 3 on desktop */
@@ -57,9 +55,9 @@
 }
 
 .section {
-  padding: 4rem 0;
   background-color: #ffffff;
   display: flex;
+
   justify-content: center;
 }
 
@@ -67,6 +65,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
+  padding-top: 3.5rem;
   width: 100%;
 }
 
@@ -99,7 +98,9 @@
 .imageContainer {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: 270px;
+  padding: 0 1rem;
+  padding-top: 1rem;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -115,7 +116,7 @@
 .iconBadge {
   position: absolute;
   bottom: 15px;
-  right: 15px;
+  right: 30px;
   width: 80px;
   height: 80px;
   background-color: #101820;
@@ -134,14 +135,15 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
+  gap: 0.6rem;
 }
 
 .title {
   font-size: 1.25rem;
   font-weight: 600;
   color: #111;
-  margin-bottom: 0.75rem;
+  /* margin-bottom: 0.75rem; */
   transition: all ease 0.4s;
 }
 .title:hover {
@@ -168,6 +170,7 @@ color: #4b535d;
   align-items: center;
   gap: 8px; /* Space between text and arrow if you add one */
   transition: color 0.2s;
+  margin-top: -0.7rem;
 }
 
 .readMore:hover {
