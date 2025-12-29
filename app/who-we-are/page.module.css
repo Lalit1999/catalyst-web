@@ -2,6 +2,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 
 .main p {
@@ -50,7 +51,6 @@
 
 
 .section {
-  padding: 2rem 0;
   display: flex;
   justify-content: center;
 }
@@ -71,25 +71,24 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0em 1.5rem;
   width: 100%;
-  align-items: stretch;
 }
 
 .mvCard {
   background-color: var(--second);
   /* Uses main color */
   color: var(--white);
-  padding: 3rem 2rem;
+  padding: 3rem 1.5rem;
   border-radius: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 
 .mvCard h3 {
   color: var(--mild);
   /* Gold/Yellow Text */
-  margin-bottom: 1.5rem;
   font-size: 22px;
   line-height: 32px;
   font-weight: 500;
@@ -156,27 +155,40 @@
   font-weight: 500;
 color: var(--second);
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin: 0 !important;
 }
 
 .desc {
   color: var(--gray);
-
   line-height: 1.6;
   font-weight: 400;
-  padding-bottom: 2rem;
+  margin-bottom: 0 !important;
 }
-
+.analysisRight{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.rightHead{
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
 /* Progress Bars */
 .progressBar {
-  margin-bottom: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ gap: 0.4rem;
 }
-
+.progressPart{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .progressHeader {
   display: flex;
   justify-content: space-between;
   font-weight: 400;
-  margin-bottom: 5px;
   font-size: 16px;
   color: var(--second);
 }
@@ -196,7 +208,6 @@ color: var(--second);
 
 /* --- 4. TIMELINE SECTION (DARK BG) --- */
 .timelineSection {
-  margin-top: 1rem;
   background-color: var(--second);
   /* Dark BG */
   padding: 5rem;
@@ -234,13 +245,13 @@ color: var(--second);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .timelineImg {
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid var(--thodaWhite);
-  margin-bottom: 1.5rem;
   width: 150px;
   height: 150px;
 }
@@ -255,19 +266,17 @@ color: var(--second);
   /* Yellow bubble */
   color: var(--darkGray);
   font-weight: 500;
-
-  padding: 5px 15px;
+  padding: 0.5rem;
   border-radius: 20px;
-  margin-bottom: 1.5rem;
 }
 
 .timelineItem h4 {
   font-size: 19px;
   font-weight: 500;
-  margin-bottom: 1.5rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 2;
+  margin: 0 !important;
   color: var(--white);
 }
 
@@ -277,6 +286,11 @@ color: var(--second);
   line-height: 1.5;
 }
 
+.timelineItemhead{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 /* --- 5. EXPERTISE ICONS --- */
 .iconGrid {
   display: grid;
@@ -302,18 +316,20 @@ color: var(--second);
   flex-shrink: 0;
   color: var(--gray);
 }
-
+.iconContent{
+  display: flex;
+  flex-direction: column;
+gap: 0.5rem;
+}
 .iconContent h4 {
   font-size: 21px;
   font-weight: 500;
-  margin-bottom: 0.5rem;
   color: var(--black);
 
 }
 
 .iconContent p {
   font-size: 15px;
-
   font-weight: 400;
   color: #68747a;
 }
@@ -322,10 +338,8 @@ color: var(--second);
 .statsSection {
   background-color: var(--second);
   /* Dark BG */
-  padding: 4rem 1em;
-
+  padding: 4rem 1.5rem;
   display: flex;
-
   border-radius: 20px;
   justify-content: center;
   align-items: center;
@@ -333,8 +347,8 @@ color: var(--second);
 }
 
 .statsGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
 }
 
@@ -342,8 +356,7 @@ color: var(--second);
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
-  padding-right: 1rem;
+  gap: 0.8rem;
 }
 
 .statIcon {
@@ -423,6 +436,5 @@ color: var(--second);
   display: flex;
   justify-content: center;
   margin-top: -0.1rem;
-  margin-bottom: 2rem;
   align-items: center;
 }

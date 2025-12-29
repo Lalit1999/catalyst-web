@@ -3,12 +3,11 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
-// This import is correct for a default export
+
 import serviceData from "../../data/serviceData";
-import { about1, about2, about3 } from "@images";
+import { about1} from "@images";
 
 export default function WhatWeDo() {
-  // Convert the object into an array so we can map over it
   const allServices = Object.values(serviceData);
 
   return (
@@ -29,13 +28,13 @@ export default function WhatWeDo() {
       <section className={styles.section}>
         <div className={styles.container}>
           {allServices.map((service) => {
-            // Important: Assign the component to a Capitalized variable 
-            // so React recognizes it as a component
             const IconComponent = service.imgicon;
 
             return (
               <div key={service.id} className={styles.card}>
                 <div className={styles.imageContainer}>
+
+                  {/* Icon Badge */}
                   <div className={styles.iconBadge}>
                     {IconComponent && (
                       <div className={styles.iconWrapper}>
@@ -44,6 +43,7 @@ export default function WhatWeDo() {
                     )}
                   </div>
                   <div className={styles.content}>
+                  {/* Changed service.slug to service.id and service.title to service.heading */}
                   <Link href={`/what-we-do/${service.id}`} className={styles.title}>
                     {service.heading} 
                   </Link>
@@ -53,7 +53,11 @@ export default function WhatWeDo() {
                   </Link>
                 </div>
                 </div>
-              </div>
+
+                {/* Content */}
+                
+                </div>
+              
             );
           })}
         </div>
