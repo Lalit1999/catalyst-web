@@ -2,6 +2,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 
 .main p {
@@ -30,14 +31,14 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 20.8px;
-  color: white;
+  color: var(--white);
 }
 
 .breadContent {
   font-weight: 700;
   font-size: 36px;
   line-height: 50.4px;
-  color: white;
+  color: var(--white);
   margin-top: 10px;
 }
 
@@ -50,7 +51,6 @@
 
 
 .section {
-  padding: 2rem 0;
   display: flex;
   justify-content: center;
 }
@@ -71,25 +71,24 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0em 1.5rem;
   width: 100%;
-  align-items: stretch;
 }
 
 .mvCard {
   background-color: var(--second);
   /* Uses main color */
-  color: white;
-  padding: 3rem 2rem;
+  color: var(--white);
+  padding: 3rem 1.5rem;
   border-radius: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 
 .mvCard h3 {
-  color: #fbbf24;
+  color: var(--mild);
   /* Gold/Yellow Text */
-  margin-bottom: 1.5rem;
   font-size: 22px;
   line-height: 32px;
   font-weight: 500;
@@ -129,7 +128,7 @@
 .miniTag {
   font-size: 1rem;
   /* Base text size */
-  color: #000;
+  color: var(--black);
   /* Adjust color as needed */
   margin-bottom: 1rem;
   display: flex;
@@ -154,50 +153,61 @@
 .heading {
   font-size: 32px;
   font-weight: 500;
-  color: #1a1a1a;
 color: var(--second);
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin: 0 !important;
 }
 
 .desc {
-  color: #4b535d;
-
+  color: var(--gray);
   line-height: 1.6;
   font-weight: 400;
-  padding-bottom: 2rem;
+  margin-bottom: 0 !important;
 }
-
+.analysisRight{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.rightHead{
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
 /* Progress Bars */
 .progressBar {
-  margin-bottom: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ gap: 0.4rem;
 }
-
+.progressPart{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .progressHeader {
   display: flex;
   justify-content: space-between;
   font-weight: 400;
-  margin-bottom: 5px;
   font-size: 16px;
-  color: #101820;
+  color: var(--second);
 }
 
 .progressTrack {
   width: 100%;
   height: 4px;
-  background-color: #e5e7eb;
+  background-color: var(--darkWhite);
   border-radius: 2px;
 }
 
 .progressFill {
   height: 100%;
-  background-color: #09243c;
+  background-color: var( --second);
   /* Uses Main Color */
 }
 
 /* --- 4. TIMELINE SECTION (DARK BG) --- */
 .timelineSection {
-  margin-top: 1rem;
   background-color: var(--second);
   /* Dark BG */
   padding: 5rem;
@@ -225,7 +235,7 @@ color: var(--second);
   left: 10%;
   right: 10%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--thodaWhite);
   z-index: 0;
 }
 
@@ -235,13 +245,13 @@ color: var(--second);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .timelineImg {
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 1.5rem;
+  border: 4px solid var(--thodaWhite);
   width: 150px;
   height: 150px;
 }
@@ -252,24 +262,22 @@ color: var(--second);
 }
 
 .timelineYear {
-  background-color: #fbbf24;
+  background-color: var(--mild);
   /* Yellow bubble */
-  color: #101820;
+  color: var(--darkGray);
   font-weight: 500;
-
-  padding: 5px 15px;
+  padding: 0.5rem;
   border-radius: 20px;
-  margin-bottom: 1.5rem;
 }
 
 .timelineItem h4 {
   font-size: 19px;
   font-weight: 500;
-  margin-bottom: 1.5rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 2;
-  color: white;
+  margin: 0 !important;
+  color: var(--white);
 }
 
 .timelineItem p {
@@ -278,6 +286,11 @@ color: var(--second);
   line-height: 1.5;
 }
 
+.timelineItemhead{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 /* --- 5. EXPERTISE ICONS --- */
 .iconGrid {
   display: grid;
@@ -296,25 +309,27 @@ color: var(--second);
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--thodaWhite);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: #333;
+  color: var(--gray);
 }
-
+.iconContent{
+  display: flex;
+  flex-direction: column;
+gap: 0.5rem;
+}
 .iconContent h4 {
   font-size: 21px;
   font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #101820;
+  color: var(--black);
 
 }
 
 .iconContent p {
   font-size: 15px;
-
   font-weight: 400;
   color: #68747a;
 }
@@ -323,19 +338,17 @@ color: var(--second);
 .statsSection {
   background-color: var(--second);
   /* Dark BG */
-  padding: 4rem 1em;
-
+  padding: 4rem 1.5rem;
   display: flex;
-
   border-radius: 20px;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--white);
 }
 
 .statsGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: row;
   gap: 2rem;
 }
 
@@ -343,8 +356,7 @@ color: var(--second);
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
-  padding-right: 1rem;
+  gap: 0.8rem;
 }
 
 .statIcon {
@@ -371,7 +383,7 @@ color: var(--second);
   font-size: 50px;
   font-weight: 500;
 
-  color: #fbbf24;
+  color: var(--mild);
   /* Yellow Numbers matching the icon stroke */
   line-height: 1;
 
@@ -379,7 +391,7 @@ color: var(--second);
 
 .statLabel {
   font-size: 0.9rem;
-  color: white;
+  color: var(--white);
   font-weight: 400;
   font-size: 12px;
 
@@ -406,7 +418,7 @@ color: var(--second);
 
   .statItem {
     border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--thodaWhite);
     padding-bottom: 1.5rem;
   }
 }
@@ -424,6 +436,5 @@ color: var(--second);
   display: flex;
   justify-content: center;
   margin-top: -0.1rem;
-  margin-bottom: 2rem;
   align-items: center;
 }

@@ -5,21 +5,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 import serviceData from "../../data/serviceData";
+import { about1} from "@images";
 
 export default function WhatWeDo() {
   const allServices = Object.values(serviceData);
 
   return (
     <main className={styles.main}>
-      <div className={styles.downbarMainCon}>
-        <div className={styles.downbarTop}>
-          <div className={styles.downHead}>
+     <div className={styles.startHead}>
+      <div className={styles.headSection}>
             <h1 className={styles.main_bread}>Home</h1>
             <h1 className={styles.main_bread}>&rarr;</h1>
             <h1 className={styles.main_bread}>Services</h1>
           </div>
-          <p className={styles.breadContent}>Services Offered by Catalyst</p>
-        </div>
+          <div className={styles.headDesc} >
+            <p className={styles.breadContent}>Services Offered by Catalyst</p>
+          <p className={styles.headContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum bibendum dignissim. Sed quam eros, accumsan in velit a, placerat mollis nunc. Nulla at purus non leo condimentum pellentesque ut a mauris. Vivamus ut euismod nisi, quis laoreet nisl. Suspendi</p>
+          <Image src={about1} alt="about service" className={styles.headImg} />
+          </div>
       </div>
 
       <section className={styles.section}>
@@ -29,17 +32,7 @@ export default function WhatWeDo() {
 
             return (
               <div key={service.id} className={styles.card}>
-                {/* Image Wrapper */}
                 <div className={styles.imageContainer}>
-                  {service.img && (
-                    <Image
-                      src={service.img}
-                      alt={service.heading}
-                      className={styles.mainImage}
-                      width={400}
-                      height={250}
-                    />
-                  )}
 
                   {/* Icon Badge */}
                   <div className={styles.iconBadge}>
@@ -49,10 +42,8 @@ export default function WhatWeDo() {
                       </div>
                     )}
                   </div>
-                </div>
-
-                {/* Content */}
-                <div className={styles.content}>
+                  <div className={styles.content}>
+                  {/* Changed service.slug to service.id and service.title to service.heading */}
                   <Link href={`/what-we-do/${service.id}`} className={styles.title}>
                     {service.heading} 
                   </Link>
@@ -61,7 +52,12 @@ export default function WhatWeDo() {
                     <span>Read More</span>
                   </Link>
                 </div>
-              </div>
+                </div>
+
+                {/* Content */}
+                
+                </div>
+              
             );
           })}
         </div>

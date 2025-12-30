@@ -114,7 +114,7 @@ export default function WhoWeAre() {
             About Catalyst Clinical Services Private Limited
           </p>
         </div>
-        </div>
+        </div>  
         {/* ******************************************************** */}
         {/* 2. MISSION & VISION SECTION */}
         <section className={styles.section}>
@@ -157,7 +157,7 @@ export default function WhoWeAre() {
         <section className={styles.analysissection}>
           <div className={styles.container}>
             <div className={styles.splitGrid}>
-              <div className={styles.imgCol}>
+              
                 <div className={styles.tallImgWrapper}>
                   <Image
                     src={Doctor}
@@ -165,11 +165,12 @@ export default function WhoWeAre() {
                     fill
                     className={styles.imgCover}
                   />
-                </div>
+               
               </div>
-              <div>
+              <div className={styles.analysisRight}>
              
                  
+                <div className={styles.rightHead} >
                   <span  className={styles.textCol}>Working Together for a Healthy Life</span>
                
                 <h2 className={styles.heading}>
@@ -180,9 +181,12 @@ export default function WhoWeAre() {
                   outstanding services and insurance solutions tailored to your
                   requirements.
                 </p>
+                </div>
+                
 
                 {/* Progress Bars */}
-                <div className={styles.progressBar}>
+                <div className={styles.progressPart}>
+                  <div className={styles.progressBar}>
                   <div className={styles.progressHeader}>
                     <span>Strategic Analysis</span>
                     
@@ -218,6 +222,7 @@ export default function WhoWeAre() {
                     ></div>
                   </div>
                 </div>
+                </div>
               </div>
             </div>
           </div>
@@ -240,8 +245,10 @@ export default function WhoWeAre() {
                     />
                   </div>
                   <div className={styles.timelineYear}>{item.year}</div>
-                  <h4>{item.title}</h4>
+                  <div className={styles.timelineItemhead} >
+                    <h4>{item.title}</h4>
                   <p>{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>

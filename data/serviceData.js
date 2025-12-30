@@ -5,7 +5,7 @@ const serviceDataObject = {
     "dental-care": {
         id: "dental-care",
         heading: "Dental Care",
-        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
+        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
         img: DentalClinic,
         imgicon: D1,
     
@@ -13,8 +13,8 @@ const serviceDataObject = {
     "pharmacology": {
         id: "pharmacology",
         heading: "Pharmacology",
-        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-        
+        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
+ 
         img: Pharmacology,
         imgicon: P1,
     
@@ -22,8 +22,8 @@ const serviceDataObject = {
     "orthopedics": {
         id: "orthopedics",
         heading: "Orthopedics",
-        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-        
+        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
+ 
         img: Orthopedics,
         imgicon: O1,
         
@@ -31,8 +31,8 @@ const serviceDataObject = {
     "hematology": {
         id: "hematology",
         heading: "Hematology",
-        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-        
+        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
+
         img: Hematology,
         imgicon: H1,
     
@@ -40,8 +40,8 @@ const serviceDataObject = {
     "neurology": {
         id: "neurology",
         heading: "Neurology",
-        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-        
+        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
+
         img: Neurology,
         imgicon: N1,
         
@@ -49,8 +49,7 @@ const serviceDataObject = {
     "cardiomyopathy": {
         id: "cardiomyopathy",
         heading: "Cardiomyopathy",
-        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-        
+        subHeading: "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
         img: Cardiomyopathy,
         imgicon: C1,
     },
