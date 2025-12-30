@@ -53,8 +53,6 @@ export default function WhatWeDo() {
                   </Link>
                 </div>
                 </div>
-
-                {/* Content */}
                 
                 </div>
               
