@@ -735,4 +735,638 @@
   .home {
     gap: 2em;
   }
+	/* home slider  */
+	.homeSlider {
+		margin: 0 -1em ;
+	}
+
+	.homeSliderText {
+		font-size: 1rem ;
+	}
+	/* home slider ends */
+
+	/* section two  */
+
+	.sectionTwo {
+		gap: 1em ;
+	}	
+
+	.sectionTwoHeadCon {
+		max-width: 95%;
+		gap: .5em ;
+	}
+
+	.sectionSubTitle {
+		font-size : .7rem ;
+	}
+
+	.sectionHeading {
+		font-size: 1.5rem ;
+	}
+
+	.sectionDescr {
+		font-size: .7rem ;
+		line-height: 1.2rem ;
+	}
+
+	.sectionTwoBoxesCon {
+		display: flex ;
+		flex-direction: column;
+		gap: 1em ;
+		justify-content: space-between ;
+	}
+
+	.sectionTwoBox {
+		flex-basis: 30%;
+		gap: .5em ;
+		padding: 2em 1em ;
+	}
+
+	.sectionTwoBoxIcon {
+		display: flex ;
+		background-color: var(--main);
+		padding: .5em ;
+		border-radius: 8px ;
+	}
+
+	.sectionTwoBoxIcon svg {
+		width: 20px ;
+		height: 20px;
+	}
+
+	.sectionTwoBoxTitle {
+		font-size: 1rem ;
+	}
+
+	.sectionTwoBoxDescrCon {
+		display: flex ;
+		flex-direction: column ;
+		gap: .5em ;
+	}
+
+	.sectionTwoBoxDescr {
+		font-size: .7rem ;
+	}
+
+	.sectionTwoBoxLink {
+		padding: .3em 1.5em ;
+	}
+
+	.sectionTwoBoxLink span {
+		font-size: .7rem;
+	}
+
+	.sectionTwoBoxLink svg {
+		width: 15px;
+		height: 15px ;
+	}
+
+	/* section two end */
+
+
+	/* section three  */
+
+	.sectionThreeMain {
+		display: flex ;
+		align-items: center ;
+		justify-content: center;
+		margin: 0 -1em ;
+		padding: 2em;
+	}
+
+	.sectionThreeCon {
+		display: flex;
+		flex-direction: column;
+		gap: 1em ;
+	}
+
+	.sectionThreeFirst {
+		flex-basis: 35%;
+		display: flex;
+		flex-direction: column;
+		gap: 1em ;
+	}
+
+	.sectionThreeFirstHead {
+		display: flex;
+		align-items: center;
+		gap: 2em ;
+	}
+
+	.threePlusHead {
+		font-size: 3rem ;
+		font-weight: 600 ;
+		color: var(--third2) ;
+	}
+
+	.threePlusHeadText {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--second);
+	}
+
+	.sectionThreeFirstText {
+		color: var(--medGray) ;
+		text-align: justify;
+		font-size: 1rem ;
+		line-height: 1.6rem ;
+	}
+
+	.sectionThreeSecond {
+		flex-direction: column;
+	}
+
+	.sectionLight {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--third2);
+		padding: 2em ;
+		height: 100% ;
+		text-align: justify;
+		flex-basis: 50%;
+		gap: 2em ;
+	}
+
+	.sectionThreeHead {
+		font-size: 1.3rem ;
+		font-weight: 600 ;
+		color: var(--darkWhite) ;
+	}
+
+	.sectionThreePara {
+		color: var(--darkWhite) ;
+		font-size: .9rem ;
+
+		display: -webkit-box ;
+		-webkit-line-clamp: 5 ;
+		line-clamp: 5 ;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.sectionDark {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--second);
+		padding: 2em ;
+		height: 100% ;
+		text-align: justify;
+		flex-basis: 50%;
+		gap: 2em ;
+	}
+
+	.sectionThreeButton {
+		font-size: .9rem ;
+		font-weight: 500 ;
+		color: var(--white) ;
+		transition: all .3s ;
+		align-self: flex-start ;
+	}
+
+	.sectionThreeButton:hover {
+		color: var(--main) ;
+	}
+
+	/* section three ends */
+
+	/* section four */
+	.sectionFourMain {
+		display: flex;
+	}
+
+	.fourFirst {
+		flex-basis: 60% ;
+		display: flex ;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 1em ;
+	}
+
+	.fourSubHeading {
+		font-size: .9rem ;
+		color: var(--third) ;
+		text-transform: uppercase ;
+		font-weight: 600 ;
+	}
+
+	.fourHeadingCon {
+		display: flex ;
+		flex-direction: column ;
+		width: 70%;
+		gap: 1em ;
+	}
+
+	.fourHeading {
+		font-size: 2.5rem ;
+		font-weight: 600 ;
+		color: var(--second) ;
+	}
+
+	.fourDescr {
+		color: var(--second) ;
+		font-size: 1rem ;
+		line-height: 1.6rem ;
+	}
+
+	.fourParaCon {
+		display: flex ;
+		flex-direction: column ;
+		max-width: 70% ;
+		gap: 1em ;
+	}
+
+	.fourParaBox {
+		display: flex ;
+		align-items: flex-start ;
+		justify-content: center;
+		gap: .5em ;
+	}
+
+	.fourParaBox svg {
+		width: 20px ;
+		height: 20px ;
+		color: var(--main) ;
+	}
+
+	.fourPara {
+		color: var(--medGray) ;
+		font-size: .9rem ;
+	}
+
+	.fourInfoCon {
+		display: flex ;
+		flex-direction: column;
+		gap: 2em ;
+		padding: 2em 0;
+	}
+
+	.fourInfoBox {
+		display: flex ;
+		align-items: center;
+		gap: 1em ;
+	}
+
+	.fourInfoIcon {
+		display: flex ;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--main);
+		border-radius: 50% ;
+		height: 48px;
+		width: 48px;
+	}
+
+	.fourInfoIcon svg {
+		width: 24px ;
+		height: 24px;
+		color: var(--white);
+	}
+
+	.fourInfoTextCon {
+		display: flex ;
+		flex-direction: column ;
+	}
+
+	.fourInfoTextHead {
+		font-size: 1.2rem ;
+		font-weight: 600 ;
+		color: var(--second) ;
+	}
+
+	.fourInfoText {
+		color: var(--secondHalf) ;
+		width: 80%;
+		font-size: .9rem ;
+		line-height: 1.4rem ;
+	}
+
+	.fourButton {
+		font-size: .9rem ;
+		color: var(--white) ;
+		background-color: var(--main) ;
+		padding: .5em 2.5em ;
+		border: 1px solid var(--main) ;
+		transition: all .3s ;
+	}
+
+	.fourButton:hover {
+		background-color: var(--white) ;
+		border: 1px solid var(--main) ;
+		color: var(--main);
+	}
+
+	.fourSecond {
+		flex-basis: 40% ;
+		display: flex ;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center ;
+	}
+
+	.fourImageCon {
+		display: flex;
+		position: relative;
+		width: 40vw;
+		height: 25vw;
+		overflow: hidden;
+		object-fit: cover;
+		object-position: center;
+	}
+	/* section four ends */
+
+	/* stats css */
+	.statsMain {
+		display: flex ;
+		justify-content: space-between ;
+	}
+
+	.statsBox {
+		flex-basis: 22%;
+		display: flex;
+		flex-direction: column ;
+		align-items: flex-start ;
+		justify-content: space-between;
+		padding: 2em 2em 1.5em;
+		gap: 1.5em ;
+		border: 1px solid var(--main);
+		border-radius: .8rem;
+	}
+
+	.statsIcon {
+		display: flex;
+	}
+
+	.statsIcon svg {
+		width: 50px ;
+		height: 50px ;
+		fill: var(--main) ;
+	}
+
+	.statsNumber {
+		font-size: 1.3rem ;
+		font-weight: 600 ;
+		color: var(--main) ;
+	}
+
+	.statsText {
+		color: var(--second) ;
+		font-size: .8rem ;
+		flex:1 ;
+	}
+
+	/* stats css ends */
+
+	/* Expertise */
+	.expertiseMain {
+		display: flex ;
+		flex-direction: column ;
+		margin: 0 -4em ;
+		padding: 4em ;
+		gap: 2em ;
+		background-image: url('../public/expertisebg.png');
+		background-size: cover;
+	}
+
+	.expertiseSubHeading {
+		font-size: .7rem ;
+		color: var(--white) ;
+		text-transform: uppercase ;
+		font-weight: 500 ;
+		background-color: var(--halfWhite);
+		padding: .2em .5em;
+		width: max-content ;
+	}
+
+	.expertiseHeading {
+		font-size: 2.5rem ;
+		font-weight: 600 ;
+		color: var(--white) ;
+	}
+
+	.expertiseBoxesCon {
+		display: flex ;
+		flex-direction: column;
+		gap: 4em ;
+	}
+
+	.expertiseBox {
+		display: flex ;
+		background-color: var(--white) ;
+		border-radius: 2rem ;
+		overflow: hidden;
+	}
+
+	.expertiseBox:nth-child(even) {
+		flex-direction: row-reverse ;
+	}
+
+	.expertiseBoxContentCon {
+		flex-basis: 50%;
+		display: flex;
+		flex-direction: column ;
+		justify-content: space-between ;
+		align-items: flex-start;
+		padding: 3em ;
+	}
+
+	.expertiseBoxTitle {
+		font-size: 1.5rem ;
+		font-weight: 600 ;
+		color: var(--second) ;
+	}
+
+	.expertiseBoxDescrCon {
+		display: flex;
+		flex-direction: column;
+		gap: 1em ;
+	}
+
+	.expertiseBoxDescr {
+		color: var(--second) ;
+		font-size: .8rem ;
+	}
+
+	.expertiseBoxLink {
+		align-self: center;
+		display: flex;
+		gap: 1.5em ;
+		align-items: center;
+		padding: .5em 2em ;
+		font-size: .8rem;
+		border: 1px solid var(--main) ;
+		color: var(--main) ;
+		border-radius: 2rem ;
+		transition: all .3s ;
+	}
+
+	.expertiseBoxLink svg {
+		width: 16px ;
+		height: 16px ;
+		color: var(--main) ;
+		transition: all .3s ;
+	}
+
+	.expertiseBoxLink:hover {
+		background-color: var(--main) ;
+		color: var(--white) ;
+	}
+
+	.expertiseBoxLink:hover svg {
+		color: var(--white) ;
+	} 
+
+	.expertiseBoxImageCon {
+		flex-basis: 50%;
+	}
+
+	.expertiseBoxImageCon img {
+		width: 100% ;
+		height: 100% ;
+		object-fit: cover;
+	}
+	/* expertise ends */
+
+	/* publications */
+	.pubMain {
+		display: flex ;
+		flex-direction: column ;
+		align-items: center;
+		gap: 4em ;
+	}
+
+	.pubHeadCon {
+		display: flex ;
+		justify-content: space-between ;
+		align-items: center ;
+		align-self: stretch;
+	}
+
+	.pubHeadTextCon {
+		display: flex ;
+		flex-direction: column ;
+		gap: 1em ;
+		max-width: 60% ;
+	}
+
+	.pubHeadLinkCon {
+		display: flex;
+	}
+
+	.pubBoxesCon {
+		display: flex ;
+		justify-content: space-between ;
+		width: 80%;
+	}
+
+	.pubBox {
+		flex-basis: 30% ;
+		display: flex;
+		flex-direction: column;
+		gap: 2em ;
+	}
+
+	.pubBoxImageCon {
+		width: 100% ;
+		overflow: hidden;
+		aspect-ratio: 1.5 / 1 ;
+	}
+
+	.pubBoxImageCon img {
+		width: 100% ;
+		height: 100% ;
+		object-fit: contain;
+	}
+
+	.pubBoxContentCon {
+		display: flex ;
+		flex-direction: column ;
+		gap: 1em ;
+	}
+
+	.pubBoxTitle {
+		font-size: 1.2rem ;
+		font-weight: 600 ;
+		color: var(--second) ;
+	}
+
+	.pubBoxDescr {
+		color: var(--second) ;
+		font-size: .9rem ;
+		line-height: 1.4rem ;
+	}
+
+	.pubBoxLink {
+		display: flex ;
+		align-items: center ;
+		gap: .5em ;
+		color: var(--main) ;
+		transition: all .3s ;
+	}
+
+	.pubBoxLink svg {
+		width: 20px ;
+		height: 20px ;
+		color: var(--main) ;
+		transition: all .3s ;
+	}
+
+	.pubBoxLink:hover, .pubBoxLink:hover svg {
+		color: var(--second) ;
+	}
+	/* publications ends*/
+
+	/* bettter result section */
+	.resultsMain {
+		display: flex ;
+		margin: 0 -4em ;
+		padding: 4em ;
+		background-image: url('../public/section.webp');
+		background-size: cover;	
+		justify-content: flex-end;
+	}
+
+	.resultInfoCon {
+		flex-basis: 50% ;
+		display: flex ;
+		flex-direction: column ;
+		gap: 1.5em ;
+		padding: 0 2em;
+	}
+
+	.resultsPointsDescrCon {
+		display: flex ;
+		flex-direction: column ;
+		gap: 2em ;
+	}
+
+	.resultsPointsDescr {
+		color: var(--medGray) ;
+		font-size: 1rem ;
+		line-height: 1.6rem ;
+	}
+
+	.resultPointsCon {
+		display: flex ;
+		flex-direction: column ;
+		gap: 1em ;
+	}
+
+	.resultPoint {
+		display: flex ;
+		align-items: center;
+		gap: 1em ;
+	}
+
+	.resultPoint svg {
+		width: 16px ;
+		height: 16px ;
+		color: var(--second) ;
+	}
+
+	.resultPointText {
+		color: var(--second) ;
+		font-size: 1rem ;
+	}
+	/* bettter result section ends */
 }
