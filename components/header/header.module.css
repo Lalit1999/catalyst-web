@@ -18,7 +18,7 @@
 	width: 24px ;
 }
 
-.headerContent, .headerSecond {
+.headerContent, .headerSecond, .headerActions {
 	display: none ;
 }
 
