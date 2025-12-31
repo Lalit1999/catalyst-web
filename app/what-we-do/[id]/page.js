@@ -126,23 +126,8 @@ export default function ServiceDetailPage() {
         {/* Main Hero Content */}
         <div className={styles.head}>
           <h1 className={styles.titleLarge}>{service.heading}</h1>
-          <p>{service.subHeading}</p>
+          <p className={styles.paragraph}>{service.subHeading}</p>
           {service.img && (
-            <Image
-              src={Ortho} // Using Ortho as per your original requirement
-              alt={service.heading}
-              width={400}
-              height={260}
-              className={styles.heroImg}
-            />
-          )}
-        </div>
-      </div>
-
-      <div className={styles.detailsContainer}>
-        <div className={styles.leftColumn}>
-          <div className={styles.leftpart_1}>
-            {service.img && (
               <div className={styles.bodyImageContainer}>
                 <Image
                   src={service.img}
@@ -152,6 +137,13 @@ export default function ServiceDetailPage() {
                 />
               </div>
             )}
+        </div>
+      </div>
+
+      <div className={styles.detailsContainer}>
+        <div className={styles.leftColumn}>
+          <div className={styles.leftpart_1}>
+            
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>
                 Our Approach to {service.heading}
@@ -241,7 +233,7 @@ export default function ServiceDetailPage() {
 
               {/* 4. FAQ SECTION RESTORED */}
               <div className={styles.faqBlock}>
-                <div>
+                <div className={styles.faqBlockHead}>
                   <h2>FAQs About The Service</h2>
                 <p className={styles.subText}>
                   Common questions regarding our {service.heading} services.
