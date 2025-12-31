@@ -115,7 +115,7 @@
 .iconBadge {
   width: 60px;
   height: 60px;
-  background-color: #101820;
+  background-color: var(--black);
   border-radius: 10px;
   /* --- CENTERING MAGIC --- */
   display: flex;
@@ -154,6 +154,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 .readMore {

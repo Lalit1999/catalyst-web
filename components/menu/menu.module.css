@@ -1,4 +1,8 @@
 
+.menu p {
+	margin: 0 ;
+}
+
 .mainMenuHead {
 	display: flex ;
 	gap: .75em ;
@@ -41,14 +45,60 @@
 }
 
 .menuItem.selected {
-	color: var(--pink) ;
-	background-color: var(--thodaPink) ;
+	color: var(--main) ;
+	background-color: var(--thodaMain) ;
 }
 
 .menuText {
 	font-size: 1.1rem ;
 	margin: 0 ;
 	flex-grow: 2;
+}
+
+.dd {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.arrowMain {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.ddMenu {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: .5em ;
+}
+
+.ddItem {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: .8rem;
+	padding: .5em 1em ;
+	border-radius: .5rem ;
+}
+
+.ddItem.selected {
+	color: var(--main) ;
+	background-color: var(--thodaMain) ;
+}
+
+.ddItem svg {
+	width: 16px ;
+	height: 16px ;
+}
+
+.ddArrow {
+	transform:  rotate(90deg) ;
+	transition: all .2s ;
+}
+
+.ddArrow.true {
+	transform: rotate(270deg) ;
 }
 
 @media (min-width: 600px) {
