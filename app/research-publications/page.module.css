@@ -12,3 +12,48 @@
 .main p {
   margin: 0;
 }
+.startHead {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.main_bread {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+  color: var(--black);
+}
+.breadContent {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50.4px;
+  color: var(--black);
+}
+.headSection {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.headContent {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray);
+  margin: 0 !important;
+}
+.headDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headImg{
+  background-size: cover;
+  width: 100%;
+}
+.coursesTwo {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
