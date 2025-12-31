@@ -2,6 +2,7 @@ import Arrow from '../public/icons/arrow.svg';
 import ArrowLong from '../public/icons/arrowLong.svg';
 import Back from '../public/icons/back.svg';
 import Brush from '../public/icons/brush.svg';
+import Bullet from '../public/icons/bullet.svg';
 import Call2 from '../public/icons/call2.svg';
 import Chat from '../public/icons/chat.svg';
 import Close from '../public/icons/close.svg';
@@ -76,14 +77,9 @@ import IconUmbrella from '../public/icons/IconUmbrella.svg';
 import Badge from '../public/icons/Badge.svg';
 import DoctorAbout from '../public/icons/DoctorAbout.svg';
 import Heart from '../public/icons/Heart.svg';
+
 export {
-  Arrow,
-  ArrowLong,
-  Badge,
-  DoctorAbout,
-  Heart,
-  UserCircle,
-  CheckIcon,
+  Arrow, ArrowLong, Badge, Bullet, DoctorAbout, Heart, UserCircle, CheckIcon,
   IconBookmark,
   IconChart,
   IconCrown,

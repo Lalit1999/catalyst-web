@@ -221,10 +221,38 @@
 		cursor: pointer;
 	}
 
+	.dropdownLink, .dropdownLabel {
+		flex: 1 ;
+		text-decoration: none ;
+		color: inherit ;
+	}
+
+	.hasNested {
+		position: relative ;
+	}
+
 	.dropdownItem svg {
 		width: 16px ;
 		height: 16px ;
 		color: var(--medGray) ;
+	}
+
+	.subDropdownMenu {
+		top: 0 ;
+		right: auto ;
+		left: calc(100% - 5px) ;
+		margin-left: 5px ;
+		z-index: 11 ;
+	}
+
+	.submenuArrow {
+		margin-left: auto ;
+		transform: rotate(0deg) ;
+		transition: transform .2s ;
+	}
+
+	.submenuArrowOpen {
+		transform: rotate(90deg) ;
 	}
 	
 	.dropdownItem:hover {

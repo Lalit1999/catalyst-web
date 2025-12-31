@@ -15,7 +15,15 @@ const menuData = [
 	{	text: 'Who we are',				link: '/who-we-are',					}, 
 	{	text: 'What we do',				children : [
 		{	text: 'Overview',							link: '/what-we-do'		}, 
-		{	text: 'Clinical Development Services',		link: '/what-we-do/clinical-development-services'		}, 
+		{	text: 'Clinical Development Services',		children : [
+				{	text: 'Overview',					link: '/what-we-do/clinical-development-services/'		}, 
+				{	text: 'Study Design & Startup',		link: '/what-we-do/clinical-development-services/study-design-startup'		}, 
+				{	text: 'Patient Recruitment',		link: '/what-we-do/clinical-development-services/patient-recruitment'		}, 
+				{	text: 'Project Management',			link: '/what-we-do/clinical-development-services/project-management'	    },
+				{ 	text: 'Clinical Trial Monitoring',  link: '/what-we-do/clinical-development-services/clinical-trial-monitoring'	},
+				{ 	text: 'Endpoint Adjucation',  		link: '/what-we-do/clinical-development-services/endpoint-adjucation'		}
+			]	
+		},  
 		{	text: 'FSP',								link: '/what-we-do/fsp'		}, 
 		{	text: 'Medical Writing',					link: '/what-we-do/medical-writing'	},
 		{ 	text: 'Regulatory Consulting',  			link: '/what-we-do/regulatory-consulting'		},
@@ -67,18 +75,76 @@ const menuData = [
 	]	}, 
 ] ;
 
+const NestedMenuList = ({ items, level = 0, pathname, handleClose }) => {
+	if (!items?.length) {
+		return null ;
+	}
+
+	return (
+		<div className={`${styles.nestedMenu} ${level ? styles.nestedMenuInner : ''}`}>
+			{items.map((item) => (
+				<MenuNestedItem
+					key={`${item.text}-${item.link ?? 'group'}`}
+					item={item}
+					level={level}
+					pathname={pathname}
+					handleClose={handleClose}
+				/>
+			))}
+		</div>
+	) ;
+} ;
+
+const MenuNestedItem = ({ item, level, pathname, handleClose }) => {
+	const [ open, setOpen ] = useState(false) ;
+	const { text, link, children } = item ;
+	const hasChildren = Boolean(children?.length) ;
+	const paddingLeft = `calc(1em + ${level} * 12px)` ;
+
+	if (hasChildren) {
+		return (
+			<div className={`${styles.menuItem} ${styles.dd} ${styles.nestedItem}`} style={{ paddingLeft }}>
+				<div className={`${styles.arrowMain} ${styles[open]}`} onClick={() => setOpen(!open)}>
+			    <p className={styles.subHeaderText}>{text}</p>
+					<Arrow className={`${styles.ddArrow} ${styles[open]}`} />
+				</div>
+				{open && (
+					<NestedMenuList
+						items={children}
+						level={level + 1}
+						pathname={pathname}
+						handleClose={handleClose}
+					/>
+				)}
+			</div>
+		) ;
+	}
+
+	return (
+		<Link
+			href={link}
+			className={`${styles.menuItem} ${styles.nestedItem} ${(link===pathname)?styles.selected:''}`}
+			style={{ paddingLeft }}
+			onClick={()=>handleClose()}
+		>
+			<p className={styles.subHeaderText}>{text}</p>
+			<Arrow />
+		</Link>
+	) ;
+} ;
+
 const MenuDropdown = ({text, children, pathname, handleClose}) => {
 	const [ open, setOpen ] = useState(false) ;
 
 	return (
 		<div key={text} className={`${styles.menuItem} ${styles.dd}`} >
 			<div className={`${styles.arrowMain} ${styles[open]}`} onClick={() => setOpen(!open)}>
-			    <p>{text}</p>
+		    <p className={styles.menuText}>{text}</p>
 				<Arrow className={`${styles.ddArrow} ${styles[open]}`} />
 			</div>
 			{open && (
 				<div className={styles.ddMenu} >
-					{children?.map(({text, link}) => <Link key={text} href={link} className={`${styles.ddItem} ${(link===pathname)?styles.selected:''}`} onClick={()=>handleClose()}>{text}<Arrow /></Link>)}
+					<NestedMenuList items={children} level={1} pathname={pathname} handleClose={handleClose} />
 				</div>
 			)}
 		</div>

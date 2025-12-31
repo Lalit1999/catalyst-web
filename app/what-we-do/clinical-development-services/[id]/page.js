@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import serviceData from "../../../data/serviceData"; // Ensure this matches your export name
+import serviceData from "../../../../data/serviceData"; // Ensure this matches your export name
 import styles from "./page.module.css";
 
 import {

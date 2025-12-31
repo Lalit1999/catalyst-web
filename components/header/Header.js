@@ -16,7 +16,15 @@ const headerData = [
 	{	text: 'Who we are',				link: '/who-we-are',					}, 
 	{	text: 'What we do',				children : [
 		{	text: 'Overview',							link: '/what-we-do'		}, 
-		{	text: 'Clinical Development Services',		link: '/what-we-do/clinical-development-services'		}, 
+		{	text: 'Clinical Development Services',		children : [
+				{	text: 'Overview',					link: '/what-we-do/clinical-development-services/'		}, 
+				{	text: 'Study Design & Startup',		link: '/what-we-do/clinical-development-services/study-design-startup'		}, 
+				{	text: 'Patient Recruitment',		link: '/what-we-do/clinical-development-services/patient-recruitment'		}, 
+				{	text: 'Project Management',			link: '/what-we-do/clinical-development-services/project-management'	    },
+				{ 	text: 'Clinical Trial Monitoring',  link: '/what-we-do/clinical-development-services/clinical-trial-monitoring'	},
+				{ 	text: 'Endpoint Adjucation',  		link: '/what-we-do/clinical-development-services/endpoint-adjucation'		}
+			]	
+		}, 
 		{	text: 'FSP',								link: '/what-we-do/fsp'		}, 
 		{	text: 'Medical Writing',					link: '/what-we-do/medical-writing'	},
 		{ 	text: 'Regulatory Consulting',  			link: '/what-we-do/regulatory-consulting'		},
@@ -68,7 +76,53 @@ const headerData = [
 	]	}, 
 ] ; 
 
-const HeaderDropdown = ({text, children}) => {
+const DropdownList = ({ items, level = 0, containerProps = {} }) => {
+  const [ activeItem, setActiveItem ] = useState(null);
+  if (!items?.length) return null;
+
+  const { className = '', onMouseEnter, onMouseLeave, ...restProps } = containerProps;
+  const handleMouseLeave = (event) => {
+    setActiveItem(null);
+    onMouseLeave?.(event);
+  };
+
+  return (
+    <div
+      {...restProps}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`${styles.dropdownMenu} ${level ? styles.subDropdownMenu : ''} ${className}`.trim()}
+    >
+      {items.map(({ text, link, children: nestedChildren }) => {
+        const hasChildren = Boolean(nestedChildren?.length);
+        const isActive = hasChildren && activeItem === text;
+
+        return (
+          <div
+            key={`${text}-${link ?? 'menu'}`}
+            className={`${styles.dropdownItem} ${hasChildren ? styles.hasNested : ''}`.trim()}
+            onMouseEnter={() => setActiveItem(hasChildren ? text : null)}
+            onMouseLeave={() => hasChildren && setActiveItem(null)}
+          >
+            {link ? (
+              <Link href={link} className={styles.dropdownLink}>{text}</Link>
+            ) : (
+              <span className={styles.dropdownLabel}>{text}</span>
+            )}
+            {hasChildren && (
+              <>
+                <Arrow className={`${styles.submenuArrow} ${isActive ? styles.submenuArrowOpen : ''}`.trim()} />
+                {isActive && <DropdownList items={nestedChildren} level={level + 1} />}
+              </>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const HeaderDropdown = ({text, children: dropdownItems}) => {
 	const [ open, setOpen ] = useState(false) ;
 	const closeTimerRef = useRef(null);
 
@@ -93,9 +147,14 @@ const HeaderDropdown = ({text, children}) => {
 				<Arrow className={styles.dropdownArrow} />
 			</div>
 			{open && (
-				<div className={styles.dropdownMenu} onClick={() => setOpen(!open)} onMouseEnter={()=>cancelClose()} onMouseLeave={()=>setOpen(false)}>
-					{children?.map(({text, link}) => <Link key={text} href={link} className={styles.dropdownItem}>{text}</Link>)}
-				</div>
+				<DropdownList
+					items={dropdownItems}
+					containerProps={{
+						onClick: () => setOpen(false),
+						onMouseEnter: () => cancelClose(),
+						onMouseLeave: () => setOpen(false)
+					}}
+				/>
 			)}
 		</div>
 	);
