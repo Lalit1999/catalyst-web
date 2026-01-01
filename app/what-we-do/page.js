@@ -48,9 +48,10 @@ export default function WhatWeDo() {
                     {service.heading} 
                   </Link>
                   <p className={styles.desc}>{service.subHeading}</p>
-                  <Link href={`/what-we-do/${service.id}`} className={styles.readMore}>
-                    <span>Read More</span>
-                  </Link>
+                   <p><Link href={`/what-we-do/${service.id}`} className={styles.readMore}>
+                    Read More
+                  </Link></p>
+                 
                 </div>
                 </div>
                 

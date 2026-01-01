@@ -38,22 +38,23 @@ const quickLinks = [
   },
 ];
 
+
 const featureCards = [
   {
     title: "Focused Customer",
-    color: "#E1F1F8",
+    color: "var(--thodaBlue)",
     icon: "user",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     title: "24/7 Care",
-    color: "#FADDE1",
+    color: "var(--thodaPink)",
     icon: "star",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     title: "Timely Care",
-    color: "#F9E6A8",
+    color: "var(--thodaYellow)",
     icon: "clock",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
