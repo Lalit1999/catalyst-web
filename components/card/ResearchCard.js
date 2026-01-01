@@ -1,46 +1,27 @@
 'use client';
 
 import Image from "next/image";
-import { User, Menu } from '@icons';
-import styles from './card.module.css';
+import Link from "next/link";
 
-const Card = ({ image, heading, pages, citations, description }) => {
+import styles from './researchCard.module.css';
+
+const Card = ({ image, heading, description, link }) => {
     return (
         <div className={styles.courseCard}>
-            <div className={styles.courseCardImageCon}>
+            <Link href={link} target="_blank" className={styles.courseCardImageCon}>
                 <Image src={image} alt="Research Paper Cover" />
-            </div>
-
+            </Link>
             <div className={styles.courseCardDetailsCon}>
-                <div className={styles.cardHead}>
+                <Link href={link} target="_blank" className={styles.cardHead}>
                     <p>{heading}</p>
-                </div>
-
-                <div className={styles.cardIconCon}>
-                    <div className={styles.cardIcon}>
-                        <Menu />
-                        <p>{pages} Pages</p>
-                    </div>
-
-                    <div className={styles.cardIconBar} />
-
-                    <div className={styles.cardIcon}>
-                        <User />
-                        <p>{citations} Citations</p>
-                    </div>
-                </div>
-
+                </Link>
                 <div className={styles.cardText}>
                     <p>{description}</p>
                 </div>
-
                 <div className={styles.cardBtnCon}>
-                    <button className={styles.cardBtnFirst}>
-                        Read Abstract
-                    </button>
-                    <button className={styles.cardBtnSecond}>
-                        Download PDF
-                    </button>
+                    <Link href={link} target="_blank" className={styles.cardBtnFirst}>
+                        View Research
+                    </Link>
                 </div>
             </div>
         </div>

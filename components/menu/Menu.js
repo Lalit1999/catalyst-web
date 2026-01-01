@@ -42,9 +42,9 @@ const menuData = [
 	},
 	{	text: 'Research Publications',	children : [
 		{	text: 'Overview',							link: '/research-publications'		}, 
-		{	text: 'Robotic Assisted Surgery',			link: '/research-publications/robotic-assisted-surgery'		}, 
-		{	text: 'Oncology',							link: '/research-publications/oncology'		}, 
-		{	text: 'Other Therapeutic Areas',			link: '/research-publications/other-therapeutic-areas'	},
+		{	text: 'Robotic Assisted Surgery',			link: '/research-publications#robotic-assisted-surgery'		}, 
+		{	text: 'Oncology',							link: '/research-publications#oncology'		}, 
+		{	text: 'Other Therapeutic Areas',			link: '/research-publications#other-therapeutic-areas'	},
 	]
 	}, 
 	{	text: 'Training Programs',		children : [

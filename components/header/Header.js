@@ -43,9 +43,9 @@ const headerData = [
 	},
 	{	text: 'Research Publications',	children : [
 		{	text: 'Overview',							link: '/research-publications'		}, 
-		{	text: 'Robotic Assisted Surgery',			link: '/research-publications/robotic-assisted-surgery'		}, 
-		{	text: 'Oncology',							link: '/research-publications/oncology'		}, 
-		{	text: 'Other Therapeutic Areas',			link: '/research-publications/other-therapeutic-areas'	},
+		{	text: 'Robotic Assisted Surgery',			link: '/research-publications#robotic-assisted-surgery'		}, 
+		{	text: 'Oncology',							link: '/research-publications#oncology'		}, 
+		{	text: 'Other Therapeutic Areas',			link: '/research-publications#other-therapeutic-areas'	},
 	]
 	}, 
 	{	text: 'Training Programs',		children : [
@@ -98,23 +98,23 @@ const DropdownList = ({ items, level = 0, containerProps = {} }) => {
         const isActive = hasChildren && activeItem === text;
 
         return (
-          <div
-            key={`${text}-${link ?? 'menu'}`}
-            className={`${styles.dropdownItem} ${hasChildren ? styles.hasNested : ''}`.trim()}
-            onMouseEnter={() => setActiveItem(hasChildren ? text : null)}
-            onMouseLeave={() => hasChildren && setActiveItem(null)}
-          >
-            {link ? (
-              <Link href={link} className={styles.dropdownLink}>{text}</Link>
-            ) : (
-              <span className={styles.dropdownLabel}>{text}</span>
-            )}
-            {hasChildren && (
-              <>
-                <Arrow className={`${styles.submenuArrow} ${isActive ? styles.submenuArrowOpen : ''}`.trim()} />
-                {isActive && <DropdownList items={nestedChildren} level={level + 1} />}
-              </>
-            )}
+			<div
+				key={`${text}-${link ?? 'menu'}`}
+				className={`${styles.dropdownItem} ${hasChildren ? styles.hasNested : ''}`.trim()}
+				onMouseEnter={() => setActiveItem(hasChildren ? text : null)}
+				onMouseLeave={() => hasChildren && setActiveItem(null)}
+			>
+				{link ? (
+				<Link href={link} className={styles.dropdownLink}>{text}</Link>
+				) : (
+				<span className={styles.dropdownLabel}>{text}</span>
+				)}
+				{hasChildren && (
+				<>
+					<Arrow className={`${styles.submenuArrow} ${isActive ? styles.submenuArrowOpen : ''}`.trim()} />
+					{isActive && <DropdownList items={nestedChildren} level={level + 1} />}
+				</>
+				)}
           </div>
         );
       })}

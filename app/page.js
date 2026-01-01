@@ -5,6 +5,8 @@ import Link from "next/link";
 
 import { ArrowLong, Arrow, Tick } from "@icons";
 import { homePageData } from "@data";
+import Card from '@c/card/ResearchCard';
+
 import styles from "./page.module.css";
 
 const HomeSlider = () => {
@@ -208,18 +210,9 @@ const PubSection = () => {
 			</div>
 			<div className={styles.pubBoxesCon}>
 				{
-					homePageData.publications.pubArr.map( ({image, title, descr, link}) => {
-						return (
-							<div key={title} className={styles.pubBox}>
-								<div className={styles.pubBoxImageCon}>
-									<Image src={image} alt={title} />
-								</div>
-								<div className={styles.pubBoxContentCon}>
-									<p className={styles.pubBoxTitle}>{title}</p>
-									<p className={styles.pubBoxDescr}>{descr}</p>
-									<Link href={link} className={styles.pubBoxLink} ><Arrow />&nbsp;Read More </Link>
-								</div>
-							</div>
+					homePageData.publications.pubArr.map( (one, i) => {
+						 return (
+							<Card key={i} {...one} />
 						) ;
 					})
 				}

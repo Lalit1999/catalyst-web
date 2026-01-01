@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { pragramBanner, programs, about3, awards, dummyLogo, event1, event2, event3, cardImage  } from "@images";
+import { pragramBanner, programs, about3, awards, placementLogos, event1, event2, event3, cardImage  } from "@images";
 import { School, ArrowLong, Clock, Location } from '@icons' ;
 import { Card } from '@comps' ;
 
@@ -87,16 +87,16 @@ const awardsArr = [
     }
 ]
 
-const placementsArr = [
-    { logo: dummyLogo },
-    { logo: dummyLogo },
-    { logo: dummyLogo },
-    { logo: dummyLogo },
-    { logo: dummyLogo },
-    { logo: dummyLogo },
-    { logo: dummyLogo },
-    { logo: dummyLogo },
-]
+// const placementsArr = [
+//     { logo: dummyLogo },
+//     { logo: dummyLogo },
+//     { logo: dummyLogo },
+//     { logo: dummyLogo },
+//     { logo: dummyLogo },
+//     { logo: dummyLogo },
+//     { logo: dummyLogo },
+//     { logo: dummyLogo },
+// ]
 
 const eventsCardArr = [
     {
@@ -278,15 +278,14 @@ const Placemnets = () => {
     return (
         <div className={styles.placementsMain}>
             <div className={styles.placementsHead}>
-                <p className={styles.subHead}>Students</p>
                 <p className={styles.mainHead}>Placements</p>
             </div>
             <div className={styles.placementsLogosCon}>
                 {
-                    placementsArr.map( (one, i) => {
+                    Object.values(placementLogos).map( (one, i) => {
                         return (
                             <div className={styles.placementLogo} key={i}>
-                                <Image src={one.logo} alt={`Placement Logo ${i+1}`}/>
+                                <Image src={one} alt={`Placement Logo ${i+1}`}/>
                             </div>
                         ) ;
                     })
@@ -346,7 +345,7 @@ const TrainingPrograms = () => {
         <div className={styles.programsMain}>
             <HomeSlider />
             <CoursesComp />
-		    <SectionFour />
+		    {/* <SectionFour /> */}
             <Awards />
             <Placemnets />
             <Event />

@@ -1,5 +1,5 @@
-import { homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3 } from "@images";
-import { School, Expertise, MultiLocation, Partners, Patients, Bullet } from "@icons";
+import { homeBanner, about1, about2, exp1, exp2, exp3, Cardiomyopathy, Neurology } from "@images";
+import { School, Bullet } from "@icons";
 
 const homePageData = {
     homeSlider: {
@@ -149,23 +149,21 @@ const homePageData = {
         buttonLink: '/',
         pubArr : [
             {
-                image : pub1,
-                title: 'Innovating To End Malaria',
-                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-                link: '/',
+                id: "ai-medical-diagnosis",
+                heading: "AI-Based Early Diagnosis of Cardiovascular Diseases",
+                description:
+                "This paper explores machine learning models for early detection of cardiovascular diseases using patient vitals, ECG signals, and clinical data.",
+                image: Cardiomyopathy,
+                link: "https://example.com/ai-medical-diagnosis.pdf",
             },
             {
-                image : pub2,
-                title: 'Emerging Investigators',
-                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-                link: '/',
+                id: "neuro-rehab",
+                heading: "Advancements in Neurological Rehabilitation Techniques",
+                description:
+                "A systematic review of modern neuro-rehabilitation methods focusing on stroke recovery, neural plasticity, and assistive technologies.",
+                image: Neurology,
+                link: "https://example.com/ai-medical-diagnosis.pdf",
             },
-            {
-                image : pub3,
-                title: 'Vaccine Research',
-                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-                link: '/',
-            }
         ]
     },
     results: {
