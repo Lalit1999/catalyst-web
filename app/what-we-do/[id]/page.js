@@ -127,7 +127,7 @@ export default function ServiceDetailPage() {
         {/* Main Hero Content */}
         <div className={styles.head}>
           <h1 className={styles.titleLarge}>{service.heading}</h1>
-          <p className={styles.paragraph}>{service.subHeading}</p>
+          <p className={styles.headparagraph}>{service.subHeading}</p>
           {service.img && (
               <div className={styles.bodyImageContainer}>
                 <Image
@@ -201,8 +201,7 @@ export default function ServiceDetailPage() {
            
           </div>
 
-          <section className={styles.extraSection}>
-            <div className={styles.extraContainer}>
+         
               {/* 2. CHECKLIST CARD */}
                <div className={styles.checkCard}>
                 {checkListItems.map((item, idx) => (
@@ -274,8 +273,7 @@ export default function ServiceDetailPage() {
       })}
     </div>
               </div>
-            </div>
-          </section>
+            
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}

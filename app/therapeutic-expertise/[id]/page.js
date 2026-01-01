@@ -40,19 +40,19 @@ const quickLinks = [
 const featureCards = [
   {
     title: "Focused Customer",
-    color: "#E1F1F8",
+    color: "var(--thodaBlue)",
     icon: "user",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     title: "24/7 Care",
-    color: "#FADDE1",
+    color: "var(--thodaPink)",
     icon: "star",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     title: "Timely Care",
-    color: "#F9E6A8",
+    color: "var(--thodaYellow)",
     icon: "clock",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
@@ -125,7 +125,7 @@ export default function therapyDetailPage() {
         {/* Main Hero Content */}
         <div className={styles.head}>
           <h1 className={styles.titleLarge}>{therapy.heading}</h1>
-          <p className={styles.paragraph}>{therapy.subHeading}</p>
+          <p className={styles.headparagraph}>{therapy.subHeading}</p>
           {therapy.img && (
               <div className={styles.bodyImageContainer}>
                 <Image
@@ -199,8 +199,7 @@ export default function therapyDetailPage() {
            
           </div>
 
-          <section className={styles.extraSection}>
-            <div className={styles.extraContainer}>
+         
               {/* 2. CHECKLIST CARD */}
                <div className={styles.checkCard}>
                 {checkListItems.map((item, idx) => (
@@ -273,8 +272,7 @@ export default function therapyDetailPage() {
     </div>
               </div>
             </div>
-          </section>
-        </div>
+          
 
         {/* RIGHT COLUMN: Sidebar */}
         <div className={styles.rightColumn}>
