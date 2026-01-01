@@ -110,7 +110,7 @@ const HomeSlider = ({ heading }) => {
                         <p>{heading}</p>
                     </div>
                     <div className={styles.sliderLeftBtnCon}>
-                        <Link href="/" className={styles.homeSliderButton1}>Register Now</Link>
+                        <Link href="/online-registration" className={styles.homeSliderButton1}>Register Now</Link>
                         <Link href="/" className={styles.homeSliderButton1}><Call2 />&nbsp; Call Us +91-9818356273 </Link>
                         <Link href="/" className={styles.homeSliderButton3}><Whatsapp />&nbsp; Whatsapp Enquiry</Link>
                     </div>
@@ -354,7 +354,7 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate})
                 </div>
             </div>
             <div className={styles.registerBtnCon}>
-                <button className={styles.registerBtn}>Register Now</button>
+                <Link href="/online-registration" className={styles.registerBtn}>Register Now</Link>
             </div>
             {/* <div className={styles.couponCon}>
                 <p className={styles.descrHead}>Apply Coupon</p>

@@ -97,6 +97,8 @@ const faqList = [
   },
 ];
 
+const DEFAULT_SERVICE_ID = 'clinical-development-service';
+
 export default function ServiceDetailPage() {
   const params = useParams();
    const [openIndex, setOpenIndex] = useState(null);
@@ -104,7 +106,7 @@ export default function ServiceDetailPage() {
   const toggleFAQ = (idx) => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
-  const serviceId = params.id || params.slug;
+  const serviceId = params?.id || params?.slug || DEFAULT_SERVICE_ID;
   const service = serviceData[serviceId];
   if (!service) {
     return notFound();

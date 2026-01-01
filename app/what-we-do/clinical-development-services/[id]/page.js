@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import serviceData from "../../../../data/serviceData"; // Ensure this matches your export name
+import { clinicalServicesData } from "@data";
 import styles from "./page.module.css";
 
 import {
@@ -105,12 +105,12 @@ export default function ServiceDetailPage() {
     setOpenIndex(openIndex === idx ? null : idx);
   };
   const serviceId = params.id || params.slug;
-  const service = serviceData[serviceId];
+  const service = clinicalServicesData[serviceId];
   if (!service) {
     return notFound();
   }
 
-  const allServices = Object.values(serviceData);
+  const allServices = Object.values(clinicalServicesData);
 
   return (
     <main className={styles.main}>

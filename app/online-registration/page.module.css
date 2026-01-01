@@ -1,0 +1,144 @@
+.registrationPage {
+    min-height: 100vh;
+    /* padding: 4rem 1rem 6rem; */
+    /* background: linear-gradient(135deg, rgba(0, 112, 243, 0.08), rgba(111, 66, 193, 0.08)); */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.formCard {
+    width: min(960px, 100%);
+    /* background: var(--white, #ffffff); */
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    /* box-shadow: 0 25px 80px rgba(15, 23, 42, 0.12); */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.formIntro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.formEyebrow {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--main);
+    margin: 0;
+    align-self: center;
+}
+
+.formTitle {
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+    margin: 0;
+    color: var(--dark);
+}
+
+.formSubtitle {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    align-self: center;
+    color: var(--medGray);
+}
+
+.formGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formCard input,
+.formCard select,
+.formCard textarea {
+    border: 1px solid var(--lightGray);
+    border-radius: 0.65rem;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+}
+
+.formCard input:focus,
+.formCard select:focus,
+.formCard textarea:focus {
+    outline: none;
+    border-color: var(--main, #0060df);
+    box-shadow: 0 0 0 2px rgba(0, 96, 223, 0.12);
+}
+
+.sectionHeading {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.dualSection {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.dualSection > div {
+    flex: 1;
+    min-width: 240px;
+}
+
+.dualSection .sectionHeading {
+    border-top: none;
+    padding-top: 0;
+}
+
+.sectionEyebrow {
+    margin: 0 0 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.sectionSubtitle {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--medGray);
+}
+
+.submitBtn {
+    background-color: var(--main);
+    color: var(--white);
+    border: 1px solid var(--main);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.submitBtn:hover {
+    background-color: var(--white);
+    color: var(--main) ;
+    transform: translateY(-1px);
+}
+
+.disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--medGray);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .formCard {
+        padding: 1.75rem;
+        border-radius: 1rem;
+    }
+
+    .sectionHeading {
+        padding-top: 1rem;
+    }
+}

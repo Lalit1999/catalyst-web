@@ -17,7 +17,7 @@ const headerData = [
 	{	text: 'What we do',				children : [
 		{	text: 'Overview',							link: '/what-we-do'		}, 
 		{	text: 'Clinical Development Services',		children : [
-				{	text: 'Overview',					link: '/what-we-do/clinical-development-services/'		}, 
+				{	text: 'Overview',					link: '/what-we-do/clinical-development-services'		}, 
 				{	text: 'Study Design & Startup',		link: '/what-we-do/clinical-development-services/study-design-startup'		}, 
 				{	text: 'Patient Recruitment',		link: '/what-we-do/clinical-development-services/patient-recruitment'		}, 
 				{	text: 'Project Management',			link: '/what-we-do/clinical-development-services/project-management'	    },
