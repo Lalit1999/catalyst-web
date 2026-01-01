@@ -1,5 +1,5 @@
-import { homeBanner, about1, about2, exp1, exp2, exp3, pub1, pub2, pub3 } from "@images";
-import { School, Expertise, MultiLocation, Partners, Patients } from "@icons";
+import { homeBanner, about1, about2, exp1, exp2, exp3, Cardiomyopathy, Neurology } from "@images";
+import { School, Bullet } from "@icons";
 
 const homePageData = {
     homeSlider: {
@@ -7,27 +7,30 @@ const homePageData = {
         image: homeBanner,
     },
     sectionTwo: {
-        subTitle: 'Precision in Every Phase',
+        subTitle: 'Precision at Every Step',
         title: 'Our Edge',
-        descr: 'At Catalyst Clinical Services, you will find unmatched scientific rigor and operational excellence in:',
+        descr: 'At Catalyst Clinical Services, you will find unmatched scientific rigor and operational excellence',
         card: [
             {
-                title: 'Clinical Trials',
+                title: 'Clinical Trials Solutions',
                 icon: <School />,
-                descr: ['Excellence in clinical trials is never accidental, it is crafted. From study design to final submission, our teams bring seamless coordination, operational excellence, and real-time oversight.',' We ensure every trial runs with precision, helping you move from concept to clinical outcomes with confidence and speed.'],
-                link: '/',
+                descr: ['Excellence in clinical trials is never accidental, it is crafted. From study design to final submission, our teams bring seamless coordination, operational excellence, and real-time oversight. We ensure every trial runs with precision, helping you move from concept to clinical outcomes with confidence and speed.'],
+                btnText: 'See How We Partner',
+                link: '/what-we-do/clinical-development-services',
             },
             {
                 title: 'Therapeutic Expertise',
                 icon: <School />,
-                descr: ['Our therapeutic strength comes from continuously evolving scientific understanding and close collaboration with subject-matter specialists.',' Every project is guided by experts who anticipate challenges, interpret data with precision, and tailor strategies that support smarter, faster clinical development across diverse disease areas.'],
-                link: '/',
+                descr: ['Our therapeutic strength comes from continuously evolving scientific understanding and close collaboration with subject-matter specialists. Every project is guided by experts who anticipate challenges, interpret data with precision, and tailor strategies that support smarter, faster clinical development across diverse disease areas.'],
+                btnText: 'Explore Our Therapeutic Expertise',
+                link: '/therapeutic-expertise',
             },
             {
                 title: 'Research Publications',
                 icon: <School />,
-                descr: ['Our expert medical writers unlock deeper insights from your data. Powered by intelligent workflows, we accelerate evidence generation, enhance accuracy.',' Deliver high-impact manuscripts for publication in internationally recognized, peer-reviewed medical journals of repute.'],
-                link: '/',
+                descr: ['Our expert medical writers unlock deeper insights from your data. Powered by intelligent workflows, we accelerate evidence generation, enhance accuracy. Deliver high-impact manuscripts for publication in internationally recognized, peer-reviewed medical journals of repute.'],
+                btnText: 'See Our Peer-Reviewed Publications',
+                link: '/research-publications',
             }
         ]
     },
@@ -45,12 +48,14 @@ const homePageData = {
             para : [
                 'We support clinical research across all major zones of India - North, South, East, and West, ensuring efficient study operations through strong investigator networks, diverse patient populations, and reliable site performance.',
             ],
+            buttonLink : '/cro-experience',
         },
         box3: {
             head : 'Types of Trial Sites ',
             para : [
                 'Our trials are conducted across a diverse spectrum of site types, including government and academic hospitals, private and corporate hospital networks, and specialist clinics. ',
             ],
+            buttonLink : '/cro-experience',
         },
     },
     sectionFour: {
@@ -66,12 +71,12 @@ const homePageData = {
         box1: {
             head: 'Enabling Impactful Clinical Development',
             text: 'through integrated trial solutions, deep therapeutic insight, and evidence-driven outcomes.',
-            icon: <School />,
+            icon: <Bullet />,
         },
         box2: {
             head: 'Accelerating Better Healthcare',
             text: 'by enabling smarter studies, stronger data, and faster pathways from discovery to delivery.',
-            icon: <School />,
+            icon: <Bullet />,
         },
         buttonText: 'Know More About Us',
         buttonLink: '/who-we-are',
@@ -83,24 +88,24 @@ const homePageData = {
     },
     statsArr: [
         {
-            icon: <MultiLocation />,
-            number: '15,000+ Patients',
-            text: 'engaged across clinical and RWE studies',
+            number: '15,000+',
+            text1 : 'Patients',
+            text2: 'engaged across clinical and RWE studies',
         },
         {
-            icon: <Partners />,
-            number: '10,000+ Cases',
-            text: 'generating evidence across robotic and other surgical techniques',
+            number: '10,000+',
+            text1 : 'Cases',
+            text2: 'generating evidence across robotic and other surgical techniques',
         },
         {
-            icon: <Expertise />,
-            number: '3,000+ Cases',
-            text: 'driving precision oncology insight',
+            number: '3,000+',
+            text1 : 'Cases',
+            text2: 'driving precision oncology insight',
         },
         {
-            icon: <Patients />,
-            number: '100+ Publications',
-            text: 'across leading peer-reviewed Journals',
+            number: '100+',
+            text1 : 'Publications',
+            text2: 'across leading peer-reviewed Journals',
         }
     ],
     expertise : {
@@ -144,23 +149,21 @@ const homePageData = {
         buttonLink: '/',
         pubArr : [
             {
-                image : pub1,
-                title: 'Innovating To End Malaria',
-                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-                link: '/',
+                id: "ai-medical-diagnosis",
+                heading: "AI-Based Early Diagnosis of Cardiovascular Diseases",
+                description:
+                "This paper explores machine learning models for early detection of cardiovascular diseases using patient vitals, ECG signals, and clinical data.",
+                image: Cardiomyopathy,
+                link: "https://example.com/ai-medical-diagnosis.pdf",
             },
             {
-                image : pub2,
-                title: 'Emerging Investigators',
-                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-                link: '/',
+                id: "neuro-rehab",
+                heading: "Advancements in Neurological Rehabilitation Techniques",
+                description:
+                "A systematic review of modern neuro-rehabilitation methods focusing on stroke recovery, neural plasticity, and assistive technologies.",
+                image: Neurology,
+                link: "https://example.com/ai-medical-diagnosis.pdf",
             },
-            {
-                image : pub3,
-                title: 'Vaccine Research',
-                descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-                link: '/',
-            }
         ]
     },
     results: {

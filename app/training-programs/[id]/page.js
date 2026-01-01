@@ -110,8 +110,8 @@ const HomeSlider = ({ heading }) => {
                         <p>{heading}</p>
                     </div>
                     <div className={styles.sliderLeftBtnCon}>
-                        <Link href="/" className={styles.homeSliderButton1}>Register Now</Link>
-                        <Link href="/" className={styles.homeSliderButton1}><Call2 />&nbsp; Call Us +91-8826806862 </Link>
+                        <Link href="/online-registration" className={styles.homeSliderButton1}>Register Now</Link>
+                        <Link href="/" className={styles.homeSliderButton1}><Call2 />&nbsp; Call Us +91-9818356273 </Link>
                         <Link href="/" className={styles.homeSliderButton3}><Whatsapp />&nbsp; Whatsapp Enquiry</Link>
                     </div>
                 </div>
@@ -341,27 +341,28 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate})
     return (
         <div className={styles.detailsRight}>
             <div className={styles.priceBox}>
+                <p className={styles.moneyBoxHead}>Program Fee</p>
                 <div className={styles.moneyBox}>
-                    <p className={styles.headPrice}>USD</p>
-                    <p className={styles.offerPrice}>${usd}</p>
-                    {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p> */}
-                </div>
-                <div className={styles.moneyBox}>
-                    <p className={styles.headPrice}>INR</p>
+                    <p className={styles.headPrice}>Indian Participants</p>
                     <p className={styles.offerPrice}>₹{inr}</p>
                     {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹{inr}</p> */}
                 </div>
+                <div className={styles.moneyBox}>
+                    <p className={styles.headPrice}>Foreign Nationals</p>
+                    <p className={styles.offerPrice}>${usd}</p>
+                    {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p> */}
+                </div>
             </div>
             <div className={styles.registerBtnCon}>
-                <button className={styles.registerBtn}>Register Now</button>
+                <Link href="/online-registration" className={styles.registerBtn}>Register Now</Link>
             </div>
-            <div className={styles.couponCon}>
+            {/* <div className={styles.couponCon}>
                 <p className={styles.descrHead}>Apply Coupon</p>
                 <div className={styles.couponBox}>
                     <input type="text" placeholder="Enter Coupon" className={styles.couponInput} />
                     <button className={styles.couponBtn}>Apply</button>
                 </div>
-            </div>
+            </div> */}
             <div className={styles.includesCon}>
                 <p className={styles.descrHead}>This course includes</p>
                 <div className={styles.includesBox}>
@@ -395,7 +396,7 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate})
                 <div className={styles.borderLine}/>
                 <div className={styles.contactCon}>
                     <p className={styles.contactText}>Contact for more details of the course</p>
-                    <button className={styles.contactBtn}><Call2 />&nbsp; Call Us +91-8826806862</button>
+                    <button className={styles.contactBtn}><Call2 />&nbsp; Call Us +91-9818356273</button>
                 </div>
             </div>
         </div>

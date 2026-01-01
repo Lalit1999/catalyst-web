@@ -190,9 +190,9 @@
     justify-content: space-between;
     gap: .5em ;
     flex-basis: 30% ;
+    padding: 1em;
     border: 1px solid var(--lightGray) ;
     border-radius: 1.2rem;
-    padding: 1em;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -317,9 +317,7 @@
 .CourseSectionMain {
     display: flex;
     flex-direction: column;
-    padding: 1em ;
-    background-color: var(--bg);
-    border-radius: 1rem ;
+    background-color: var(--white);
     gap: 1em ;
 }
 
@@ -327,8 +325,10 @@
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    border-radius: 1rem ;
     gap: .5em ;
+    border-radius: 1rem ;
+    border: 1px solid var(--lightGray) ;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .courseDetailTop {
@@ -360,7 +360,7 @@
     align-items: center;
     justify-content: center;
     padding: .3em ;
-    background-color: var(--thodaMain);
+    /* background-color: var(--thodaMain); */
     border-radius: 50% ;
 }
 
@@ -459,7 +459,7 @@
     flex-basis: 25%;
     display: flex;
     flex-direction: column;
-    gap : 2em ;
+    gap : 1em ;
     border: 1px solid var(--lightGray) ;
     border-radius: 1.2rem;
     padding: 1em 1em 0 1em ;
@@ -471,31 +471,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100% ;
+    /* gap: 1em ; */
+}
+
+.moneyBoxHead {
+    font-size: 1.5rem ;
+    font-weight: 600 ;
+    align-self: flex-start;
 }
 
 .moneyBox {
     display: flex;
-    text-align: center;
+    text-align: flex-start;
     align-items: center;
+    justify-content: space-between;
     width: 100% ;
-    padding: .5em 1em;
+    padding-right: 1em ;
     gap: 2em ;
 }
 
 .headPrice {
-    font-size: 1.2rem ;
-    font-weight: 600 ;
+    font-size: .9rem ;
 }
 
 .offerPrice {
-    font-size: 1.5rem ;
-    font-weight: 600 ;
+    font-size: 1.1rem ;
+    font-weight: 500 ;
     color: var(--main) ;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
     gap: 1em ;
-    width: 100% ;    
+    width: 100% ;  
+    max-width: max-content;  
 }
 
 .cutPrice {
@@ -512,12 +519,13 @@
     background-color: var(--main) ;
     color: var(--white) ;
     padding: 0.5em 1em ;
-    border: none ;
+    border: 1px solid var(--main) ;
     border-radius: 5px ;
     font-size: .9rem ;
     font-weight: 600 ;
     cursor: pointer ;
     width: 100% ;
+    text-align: center;
     transition: all 0.3s;
 }
 

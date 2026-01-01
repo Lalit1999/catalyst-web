@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import serviceData from "../../../data/serviceData"; // Ensure this matches your export name
+import { clinicalServicesData } from "@data";
 import styles from "./page.module.css";
 
 import {
@@ -38,23 +38,22 @@ const quickLinks = [
   },
 ];
 
-
 const featureCards = [
   {
     title: "Focused Customer",
-    color: "var(--thodaBlue)",
+    color: "#E1F1F8",
     icon: "user",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     title: "24/7 Care",
-    color: "var(--thodaPink)",
+    color: "#FADDE1",
     icon: "star",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     title: "Timely Care",
-    color: "var(--thodaYellow)",
+    color: "#F9E6A8",
     icon: "clock",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
@@ -106,12 +105,12 @@ export default function ServiceDetailPage() {
     setOpenIndex(openIndex === idx ? null : idx);
   };
   const serviceId = params.id || params.slug;
-  const service = serviceData[serviceId];
+  const service = clinicalServicesData[serviceId];
   if (!service) {
     return notFound();
   }
 
-  const allServices = Object.values(serviceData);
+  const allServices = Object.values(clinicalServicesData);
 
   return (
     <main className={styles.main}>

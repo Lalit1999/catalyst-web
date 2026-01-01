@@ -44,7 +44,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 50%;
+	max-width: 70%;
 	text-align: center;
 	gap: 1em ;
 }
@@ -78,9 +78,9 @@
 	display: flex ;
 	flex-direction: column ;
 	justify-content: space-between;
-	gap: 3em ;
+	gap: 1.5em ;
 	align-items: flex-start ;
-	padding: 3em 2em ;
+	padding: 1.5em 1em ;
 	border: 1px solid var(--lightGray) ;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	border-radius: 8px ;
@@ -96,15 +96,15 @@
 }
 
 .sectionTwoBoxIcon svg {
-	width: 40px ;
-	height: 40px;
+	width: 30px ;
+	height: 30px;
 	color: var(--white);
 }
 
 .sectionTwoBoxContentCon {
 	display: flex ;
 	flex-direction: column ;
-	text-align: justify;
+	text-align: left ;
 	flex: 1;
 	gap: 1em ;
 }
@@ -122,7 +122,7 @@
 }
 
 .sectionTwoBoxDescr {
-	color: var(--medGray) ;
+	color: var(--gray) ;
 	font-size: .8rem ;
 	line-height: 1.4rem ;
 }
@@ -142,7 +142,7 @@
 	color : var(--main) ;
 	font-weight: 600 ;
 	transition: all .3s ;
-	font-size: .8rem;
+	font-size: .7rem;
 }
 
 .sectionTwoBoxLink svg {
@@ -207,13 +207,12 @@
 
 .sectionThreeFirstText {
 	color: var(--medGray) ;
-	text-align: justify;
+	text-align: left;
 	font-size: 1rem ;
 	line-height: 1.6rem ;
 }
 
 .sectionThreeSecond {
-	align-self: flex-end ;
 	flex-basis: 65% ;
 	display: flex ;
 	align-items: flex-end;
@@ -226,7 +225,7 @@
 	background-color: var(--third2);
 	padding: 2em ;
 	height: 100% ;
-	text-align: justify;
+	text-align: left;
 	flex-basis: 50%;
 	gap: 2em ;
 }
@@ -240,10 +239,10 @@
 .sectionThreePara {
 	color: var(--darkWhite) ;
 	font-size: .9rem ;
-
+	flex-grow: 1;
 	display: -webkit-box ;
-	-webkit-line-clamp: 5 ;
-	line-clamp: 5 ;
+	-webkit-line-clamp: 6 ;
+	line-clamp: 6 ;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }
@@ -254,21 +253,43 @@
 	background-color: var(--second);
 	padding: 2em ;
 	height: 100% ;
-	text-align: justify;
+	text-align: left;
 	flex-basis: 50%;
 	gap: 2em ;
 }
 
 .sectionThreeButton {
+	background-color: var(--white);
+	border: 1px solid var(--white) ;
+	padding: .5em 1em ;
+	border-radius: .5rem;
 	font-size: .9rem ;
 	font-weight: 500 ;
-	color: var(--white) ;
+	color: var(--third2) ;
 	transition: all .3s ;
 	align-self: flex-start ;
 }
 
 .sectionThreeButton:hover {
-	color: var(--main) ;
+	color: var(--white) ;
+	background-color: var(--third2);
+}
+
+.sectionThreeButton2 {
+	background-color: var(--white);
+	border: 1px solid var(--white) ;
+	padding: .5em 1em ;
+	border-radius: .5rem;
+	font-size: .9rem ;
+	font-weight: 500 ;
+	color: var(--second) ;
+	transition: all .3s ;
+	align-self: flex-start ;
+}
+
+.sectionThreeButton2:hover {
+	color: var(--white) ;
+	background-color: var(--second);
 }
 
 /* section three ends */
@@ -353,18 +374,14 @@
 
 .fourInfoIcon {
 	display: flex ;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--main);
-	border-radius: 50% ;
-	height: 48px;
-	width: 48px;
+	align-items: flex-start;
+	justify-content: flex-start;
 }
 
 .fourInfoIcon svg {
-	width: 24px ;
-	height: 24px;
-	color: var(--white);
+	width: 36px ;
+	height: 36px;
+	color: var(--main);
 }
 
 .fourInfoTextCon {
@@ -431,9 +448,9 @@
 	flex-direction: column ;
 	align-items: flex-start ;
 	justify-content: space-between;
-	padding: 2em 2em 1.5em;
-	gap: 1.5em ;
-	border: 1px solid var(--main);
+	padding: 1em ;
+	border: 1px solid var(--lightGray);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	border-radius: .8rem;
 }
 
@@ -448,14 +465,26 @@
 }
 
 .statsNumber {
-	font-size: 1.3rem ;
+	font-size: 2.5rem ;
+	font-weight: 600 ;
+	align-self: center;
+	color: var(--main) ;
+	line-height: 2.7rem ;
+}
+
+.statsText1 {
+	font-size: 1.5rem ;
 	font-weight: 600 ;
 	color: var(--main) ;
+	align-self: center;
+	line-height: 1.8rem ;
 }
 
 .statsText {
 	color: var(--second) ;
 	font-size: .8rem ;
+	text-align: center;
+	align-self: center;
 	flex:1 ;
 }
 
@@ -528,7 +557,7 @@
 
 .expertiseBoxDescr {
 	color: var(--second) ;
-	font-size: .8rem ;
+	font-size: .9rem ;
 }
 
 .expertiseBoxLink {
@@ -576,7 +605,7 @@
 	display: flex ;
 	flex-direction: column ;
 	align-items: center;
-	gap: 4em ;
+	gap: 2em ;
 }
 
 .pubHeadCon {
@@ -600,11 +629,13 @@
 .pubBoxesCon {
 	display: flex ;
 	justify-content: space-between ;
-	width: 80%;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 1em ;
 }
 
 .pubBox {
-	flex-basis: 30% ;
+	flex-basis: 45% ;
 	display: flex;
 	flex-direction: column;
 	gap: 2em ;
@@ -783,8 +814,6 @@
 	}
 
 	.sectionTwoBoxIcon {
-		display: flex ;
-		background-color: var(--main);
 		padding: .5em ;
 		border-radius: 8px ;
 	}
@@ -813,7 +842,7 @@
 	}
 
 	.sectionTwoBoxLink span {
-		font-size: .7rem;
+		font-size: .6rem;
 	}
 
 	.sectionTwoBoxLink svg {
@@ -867,7 +896,7 @@
 
 	.sectionThreeFirstText {
 		color: var(--medGray) ;
-		text-align: justify;
+		text-align: left;
 		font-size: 1rem ;
 		line-height: 1.6rem ;
 	}
@@ -882,7 +911,7 @@
 		background-color: var(--third2);
 		padding: 2em ;
 		height: 100% ;
-		text-align: justify;
+		text-align: left;
 		flex-basis: 50%;
 		gap: 2em ;
 	}
@@ -898,8 +927,8 @@
 		font-size: .9rem ;
 
 		display: -webkit-box ;
-		-webkit-line-clamp: 5 ;
-		line-clamp: 5 ;
+		-webkit-line-clamp: 6 ;
+		line-clamp: 6 ;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
@@ -910,7 +939,7 @@
 		background-color: var(--second);
 		padding: 2em ;
 		height: 100% ;
-		text-align: justify;
+		text-align: left;
 		flex-basis: 50%;
 		gap: 2em ;
 	}
@@ -918,7 +947,7 @@
 	.sectionThreeButton {
 		font-size: .9rem ;
 		font-weight: 500 ;
-		color: var(--white) ;
+		color: var(--main) ;
 		transition: all .3s ;
 		align-self: flex-start ;
 	}
@@ -1011,8 +1040,6 @@
 		display: flex ;
 		align-items: center;
 		justify-content: center;
-		background-color: var(--main);
-		border-radius: 50% ;
 		height: 48px;
 		width: 48px;
 	}
@@ -1020,7 +1047,7 @@
 	.fourInfoIcon svg {
 		width: 24px ;
 		height: 24px;
-		color: var(--white);
+		color: var(--main);
 	}
 
 	.fourInfoTextCon {

@@ -5,6 +5,8 @@ import Link from "next/link";
 
 import { ArrowLong, Arrow, Tick } from "@icons";
 import { homePageData } from "@data";
+import Card from '@c/card/ResearchCard';
+
 import styles from "./page.module.css";
 
 const HomeSlider = () => {
@@ -26,7 +28,7 @@ const SectionTwo = () => {
         </div>
         <div className={styles.sectionTwoBoxesCon}>
 		{
-			homePageData.sectionTwo.card.map( ({title, icon, descr, link}) => {
+			homePageData.sectionTwo.card.map( ({title, icon, descr, link, btnText}) => {
 				return (
 					<div className={styles.sectionTwoBox} key={title}>
 						<div className={styles.sectionTwoBoxIcon}>{icon}</div>
@@ -40,7 +42,7 @@ const SectionTwo = () => {
 							</div>
 						</div>
 						<Link href={link} className={styles.sectionTwoBoxLink}>
-							<span>Explore {title}</span>
+							<span>{btnText}</span>
 							<ArrowLong />
 						</Link>
 					</div>
@@ -79,7 +81,7 @@ const SectionThree = () => {
 								) ;
 							} )
 						}
-						<Link href={homePageData.sectionThree.box2.buttonLink||'#'} className={styles.sectionThreeButton}>Read More...</Link>
+						<Link href={homePageData.sectionThree.box2.buttonLink||'#'} className={styles.sectionThreeButton}>Read More</Link>
 					</div>
 					<div className={styles.sectionDark}>
 						<p className={styles.sectionThreeHead}>{homePageData.sectionThree.box3.head}</p>
@@ -90,7 +92,7 @@ const SectionThree = () => {
 								) ;
 							} )
 						}
-						<Link href={homePageData.sectionThree.box2.buttonLink||'#'} className={styles.sectionThreeButton}>Read More...</Link>
+						<Link href={homePageData.sectionThree.box2.buttonLink||'#'} className={styles.sectionThreeButton2} >Read More</Link>
 					</div>
 				</div>
 			</div>
@@ -127,18 +129,6 @@ const SectionFour = () => {
 						</div>
 					</div>
 				</div>
-				{/* <div className={styles.fourParaCon}>
-				{
-					homePageData.sectionFour.para.map( (para, index) => {
-						return (
-							<div key={index} className={styles.fourParaBox}>
-								<Arrow />
-								<p className={styles.fourPara}>{para}</p>
-							</div>
-						) ;
-					} )
-				}
-				</div> */}
 				<Link href={homePageData.sectionFour.buttonLink} className={styles.fourButton}>{homePageData.sectionFour.buttonText}</Link>
 			</div>
 			<div className={styles.fourSecond}>
@@ -157,12 +147,12 @@ const StatsSection = () => {
 	return (
 		<div className={styles.statsMain}>
 		{
-			homePageData.statsArr.map( ({icon, number, text}) => {
+			homePageData.statsArr.map( ({number, text1, text2}) => {
 				return (
 					<div className={styles.statsBox} key={number}>
-						<div className={styles.statsIcon}>{icon}</div>
 						<p className={styles.statsNumber}>{number}</p>
-						<p className={styles.statsText}>{text}</p>
+						<p className={styles.statsText1}>{text1}</p>
+						<p className={styles.statsText}>{text2}</p>
 					</div>
 				) ;
 			} )
@@ -220,18 +210,9 @@ const PubSection = () => {
 			</div>
 			<div className={styles.pubBoxesCon}>
 				{
-					homePageData.publications.pubArr.map( ({image, title, descr, link}) => {
-						return (
-							<div key={title} className={styles.pubBox}>
-								<div className={styles.pubBoxImageCon}>
-									<Image src={image} alt={title} />
-								</div>
-								<div className={styles.pubBoxContentCon}>
-									<p className={styles.pubBoxTitle}>{title}</p>
-									<p className={styles.pubBoxDescr}>{descr}</p>
-									<Link href={link} className={styles.pubBoxLink} ><Arrow />&nbsp;Read More </Link>
-								</div>
-							</div>
+					homePageData.publications.pubArr.map( (one, i) => {
+						 return (
+							<Card key={i} {...one} />
 						) ;
 					})
 				}
@@ -244,7 +225,7 @@ const ResultsSection = () => {
 	return (
 		<div className={styles.resultsMain}>
 			<div className={styles.resultInfoCon}>
-				<p className={styles.fourSubHeading}>{homePageData.results.subTitle}</p>
+				{/* <p className={styles.fourSubHeading}>{homePageData.results.subTitle}</p> */}
 				<p className={styles.fourHeading}>{homePageData.results.title}</p>
 				<div className={styles.resultsPointsDescrCon}>
 					<p className={styles.resultsPointsDescr}>{homePageData.results.descr}</p>

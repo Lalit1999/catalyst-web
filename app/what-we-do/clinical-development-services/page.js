@@ -38,23 +38,22 @@ const quickLinks = [
   },
 ];
 
-
 const featureCards = [
   {
     title: "Focused Customer",
-    color: "var(--thodaBlue)",
+    color: "#E1F1F8",
     icon: "user",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     title: "24/7 Care",
-    color: "var(--thodaPink)",
+    color: "#FADDE1",
     icon: "star",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     title: "Timely Care",
-    color: "var(--thodaYellow)",
+    color: "#F9E6A8",
     icon: "clock",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
@@ -84,7 +83,7 @@ const faqList = [
       "Yes, absolutely. We provide full profiles, including board certifications and education.",
   },
   {
-    question: "If I’m taking a companion, when can he or she travel?",
+    question: "If I'm taking a companion, when can he or she travel?",
     answer:
       "Your companion can travel with you at any time. We assist with all arrangements.",
   },
@@ -98,6 +97,8 @@ const faqList = [
   },
 ];
 
+const DEFAULT_SERVICE_ID = 'clinical-development-service';
+
 export default function ServiceDetailPage() {
   const params = useParams();
    const [openIndex, setOpenIndex] = useState(null);
@@ -105,7 +106,7 @@ export default function ServiceDetailPage() {
   const toggleFAQ = (idx) => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
-  const serviceId = params.id || params.slug;
+  const serviceId = params?.id || params?.slug || DEFAULT_SERVICE_ID;
   const service = serviceData[serviceId];
   if (!service) {
     return notFound();

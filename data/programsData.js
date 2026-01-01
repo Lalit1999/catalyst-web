@@ -119,8 +119,8 @@ const programsDetailsArr = {
         },
         usd: 350,
         inr: 14000,
-        duration: '12 Weeks',
-        lessons: 10,
+        duration: 'Self-Paced',
+        lessons: 4,
         students: `500+`,
         language: ['English'],
         certificate: true
@@ -249,8 +249,8 @@ const programsDetailsArr = {
         },
         usd: 350,
         inr: 14000,
-        duration: '12 Weeks',
-        lessons: 10,
+        duration: 'Self-Paced',
+        lessons: 4,
         students: `500+`,
         language: ['English'],
         certificate: true
@@ -379,8 +379,8 @@ const programsDetailsArr = {
         },
         usd: 350,
         inr: 14000,
-        duration: '12 Weeks',
-        lessons: 10,
+        duration: 'Self-Paced',
+        lessons: 4,
         students: `500+`,
         language: ['English'],
         certificate: true
@@ -502,8 +502,8 @@ const programsDetailsArr = {
         },
         usd: 350,
         inr: 14000,
-        duration: '12 Weeks',
-        lessons: 10,
+        duration: 'Self-Paced',
+        lessons: 4,
         students: `500+`,
         language: ['English'],
         certificate: true
@@ -626,8 +626,8 @@ const programsDetailsArr = {
         },
         usd: 350,
         inr: 14000,
-        duration: '12 Weeks',
-        lessons: 10,
+        duration: 'Self-Paced',
+        lessons: 4,
         students: `500+`,
         language: ['English'],
         certificate: true
@@ -746,7 +746,7 @@ const programsDetailsArr = {
         usd: 350,
         inr: 14000,
         duration: 'Self-Paced',
-        lessons: 10,
+        lessons: 4,
         students: `500+`,
         language: ['English'],
         certificate: true 

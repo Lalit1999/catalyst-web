@@ -1,0 +1,122 @@
+.courseCard {
+  display: flex;
+  gap: 1em;
+  width: 48%;
+  border: 1px solid var(--medGray);
+  border-radius: 1.5rem;
+  padding: 1em;
+}
+
+.courseCardImageCon {
+  display: flex;
+  flex-basis: 45%;
+  position: relative;
+  overflow: hidden;
+}
+
+.courseCardImageCon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.courseCardDetailsCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  flex-basis: 50%;
+}
+
+.cardHead p {
+  font-size: 1rem;
+  color: var(--second);
+  font-weight: 600;
+   display: -webkit-box ;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+.cardIconCon {
+  display: flex;
+  gap: 1em;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.cardIcon svg {
+  width: 20px;
+  height: 20px;
+  color : var(--medGray)
+}
+
+.cardIcon p {
+  font-size: .8rem;
+  color: var(--medGray);
+  font-weight: 500;
+}
+
+.cardIconBar {
+  width: 2px;
+  height: 20px;
+  background-color: var(--medGray);
+}
+
+.cardText p {
+  font-size: .8rem;
+  color: var(--medGray);
+  
+  display: -webkit-box ;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardBtnCon {
+  display: flex;
+  gap: 1em;
+}
+
+.cardBtnFirst {
+  padding: .5em 1em;
+  border: 1px solid var(--main);
+  border-radius: 8px;
+  background-color: var(--main);
+  color: var(--white);
+  font-size: .8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ;
+}
+
+.cardBtnFirst:hover {
+  background-color: var(--white);
+  color: var(--main);
+
+}
+
+.cardBtnSecond {
+  padding: .5em 1em;
+  border: 1px solid var(--main);
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--main);
+  font-size: .8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ;
+}
+
+.cardBtnSecond:hover {
+  background-color: var(--main);
+  color: var(--white);
+}

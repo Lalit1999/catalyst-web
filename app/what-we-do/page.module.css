@@ -118,7 +118,7 @@ width: 70vw;
 .iconBadge {
   width: 60px;
   height: 60px;
-  background-color: #101820;
+  background-color: var(--black);
   border-radius: 10px;
   /* --- CENTERING MAGIC --- */
   display: flex;
