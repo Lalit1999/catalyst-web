@@ -58,21 +58,6 @@
 	display: flex;
 }
 
-.brTop {
-	display: flex;
-}
-
-.brTop p {
-	font-size: 1.3rem;
-	font-weight: 400;
-	color: var(--black);
-}
-
-.brBottom {
-	display: flex;
-    gap: 1em;
-}
-
 .downbarMain {
 	display: flex;
 	width: 100%;
@@ -197,119 +182,70 @@
 /* mobile css */
 /* For Mobile */
 @media (max-width: 600px) {
-	.downbar {
-		margin: 0 -1em;
-		padding: 1em 0 0 ;
-		gap: 1em;
+	.downbarMainCon {
+		margin: 1em -1em 0;
 	}
 
-	.support {
+	.downbarTop {
+		width: 100%;
+		padding: 1em;
 		gap: 1em ;
-		margin: 0;
 	}
-	
-	.supportText1 {
-		font-size: 1rem;
+
+	.dbTopText {
+		font-size: .8rem;
+		flex-basis: 60% ;
 	}
-	
-	.supportText2 {
-		font-size: 1rem;
+
+	.dbTopButton {
+		flex-basis: 40% ;
+		border-radius: 1.5rem;
+		padding: .5em 1em ; 	
+		max-width: max-content;
+		font-size: .8rem;
 	}
-	
-	.brTop p {
-		font-size: 1rem;
+
+	.dbTopButton svg {
+		width: 12px ;
+		height: 12px ;
 	}
-	
-	.jobLookingBtn {
-		font-size: .8rem ;
-		border-radius: 0.25rem ;
-		padding: 0.7em 2em ;
-	}
-	
-	.jobPostingBtn {
-		font-size: .8rem ;
-		border-radius: 0.25rem ;
-		padding: 0.7em 2em ;
-	}
-	
+
 	.downbarMain {
-		padding: 1em 1em 2em ;
-		gap: 1em ;
-	}	
-	
-	.dbLogo {
-		gap: 1em;
-		padding: 4px 8px ;
-	}
-	
-	.dbEmail p {
-		font-size: .9rem;
-	}
-	
-	.dbText p {
-		font-size: .7rem;
-	}
-	
-	.downbarMainImage {
-		align-self: center;
-	}
-	
-	.dbContent {
 		flex-direction: column;
+		width: 100%;
+		padding: 1em;
 		gap: 2em ;
-	
-	}
-	
-	.dbContentLeft {
-		gap: 1em;
-		flex-basis: 100%;
-	}
-	
-	.downbarSocialIcons {
-		gap: 1.5em;
-	}
-	
-	.downbarSocialIcons svg {
-		width: 20px;
-		height: 20px;
-	}
-	
-	.dbContentRight {
-		flex-basis: 100%;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		padding: 0 ;
-		gap: 1em ;
-	}
-	
-	.dbService {
-		gap: 1em;
-		flex-basis: 100%;
-	}
-	.dbCompany, .dbSupport {
-		gap: 1em;
-		flex-basis: 45%;
 	}
 
-	.dbLinkCon {
-		gap: .5em;
+	.dbLogo {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		flex-basis: 30%;
 	}
-	
-	.qLinks {
-		font-size: 1rem;
+
+	.dbText p {
+		color: var(--gray);
+		font-size: .8rem;
 	}
-	
-	.qLink {
-		font-size: .6rem ;
-		padding: 4px ;
-		flex-basis: 100% ;
-	}	
+
+	.dbContent {
+		display: flex;
+		flex-wrap: wrap;
+		flex-basis: unset;
+		gap: 2em ;	
+	}
+
+	.downbarSocialIcons svg {
+		width: 16px;
+		height: 16px;
+	}
+
+	.dbService, .dbCompany, .dbSupport {
+		flex-basis: 40%;
+	}
 
 	.dbCopyright {
-		align-self: center;
-	}
-
-	.downbarCrText {
-		font-size: .55rem ;
+		padding: 1em ;
 	}
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { ArrowLong, Arrow, Tick } from "@icons";
 import { homePageData } from "@data";
-import Card from '@c/card/ResearchCard';
+import ResearchCard from '@c/card/ResearchCard';
 
 import styles from "./page.module.css";
 
@@ -135,9 +135,6 @@ const SectionFour = () => {
 				<div className={styles.fourImageCon}>
 					<Image src={homePageData.sectionFour.imageArr[1]} alt="about-2" />
 				</div>
-				<div className={styles.fourImageCon}>
-					<Image src={homePageData.sectionFour.imageArr[0]} alt="about-1" />
-				</div>
 			</div>
 		</div>
 	) ;
@@ -212,7 +209,7 @@ const PubSection = () => {
 				{
 					homePageData.publications.pubArr.map( (one, i) => {
 						 return (
-							<Card key={i} {...one} />
+							<ResearchCard key={i} {...one} />
 						) ;
 					})
 				}

@@ -38,36 +38,6 @@
   line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
-}
-
-.cardIconCon {
-  display: flex;
-  gap: 1em;
-}
-
-.cardIcon {
-  display: flex;
-  align-items: center;
-  gap: .5em;
-}
-
-.cardIcon svg {
-  width: 20px;
-  height: 20px;
-  color : var(--medGray)
-}
-
-.cardIcon p {
-  font-size: .8rem;
-  color: var(--medGray);
-  font-weight: 500;
-}
-
-.cardIconBar {
-  width: 2px;
-  height: 20px;
-  background-color: var(--medGray);
 }
 
 .cardText p {
@@ -104,19 +74,27 @@
 
 }
 
-.cardBtnSecond {
-  padding: .5em 1em;
-  border: 1px solid var(--main);
-  border-radius: 8px;
-  background-color: var(--white);
-  color: var(--main);
-  font-size: .8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ;
-}
+@media (max-width: 600px) {
+  .courseCard {
+    gap: 1em;
+    width: 100%;
+    padding: .5em;
+  }
 
-.cardBtnSecond:hover {
-  background-color: var(--main);
-  color: var(--white);
+  .courseCardImageCon {
+    flex-basis: 50%;
+    flex-shrink: 0;
+  }
+
+  .cardHead p {
+    font-size: .9rem;
+  }
+
+  .cardText p {
+    font-size: .7rem;
+  }
+
+  .cardBtnFirst {
+    font-size: .7rem;
+  }
 }

@@ -5,11 +5,11 @@ import Link from "next/link";
 
 import styles from './researchCard.module.css';
 
-const Card = ({ image, heading, description, link }) => {
+const ReaearchCard = ({ image, heading, description, link }) => {
     return (
         <div className={styles.courseCard}>
             <Link href={link} target="_blank" className={styles.courseCardImageCon}>
-                <Image src={image} alt="Research Paper Cover" />
+                <Image fill src={image} alt="Research Paper Cover" />
             </Link>
             <div className={styles.courseCardDetailsCon}>
                 <Link href={link} target="_blank" className={styles.cardHead}>
@@ -28,4 +28,4 @@ const Card = ({ image, heading, description, link }) => {
     );
 };
 
-export default Card;
+export default ReaearchCard;

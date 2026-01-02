@@ -70,7 +70,7 @@ const DownBarTop = () => {
 	return (
 		<div className={styles.downbarTop}>
 			<p className={styles.dbTopText}>Interested in Catalyst Clinical Services?</p>
-			<button className={styles.dbTopButton}>Get in touch&ensp;&ensp; <ArrowLong /></button>
+			<Link href='/contact-us' className={styles.dbTopButton}>Get in touch&ensp;&ensp; <ArrowLong /></Link>
 		</div>
 	) ;
 }
