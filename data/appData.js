@@ -118,7 +118,7 @@ const homePageData = {
                     'Our expertise in robotic-assisted surgery enables sponsors to advance next-generation surgical solutions with confidence. We support the entire clinical development pathway - from protocol design and feasibility assessment to multi-centre trial execution and post-market evidence generation.',
                     'With deep understanding of robotic systems, performance metrics, and real-world surgical workflows, we help deliver high-quality data on precision, safety, and patient recovery outcomes. Our robust operational frameworks ensure faster study timelines and accelerated adoption of minimally invasive technologies. '
                 ],
-                link: '/',
+                link: '/therapeutic-expertise/robotic-assisted-surgery',
                 image: exp1
             },
             {
@@ -127,7 +127,7 @@ const homePageData = {
                     'In oncology research, we combine scientific depth with operational excellence to manage some of the most complex and time-sensitive clinical trials. Our capabilities span solid tumours and haematological malignancies, immuno-oncology, precision medicine, and novel targeted therapies.',
                     'Through strong investigator networks, biomarker-driven approaches, and patient-centric study designs, we help sponsors generate high-impact clinical evidence while navigating regulatory complexities. Our focus remains on accelerating breakthroughs that improve survival, quality of life, and global access to advanced cancer therapies.',
                 ],
-                link: '/',
+                link: '/therapeutic-expertise/oncology',
                 image: exp2
             },
             {
@@ -136,7 +136,7 @@ const homePageData = {
                     `We possess deep, cross-therapeutic expertise in the conceptualization, design, and execution of real-world evidence (RWE) studies, supporting evidence generation across the entire research continuum.`,
                     `Our experience encompasses prospective and retrospective study designs, including sponsor-initiated and investigator-initiated research, enabling the generation of evidence tailored to diverse scientific, regulatory, and market-access objectives.`,
                 ],
-                link: '/',
+                link: '/therapeutic-expertise/rwe-scientific-expertise',
                 image: exp3
             }
         ]

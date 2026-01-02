@@ -35,6 +35,7 @@ const headerData = [
 		{	text: 'Overview',							link: '/therapeutic-expertise'		}, 
 		{	text: 'Robotic Assisted Surgery',			link: '/therapeutic-expertise/robotic-assisted-surgery'		}, 
 		{	text: 'Oncology',							link: '/therapeutic-expertise/oncology'		}, 
+		{	text: 'RWE Scientific Expertise',			link: '/therapeutic-expertise/rwe-scientific-expertise'		}, 
 		{	text: 'Endocrinology',						link: '/therapeutic-expertise/endocrinology'	},
 		{ 	text: 'Cardiology',  						link: '/therapeutic-expertise/cardiology'		},
 		{ 	text: 'Vaccines',  							link: '/therapeutic-expertise/vaccines'		},
