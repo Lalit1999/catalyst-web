@@ -3,9 +3,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  color: var(--black);
   position: relative;
-  gap: 3rem;
+   color: var(--darkGray);
+  gap: 1.5rem;
 }
 .startHead {
   display: flex;
@@ -16,13 +16,13 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 20.8px;
-  color: var(--black);
+ 
+  margin: 0 !important;
 }
 .breadContent {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 50.4px;
-  color: var(--black);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 !important;
 }
 .headSection {
   display: flex;
@@ -32,7 +32,7 @@
 .headContent {
   font-size: 14px;
   font-weight: 400;
-  color: var(--gray);
+width: 70vw;
   margin: 0 !important;
 }
 .headDesc {
@@ -44,6 +44,8 @@
 .headImg{
   background-size: cover;
   width: 100%;
+  height: 55vh;
+  border-radius: 16px;
 }
 /* Responsive Grid: 2 columns on tablet, 3 on desktop */
 @media (min-width: 768px) {
@@ -107,7 +109,7 @@
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   padding: 2rem;
 }
 
@@ -132,6 +134,7 @@
 .content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   gap: 0.5rem;
 }
@@ -140,7 +143,6 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--black);
-  /* margin-bottom: 0.75rem; */
   transition: all ease 0.4s;
 }
 .title:hover {
@@ -154,7 +156,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  line-clamp: 2;
+  margin: 0 !important;
 }
 
 .readMore {
@@ -164,9 +166,8 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between text and arrow if you add one */
   transition: color 0.2s;
-  margin-top: -0.7rem;
+
 }
 
 .readMore:hover {
