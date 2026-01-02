@@ -1,12 +1,13 @@
 'use client'
 
 import { useParams } from 'next/navigation' ;
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { pragramBanner, course, cardImage } from "@images";
 import { Card } from '@comps' ;
+import { AppContext } from '@ac' ;
 import { programsDetailsArr } from '@data' ;
 import { Call2, Whatsapp, Tick, Clock, Menu, Person, Website, Principal, Facebook, Twitter, Instagram, Li, Quote, Arrow } from "@icons";
 import styles from './page.module.css';
@@ -100,7 +101,9 @@ const socialArr = [
     }
 ] ;
 
-const HomeSlider = ({ heading }) => {
+const HomeSlider = ({ heading, id }) => {
+    const { setCourse } = useContext(AppContext);
+
     return (
         <div className={styles.homeSlider}>
             <Image src={pragramBanner} alt="Program Banner" />
@@ -110,7 +113,7 @@ const HomeSlider = ({ heading }) => {
                         <p>{heading}</p>
                     </div>
                     <div className={styles.sliderLeftBtnCon}>
-                        <Link href="/online-registration" className={styles.homeSliderButton1}>Register Now</Link>
+                        <Link href="/online-registration" onClick={()=>setCourse(id)} className={styles.homeSliderButton1}>Register Now</Link>
                         <Link href="/" className={styles.homeSliderButton1}><Call2 />&nbsp; Call Us +91-9818356273 </Link>
                         <Link href="/" className={styles.homeSliderButton3}><Whatsapp />&nbsp; Whatsapp Enquiry</Link>
                     </div>
@@ -141,7 +144,6 @@ const DescrCon = ({subHeading, description}) => {
 }
 
 const LearnSection = ({learnArr}) => {
-    console.log(learnArr) ;
     return (
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>What you'll learn</p>
@@ -308,7 +310,8 @@ const RegProcessSection = ({regProcess}) => {
     ) ;
 }
 
-const SideBar = ({usd, inr, duration, lessons, students, language, certificate}) => {
+const SideBar = ({usd, inr, duration, lessons, students, language, certificate, id}) => {
+    const { setCourse } = useContext(AppContext);
 
     const includesArr = [
         {
@@ -353,7 +356,7 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate})
                     {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p> */}
                 </div>
             </div>
-            <div className={styles.registerBtnCon}>
+            <div className={styles.registerBtnCon} onClick={()=>setCourse(id)}>
                 <Link href="/online-registration" className={styles.registerBtn}>Register Now</Link>
             </div>
             {/* <div className={styles.couponCon}>
@@ -481,9 +484,9 @@ const program = () => {
 
     return (
         <div className={styles.courseMain}>
-            <HomeSlider heading={data.heading} />
+            <HomeSlider heading={data.heading} id={decodedId}/>
             <div className={styles.courseDetails}>
-                <DetailMain {...data} />
+                <DetailMain {...data} id={decodedId}/>
                 <DetailBottom />
             </div>
         </div>

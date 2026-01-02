@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext/*, useState, useRef*/ } from 'react' ;
+import { createContext, useState/*, useRef*/ } from 'react' ;
 // import { createContext, useState, useEffect, useRef } from 'react' ;
 
 // import { addNotif, get, remNotif } from '@utils' ;
@@ -13,7 +13,7 @@ const AppContextProvider = ({children}) => {
     // const [userLoading, setUserLoading] = useState(true) ;
 	// const [popOpen, setPopOpen] = useState(false) ;
 	// const [popContent, setPopContent] = useState('') ;
-	// const [listData, setListData] = useState([]) ;
+	const [course, setCourse] = useState('') ;
 	// const conRef = useRef(null);
 
     // useEffect(() => {
@@ -92,6 +92,7 @@ const AppContextProvider = ({children}) => {
     };
 
 	const value = {
+		course, setCourse,
 		// user, userToken, userLoading, loadUser,
 		// popOpen, setPopOpen, setPopContent, popContent,
 		scrollToTop,

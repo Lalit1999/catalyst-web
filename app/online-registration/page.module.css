@@ -1,3 +1,12 @@
+.registrationMainPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.registrationMainPage p {
+    margin: 0;
+}
+
 .registrationPage {
     min-height: 100vh;
     /* padding: 4rem 1rem 6rem; */
@@ -7,24 +16,63 @@
     align-items: flex-start;
 }
 
+.startHead {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main_bread {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.8px;
+  color: var(--black);
+}
+.breadContent {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50.4px;
+  color: var(--black);
+}
+.headSection {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.headContent {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray);
+  margin: 0 !important;
+}
+.headDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headImg{
+  background-size: cover;
+  width: 100%;
+}
+
 .formCard {
     width: min(960px, 100%);
     /* background: var(--white, #ffffff); */
     border-radius: 1.5rem;
-    padding: 2.5rem;
+    padding: 1rem;
     /* box-shadow: 0 25px 80px rgba(15, 23, 42, 0.12); */
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.formIntro {
+/* .formIntro {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-}
+} */
 
-.formEyebrow {
+/* .formEyebrow {
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.15em;
@@ -32,21 +80,21 @@
     color: var(--main);
     margin: 0;
     align-self: center;
-}
+} */
 
-.formTitle {
+/* .formTitle {
     font-size: clamp(1.75rem, 2.5vw, 2.5rem);
     margin: 0;
     color: var(--dark);
-}
+} */
 
-.formSubtitle {
+/* .formSubtitle {
     margin: 0;
     font-size: 1rem;
     line-height: 1.6;
     align-self: center;
     color: var(--medGray);
-}
+} */
 
 .formGrid {
     display: flex;
@@ -67,13 +115,13 @@
 .formCard select:focus,
 .formCard textarea:focus {
     outline: none;
-    border-color: var(--main, #0060df);
+    border-color: var(--main);
     box-shadow: 0 0 0 2px rgba(0, 96, 223, 0.12);
 }
 
 .sectionHeading {
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    /* border-top: 1px solid rgba(15, 23, 42, 0.08); */
 }
 
 .dualSection {
@@ -81,7 +129,7 @@
     gap: 1.5rem;
     flex-wrap: wrap;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    /* border-top: 1px solid rgba(15, 23, 42, 0.08); */
 }
 
 .dualSection > div {
@@ -116,12 +164,15 @@
     font-weight: 600;
     padding: 0.85rem 1rem;
     cursor: pointer;
+    max-width: max-content;
+    align-self: center;
     transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .submitBtn:hover {
     background-color: var(--white);
     color: var(--main) ;
+    border: 1px solid var(--main);
     transform: translateY(-1px);
 }
 
