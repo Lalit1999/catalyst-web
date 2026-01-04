@@ -5,7 +5,7 @@
   flex-direction: column;
   color: var(--darkGray);
   /* padding: 0 4em; */
-  gap: 1.5rem;
+  gap: 3rem;
   min-height: 20vw;
 }
 

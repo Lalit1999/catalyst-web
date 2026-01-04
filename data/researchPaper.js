@@ -1,3 +1,4 @@
+import { about1 } from "@images";
 import {
   DentalClinic,
   Neurology,
@@ -57,3 +58,10 @@ export const researchPaperData = [
     link: "https://example.com/ai-medical-diagnosis.pdf",
   },
 ];
+
+export const researchPageHeader = {
+  bread: "Research Publications",
+  heading: "Research Publications",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum bibendum dignissim. Sed quam eros, accumsan in velit a, placerat mollis nunc. Nulla at purus non leo condimentum pellentesque ut a mauris. Vivamus ut euismod nisi, quis laoreet nisl. Suspendi",
+  image: about1,
+};

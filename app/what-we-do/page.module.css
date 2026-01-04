@@ -5,47 +5,7 @@
   flex-direction: column;
   position: relative;
    color: var(--darkGray);
-  gap: 1.5rem;
-}
-.startHead {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.main_bread {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20.8px;
- 
-  margin: 0 !important;
-}
-.breadContent {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0 !important;
-}
-.headSection {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-.headContent {
-  font-size: 14px;
-  font-weight: 400;
-width: 70vw;
-  margin: 0 !important;
-}
-.headDesc {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.headImg{
-  background-size: cover;
-  width: 100%;
-  height: 55vh;
-  border-radius: 16px;
+  gap: 3rem;
 }
 /* Responsive Grid: 2 columns on tablet, 3 on desktop */
 @media (min-width: 768px) {
@@ -94,6 +54,7 @@ width: 70vw;
   box-shadow: 0 4px 6px -1px var(--thodaBlack);
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 3rem;
 }
 
@@ -136,12 +97,14 @@ width: 70vw;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  flex-grow: 2;
   gap: 0.5rem;
 }
 
 .title {
   font-size: 1.25rem;
   font-weight: 600;
+  display: inline-block;
   color: var(--black);
   transition: all ease 0.4s;
 }
