@@ -60,3 +60,21 @@
   justify-content: center;
   align-items: center;
 }
+.researchHead{
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.heading{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--darkGray);
+  margin: 0 !important;
+  padding-left: 0.5rem;
+  text-transform: capitalize;
+}
+.paper{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}

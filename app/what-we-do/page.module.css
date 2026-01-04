@@ -145,8 +145,6 @@
   display: flex;
   align-items: center;
   transition: color 0.2s;
-  /* Ensures the link sits at the bottom of the content area */
-  margin-top: auto; 
 }
 
 .readMore:hover {
