@@ -4,7 +4,7 @@ import { notFound, useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { Title } from "@c/index";
+import { RightPanel, Title } from "@c/index";
 
 // 1. Import Data
 import { clinicalServicesData } from "@data";
@@ -183,44 +183,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <div className={styles.rightColumn}>
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Services</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {allServices.map((item) => (
-                <li key={item.id} className={styles.sidebarItem}>
-                  {/* IMPORTANT: Ensure this href matches your folder structure. 
-                      If this page is inside [id], the link logic is correct. */}
-                  <Link
-                    href={`/what-we-do/${item.id}`} 
-                    className={`${styles.sidebarNavLink} ${
-                      serviceId === item.id ? styles.active : ""
-                    }`}
-                  >
-                    {item.heading}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Quick Links</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {quickLinks.map((link, idx) => (
-                <li key={idx} className={styles.sidebarItem}>
-                  <Link href={link.path} className={styles.sidebarNavLink}>
-                    {link.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <RightPanel allServices={allServices} />
       </div>
     </main>
   );

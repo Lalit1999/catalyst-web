@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import { serviceDataObject, quickLinks } from '@data'; // Ensure this matches your export name
+import { serviceDataObject, quickLinks, clinicalServicesData } from '@data'; // Ensure this matches your export name
 import styles from "./page.module.css";
 
 import {
@@ -17,86 +17,7 @@ import {
   UserIcon,
 } from "@icons";
 import Link from "next/link";
-import { Title } from "@c/index";
-
-// const quickLinks = [
-//   { text: "What we do", icon: <BagIcon />, path: "/what-we-do" },
-//   { text: "Who we are", icon: <GlobeIcon />, path: "/who-we-are" },
-//   {
-//     text: "Research Publications",
-//     icon: <UserIcon />,
-//     path: "/research-publications",
-//   },
-//   {
-//     text: "Therapeutic Expertise",
-//     icon: <FlaskIcon />,
-//     path: "/therapeutic-expertise",
-//   },
-//   {
-//     text: "Training Programs",
-//     icon: <MoneyIcon />,
-//     path: "/training-programs",
-//   },
-// ];
-
-const featureCards = [
-  {
-    title: "Focused Customer",
-    color: "#E1F1F8",
-    icon: "user",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    title: "24/7 Care",
-    color: "#FADDE1",
-    icon: "star",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    title: "Timely Care",
-    color: "#F9E6A8",
-    icon: "clock",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-];
-
-const checkListItems = [
-  "Pellentesque elementum purus nec venenatis hendrerit. Praesent eu ex sollicitudin.",
-  "Aliquam erat volutpat. Nunc consequat mattis egestas.",
-  "Sed dignissim in ex sit amet imperdiet.",
-];
-
-const expertiseList = [
-  "1. Cartilage Restoration",
-  "2. Avascular Necrosis",
-  "3. Carpal Tunnel Syndrome",
-  "4. Chronic Ligament instability",
-  "5. Developmental Dysplasia Of The Hip (DDH)",
-  "6. Dislocations",
-  "7. Forefoot And Toe Deformities",
-  "8. Femoroacetabular Impingement (FAI)",
-];
-
-const faqList = [
-  {
-    question: "Can I know the doctors’ credentials?",
-    answer:
-      "Yes, absolutely. We provide full profiles, including board certifications and education.",
-  },
-  {
-    question: "If I'm taking a companion, when can he or she travel?",
-    answer:
-      "Your companion can travel with you at any time. We assist with all arrangements.",
-  },
-  {
-    question: "What happens if I need follow-up?",
-    answer: "We arrange follow-up video consultations with your doctor.",
-  },
-  {
-    question: "What Does Medical Tourism Corporation charge?",
-    answer: "Our coordination services are completely free for patients.",
-  },
-];
+import { RightPanel, Title } from "@c/index";
 
 const DEFAULT_SERVICE_ID = 'clinical-development-service';
 
@@ -113,7 +34,7 @@ export default function ServiceDetailPage() {
     return notFound();
   }
 
-  const allServices = Object.values(serviceDataObject);
+  const allServices = Object.values(clinicalServicesData);
 
   return (
     <main className={styles.main}>
@@ -241,43 +162,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <div className={styles.rightColumn}>
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Services</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {allServices.map((item) => (
-                <li key={item.id} className={styles.sidebarItem}>
-                  <Link
-                    href={`/what-we-do/${item.id}`}
-                    className={`${styles.sidebarNavLink} ${
-                      serviceId === item.id ? styles.active : ""
-                    }`}
-                  >
-                    {item.heading}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Quick Links</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {quickLinks.map((link, idx) => (
-                <li key={idx} className={styles.sidebarItem}>
-                  <Link href={link.path} className={styles.sidebarNavLink}>
-                    {/* Render icon based on helper function if needed, or just text */}
-                    {link.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+       <RightPanel allServices={allServices} />
       </div>
     </main>
   );
