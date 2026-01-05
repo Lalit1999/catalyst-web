@@ -1,9 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import therapyData from "../../../data/therapeuticExpertise"; // Ensure this matches your export name
+import Link from "next/link";
 import styles from "./page.module.css";
+import { Title } from "@c/index"; // Adjust path as needed
+
+// 1. Import Data
+import { 
+  therapeuticExpertiseData, 
+  therapeuticPageHeader, 
+  quickLinks 
+} from "@data"; 
+
+// 2. Import Icons
 import {
   BagIcon,
   CheckIcon,
@@ -15,168 +24,64 @@ import {
   User,
   UserIcon,
 } from "@icons";
-import Link from "next/link";
 
-const quickLinks = [
-  { text: "What we do", icon: <BagIcon />, path: "/what-we-do" },
-  { text: "Who we are", icon: <GlobeIcon />, path: "/who-we-are" },
-  {
-    text: "Research Publications",
-    icon: <UserIcon />,
-    path: "/research-publications",
-  },
-  {
-    text: "Therapeutic Expertise",
-    icon: <FlaskIcon />,
-    path: "/therapeutic-expertise",
-  },
-  {
-    text: "Training Programs",
-    icon: <MoneyIcon />,
-    path: "/training-programs",
-  },
-];
-
-const featureCards = [
-  {
-    title: "Focused Customer",
-    color: "var(--thodaBlue)",
-    icon: "user",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    title: "24/7 Care",
-    color: "var(--thodaPink)",
-    icon: "star",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    title: "Timely Care",
-    color: "var(--thodaYellow)",
-    icon: "clock",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-];
-
-const checkListItems = [
-  "Pellentesque elementum purus nec venenatis hendrerit. Praesent eu ex sollicitudin.",
-  "Aliquam erat volutpat. Nunc consequat mattis egestas.",
-  "Sed dignissim in ex sit amet imperdiet.",
-];
-
-const expertiseList = [
-  "1. Cartilage Restoration",
-  "2. Avascular Necrosis",
-  "3. Carpal Tunnel Syndrome",
-  "4. Chronic Ligament instability",
-  "5. Developmental Dysplasia Of The Hip (DDH)",
-  "6. Dislocations",
-  "7. Forefoot And Toe Deformities",
-  "8. Femoroacetabular Impingement (FAI)",
-];
-
-const faqList = [
-  {
-    question: "Can I know the doctors’ credentials?",
-    answer:
-      "Yes, absolutely. We provide full profiles, including board certifications and education.",
-  },
-  {
-    question: "If I’m taking a companion, when can he or she travel?",
-    answer:
-      "Your companion can travel with you at any time. We assist with all arrangements.",
-  },
-  {
-    question: "What happens if I need follow-up?",
-    answer: "We arrange follow-up video consultations with your doctor.",
-  },
-  {
-    question: "What Does Medical Tourism Corporation charge?",
-    answer: "Our coordination therapys are completely free for patients.",
-  },
-];
-
-export default function therapyDetailPage() {
+export default function TherapyDetailPage() {
   const params = useParams();
-   const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (idx) => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
+
   const therapyId = params.id || params.slug;
-  const therapy= therapyData[therapyId];
+  const therapy = therapeuticExpertiseData[therapyId];
+
   if (!therapy) {
     return notFound();
   }
 
-  const alltherapyData = Object.values(therapyData);
+  const alltherapyData = Object.values(therapeuticExpertiseData);
 
   return (
     <main className={styles.main}>
-      <div className={styles.contentContainer}>
-        {/* Breadcrumbs */}
-        <div className={styles.downHead}>
-          <h1 className={styles.main_bread}>Home</h1>
-          <h1 className={styles.main_bread}>&rarr;</h1>
-          <h1 className={styles.main_bread}>Therapeutic Expertise</h1>
-          <h1 className={styles.main_bread}>&rarr;</h1>
-          <h1 className={styles.main_bread}>{therapy.heading}</h1>
-        </div>
-        {/* Main Hero Content */}
-        <div className={styles.head}>
-          <h1 className={styles.titleLarge}>{therapy.heading}</h1>
-          <p className={styles.headparagraph}>{therapy.subHeading}</p>
-          {therapy.img && (
-              <div className={styles.bodyImageContainer}>
-                <Image
-                  src={therapy.img}
-                  alt="Detail view"
-                  fill
-                  style={{ objectFit: "cover", borderRadius: "20px" }}
-                />
-              </div>
-            )}
-        </div>
-      </div>
+      
+      {/* 3. Title Component 
+          Uses Header Data for the main look, but passes therapy.heading 
+          to the 'breadIn' prop so the breadcrumb shows: Home -> Expert -> [Therapy Name] 
+      */}
+      <Title 
+        bread={therapeuticPageHeader.bread} 
+        breadIn={therapy.heading} 
+        heading={therapeuticPageHeader.heading} 
+        description={therapeuticPageHeader.description} 
+        image={therapeuticPageHeader.image} 
+      />
 
       <div className={styles.detailsContainer}>
         <div className={styles.leftColumn}>
           <div className={styles.leftpart_1}>
-            
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>
                 Our Approach to {therapy.heading}
               </h2>
               <div className={styles.leftContent}>
-                <p className={styles.paragraph}>
-                From trouble sleeping to work stress to anxiety to depression,
-                we all have difficulty managing our emotions at times. It’s part
-                of being human. And addressing these issues is a vital part of
-                what we do as a primary care practice, because your emotional
-                well-being is essential to your overall health and wellness.
-              </p>
-              <p className={styles.paragraph}>
-                We’ve redesigned the doctor’s office experience to fit your
-                life, put you at ease, and treat you as a whole person. We
-                create safe and inviting spaces, ask meaningful questions, give
-                you time to talk, and listen without judgment. Then we work with
-                you on a plan to help you feel your best — whether you want to
-                sleep better, feel calmer, worry less, or get a better handle on
-                your mood.
-              </p>
+                {/* Dynamic Approach Content */}
+                {therapy.approachContent && therapy.approachContent.map((para, i) => (
+                    <p key={i} className={styles.paragraph}>{para}</p>
+                ))}
               </div>
             </div>
           </div>
+          
           <div className={styles.leftpart_2}>
             <h2 className={styles.heading}>Primary Care</h2>
             <p className={styles.paragraph}>
-              To continue shedding a light on mental health issues, we teamed up
-              with the award-winning musicians from Bear and a Banjo to create a
-              song showing people they’re not alone.
+              {therapy.primaryCareText}
             </p>
 
             <div className={styles.featureGrid}>
-              {featureCards.map((card, idx) => (
+              {/* Dynamic Feature Cards */}
+              {therapy.features && therapy.features.map((card, idx) => (
                 <div
                   key={idx}
                   className={styles.featureCard}
@@ -196,83 +101,77 @@ export default function therapyDetailPage() {
                 </div>
               ))}
             </div>
-           
           </div>
 
-         
-              {/* 2. CHECKLIST CARD */}
-               <div className={styles.checkCard}>
-                {checkListItems.map((item, idx) => (
+          {/* Dynamic Checklist */}
+          {therapy.checkList && (
+            <div className={styles.checkCard}>
+                {therapy.checkList.map((item, idx) => (
                   <div key={idx} className={styles.checkItem}>
                     <CheckIcon />
                     <span>{item}</span>
                   </div>
                 ))}
-              </div>
-              <div className={styles.separator}></div>
-
-              {/* 3. INDUSTRY EXPERTISE */}
-              <div className={styles.expertiseBlock}>
-                <h2>Our Industry Expertise</h2>
-                <p className={styles.subText}>
-                  Professional care from specialists who understand your
-                  specific needs.
-                </p>
-                <div className={styles.expertiseGrid}>
-                  {expertiseList.map((item, idx) => (
-                    <p key={idx} className={styles.expertiseItem}>
-                      {item}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              <div className={styles.separator}></div>
-
-              {/* 4. FAQ SECTION RESTORED */}
-              <div className={styles.faqBlock}>
-                <div className={styles.faqBlockHead}>
-                  <h2>FAQs About The therapy</h2>
-                <p className={styles.subText}>
-                  Common questions regarding our {therapy.heading} therapys.
-                </p>
-
-                </div>
-                <div className={styles.faqList}>
-      {faqList.map((faq, idx) => {
-        const isOpen = openIndex === idx;
-
-        return (
-          <div key={idx} className={styles.faqItem}>
-            <div className={styles.faqInner} >
-              <button
-              className={styles.faqSummary}
-              onClick={() => toggleFAQ(idx)}
-              aria-expanded={isOpen}
-            >
-              <span className={styles.faqQuestion}>{faq.question}</span>
-              <span className={styles.faqIcon}>
-                {isOpen ? "−" : "+"}
-              </span>
-            </button>
             </div>
+          )}
+          
+          <div className={styles.separator}></div>
 
-            <div
-              className={`${styles.faqAnswer} ${
-                isOpen ? styles.open : ""
-              }`}
-            >
-               <div className={styles.faqAnswerInner}>
-                {faq.answer}
-              </div>
+          {/* Dynamic Industry Expertise */}
+          <div className={styles.expertiseBlock}>
+            <h2>Our Industry Expertise</h2>
+            <p className={styles.subText}>
+              Professional care from specialists who understand your specific needs.
+            </p>
+            <div className={styles.expertiseGrid}>
+              {therapy.expertiseList && therapy.expertiseList.map((item, idx) => (
+                <p key={idx} className={styles.expertiseItem}>
+                  {item}
+                </p>
+              ))}
             </div>
           </div>
-        );
-      })}
-    </div>
-              </div>
+
+          <div className={styles.separator}></div>
+
+          {/* Dynamic FAQs */}
+          <div className={styles.faqBlock}>
+            <div className={styles.faqBlockHead}>
+              <h2>Frequently Asked Questions (FAQs)</h2>
+              <p className={styles.subText}>
+                Common questions regarding our {therapy.heading} therapies.
+              </p>
             </div>
-          
+            <div className={styles.faqList}>
+              {therapy.faqList && therapy.faqList.map((faq, idx) => {
+                const isOpen = openIndex === idx;
+
+                return (
+                  <div key={idx} className={styles.faqItem}>
+                    <div className={styles.faqInner}>
+                      <button
+                        className={styles.faqSummary}
+                        onClick={() => toggleFAQ(idx)}
+                        aria-expanded={isOpen}
+                      >
+                        <span className={styles.faqQuestion}>{faq.question}</span>
+                        <span className={styles.faqIcon}>
+                          {isOpen ? "−" : "+"}
+                        </span>
+                      </button>
+                    </div>
+
+                    <div className={`${styles.faqAnswer} ${isOpen ? styles.open : ""}`}>
+                      <div className={styles.faqAnswerInner}>
+                        {faq.answer}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
 
         {/* RIGHT COLUMN: Sidebar */}
         <div className={styles.rightColumn}>

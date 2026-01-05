@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import serviceData from "../../../data/serviceData"; // Ensure this matches your export name
+import { serviceDataObject, quickLinks } from '@data'; // Ensure this matches your export name
 import styles from "./page.module.css";
 
 import {
@@ -17,26 +17,27 @@ import {
   UserIcon,
 } from "@icons";
 import Link from "next/link";
+import { Title } from "@c/index";
 
-const quickLinks = [
-  { text: "What we do", icon: <BagIcon />, path: "/what-we-do" },
-  { text: "Who we are", icon: <GlobeIcon />, path: "/who-we-are" },
-  {
-    text: "Research Publications",
-    icon: <UserIcon />,
-    path: "/research-publications",
-  },
-  {
-    text: "Therapeutic Expertise",
-    icon: <FlaskIcon />,
-    path: "/therapeutic-expertise",
-  },
-  {
-    text: "Training Programs",
-    icon: <MoneyIcon />,
-    path: "/training-programs",
-  },
-];
+// const quickLinks = [
+//   { text: "What we do", icon: <BagIcon />, path: "/what-we-do" },
+//   { text: "Who we are", icon: <GlobeIcon />, path: "/who-we-are" },
+//   {
+//     text: "Research Publications",
+//     icon: <UserIcon />,
+//     path: "/research-publications",
+//   },
+//   {
+//     text: "Therapeutic Expertise",
+//     icon: <FlaskIcon />,
+//     path: "/therapeutic-expertise",
+//   },
+//   {
+//     text: "Training Programs",
+//     icon: <MoneyIcon />,
+//     path: "/training-programs",
+//   },
+// ];
 
 const featureCards = [
   {
@@ -107,79 +108,51 @@ export default function ServiceDetailPage() {
     setOpenIndex(openIndex === idx ? null : idx);
   };
   const serviceId = params?.id || params?.slug || DEFAULT_SERVICE_ID;
-  const service = serviceData[serviceId];
+  const service = serviceDataObject[serviceId];
   if (!service) {
     return notFound();
   }
 
-  const allServices = Object.values(serviceData);
+  const allServices = Object.values(serviceDataObject);
 
   return (
     <main className={styles.main}>
-      <div className={styles.contentContainer}>
-        {/* Breadcrumbs */}
-        <div className={styles.downHead}>
-          <h1 className={styles.main_bread}>Home</h1>
-          <h1 className={styles.main_bread}>&rarr;</h1>
-          <h1 className={styles.main_bread}>Services</h1>
-          <h1 className={styles.main_bread}>&rarr;</h1>
-          <h1 className={styles.main_bread}>{service.heading}</h1>
-        </div>
-        {/* Main Hero Content */}
-        <div className={styles.head}>
-          <h1 className={styles.titleLarge}>{service.heading}</h1>
-          <p className={styles.paragraph}>{service.subHeading}</p>
-          {service.img && (
-              <div className={styles.bodyImageContainer}>
-                <Image
-                  src={service.img}
-                  alt="Detail view"
-                  fill
-                  style={{ objectFit: "cover", borderRadius: "20px" }}
-                />
-              </div>
-            )}
-        </div>
-      </div>
+      <Title 
+        bread={'Services'} 
+        breadIn={service.heading} 
+        heading={service.heading} 
+        description={service.subHeading} 
+        image={service.img} 
+      />
 
       <div className={styles.detailsContainer}>
         <div className={styles.leftColumn}>
           <div className={styles.leftpart_1}>
-            
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>
                 Our Approach to {service.heading}
               </h2>
               <div className={styles.leftContent}>
-                <p className={styles.paragraph}>
-                From trouble sleeping to work stress to anxiety to depression,
-                we all have difficulty managing our emotions at times. It’s part
-                of being human. And addressing these issues is a vital part of
-                what we do as a primary care practice, because your emotional
-                well-being is essential to your overall health and wellness.
-              </p>
-              <p className={styles.paragraph}>
-                We’ve redesigned the doctor’s office experience to fit your
-                life, put you at ease, and treat you as a whole person. We
-                create safe and inviting spaces, ask meaningful questions, give
-                you time to talk, and listen without judgment. Then we work with
-                you on a plan to help you feel your best — whether you want to
-                sleep better, feel calmer, worry less, or get a better handle on
-                your mood.
-              </p>
+                {/* Dynamic Approach Paragraphs */}
+                {service.approachContent && service.approachContent.map((paragraph, index) => (
+                    <p key={index} className={styles.paragraph}>
+                        {paragraph}
+                    </p>
+                ))}
               </div>
             </div>
           </div>
+          
           <div className={styles.leftpart_2}>
             <h2 className={styles.heading}>Primary Care</h2>
+            {/* Dynamic Primary Care Text */}
             <p className={styles.paragraph}>
-              To continue shedding a light on mental health issues, we teamed up
-              with the award-winning musicians from Bear and a Banjo to create a
-              song showing people they’re not alone.
+              {service.primaryCareText}
             </p>
 
             <div className={styles.featureGrid}>
-              {featureCards.map((card, idx) => (
+              {/* Dynamic Feature Cards */}
+              {service.features && service.features.map((card, idx) => (
                 <div
                   key={idx}
                   className={styles.featureCard}
@@ -187,9 +160,7 @@ export default function ServiceDetailPage() {
                 >
                   <div className={styles.featureIcon}>
                     {card.icon === "user" && (
-                      <div className={styles.userIconBg}>
-                        <User />
-                      </div>
+                      <div className={styles.userIconBg}><User /></div>
                     )}
                     {card.icon === "star" && <StarCircle />}
                     {card.icon === "clock" && <ClockCircle />}
@@ -199,84 +170,74 @@ export default function ServiceDetailPage() {
                 </div>
               ))}
             </div>
-           
           </div>
 
-          <section className={styles.extraSection}>
-            <div className={styles.extraContainer}>
-              {/* 2. CHECKLIST CARD */}
-               <div className={styles.checkCard}>
-                {checkListItems.map((item, idx) => (
-                  <div key={idx} className={styles.checkItem}>
+          {/* Dynamic Checklist */}
+          {service.checkList && (
+            <div className={styles.checkCard}>
+                {service.checkList.map((item, idx) => (
+                <div key={idx} className={styles.checkItem}>
                     <CheckIcon />
                     <span>{item}</span>
-                  </div>
+                </div>
                 ))}
-              </div>
-              <div className={styles.separator}></div>
-
-              {/* 3. INDUSTRY EXPERTISE */}
-              <div className={styles.expertiseBlock}>
-                <h2>Our Industry Expertise</h2>
-                <p className={styles.subText}>
-                  Professional care from specialists who understand your
-                  specific needs.
-                </p>
-                <div className={styles.expertiseGrid}>
-                  {expertiseList.map((item, idx) => (
-                    <p key={idx} className={styles.expertiseItem}>
-                      {item}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              <div className={styles.separator}></div>
-
-              {/* 4. FAQ SECTION RESTORED */}
-              <div className={styles.faqBlock}>
-                <div className={styles.faqBlockHead}>
-                  <h2>FAQs About The Service</h2>
-                <p className={styles.subText}>
-                  Common questions regarding our {service.heading} services.
-                </p>
-
-                </div>
-                <div className={styles.faqList}>
-      {faqList.map((faq, idx) => {
-        const isOpen = openIndex === idx;
-
-        return (
-          <div key={idx} className={styles.faqItem}>
-            <div className={styles.faqInner} >
-              <button
-              className={styles.faqSummary}
-              onClick={() => toggleFAQ(idx)}
-              aria-expanded={isOpen}
-            >
-              <span className={styles.faqQuestion}>{faq.question}</span>
-              <span className={styles.faqIcon}>
-                {isOpen ? "−" : "+"}
-              </span>
-            </button>
             </div>
+          )}
+          
+          <div className={styles.separator}></div>
 
-            <div
-              className={`${styles.faqAnswer} ${
-                isOpen ? styles.open : ""
-              }`}
-            >
-               <div className={styles.faqAnswerInner}>
-                {faq.answer}
-              </div>
+          {/* Dynamic Expertise */}
+          <div className={styles.expertiseBlock}>
+            <h2>Our Industry Expertise</h2>
+            <p className={styles.subText}>
+              Professional care from specialists who understand your specific needs.
+            </p>
+            <div className={styles.expertiseGrid}>
+              {service.expertiseList && service.expertiseList.map((item, idx) => (
+                <p key={idx} className={styles.expertiseItem}>
+                  {item}
+                </p>
+              ))}
             </div>
           </div>
-        );
-      })}
-    </div>
-              </div>
+
+          <div className={styles.separator}></div>
+
+          {/* Dynamic FAQs */}
+          <div className={styles.faqBlock}>
+            <div className={styles.faqBlockHead}>
+              <h2>Frequently Asked Questions (FAQs)</h2>
+              <p className={styles.subText}>
+                Common questions regarding our {service.heading} services.
+              </p>
             </div>
-          </section>
+            <div className={styles.faqList}>
+              {service.faqList && service.faqList.map((faq, idx) => {
+                const isOpen = openIndex === idx;
+                return (
+                  <div key={idx} className={styles.faqItem}>
+                    <div className={styles.faqInner}>
+                      <button
+                        className={styles.faqSummary}
+                        onClick={() => toggleFAQ(idx)}
+                        aria-expanded={isOpen}
+                      >
+                        <span className={styles.faqQuestion}>{faq.question}</span>
+                        <span className={styles.faqIcon}>
+                          {isOpen ? "−" : "+"}
+                        </span>
+                      </button>
+                    </div>
+                    <div className={`${styles.faqAnswer} ${isOpen ? styles.open : ""}`}>
+                      <div className={styles.faqAnswerInner}>
+                        {faq.answer}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
@@ -309,6 +270,7 @@ export default function ServiceDetailPage() {
               {quickLinks.map((link, idx) => (
                 <li key={idx} className={styles.sidebarItem}>
                   <Link href={link.path} className={styles.sidebarNavLink}>
+                    {/* Render icon based on helper function if needed, or just text */}
                     {link.text}
                   </Link>
                 </li>

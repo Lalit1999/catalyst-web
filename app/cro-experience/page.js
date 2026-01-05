@@ -7,48 +7,74 @@ import styles from "./page.module.css";
 import { Title } from "@c/index"; // Assuming this is your path
 
 // Import Data and QuickLinks
-import { serviceDataObject, quickLinks } from '@data';
+import { serviceDataObject, quickLinks, croPageHeader, therapeuticExpertiseData } from '@data';
 
 // Import Icons
 import {
   BagIcon, CheckIcon, ClockCircle, FlaskIcon, GlobeIcon, 
   MoneyIcon, StarCircle, User, UserIcon,
 } from "@icons";
+import { about1 } from "@images";
 
-export default function ServiceDetailPage() {
-  const params = useParams();
-  const [openIndex, setOpenIndex] = useState(null);
+const defaultFeatures = [
+  {
+    title: "Focused Customer",
+    color: "var(--thodaBlue)",
+    icon: "user",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "24/7 Care",
+    color: "var(--thodaPink)",
+    icon: "star",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    title: "Timely Care",
+    color: "var(--thodaYellow)",
+    icon: "clock",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];
 
-  const toggleFAQ = (idx) => {
-    setOpenIndex(openIndex === idx ? null : idx);
+
+const defaultCheckList = [
+  "ICH-GCP Compliant Protocols",
+  "21 CFR Part 11 Validated Systems",
+  "Robust Risk Management Strategies",
+  "Real-time Data Visualization",
+];
+
+
+const defaultApproach = [
+    "Our approach to CRO services is rooted in partnership. We don't just execute tasks; we align with your scientific and business objectives to navigate the complex pathway of drug development.",
+    "By integrating advanced technology with human expertise, we proactively identify risks before they become issues, ensuring your data remains robust and your timelines stay on track."
+];
+const defaultPrimaryCare = "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.";
+
+export default function CROExperiencePage() {
+
+
+  // Helper to render Sidebar Icons based on string name in data
+  const renderSidebarIcon = (iconName) => {
+     switch(iconName) {
+        case 'bag': return <BagIcon />;
+        case 'globe': return <GlobeIcon />;
+        case 'user': return <UserIcon />;
+        case 'flask': return <FlaskIcon />;
+        case 'money': return <MoneyIcon />;
+        default: return <BagIcon />;
+     }
   };
-
-  const serviceId = params.id || params.slug;
-  const service = serviceDataObject[serviceId];
-
-  if (!service) {
-    return notFound();
-  }
-
   const allServices = Object.values(serviceDataObject);
-
-  // use like ( icons[value] || <DefaultIcon /> )
-  // const icons = {
-  //   bag: <BagIcon />,
-  //   globe: <GlobeIcon />,
-  //   user: <UserIcon />,
-  //   flask: <FlaskIcon />,
-  //   money: <MoneyIcon />,
-  // }
-
+  const alltherapyData = Object.values(therapeuticExpertiseData);
   return (
     <main className={styles.main}>
       <Title 
-        bread={'Services'} 
-        breadIn={service.heading} 
-        heading={service.heading} 
-        description={service.subHeading} 
-        image={service.img} 
+        bread={croPageHeader.bread} 
+        heading={croPageHeader.heading} 
+        description={croPageHeader.description} 
+        image={croPageHeader.image} 
       />
       
       <div className={styles.detailsContainer}>
@@ -56,11 +82,11 @@ export default function ServiceDetailPage() {
           <div className={styles.leftpart_1}>
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>
-                Our Approach to {service.heading}
+                Our Approach to CRO Experience
               </h2>
               <div className={styles.leftContent}>
                 {/* Dynamic Approach Paragraphs */}
-                {service.approachContent && service.approachContent.map((paragraph, index) => (
+                {defaultApproach && defaultApproach.map((paragraph, index) => (
                     <p key={index} className={styles.paragraph}>
                         {paragraph}
                     </p>
@@ -73,12 +99,12 @@ export default function ServiceDetailPage() {
             <h2 className={styles.heading}>Primary Care</h2>
             {/* Dynamic Primary Care Text */}
             <p className={styles.paragraph}>
-              {service.primaryCareText}
+              {defaultPrimaryCare}
             </p>
 
             <div className={styles.featureGrid}>
               {/* Dynamic Feature Cards */}
-              {service.features && service.features.map((card, idx) => (
+              {defaultFeatures && defaultFeatures.map((card, idx) => (
                 <div
                   key={idx}
                   className={styles.featureCard}
@@ -99,9 +125,9 @@ export default function ServiceDetailPage() {
           </div>
 
           {/* Dynamic Checklist */}
-          {service.checkList && (
+          {defaultCheckList && (
             <div className={styles.checkCard}>
-                {service.checkList.map((item, idx) => (
+                {defaultCheckList.map((item, idx) => (
                 <div key={idx} className={styles.checkItem}>
                     <CheckIcon />
                     <span>{item}</span>
@@ -109,61 +135,7 @@ export default function ServiceDetailPage() {
                 ))}
             </div>
           )}
-          
-          <div className={styles.separator}></div>
 
-          {/* Dynamic Expertise */}
-          <div className={styles.expertiseBlock}>
-            <h2>Our Industry Expertise</h2>
-            <p className={styles.subText}>
-              Professional care from specialists who understand your specific needs.
-            </p>
-            <div className={styles.expertiseGrid}>
-              {service.expertiseList && service.expertiseList.map((item, idx) => (
-                <p key={idx} className={styles.expertiseItem}>
-                  {item}
-                </p>
-              ))}
-            </div>
-          </div>
-
-          <div className={styles.separator}></div>
-
-          {/* Dynamic FAQs */}
-          <div className={styles.faqBlock}>
-            <div className={styles.faqBlockHead}>
-              <h2>Frequently Asked Questions (FAQs)</h2>
-              <p className={styles.subText}>
-                Common questions regarding our {service.heading} services.
-              </p>
-            </div>
-            <div className={styles.faqList}>
-              {service.faqList && service.faqList.map((faq, idx) => {
-                const isOpen = openIndex === idx;
-                return (
-                  <div key={idx} className={styles.faqItem}>
-                    <div className={styles.faqInner}>
-                      <button
-                        className={styles.faqSummary}
-                        onClick={() => toggleFAQ(idx)}
-                        aria-expanded={isOpen}
-                      >
-                        <span className={styles.faqQuestion}>{faq.question}</span>
-                        <span className={styles.faqIcon}>
-                          {isOpen ? "−" : "+"}
-                        </span>
-                      </button>
-                    </div>
-                    <div className={`${styles.faqAnswer} ${isOpen ? styles.open : ""}`}>
-                      <div className={styles.faqAnswerInner}>
-                        {faq.answer}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
@@ -177,9 +149,7 @@ export default function ServiceDetailPage() {
                 <li key={item.id} className={styles.sidebarItem}>
                   <Link
                     href={`/what-we-do/${item.id}`}
-                    className={`${styles.sidebarNavLink} ${
-                      serviceId === item.id ? styles.active : ""
-                    }`}
+                    className={`${styles.sidebarNavLink}`}
                   >
                     {item.heading}
                   </Link>
@@ -198,6 +168,21 @@ export default function ServiceDetailPage() {
                   <Link href={link.path} className={styles.sidebarNavLink}>
                     {/* Render icon based on helper function if needed, or just text */}
                     {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.sidebarCard}>
+            <div className={styles.sidebarCard_round}>
+              <div className={styles.sidebarHeader}>Therapeutic Expertise</div>
+            </div>
+            <ul className={styles.sidebarList}>
+              {alltherapyData.map((link, idx) => (
+                <li key={idx} className={styles.sidebarItem}>
+                  <Link href={link.id} className={styles.sidebarNavLink}>
+                    {/* Render icon based on helper function if needed, or just text */}
+                    {link.heading}
                   </Link>
                 </li>
               ))}

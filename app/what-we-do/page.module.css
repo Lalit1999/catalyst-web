@@ -5,47 +5,7 @@
   flex-direction: column;
   position: relative;
    color: var(--darkGray);
-  gap: 1.5rem;
-}
-.startHead {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.main_bread {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20.8px;
- 
-  margin: 0 !important;
-}
-.breadContent {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 0 !important;
-}
-.headSection {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-.headContent {
-  font-size: 14px;
-  font-weight: 400;
-width: 70vw;
-  margin: 0 !important;
-}
-.headDesc {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.headImg{
-  background-size: cover;
-  width: 100%;
-  height: 55vh;
-  border-radius: 16px;
+  gap: 3rem;
 }
 /* Responsive Grid: 2 columns on tablet, 3 on desktop */
 @media (min-width: 768px) {
@@ -94,23 +54,29 @@ width: 70vw;
   box-shadow: 0 4px 6px -1px var(--thodaBlack);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  height: 100%;
+  /* Removed gap: 3rem; -> This was likely too large and unnecessary if there's only one child */
 }
 
 .card:hover {
   box-shadow: 0 10px 25px -5px var(--zaraBlack);
 }
-
+.card p{
+  margin: 0;
+}
 .imageContainer {
   position: relative;
   width: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  /* Changed from center to flex-start to stop content from floating in the middle */
+  justify-content: flex-start; 
   align-items: start;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  /* Added flex: 1 to ensure this container fills the card height */
+  flex: 1; 
 }
 
 /* Container for the black circle */
@@ -119,35 +85,45 @@ width: 70vw;
   height: 60px;
   background-color: var(--black);
   border-radius: 10px;
-  /* --- CENTERING MAGIC --- */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* ----------------------- */
   z-index: 2;
-  overflow: hidden; /* Keeps image inside the circle if it's too big */
+  overflow: hidden;
+  /* Prevent the icon from shrinking when card height changes */
+  flex-shrink: 0; 
 }
-.iconWrapper{
+
+.iconWrapper {
   min-height: 25px;
   min-width: 25px;
 }
+
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* Changed from center to space-between. 
+     This pushes the Title/Desc to the top and the "Read More" to the bottom 
+     of the available space, effectively removing the "dead space" below the button. */
+  justify-content: space-between; 
   width: 100%;
+  /* flex-grow makes this fill the remaining height of the imageContainer */
+  flex-grow: 1; 
   gap: 0.5rem;
 }
 
 .title {
   font-size: 1.25rem;
   font-weight: 600;
+  display: inline-block;
   color: var(--black);
   transition: all ease 0.4s;
 }
+
 .title:hover {
   color: var(--main);
 }
+
 .desc {
   font-size: 0.95rem;
   line-height: 1.6;
@@ -157,6 +133,8 @@ width: 70vw;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   margin: 0 !important;
+  /* Optional: Push the Read More down if you want space in the middle instead of below */
+  /* margin-bottom: auto !important;  */
 }
 
 .readMore {
@@ -167,7 +145,6 @@ width: 70vw;
   display: flex;
   align-items: center;
   transition: color 0.2s;
-
 }
 
 .readMore:hover {

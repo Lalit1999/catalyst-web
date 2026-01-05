@@ -25,3 +25,49 @@
     font-size: 3em;
   }
 }
+/* new Title Component */
+.startHead {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.startHead p{
+  margin: 0;
+}
+.startHead h1{
+  margin: 0;
+}
+
+.main_bread {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.8px;
+ 
+}
+.breadContent {
+  font-weight: 600;
+  font-size: 3rem;
+}
+.headSection {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.headContent {
+  font-size: 1.1rem;
+  font-weight: 400;
+  width: 70vw;
+  color: var(--gray);
+}
+.headDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headImg{
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 16px;
+}

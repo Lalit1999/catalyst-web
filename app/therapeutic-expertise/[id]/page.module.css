@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   color: var(--darkGray);
-gap: 1.5rem;
+gap: 3rem;
   position: relative;
 }
 
@@ -27,7 +27,7 @@ gap: 1.5rem;
 .headparagraph{
   font-size: 14px;
   line-height: 25px;
-  color: var(--gray);
+  color: var(--gray); 
   font-weight: 400;
   margin: 0 !important;
   width: 70vw;
@@ -83,8 +83,8 @@ gap: 1.5rem;
 .leftColumn {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 70%;
+  gap: 3rem;
+  min-width: 70%;
 }
 
 .bodyImageContainer {
@@ -115,7 +115,7 @@ gap: 1.5rem;
 }
 .heading {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--darkGray);
   margin: 0 !important;
 }
@@ -137,7 +137,7 @@ gap: 1.5rem;
 }
 .sidebarNavLink {
   display: block;
-  padding: 1rem 0.6rem;
+  padding: 0.8em 0;
   color: var(--gray);
   text-decoration: none;
   font-size: 0.9rem;
@@ -150,7 +150,7 @@ gap: 1.5rem;
 .sidebarNavLink:hover {
   background-color: var(--white);
   color: var(--moderate);
-  padding-left: 1.8rem; /* same slide for both */
+ 
 }
 
 /* --- SIDEBAR CARDS --- */
@@ -166,7 +166,7 @@ gap: 1.5rem;
 .sidebarHeader {
   background-color: var(--second); /* Dark Background like screenshot */
   color: var(--white);
-  padding: 1.2rem 2rem;
+  padding: 0.5rem 1.5rem;
   font-weight: 500;
   font-size: 20px;
   border-radius: 20px;
@@ -319,7 +319,7 @@ gap: 1.5rem;
 /* 3. Industry Expertise */
 .expertiseBlock h2 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--darkGray);
   margin: 0 !important;
 }
@@ -359,12 +359,13 @@ gap: 1.5rem;
 }
 .faqBlockHead h2{
   font-size: 1.5rem;
+  font-weight: 600;
    margin: 0 !important;
 }
 .faqList{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .faqItem {
   border: 1px solid var(--lightGray);
