@@ -13,7 +13,7 @@ export default function WhatWeDo() {
   return (
     <main className={styles.main}>
      
-<Title 
+    <Title 
         bread={servicePageHeader.bread} 
         heading={servicePageHeader.heading} 
         description={servicePageHeader.description} 

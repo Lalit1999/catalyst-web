@@ -32,17 +32,14 @@ export default function ServiceDetailPage() {
 
   const allServices = Object.values(serviceDataObject);
 
-  // Helper to render Sidebar Icons based on string name in data
-  const renderSidebarIcon = (iconName) => {
-     switch(iconName) {
-        case 'bag': return <BagIcon />;
-        case 'globe': return <GlobeIcon />;
-        case 'user': return <UserIcon />;
-        case 'flask': return <FlaskIcon />;
-        case 'money': return <MoneyIcon />;
-        default: return <BagIcon />;
-     }
-  };
+  // use like ( icons[value] || <DefaultIcon /> )
+  // const icons = {
+  //   bag: <BagIcon />,
+  //   globe: <GlobeIcon />,
+  //   user: <UserIcon />,
+  //   flask: <FlaskIcon />,
+  //   money: <MoneyIcon />,
+  // }
 
   return (
     <main className={styles.main}>

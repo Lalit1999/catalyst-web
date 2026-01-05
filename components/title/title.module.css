@@ -56,8 +56,8 @@
 .headContent {
   font-size: 1.1rem;
   font-weight: 400;
-width: 70vw;
-color: var(--gray);
+  width: 70vw;
+  color: var(--gray);
 }
 .headDesc {
   display: flex;
@@ -66,9 +66,8 @@ color: var(--gray);
 }
 
 .headImg{
-  background-size: cover;
   width: 100%;
-  height: 55vh;
+  height: 60vh;
   object-fit: cover;
   border-radius: 16px;
 }
