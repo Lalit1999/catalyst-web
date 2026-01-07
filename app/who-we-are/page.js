@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { RightPanel, Title } from "@c/index"; // Assuming this is your path
+import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
 // Import Data and QuickLinks
 import { serviceDataObject, quickLinks, croPageHeader, therapeuticExpertiseData } from '@data';

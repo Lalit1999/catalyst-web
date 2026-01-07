@@ -4,7 +4,7 @@ import { notFound, useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { RightPanel, Title } from "@c/index";
+import { RightPanel, Title } from "@comps";
 
 // 1. Import Data
 import { clinicalServicesData } from "@data";
@@ -50,7 +50,7 @@ export default function ServiceDetailPage() {
   return (
     <main className={styles.main}>
       <Title
-        bread={'Services'}
+        bread={'Clinical Development Services'}
         breadIn={service.heading}
         heading={service.heading}
         description={service.subHeading}
@@ -183,7 +183,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel allServices={allServices} />
+        <RightPanel allServices={allServices} variant="clinical" />
       </div>
     </main>
   );

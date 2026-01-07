@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { RightPanel, Title } from "@c/index"; // Adjust path as needed
+import { RightPanel, Title } from "@comps"; // Adjust path as needed
 
 // 1. Import Data
 import { 
@@ -174,7 +174,7 @@ export default function TherapyDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel allServices={alltherapyData}  />
+        <RightPanel allServices={alltherapyData} variant="therapeutic"  />
       </div>
     </main>
   );

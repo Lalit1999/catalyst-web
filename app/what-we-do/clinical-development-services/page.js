@@ -17,7 +17,7 @@ import {
   UserIcon,
 } from "@icons";
 import Link from "next/link";
-import { RightPanel, Title } from "@c/index";
+import { RightPanel, Title } from "@comps";
 
 const DEFAULT_SERVICE_ID = 'clinical-development-service';
 
@@ -162,7 +162,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-       <RightPanel allServices={allServices} />
+       <RightPanel allServices={allServices} variant="clinical" />
       </div>
     </main>
   );
