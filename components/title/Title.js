@@ -18,7 +18,7 @@ import styles from './title.module.css';
 //     </div>
 // )
 
-const Title = ({ bread, heading, description, image,breadIn }) => {
+const Title = ({ bread, heading, description, image,breadIn,breadIn_1 }) => {
   return (
     <div className={styles.startHead}>
       <div className={styles.headSection}>
@@ -27,6 +27,8 @@ const Title = ({ bread, heading, description, image,breadIn }) => {
         <h1 className={styles.main_bread}>{bread}</h1>
        {breadIn ? <> <h1 className={styles.main_bread}>&rarr;</h1>
         <h1 className={styles.main_bread}>{breadIn}</h1></>: null}
+        {breadIn_1 ? <> <h1 className={styles.main_bread}>&rarr;</h1>
+        <h1 className={styles.main_bread}>{breadIn_1}</h1></>: null}
       </div>
       <div className={styles.headDesc}>
         <p className={styles.breadContent}>{heading}</p>

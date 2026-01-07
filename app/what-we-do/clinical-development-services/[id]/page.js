@@ -50,8 +50,9 @@ export default function ServiceDetailPage() {
   return (
     <main className={styles.main}>
       <Title
-        bread={'Clinical Development Services'}
-        breadIn={service.heading}
+      bread={'Services'}
+        breadIn={'Clinical Development Services'}
+        breadIn_1={service.heading}
         heading={service.heading}
         description={service.subHeading}
         image={service.img}
