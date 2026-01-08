@@ -38,7 +38,7 @@
   padding: 0.5rem 1.5rem;
   font-weight: 500;
   font-size: 20px;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
 .sidebarList {
@@ -82,5 +82,10 @@
 
   .rightColumn {
     order: -1; /* Sidebar goes to top on mobile (optional, remove to keep at bottom) */
+  }
+}
+@media (max-width: 600px){
+  .rightColumn{
+    display: none;
   }
 }
