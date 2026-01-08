@@ -1,8 +1,5 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import { notFound, useParams } from "next/navigation";
-import Link from "next/link";
+import React from 'react'
 import styles from "./page.module.css";
 import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
@@ -14,7 +11,6 @@ import {
   BagIcon, CheckIcon, ClockCircle, FlaskIcon, GlobeIcon, 
   MoneyIcon, StarCircle, User, UserIcon,
 } from "@icons";
-import { about1 } from "@images";
 
 const defaultFeatures = [
   {
@@ -71,8 +67,9 @@ export default function CROExperiencePage() {
   return (
     <main className={styles.main}>
       <Title 
-        bread={croPageHeader.bread} 
-        heading={croPageHeader.heading} 
+        breadIn={'Privacy Policy'}
+        bread={'Policy'} 
+        heading={'Privacy Policy'} 
         description={croPageHeader.description} 
         image={croPageHeader.image} 
       />
@@ -82,7 +79,7 @@ export default function CROExperiencePage() {
           <div className={styles.leftpart_1}>
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>
-                Our Approach to CRO Experience
+                Our Privacy Policy
               </h2>
               <div className={styles.leftContent}>
                 {/* Dynamic Approach Paragraphs */}

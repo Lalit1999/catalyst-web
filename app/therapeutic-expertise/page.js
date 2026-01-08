@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 import {therapeuticExpertiseData, therapeuticPageHeader} from "@data";
-import { Title } from "@c/index";
+import { Title } from "@comps";
 
 export default function WhatWeDo() {
   const alltherapyData = Object.values(therapeuticExpertiseData);

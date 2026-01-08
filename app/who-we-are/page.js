@@ -1,292 +1,146 @@
 "use client";
-import {
-  Badge,
-  DoctorAbout,
-  Heart,
-  IconBookmark,
-  IconChart,
-  IconCrown,
-  IconPig,
-  IconUmbrella,
-  IconUser,
-  Location,
-} from "@icons";
-import styles from "./page.module.css";
+import React, { useState } from "react";
 import Image from "next/image";
-import { Doctor, headIcon, Nurses, Round, Round1, Round2, Round3 } from "@images";
+import { notFound, useParams } from "next/navigation";
+import Link from "next/link";
+import styles from "./page.module.css";
+import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
-const timelineData = [
-  {
-    year: "2001",
-    title: "Fill In Our Medical Application",
-    desc: "Nulla metus quam, dictum mollis felis quis, congue sollicitudin orci.",
-    img: Round,
-  },
-  {
-    year: "2005",
-    title: "Review Your Family Medical History",
-    desc: "Nulla metus quam, dictum mollis felis quis, congue sollicitudin orci.",
-    img: Round1,
-  },
-  {
-    year: "2015",
-    title: "Choose Between Our Care Programs",
-    desc: "Nulla metus quam, dictum mollis felis quis, congue sollicitudin orci.",
-    img: Round2,
-  },
-  {
-    year: "Now",
-    title: "Introduce To Highly Qualified Doctors",
-    desc: "Nulla metus quam, dictum mollis felis quis, congue sollicitudin orci.",
-    img: Round3,
-  },
-];
+// Import Data and QuickLinks
+import { serviceDataObject, quickLinks, croPageHeader, therapeuticExpertiseData } from '@data';
 
-const expertiseData = [
+// Import Icons
+import {
+  BagIcon, CheckIcon, ClockCircle, FlaskIcon, GlobeIcon, 
+  MoneyIcon, StarCircle, User, UserIcon,
+} from "@icons";
+import { about1 } from "@images";
+
+const defaultFeatures = [
   {
-    title: "Experience and Expertise",
-    icon: <IconBookmark />,
+    title: "Focused Customer",
+    color: "var(--thodaBlue)",
+    icon: "user",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    title: "Pathology Analysis",
-    icon: <IconChart />,
+    title: "24/7 Care",
+    color: "var(--thodaPink)",
+    icon: "star",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    title: "Customer Focused",
-    icon: <IconUser />,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    title: "Industry Certified",
-    icon: <IconCrown />,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    title: "Saving Costs",
-    icon: <IconPig />,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    title: "Honesty and Integrity",
-    icon: <IconUmbrella />,
+    title: "Timely Care",
+    color: "var(--thodaYellow)",
+    icon: "clock",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 
-const statsData = [
-  {
-    number: "1+",
-    label: "Centers Across The United States",
-    icon: <Location />,
-  },
-  {
-    number: "1%",
-    label: "Customer Satisfaction Is Our Success",
-    icon: <Heart />,
-  },
-  {
-    number: "1",
-    label: "Honorary Award For Best Quality Hospital",
-    icon: <Badge />,
-  },
-  {
-    number: "1",
-    label: "Highly Specialized Doctors And Nurses",
-    icon: <DoctorAbout />,
-  },
+
+const defaultCheckList = [
+  "ICH-GCP Compliant Protocols",
+  "21 CFR Part 11 Validated Systems",
+  "Robust Risk Management Strategies",
+  "Real-time Data Visualization",
 ];
 
-export default function WhoWeAre() {
+
+const defaultApproach = [
+    "Our approach to CRO services is rooted in partnership. We don't just execute tasks; we align with your scientific and business objectives to navigate the complex pathway of drug development.",
+    "By integrating advanced technology with human expertise, we proactively identify risks before they become issues, ensuring your data remains robust and your timelines stay on track."
+];
+const defaultPrimaryCare = "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.";
+
+export default function CROExperiencePage() {
+
+
+  // Helper to render Sidebar Icons based on string name in data
+  const renderSidebarIcon = (iconName) => {
+     switch(iconName) {
+        case 'bag': return <BagIcon />;
+        case 'globe': return <GlobeIcon />;
+        case 'user': return <UserIcon />;
+        case 'flask': return <FlaskIcon />;
+        case 'money': return <MoneyIcon />;
+        default: return <BagIcon />;
+     }
+  };
+  const allServices = Object.values(serviceDataObject);
+  const alltherapyData = Object.values(therapeuticExpertiseData);
   return (
-    <>
-      <main className={styles.main}>
-        <div className={styles.downbarMainCon} >
-          <div className={styles.downbarTop}>
-          <div className={styles.downHead}>
-            <h1 className={styles.main_bread}>Home</h1>
-            <h1 className={styles.main_bread}>&rarr;</h1>
-            <h1 className={styles.main_bread}>About us</h1>
+    <main className={styles.main}>
+      <Title 
+        bread={'Who we are'} 
+        heading={'Who we are'} 
+        description={croPageHeader.description} 
+        image={croPageHeader.image} 
+      />
+      
+      <div className={styles.detailsContainer}>
+        <div className={styles.leftColumn}>
+          <div className={styles.leftpart_1}>
+            <div className={styles.leftpart}>
+              <h2 className={styles.heading}>
+                Our Mission
+              </h2>
+              <div className={styles.leftContent}>
+                {/* Dynamic Approach Paragraphs */}
+                {defaultApproach && defaultApproach.map((paragraph, index) => (
+                    <p key={index} className={styles.paragraph}>
+                        {paragraph}
+                    </p>
+                ))}
+              </div>
+            </div>
           </div>
-          {/* content */}
-          <p className={styles.breadContent}>
-            About Catalyst Clinical Services Private Limited
-          </p>
+          
+          <div className={styles.leftpart_2}>
+            <h2 className={styles.heading}>Primary Care</h2>
+            {/* Dynamic Primary Care Text */}
+            <p className={styles.paragraph}>
+              {defaultPrimaryCare}
+            </p>
+
+            <div className={styles.featureGrid}>
+              {/* Dynamic Feature Cards */}
+              {defaultFeatures && defaultFeatures.map((card, idx) => (
+                <div
+                  key={idx}
+                  className={styles.featureCard}
+                  style={{ backgroundColor: card.color }}
+                >
+                  <div className={styles.featureIcon}>
+                    {card.icon === "user" && (
+                      <div className={styles.userIconBg}><User /></div>
+                    )}
+                    {card.icon === "star" && <StarCircle />}
+                    {card.icon === "clock" && <ClockCircle />}
+                  </div>
+                  <h3>{card.title}</h3>
+                  <p>{card.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Dynamic Checklist */}
+          {defaultCheckList && (
+            <div className={styles.checkCard}>
+                {defaultCheckList.map((item, idx) => (
+                <div key={idx} className={styles.checkItem}>
+                    <CheckIcon />
+                    <span>{item}</span>
+                </div>
+                ))}
+            </div>
+          )}
+
         </div>
-        </div>  
-        {/* ******************************************************** */}
-        {/* 2. MISSION & VISION SECTION */}
-        <section className={styles.section}>
-          <div className={styles.container}>
-            <div className={styles.mvGrid}>
-              {/* Mission Card */}
-              <div className={styles.mvCard}>
-                <h3>Our Mission</h3>
-                <p>
-                  We understand that accessing medical care can sometimes be
-                  challenging, especially for individuals with limited mobility
-                  or busy schedules. Lorem ipsum dolor sit amet.
-                </p>
-              </div>
 
-              {/* Center Image */}
-              <div className={styles.mvImageWrapper}>
-                <Image
-                  src={Nurses}
-                  alt="Medical Team"
-                  fill
-                  className={styles.imgCover}
-                />
-              </div>
-
-              {/* Vision Card */}
-              <div className={styles.mvCard}>
-                <h3>Our Vision</h3>
-                <p>
-                  We understand that accessing medical care can sometimes be
-                  challenging, especially for individuals with limited mobility
-                  or busy schedules. Lorem ipsum dolor sit amet.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 3. PROGRESS / CULTURE SECTION */}
-        <section className={styles.analysissection}>
-          <div className={styles.container}>
-            <div className={styles.splitGrid}>
-              
-                <div className={styles.tallImgWrapper}>
-                  <Image
-                    src={Doctor}
-                    alt="Patient Care"
-                    fill
-                    className={styles.imgCover}
-                  />
-               
-              </div>
-              <div className={styles.analysisRight}>
-             
-                 
-                <div className={styles.rightHead} >
-                  <span  className={styles.textCol}>Working Together for a Healthy Life</span>
-               
-                <h2 className={styles.heading}>
-                  Committed To Build A Positive, Safe, Patient Focused Culture.
-                </h2>
-                <p className={styles.desc}>
-                  If you’re looking for a reliable health insurer with
-                  outstanding services and insurance solutions tailored to your
-                  requirements.
-                </p>
-                </div>
-                
-
-                {/* Progress Bars */}
-                <div className={styles.progressPart}>
-                  <div className={styles.progressBar}>
-                  <div className={styles.progressHeader}>
-                    <span>Strategic Analysis</span>
-                    
-                  </div>
-                  <div className={styles.progressTrack}>
-                    <div
-                      className={styles.progressFill}
-                      style={{ width: "80%" }}
-                    ></div>
-                  </div>
-                </div>
-                <div className={styles.progressBar}>
-                  <div className={styles.progressHeader}>
-                    <span>Research On Diseases</span>
-                  
-                  </div>
-                  <div className={styles.progressTrack}>
-                    <div
-                      className={styles.progressFill}
-                      style={{ width: "90%" }}
-                    ></div>
-                  </div>
-                </div>
-                <div className={styles.progressBar}>
-                  <div className={styles.progressHeader}>
-                    <span>Healing Solution</span>
-                  
-                  </div>
-                  <div className={styles.progressTrack}>
-                    <div
-                      className={styles.progressFill}
-                      style={{ width: "95%" }}
-                    ></div>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 4. TIMELINE SECTION (Dark Background using var(--main)) */}
-        <section className={styles.timelineSection}>
-          <div className={styles.container}>
-            <div className={styles.timelineGrid}>
-              {timelineData.map((item, index) => (
-                <div key={index} className={styles.timelineItem}>
-                  <div className={styles.timelineImg}>
-                    {/* Placeholder for round image */}
-                    <Image
-                      src={item.img}
-                      alt={item.year}
-                      width={150}
-                      height={150}
-                      className={styles.roundImg}
-                    />
-                  </div>
-                  <div className={styles.timelineYear}>{item.year}</div>
-                  <div className={styles.timelineItemhead} >
-                    <h4>{item.title}</h4>
-                  <p>{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 5. EXPERTISE GRID */}
-        <section className={styles.section}>
-          <div className={styles.statcontainer}>
-            <div className={styles.iconGrid}>
-              {expertiseData.map((item, idx) => (
-                <div key={idx} className={styles.iconCard}>
-                  <div className={styles.iconCircle}>{item.icon}</div>
-                  <div className={styles.iconContent}>
-                    <h4>{item.title}</h4>
-                    <p>{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 6. STATS BAR (Dark Background using var(--main)) */}
-        <section className={styles.statsSection}>
-          <div className={styles.container}>
-            <div className={styles.statsGrid}>
-              {statsData.map((stat, idx) => (
-                <div key={idx} className={styles.statItem}>
-                  <div className={styles.statIcon}>{stat.icon}</div>
-                  <div className={styles.statNumber}>{stat.number}</div>
-                  <div className={styles.statLabel}>{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
+        {/* RIGHT COLUMN: Sidebar */}
+        <RightPanel allServices={allServices} otherPageData={alltherapyData} />
+      </div>
+    </main>
   );
 }

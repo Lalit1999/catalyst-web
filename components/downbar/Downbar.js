@@ -32,9 +32,9 @@ const serviceLinks = [
 ] ;
 
 const pagesLinks = [
-	{	text: 'About Us',			link: '/about',	}, 
+	{	text: 'About Us',			link: '/who-we-are',	}, 
 	{	text: 'Terms & Conditions',	link: '/',	}, 
-	{	text: 'Privacy Policy',		link: '/',	}, 
+	{	text: 'Privacy Policy',		link: '/policy/privacy-policy',	}, 
 	{	text: 'Cookie Policy',		link: '/',	}, 
 	{	text: 'Refund Policy',		link: '/',	}, 
 	// {	text: 'Terms & Conditions',	link: '/policy/terms-and-conditions',	}, 
