@@ -2,9 +2,25 @@
 import styles from './page.module.css';
 import { NewCard } from '@c/index';
 import {NewFormCard} from '@c/index';
+import { clinicalServicesData } from '@data';
+import { useState } from 'react';
+
+
+const contactfaq=clinicalServicesData['patient-recruitment'].faqList;
+
+
 
 export default function ContactUs() {
+
+      const [openIndex, setOpenIndex] = useState(null);
+
+      const toggleFAQ = (idx) => {
+  setOpenIndex(openIndex === idx ? null : idx);
+};
+
+
   return (
+
 
     <main className={styles.main}>
 
@@ -31,6 +47,49 @@ export default function ContactUs() {
     <NewFormCard/>
   </div>
 </div>
+
+
+
+<div className={styles.faqBlock}>
+  <div className={styles.faqBlockHead}>
+    <h2>Frequently Asked Questions</h2>
+    <p className={styles.subText}>
+      Common questions about our services.
+    </p>
+  </div>
+
+  <div className={styles.faqList}>
+    {contactfaq?.map((faq, idx) => {
+      const isOpen = openIndex === idx;
+
+      return (
+        <div key={idx} className={styles.faqItem}>
+          <button
+            className={styles.faqSummary}
+            onClick={() => toggleFAQ(idx)}
+            aria-expanded={isOpen}
+          >
+            <span className={styles.faqQuestion}>{faq.question}</span>
+            <span className={styles.faqIcon}>
+              {isOpen ? "−" : "+"}
+            </span>
+          </button>
+
+          <div
+            className={`${styles.faqAnswer} ${
+              isOpen ? styles.open : ""
+            }`}
+          >
+            <div className={styles.faqAnswerInner}>
+              {faq.answer}
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
 
 
      
