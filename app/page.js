@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { ArrowLong, Arrow, Tick } from "@icons";
 import { homePageData } from "@data";
-import ResearchCard from '@c/card/ResearchCard';
+import { ResearchCard } from '@comps';
 
 import styles from "./page.module.css";
 

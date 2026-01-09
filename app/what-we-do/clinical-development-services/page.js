@@ -1,20 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import { serviceDataObject, quickLinks, clinicalServicesData } from '@data'; // Ensure this matches your export name
+import { serviceDataObject, clinicalServicesData } from '@data'; // Ensure this matches your export name
 import styles from "./page.module.css";
 
 import {
   BagIcon,
   CheckIcon,
   ClockCircle,
-  FlaskIcon,
-  GlobeIcon,
-  MoneyIcon,
   StarCircle,
   User,
-  UserIcon,
 } from "@icons";
 import Link from "next/link";
 import { RightPanel, Title } from "@comps";
@@ -162,7 +157,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-       <RightPanel allServices={allServices} variant="clinical" />
+        <RightPanel allServices={allServices} variant="clinical" />
       </div>
     </main>
   );

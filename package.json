@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 2007",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@tiptap/extension-color": "^2.11.5",

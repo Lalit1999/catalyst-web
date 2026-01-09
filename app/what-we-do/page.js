@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 import {serviceDataObject, servicePageHeader} from '@data'
-import { Title } from "@c/index";
+import { Title } from "@comps";
 
 
 export default function WhatWeDo() {
