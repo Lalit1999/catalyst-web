@@ -1,5 +1,5 @@
 import { N1 } from "@icons";
-import { Neurology, about1 } from "@images"; // Ensure about1 is imported if needed for headers
+import { Neurology} from "@images"; // Ensure about1 is imported if needed for headers
 
 // 1. Defaults (The content that was previously hardcoded in your component)
 const defaultApproach = [

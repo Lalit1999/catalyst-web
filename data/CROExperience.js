@@ -1,15 +1,9 @@
-import { C1, D1, H1, N1, O1, P1 } from "@icons";
-import { 
-  about1, 
-  DentalClinic, 
-  Hematology, 
-  Neurology, 
-  Orthopedics, 
-  Pharmacology 
-} from "@images";
 
 // ==========================================
 // 1. CRO PAGE HEADER CONFIGURATION
+
+import { about1 } from "@images";
+
 // ==========================================
 export const croPageHeader = {
     bread: 'CRO Experience',

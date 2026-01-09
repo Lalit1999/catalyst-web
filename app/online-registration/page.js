@@ -6,7 +6,6 @@ import { BasicForm, Title } from '@comps';
 import { programsDetailsArr } from '@data';
 import { AppContext } from '@ac' ;
 import styles from './page.module.css';
-import program from '../training-programs/[id]/page';
 
 const genderOptions = ['Female', 'Male'];
 const countryOptions = ['India', 'United States', 'Singapore', 'United Arab Emirates'];
@@ -58,7 +57,7 @@ const RegistrationFormPage = () => {
 
     const selectedProgram = useMemo(() => {
         return programsDetailsArr?.[course]?.heading ;
-    }, [course, programOptions]);
+    }, [course]);
 
     const registrationFormData = [
         { type: 'custom', component: (
@@ -142,12 +141,12 @@ const RegistrationFormPage = () => {
         { type: 'submit', text: 'Submit Registration', style: styles.submitBtn },
     ];
 
-    const handleSubmit = (values) => {
-        console.log('Registration form submitted', values);
+    const handleSubmit = () => {
+        // console.log('Registration form submitted', values);
+        // console.log('Course from Context:', course);
+        // console.log('Selected Program:', selectedProgram);
     };
 
-    console.log('Selected Program:', selectedProgram);
-    console.log('Course from Context:', course);
 
     return (
         <div  className={styles.registrationMainPage}>            

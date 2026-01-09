@@ -1,20 +1,18 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import { notFound, useParams } from "next/navigation";
-import Link from "next/link";
+import React from "react";
+
 import styles from "./page.module.css";
 import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
 // Import Data and QuickLinks
-import { serviceDataObject, quickLinks, croPageHeader, therapeuticExpertiseData } from '@data';
+import { serviceDataObject,croPageHeader, therapeuticExpertiseData } from '@data';
 
 // Import Icons
 import {
-  BagIcon, CheckIcon, ClockCircle, FlaskIcon, GlobeIcon, 
-  MoneyIcon, StarCircle, User, UserIcon,
+ CheckIcon, ClockCircle, 
+StarCircle, User
 } from "@icons";
-import { about1 } from "@images";
+
 
 const defaultFeatures = [
   {
@@ -53,19 +51,6 @@ const defaultApproach = [
 const defaultPrimaryCare = "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.";
 
 export default function CROExperiencePage() {
-
-
-  // Helper to render Sidebar Icons based on string name in data
-  const renderSidebarIcon = (iconName) => {
-     switch(iconName) {
-        case 'bag': return <BagIcon />;
-        case 'globe': return <GlobeIcon />;
-        case 'user': return <UserIcon />;
-        case 'flask': return <FlaskIcon />;
-        case 'money': return <MoneyIcon />;
-        default: return <BagIcon />;
-     }
-  };
   const allServices = Object.values(serviceDataObject);
   const alltherapyData = Object.values(therapeuticExpertiseData);
   return (
