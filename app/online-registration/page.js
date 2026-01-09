@@ -111,15 +111,38 @@ const RegistrationFormPage = () => {
         { type: 'text', name: 'addressLine1', label: 'Address Line 1', valid: { required: true, minLength: 5 } },
         { type: 'text', name: 'addressLine2', label: 'Address Line 2', descr: 'Optional' },
         { type: 'row', children: [
-                { type: 'dropdown', name: 'country', label: 'Country', options: countryOptions, valid: { required: true } },
-                { type: 'dropdown', name: 'state', label: 'State', options: stateOptions, valid: { required: true } },
-            ],
-        },
+            { 
+                type: 'country', 
+                name: 'country', 
+                label: 'Country', 
+                valid: { required: 'Country is required' } 
+            },
+            { 
+                type: 'state',   
+                name: 'state', 
+                label: 'State', 
+                valid: { required: 'State is required' } 
+            },
+        ],
+    },
         { type: 'row', children: [
-                { type: 'dropdown', name: 'city', label: 'City', options: cityOptions, valid: { required: true } },
-                { type: 'number', name: 'pincode', label: 'Pincode', valid: { required: true, min: 100000 } },
-            ],
-        },
+            { 
+                type: 'city',
+                name: 'city', 
+                label: 'City', 
+                valid: { required: 'City is required' } 
+            },
+            { 
+                type: 'number', 
+                name: 'pincode', 
+                label: 'Pincode / Zip Code', 
+                valid: { 
+                    required: 'Pincode is required',
+                    minLength: { value: 4, message: 'Too short' } 
+                } 
+            },
+        ],
+    },
         { type: 'custom', component: (
                 <SectionHeading
                     title="4. Academic Details"
