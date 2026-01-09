@@ -456,3 +456,57 @@ margin-top: 0.8rem;
     padding: 2rem;
   }
 }
+@media (max-width: 600px) {
+
+  /* MAIN LAYOUT */
+  .main {
+    gap: 2em; /* was 3rem */
+  }
+
+  .contentContainer,
+  .head,
+  .leftpart,
+  .leftContent,
+  .leftpart_1,
+  .leftpart_2,
+  .expertiseBlock,
+  .faqBlock,
+  .faqBlockHead {
+    gap: 1em; /* was 1.5rem */
+  }
+  .extraContainer{
+    gap: 2em;
+  }
+  /* DETAILS */
+  .detailsContainer {
+    gap: 2em; /* was 3rem */
+  }
+
+  .leftColumn {
+    gap: 2em; /* was 3rem */
+  }
+
+  /* FEATURE SECTION */
+  .featureGrid {
+    gap: 1em; /* was 1.5rem */
+  }
+
+  .featureCard {
+    padding: 2em 1.5em; /* was 3rem 2rem */
+  }
+
+  /* CHECKLIST */
+  .checkCard {
+    gap: 1em; /* was 1.5rem */
+    padding: 1.5em; /* was 2rem */
+  }
+
+  /* FAQ */
+  .faqList {
+    gap: 0.8em; /* was 1rem */
+  }
+
+  .faqItem {
+    gap: 0.8em; /* was 1rem */
+  }
+}

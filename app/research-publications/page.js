@@ -12,7 +12,6 @@ export default function Research() {
         bread={researchPageHeader.bread}
         heading={researchPageHeader.heading}
         description={researchPageHeader.description}
-        image={researchPageHeader.image}
       />
       <div className={styles.researchHead}>
         <div className={styles.paper}>

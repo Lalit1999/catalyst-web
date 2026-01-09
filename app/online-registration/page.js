@@ -2,7 +2,7 @@
 
 import { useMemo, useContext } from 'react';
 
-import { BasicForm } from '@comps';
+import { BasicForm, Title } from '@comps';
 import { programsDetailsArr } from '@data';
 import { AppContext } from '@ac' ;
 import styles from './page.module.css';
@@ -151,17 +151,11 @@ const RegistrationFormPage = () => {
 
     return (
         <div  className={styles.registrationMainPage}>            
-            <div className={styles.startHead}>
-                <div className={styles.headSection}>
-                    <h1 className={styles.main_bread}>Home</h1>
-                    <h1 className={styles.main_bread}>&rarr;</h1>
-                    <h1 className={styles.main_bread}>Online Registration</h1>
-                </div>
-                <div className={styles.headDesc} >
-                    <p className={styles.breadContent}>Online Registration Form</p>
-                    <p className={styles.headContent}>Fill out the information below and our academic counselors will reach out with the onboarding kit.</p>
-                </div>
-            </div>
+            <Title
+                    bread={'Online Registration'}
+                    heading={'Online Registration Form'}
+                    description={'Fill out the information below and our academic counselors will reach out with the onboarding kit.'}
+                  />
             <div className={styles.registrationPage}>
                 <div className={styles.formCard}>
                     <BasicForm styleOR={styles.formGrid} data={registrationFormData} onFormSubmit={handleSubmit} defaultObj={{program:selectedProgram}} />

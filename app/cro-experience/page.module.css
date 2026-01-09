@@ -273,6 +273,7 @@ gap: 3rem;
   font-size: 15px;
   color: var(--gray);
   line-height: 1.6;
+  margin: 0;
 }
 
 /* 2. Checklist Card */
@@ -454,5 +455,16 @@ margin-top: 0.8rem;
 
   .checkCard {
     padding: 2rem;
+  }
+}
+@media (max-width : 600px){
+  .leftColumn{
+    gap: 2em;
+  }
+  .main{
+    gap: 2em;
+  }
+  .leftpart_1,.leftpart_2,.leftContent,.leftpart,.featureGrid{
+    gap: 1em;
   }
 }
