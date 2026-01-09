@@ -1,8 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { notFound, useParams } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
 import styles from "./page.module.css";
 import { RightPanel, Title } from "@comps";
 
@@ -11,24 +9,11 @@ import { clinicalServicesData } from "@data";
 
 // 2. Import Icons
 import {
-  BagIcon,
   CheckIcon,
   ClockCircle,
-  FlaskIcon,
-  GlobeIcon,
-  MoneyIcon,
   StarCircle,
   User,
-  UserIcon,
 } from "@icons";
-
-const quickLinks = [
-  { text: "What we do", icon: <BagIcon />, path: "/what-we-do" },
-  { text: "Who we are", icon: <GlobeIcon />, path: "/who-we-are" },
-  { text: "Research Publications", icon: <UserIcon />, path: "/research-publications" },
-  { text: "Therapeutic Expertise", icon: <FlaskIcon />, path: "/therapeutic-expertise" },
-  { text: "Training Programs", icon: <MoneyIcon />, path: "/training-programs" },
-];
 
 export default function ServiceDetailPage() {
   const params = useParams();
