@@ -1,9 +1,9 @@
 'use client'
 import styles from './page.module.css';
-import { NewCard } from '@c/index';
-import {NewFormCard} from '@c/index';
+import { NewCard,NewFormCard} from '@c/index';
 import { clinicalServicesData } from '@data';
 import { useState } from 'react';
+import {Title,ContactForm} from '@comps';
 
 
 const contactfaq=clinicalServicesData['patient-recruitment'].faqList;
@@ -18,6 +18,8 @@ export default function ContactUs() {
   setOpenIndex(openIndex === idx ? null : idx);
 };
 
+const heading='Contact Us '
+
 
   return (
 
@@ -25,16 +27,11 @@ export default function ContactUs() {
     <main className={styles.main}>
 
 {/* HEADER SECTION  */}
-      <div className={styles.HeaderSection}>
-
-      <div className={styles.title}>  
-        <p> Contact Us</p>
-      </div>
-
-      <div className={styles.para1}>
-        <p> Find your next career at companies like HubSpot, Nike, and Dropbox</p>
-      </div>
-      </div>
+     
+    <Title 
+    heading="Contact Us"
+    description="We'd love to hear from you. Reach out to our team anytime."
+    />
 
  {/* FORM SECTION  */}
 
@@ -44,7 +41,7 @@ export default function ContactUs() {
   </div>
 
   <div className={styles.rightSection}>
-    <NewFormCard/>
+    <ContactForm/>
   </div>
 </div>
 

@@ -22,7 +22,6 @@ import Slider from './slider/Slider.js' ;
 import Text from './formelements/Text.js' ;
 import Title from './title/Title.js' ;
 import ToolTip from './toolTip/ToolTip.js' ;
-import NewCard from './newcard/newcard.js';
-import NewFormCard from './newcard/newformcard.js';
+import NewCard from '../app/contact-us/newcard.js';
 
-export { AnimProgBar, BasicForm, Card, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip,NewCard,NewFormCard } ;
+export { AnimProgBar, BasicForm, Card, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip,NewCard } ;
