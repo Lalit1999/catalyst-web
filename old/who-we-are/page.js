@@ -13,7 +13,7 @@ import {
 } from "@icons";
 import styles from "./page.module.css";
 import Image from "next/image";
-import { Doctor, headIcon, Nurses, Round, Round1, Round2, Round3 } from "@images";
+import { Doctor,  Nurses, Round, Round1, Round2, Round3 } from "@images";
 
 const timelineData = [
   {

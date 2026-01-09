@@ -6,7 +6,7 @@ import ContextWrapper from './ContextWrapper.js' ;
 import './globals.css' ;
 import './tiptap.css' ;
 
-import { Inter, Lexend, Poppins } from "next/font/google";
+import {  Poppins } from "next/font/google";
   
 const poppins = Poppins({
     subsets: ["latin"],
