@@ -23,7 +23,7 @@ import ObjectInput from './inputs/ObjectInput.js';
 import SearchInput from './inputs/SearchInput.js' ;
 import DPInput from './inputs/DPInput.js' ;
 import ImageInput from './inputs/ImageInput.js' ;
-
+import IntlPhoneInput from './inputs/IntlInput.js';
 import styles from './form.module.css' ;
 
 const defaultFn = data => {
@@ -69,7 +69,7 @@ const BasicForm = ({data, onFormSubmit=defaultFn, styleOR='', reset, defaultObj 
 				tags 		: <TagInput {...compObj2} />, 
 				array 		: <ArrayInput {...compObj2} />,
 				object 		: <ObjectInput {...compObj2}/>,
-				
+				phone       : <IntlPhoneInput {...compObj2} />,
 				/* external libs */
 				search 		: <SearchInput {...compObj2} />,
 				dp 			: <DPInput {...compObj2} />,

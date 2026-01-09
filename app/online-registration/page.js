@@ -85,11 +85,22 @@ const RegistrationFormPage = () => {
                 { type: 'date', name: 'dob', label: 'Date of Birth', max: today, valid: { required: true }},
             ],
         },
-        { type: 'row', children: [
-                { type: 'tel', name: 'phone', label: 'Phone Number', ph: '90 0000 0000', valid: { required: true, pattern: phonePattern }},
-                { type: 'tel', name: 'whatsapp', label: 'WhatsApp Number', ph: '90 0000 0000', valid: { required: true, pattern: phonePattern }},
-            ],
-        },
+        
+       { type: 'row', children: [
+            { 
+                type: 'phone',
+                name: 'phone', 
+                label: 'Phone Number', 
+                valid: { required: 'Phone Number is required' }
+            },
+            { 
+                type: 'phone', 
+                name: 'whatsapp', 
+                label: 'WhatsApp Number', 
+                valid: { required: 'WhatsApp Number is required' }
+            },
+        ],
+    },
         { type: 'custom', component: (
                 <SectionHeading
                     title="3. Address Details"
@@ -141,10 +152,10 @@ const RegistrationFormPage = () => {
         { type: 'submit', text: 'Submit Registration', style: styles.submitBtn },
     ];
 
-    const handleSubmit = () => {
-        // console.log('Registration form submitted', values);
-        // console.log('Course from Context:', course);
-        // console.log('Selected Program:', selectedProgram);
+    const handleSubmit = (values) => {
+        console.log('Registration form submitted', values);
+        console.log('Course from Context:', course);
+        console.log('Selected Program:', selectedProgram);
     };
 
 
