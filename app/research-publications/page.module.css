@@ -78,3 +78,14 @@
   flex-direction: column;
   gap: 1.5em;
 }
+@media (max-width : 600px){
+  .researchHead{
+    gap: 2em;
+  }
+  .paper{
+    gap: 1em;
+  }
+  .coursesTwo{
+    gap: 1em;
+  }
+}

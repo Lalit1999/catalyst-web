@@ -1,20 +1,17 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import { notFound, useParams } from "next/navigation";
-import Link from "next/link";
+import React from "react";
+
 import styles from "./page.module.css";
-import { Title } from "@c/index"; // Assuming this is your path
+import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
 // Import Data and QuickLinks
-import { serviceDataObject, quickLinks, croPageHeader, therapeuticExpertiseData } from '@data';
+import { serviceDataObject,  croPageHeader, therapeuticExpertiseData } from '@data';
 
 // Import Icons
 import {
-  BagIcon, CheckIcon, ClockCircle, FlaskIcon, GlobeIcon, 
-  MoneyIcon, StarCircle, User, UserIcon,
+ CheckIcon, ClockCircle,
+ StarCircle, User
 } from "@icons";
-import { about1 } from "@images";
 
 const defaultFeatures = [
   {
@@ -54,18 +51,6 @@ const defaultPrimaryCare = "To continue shedding a light on mental health issues
 
 export default function CROExperiencePage() {
 
-
-  // Helper to render Sidebar Icons based on string name in data
-  const renderSidebarIcon = (iconName) => {
-     switch(iconName) {
-        case 'bag': return <BagIcon />;
-        case 'globe': return <GlobeIcon />;
-        case 'user': return <UserIcon />;
-        case 'flask': return <FlaskIcon />;
-        case 'money': return <MoneyIcon />;
-        default: return <BagIcon />;
-     }
-  };
   const allServices = Object.values(serviceDataObject);
   const alltherapyData = Object.values(therapeuticExpertiseData);
   return (
@@ -139,56 +124,7 @@ export default function CROExperiencePage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <div className={styles.rightColumn}>
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Services</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {allServices.map((item) => (
-                <li key={item.id} className={styles.sidebarItem}>
-                  <Link
-                    href={`/what-we-do/${item.id}`}
-                    className={`${styles.sidebarNavLink}`}
-                  >
-                    {item.heading}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Quick Links</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {quickLinks.map((link, idx) => (
-                <li key={idx} className={styles.sidebarItem}>
-                  <Link href={link.path} className={styles.sidebarNavLink}>
-                    {/* Render icon based on helper function if needed, or just text */}
-                    {link.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Therapeutic Expertise</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {alltherapyData.map((link, idx) => (
-                <li key={idx} className={styles.sidebarItem}>
-                  <Link href={link.id} className={styles.sidebarNavLink}>
-                    {/* Render icon based on helper function if needed, or just text */}
-                    {link.heading}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <RightPanel allServices={allServices} otherPageData={alltherapyData} />
       </div>
     </main>
   );

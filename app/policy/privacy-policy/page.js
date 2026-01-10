@@ -1,18 +1,16 @@
 "use client";
-import React from "react";
-
+import React from 'react'
 import styles from "./page.module.css";
 import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
 // Import Data and QuickLinks
-import { serviceDataObject,croPageHeader, therapeuticExpertiseData } from '@data';
+import { serviceDataObject, croPageHeader, therapeuticExpertiseData } from '@data';
 
 // Import Icons
 import {
- CheckIcon, ClockCircle, 
-StarCircle, User
+  CheckIcon, ClockCircle,  
+ StarCircle, User
 } from "@icons";
-
 
 const defaultFeatures = [
   {
@@ -51,13 +49,15 @@ const defaultApproach = [
 const defaultPrimaryCare = "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.";
 
 export default function CROExperiencePage() {
+
   const allServices = Object.values(serviceDataObject);
   const alltherapyData = Object.values(therapeuticExpertiseData);
   return (
     <main className={styles.main}>
       <Title 
-        bread={'Who we are'} 
-        heading={'Who we are'} 
+        breadIn={'Privacy Policy'}
+        bread={'Policy'} 
+        heading={'Privacy Policy'} 
         description={croPageHeader.description} 
         image={croPageHeader.image} 
       />
@@ -67,7 +67,7 @@ export default function CROExperiencePage() {
           <div className={styles.leftpart_1}>
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>
-                Our Mission
+                Our Privacy Policy
               </h2>
               <div className={styles.leftContent}>
                 {/* Dynamic Approach Paragraphs */}

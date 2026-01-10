@@ -1,3 +1,4 @@
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
 import react from "eslint-plugin-react";
 import globals from "globals";
 import path from "node:path";
@@ -14,7 +15,9 @@ const compat = new FlatCompat({
 });
 
 const arr = [
-    ...compat.extends("eslint:recommended", "plugin:react/recommended", "next/core-web-vitals"),
+    ...compat.extends("eslint:recommended"),
+    ...compat.extends("plugin:react/recommended"),
+    ...nextCoreWebVitals,
     {
         plugins: {
             react,
@@ -33,12 +36,16 @@ const arr = [
             "no-unused-vars": "warn",
             "no-mixed-spaces-and-tabs": "warn",
             "no-extra-semi": "warn",
+            "react-hooks/set-state-in-effect": "off",
 
             "no-console": ["warn", {
                 allow: ["error"],
             }],
         },
     },
+    {
+        ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
+    }
 ];
 
 export default arr ;

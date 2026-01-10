@@ -151,3 +151,11 @@
   color: var(--main);
   text-decoration: underline;
 }
+@media (max-width:600px){
+  .main {
+    gap: 2em;
+  }
+  .container{
+    gap: 1em;
+  }
+}

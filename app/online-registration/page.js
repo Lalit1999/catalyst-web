@@ -2,11 +2,10 @@
 
 import { useMemo, useContext } from 'react';
 
-import { BasicForm } from '@comps';
+import { BasicForm, Title } from '@comps';
 import { programsDetailsArr } from '@data';
 import { AppContext } from '@ac' ;
 import styles from './page.module.css';
-import program from '../training-programs/[id]/page';
 
 const genderOptions = ['Female', 'Male'];
 const countryOptions = ['India', 'United States', 'Singapore', 'United Arab Emirates'];
@@ -58,7 +57,7 @@ const RegistrationFormPage = () => {
 
     const selectedProgram = useMemo(() => {
         return programsDetailsArr?.[course]?.heading ;
-    }, [course, programOptions]);
+    }, [course]);
 
     const registrationFormData = [
         { type: 'custom', component: (
@@ -142,26 +141,20 @@ const RegistrationFormPage = () => {
         { type: 'submit', text: 'Submit Registration', style: styles.submitBtn },
     ];
 
-    const handleSubmit = (values) => {
-        console.log('Registration form submitted', values);
+    const handleSubmit = () => {
+        // console.log('Registration form submitted', values);
+        // console.log('Course from Context:', course);
+        // console.log('Selected Program:', selectedProgram);
     };
 
-    console.log('Selected Program:', selectedProgram);
-    console.log('Course from Context:', course);
 
     return (
         <div  className={styles.registrationMainPage}>            
-            <div className={styles.startHead}>
-                <div className={styles.headSection}>
-                    <h1 className={styles.main_bread}>Home</h1>
-                    <h1 className={styles.main_bread}>&rarr;</h1>
-                    <h1 className={styles.main_bread}>Online Registration</h1>
-                </div>
-                <div className={styles.headDesc} >
-                    <p className={styles.breadContent}>Online Registration Form</p>
-                    <p className={styles.headContent}>Fill out the information below and our academic counselors will reach out with the onboarding kit.</p>
-                </div>
-            </div>
+            <Title
+                    bread={'Online Registration'}
+                    heading={'Online Registration Form'}
+                    description={'Fill out the information below and our academic counselors will reach out with the onboarding kit.'}
+                  />
             <div className={styles.registrationPage}>
                 <div className={styles.formCard}>
                     <BasicForm styleOR={styles.formGrid} data={registrationFormData} onFormSubmit={handleSubmit} defaultObj={{program:selectedProgram}} />

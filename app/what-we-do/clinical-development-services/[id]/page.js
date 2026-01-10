@@ -1,34 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { notFound, useParams } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
 import styles from "./page.module.css";
-import { Title } from "@c/index";
+import { RightPanel, Title } from "@comps";
 
 // 1. Import Data
 import { clinicalServicesData } from "@data";
 
 // 2. Import Icons
 import {
-  BagIcon,
   CheckIcon,
   ClockCircle,
-  FlaskIcon,
-  GlobeIcon,
-  MoneyIcon,
   StarCircle,
   User,
-  UserIcon,
 } from "@icons";
-
-const quickLinks = [
-  { text: "What we do", icon: <BagIcon />, path: "/what-we-do" },
-  { text: "Who we are", icon: <GlobeIcon />, path: "/who-we-are" },
-  { text: "Research Publications", icon: <UserIcon />, path: "/research-publications" },
-  { text: "Therapeutic Expertise", icon: <FlaskIcon />, path: "/therapeutic-expertise" },
-  { text: "Training Programs", icon: <MoneyIcon />, path: "/training-programs" },
-];
 
 export default function ServiceDetailPage() {
   const params = useParams();
@@ -50,8 +35,9 @@ export default function ServiceDetailPage() {
   return (
     <main className={styles.main}>
       <Title
-        bread={'Services'}
-        breadIn={service.heading}
+      bread={'Services'}
+        breadIn={'Clinical Development Services'}
+        breadIn_1={service.heading}
         heading={service.heading}
         description={service.subHeading}
         image={service.img}
@@ -183,44 +169,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <div className={styles.rightColumn}>
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Services</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {allServices.map((item) => (
-                <li key={item.id} className={styles.sidebarItem}>
-                  {/* IMPORTANT: Ensure this href matches your folder structure. 
-                      If this page is inside [id], the link logic is correct. */}
-                  <Link
-                    href={`/what-we-do/${item.id}`} 
-                    className={`${styles.sidebarNavLink} ${
-                      serviceId === item.id ? styles.active : ""
-                    }`}
-                  >
-                    {item.heading}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Quick Links</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {quickLinks.map((link, idx) => (
-                <li key={idx} className={styles.sidebarItem}>
-                  <Link href={link.path} className={styles.sidebarNavLink}>
-                    {link.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <RightPanel allServices={allServices} variant="clinical" />
       </div>
     </main>
   );

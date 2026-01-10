@@ -273,6 +273,7 @@ gap: 3rem;
   font-size: 15px;
   color: var(--gray);
   line-height: 1.6;
+  margin: 0;
 }
 
 /* 2. Checklist Card */
@@ -454,5 +455,58 @@ margin-top: 0.8rem;
 
   .checkCard {
     padding: 2rem;
+  }
+}
+@media (max-width: 600px) {
+
+  /* MAIN LAYOUT */
+  .main {
+    gap: 2em; /* was 3rem */
+  }
+
+  .contentContainer,
+  .head,
+  .leftpart,
+  .leftContent,
+  .leftpart_1,
+  .leftpart_2,
+  .extraContainer,
+  .expertiseBlock,
+  .faqBlock,
+  .faqBlockHead {
+    gap: 1em; /* was 1.5rem */
+  }
+
+  /* DETAILS */
+  .detailsContainer {
+    gap: 2em; /* was 3rem */
+  }
+
+  .leftColumn {
+    gap: 2em; /* was 3rem */
+  }
+
+  /* FEATURE SECTION */
+  .featureGrid {
+    gap: 1em; /* was 1.5rem */
+  }
+
+  .featureCard {
+    padding: 2em 1.5em; /* was 3rem 2rem */
+  }
+
+  /* CHECKLIST */
+  .checkCard {
+    gap: 1em; /* was 1.5rem */
+    padding: 1.5em; /* was 2rem */
+  }
+
+  /* FAQ */
+  .faqList {
+    gap: 0.8em; /* was 1rem */
+  }
+
+  .faqItem {
+    gap: 0.8em; /* was 1rem */
   }
 }

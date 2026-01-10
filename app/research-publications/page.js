@@ -1,10 +1,8 @@
 "use client";
-import { about1 } from "@images";
 import styles from "./page.module.css";
-import Image from "next/image";
 import { researchPageHeader, researchPaperData } from "@data";
-import Card from "@c/card/ResearchCard";
-import { Title } from "@c/index";
+import { Title, Card } from "@comps";
+
 export default function Research() {
   return (
     <main className={styles.main}>
@@ -12,7 +10,6 @@ export default function Research() {
         bread={researchPageHeader.bread}
         heading={researchPageHeader.heading}
         description={researchPageHeader.description}
-        image={researchPageHeader.image}
       />
       <div className={styles.researchHead}>
         <div className={styles.paper}>

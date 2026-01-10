@@ -1,28 +1,21 @@
 "use client";
 import React, { useState } from "react";
 import { notFound, useParams } from "next/navigation";
-import Link from "next/link";
 import styles from "./page.module.css";
-import { Title } from "@c/index"; // Adjust path as needed
+import { RightPanel, Title } from "@comps"; // Adjust path as needed
 
 // 1. Import Data
 import { 
   therapeuticExpertiseData, 
-  therapeuticPageHeader, 
-  quickLinks 
+  therapeuticPageHeader
 } from "@data"; 
 
 // 2. Import Icons
 import {
-  BagIcon,
   CheckIcon,
   ClockCircle,
-  FlaskIcon,
-  GlobeIcon,
-  MoneyIcon,
   StarCircle,
-  User,
-  UserIcon,
+  User
 } from "@icons";
 
 export default function TherapyDetailPage() {
@@ -52,8 +45,8 @@ export default function TherapyDetailPage() {
       <Title 
         bread={therapeuticPageHeader.bread} 
         breadIn={therapy.heading} 
-        heading={therapeuticPageHeader.heading} 
-        description={therapeuticPageHeader.description} 
+        heading={therapy.heading} 
+        description={therapy.subHeading} 
         image={therapeuticPageHeader.image} 
       />
 
@@ -174,42 +167,7 @@ export default function TherapyDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <div className={styles.rightColumn}>
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Therapeutic Expertise</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {alltherapyData.map((item) => (
-                <li key={item.id} className={styles.sidebarItem}>
-                  <Link
-                    href={`/therapeutic-expertise/${item.id}`}
-                    className={`${styles.sidebarNavLink} ${
-                      therapyId === item.id ? styles.active : ""
-                    }`}
-                  >
-                    {item.heading}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Quick Links</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {quickLinks.map((link, idx) => (
-                <li key={idx} className={styles.sidebarItem}>
-                  <Link href={link.path} className={styles.sidebarNavLink}>
-                    {link.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <RightPanel allServices={alltherapyData} variant="therapeutic"  />
       </div>
     </main>
   );

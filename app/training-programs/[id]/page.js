@@ -146,7 +146,7 @@ const DescrCon = ({subHeading, description}) => {
 const LearnSection = ({learnArr}) => {
     return (
         <div className={styles.descrCon}>
-            <p className={styles.descrHead}>What you'll learn</p>
+            <p className={styles.descrHead}>What you&apos;ll learn</p>
             <div className={styles.learnCon}>
             {
                 learnArr.map((one,i) => {
@@ -474,7 +474,7 @@ const DetailBottom = () => {
     ) ;
 }
 
-const program = () => {
+const Program = () => {
 
     const params = useParams() ;
     const { id } = params;
@@ -493,4 +493,4 @@ const program = () => {
     ) ;
 }
 
-export default program;
+export default Program;

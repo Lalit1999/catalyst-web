@@ -1,18 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+
 import { notFound, useParams } from "next/navigation";
-import Link from "next/link";
+
 import styles from "./page.module.css";
-import { Title } from "@c/index"; // Assuming this is your path
+import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
 // Import Data and QuickLinks
-import { serviceDataObject, quickLinks } from '@data';
+import { serviceDataObject} from '@data';
 
 // Import Icons
 import {
-  BagIcon, CheckIcon, ClockCircle, FlaskIcon, GlobeIcon, 
-  MoneyIcon, StarCircle, User, UserIcon,
+   CheckIcon, ClockCircle, 
+ StarCircle, User
 } from "@icons";
 
 export default function ServiceDetailPage() {
@@ -167,43 +167,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <div className={styles.rightColumn}>
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Services</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {allServices.map((item) => (
-                <li key={item.id} className={styles.sidebarItem}>
-                  <Link
-                    href={`/what-we-do/${item.id}`}
-                    className={`${styles.sidebarNavLink} ${
-                      serviceId === item.id ? styles.active : ""
-                    }`}
-                  >
-                    {item.heading}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.sidebarCard}>
-            <div className={styles.sidebarCard_round}>
-              <div className={styles.sidebarHeader}>Quick Links</div>
-            </div>
-            <ul className={styles.sidebarList}>
-              {quickLinks.map((link, idx) => (
-                <li key={idx} className={styles.sidebarItem}>
-                  <Link href={link.path} className={styles.sidebarNavLink}>
-                    {/* Render icon based on helper function if needed, or just text */}
-                    {link.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <RightPanel allServices={allServices} />
       </div>
     </main>
   );
