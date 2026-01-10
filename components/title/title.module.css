@@ -1,3 +1,4 @@
+
 .pageHeader {
   display: flex;
   flex-direction: column;
@@ -9,15 +10,16 @@
   font-size: 5em;
   font-weight: 300;
   text-align: center;
-  line-height: normal ;
-  color: var(--black) ;
-  text-transform: uppercase ;
-  margin: 0 ;
+  line-height: normal;
+  color: var(--black);
+  text-transform: uppercase;
+  margin: 0;
 }
+
 .subTitle {
   text-align: center;
   color: var(--gray);
-  margin: 0 ;
+  margin: 0;
 }
 
 @media (max-width: 600px) {
@@ -25,83 +27,114 @@
     font-size: 3em;
   }
 }
-/* new Title Component */
+
+
+
 .startHead {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%; 
 }
-.startHead p{
-  margin: 0;
-}
-.startHead h1{
+
+.startHead p, .startHead h1 {
   margin: 0;
 }
 
-.main_bread {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20.8px;
- 
-}
-.breadContent {
-  font-weight: 600;
-  font-size: 3rem;
-}
+
 .headSection {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  align-items: center; 
+  flex-wrap: wrap;     
+  gap: 0.5rem;        
+  line-height: 1.5;   
 }
-.headContent {
-  font-size: 1.1rem;
-  font-weight: 400;
-  width: 70vw;
-  color: var(--gray);
+
+
+.main_bread {
+  font-size: 14px;      
+  font-weight: 500;
+  color: var(--gray);   
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;  
+  text-transform: capitalize; 
+  transition: color 0.3s ease;
 }
+
+
+.main_bread:hover {
+  color: var(--main);
+}
+
+
+
+/* Main Title */
+.breadContent {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
 .headDesc {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-.headDesc p{
-  margin: 0;
+
+.headContent {
+  font-size: 1.1rem;
+  font-weight: 400;
+  width: 70vw;
+  color: var(--gray);
+  line-height: 1.6; /* Better readability */
 }
-.headImg{
+
+.headImg {
   width: 100%;
   height: 60vh;
   object-fit: cover;
   border-radius: 16px;
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 600px) {
-  .startHead{
-    gap: 2em;
+  .startHead {
+    gap: 1em;
   }
   
-  .heading {
-    font-size: 1.5em; /* ~30% of 5em */
-  }
- 
-  .breadContent {
-    font-size: 2.1rem; /* ~30% reduction from 3rem */
-  }
-
-  .headContent {
-    width: 100%; /* 70vw → full width */
-    font-size: 1rem; /* ~30% smaller */
+  /* Breadcrumbs on mobile */
+  .headSection {
+    gap: 0.3rem; /* Tighter gap for small screens */
   }
 
   .main_bread {
-    font-size: 0.75rem;
+    font-size: 0.8rem; /* Smaller font to fit more */
+  }
+
+  .heading {
+    font-size: 1.8em; 
+  }
+ 
+  .breadContent {
+    font-size: 2rem;
+  }
+
+  .headContent {
+    width: 100%; 
+    font-size: 0.95rem; 
   }
 
   .subTitle {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
-  .headDesc{
+
+  .headDesc {
     gap: 1em;
   }
+
   .headImg {
-    height: 30vh; /* reduced from 60vh */
+    height: 30vh; 
   }
 }
