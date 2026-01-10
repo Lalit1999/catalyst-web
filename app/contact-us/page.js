@@ -1,9 +1,9 @@
 'use client'
 import styles from './page.module.css';
-import { NewCard,NewFormCard} from '@c/index';
 import { clinicalServicesData } from '@data';
 import { useState } from 'react';
 import {Title,ContactForm} from '@comps';
+import NewCard from './newcard';
 
 
 const contactfaq=clinicalServicesData['patient-recruitment'].faqList;
