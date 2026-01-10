@@ -1,10 +1,95 @@
 'use client'
 import styles from './page.module.css';
+import { clinicalServicesData } from '@data';
+import { useState } from 'react';
+import {Title,ContactForm} from '@comps';
+import NewCard from './newcard';
+
+
+const contactfaq=clinicalServicesData['patient-recruitment'].faqList;
+
+
 
 export default function ContactUs() {
+
+      const [openIndex, setOpenIndex] = useState(null);
+
+      const toggleFAQ = (idx) => {
+  setOpenIndex(openIndex === idx ? null : idx);
+};
+
+const heading='Contact Us '
+
+
   return (
+
+
     <main className={styles.main}>
-      This is contact us page
-    </main>
+
+{/* HEADER SECTION  */}
+     
+    <Title 
+    heading="Contact Us"
+    description="We'd love to hear from you. Reach out to our team anytime."
+    />
+
+ {/* FORM SECTION  */}
+
+ <div className={styles.contactWrapper}>
+  <div className={styles.leftSection}>
+    <NewCard/>
+  </div>
+
+  <div className={styles.rightSection}>
+    <ContactForm/>
+  </div>
+</div>
+
+
+
+<div className={styles.faqBlock}>
+  <div className={styles.faqBlockHead}>
+    <h2>Frequently Asked Questions</h2>
+    <p className={styles.subText}>
+      Common questions about our services.
+    </p>
+  </div>
+
+  <div className={styles.faqList}>
+    {contactfaq?.map((faq, idx) => {
+      const isOpen = openIndex === idx;
+
+      return (
+        <div key={idx} className={styles.faqItem}>
+          <button
+            className={styles.faqSummary}
+            onClick={() => toggleFAQ(idx)}
+            aria-expanded={isOpen}
+          >
+            <span className={styles.faqQuestion}>{faq.question}</span>
+            <span className={styles.faqIcon}>
+              {isOpen ? "−" : "+"}
+            </span>
+          </button>
+
+          <div
+            className={`${styles.faqAnswer} ${
+              isOpen ? styles.open : ""
+            }`}
+          >
+            <div className={styles.faqAnswerInner}>
+              {faq.answer}
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+
+
+     
+     </main>
   );
 }
