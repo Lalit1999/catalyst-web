@@ -19,17 +19,19 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 5rem;
-  padding: 2rem 4rem;
-  box-sizing: border-box;
+  gap: 2rem;
+  padding: 1.5rem;
 }
+
+
 
 .card {
   height: 100%;
-  min-height: 70vh;
+  min-height: auto;
   width: 100%;
+  min-width: 0;
   border-radius: 0.5rem;
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border: 1px solid transparent;
   display: flex;
@@ -43,6 +45,8 @@
 .content {
   margin-top: 1rem;
   padding: 1.1rem;
+  
+  
 }
 
 .image {
@@ -52,20 +56,45 @@
   overflow: hidden;
 }
 
-.title {
-  color: #111827;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 600;
+.title{
+  font-size:1.3rem;
 }
 
 .detailsList {
-  margin-top: 0.75rem;
-  padding-left: 0;
   list-style: none;
+  padding: 0;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: flex-start;
   gap: 0.6rem;
+  line-height: 1.4;
+}
+
+.icon {
+  color: var(--main);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.detailText {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.9rem;
+   word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+
+}
+
+.detailText:hover {
+  color: var(--main);
 }
 
 
@@ -75,7 +104,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  color: #ffffff;
+  color: var(--white);
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 500;
@@ -95,28 +124,35 @@
   transform: translateX(4px);
 }
 
-/* Right form */
+/*  form */
 
 .leftSection {
-  transform: translateX(-1.5rem);
+  /* transform: translateX(-1.5rem); */
+  box-shadow: 2px 2px 5px var(--thodaBlack);
+  
+;
 }
 
 .rightSection {
-  transform: translateX(1.5rem);
+  padding:  3rem;
+  /* transform: translateX(1.5rem); */
+  box-shadow: 2px 2px 5px var(--thodaBlack);
+
 }
 
 
 @media (max-width: 1024px) {
   .contactWrapper {
     grid-template-columns: 1fr;
-    padding: 1.5rem;
-    gap: 2.5rem;   
   }
 
   .leftSection,
   .rightSection {
-    transform: none;
-    width: 100%;
+    /* transform: none; */
+    /* width: 100%; */
+     min-width: 0;
+     
+     
   }
 }
 
@@ -154,8 +190,10 @@
 }
 
 .contactForm {
-	padding: 2em 1.5em ;
-	min-width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 2em 1.5em;
+  box-sizing: border-box;
 }
 
 .blackBtn {
@@ -199,8 +237,7 @@
 	}
 
 	.contactForm {
-		padding: 2em 1.5em ;
-		min-width: 45vw;
+		width: 100%;
 	}
 }
 /* Mobile */
@@ -212,6 +249,9 @@
 
   .rightSection {
     padding: 1.2rem;
+  
+    
+    
   }
 }
 
@@ -322,7 +362,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--darkGray);
-  margin: 0 !important;
+  margin: 0;
 }
 
 .subText {
@@ -332,7 +372,7 @@
   line-height: 1.6;
   max-width: 900px;
   font-weight: 400;
-  margin: 0 !important;
+  margin: 0;
 }
 
 .expertiseGrid {
@@ -345,7 +385,7 @@
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--darkGray);
-  margin: 0 !important;
+  margin: 0 ;
 }
 
 .faqBlock{
@@ -361,7 +401,7 @@
 .faqBlockHead h2{
   font-size: 1.5rem;
   font-weight: 600;
-   margin: 0 !important;
+   margin: 0 ;
 }
 .faqList{
   display: flex;
@@ -399,12 +439,14 @@ margin-top: 0.8rem;
 }
 
 .faqQuestion {
+  padding-top: 1rem;
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 30px;
 }
 
 .faqIcon {
+  padding-top: 1rem;
   font-size: 1.8rem;
   line-height: 1;
 }
