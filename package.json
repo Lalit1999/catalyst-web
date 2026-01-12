@@ -9,6 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@table-library/react-table-library": "^4.1.15",
     "@tiptap/extension-color": "^2.11.5",
     "@tiptap/extension-list-item": "^2.11.5",
     "@tiptap/extension-text-style": "^2.11.5",

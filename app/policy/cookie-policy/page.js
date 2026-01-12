@@ -113,7 +113,7 @@ export default function Page() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel allServices={allServices} otherPageData={alltherapyData} />
+        <RightPanel  variants={['therapeutic', 'clinical', 'services']} />
       </div>
     </main>
   );
