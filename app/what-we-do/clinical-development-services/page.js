@@ -5,13 +5,11 @@ import { serviceDataObject, clinicalServicesData } from '@data'; // Ensure this 
 import styles from "./page.module.css";
 
 import {
-  BagIcon,
   CheckIcon,
   ClockCircle,
   StarCircle,
   User,
 } from "@icons";
-import Link from "next/link";
 import { RightPanel, Title } from "@comps";
 
 const DEFAULT_SERVICE_ID = 'clinical-development-service';
@@ -157,7 +155,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel allServices={allServices} variant="clinical" />
+        <RightPanel  variants={"clinical"} />
       </div>
     </main>
   );

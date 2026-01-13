@@ -9,6 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@table-library/react-table-library": "^4.1.15",
     "@tiptap/extension-color": "^2.11.5",
     "@tiptap/extension-list-item": "^2.11.5",
     "@tiptap/extension-text-style": "^2.11.5",
@@ -16,6 +17,7 @@
     "@tiptap/react": "^2.11.5",
     "@tiptap/starter-kit": "^2.11.5",
     "bootstrap": "^5.3.3",
+    "country-state-city": "^3.2.1",
     "crypto-js": "^4.2.0",
     "intl-tel-input": "^25.14.1",
     "next": "^16.0.7",

@@ -8,8 +8,10 @@ import {servicePageHeader} from './serviceData.js'
 import {quickLinks} from './serviceData.js'
 import { researchPageHeader,researchPaperData } from "./researchPaper.js";
 import { croPageHeader } from "./CROExperience.js";
+import { countryArr } from "./CountryArr.js";
 export {
   blogData,
+  countryArr,
   servicePageHeader,
   homePageData,
   quickLinks,

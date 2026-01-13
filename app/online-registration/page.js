@@ -6,7 +6,6 @@ import { BasicForm, Title } from '@comps';
 import { programsDetailsArr } from '@data';
 import { AppContext } from '@ac' ;
 import styles from './page.module.css';
-import program from '../training-programs/[id]/page';
 
 const genderOptions = ['Female', 'Male'];
 const countryOptions = ['India', 'United States', 'Singapore', 'United Arab Emirates'];
@@ -58,7 +57,7 @@ const RegistrationFormPage = () => {
 
     const selectedProgram = useMemo(() => {
         return programsDetailsArr?.[course]?.heading ;
-    }, [course, programOptions]);
+    }, [course]);
 
     const registrationFormData = [
         { type: 'custom', component: (
@@ -86,11 +85,22 @@ const RegistrationFormPage = () => {
                 { type: 'date', name: 'dob', label: 'Date of Birth', max: today, valid: { required: true }},
             ],
         },
-        { type: 'row', children: [
-                { type: 'tel', name: 'phone', label: 'Phone Number', ph: '90 0000 0000', valid: { required: true, pattern: phonePattern }},
-                { type: 'tel', name: 'whatsapp', label: 'WhatsApp Number', ph: '90 0000 0000', valid: { required: true, pattern: phonePattern }},
-            ],
-        },
+        
+       { type: 'row', children: [
+            { 
+                type: 'phone',
+                name: 'phone', 
+                label: 'Phone Number', 
+                valid: { required: 'Phone Number is required' }
+            },
+            { 
+                type: 'phone', 
+                name: 'whatsapp', 
+                label: 'WhatsApp Number', 
+                valid: { required: 'WhatsApp Number is required' }
+            },
+        ],
+    },
         { type: 'custom', component: (
                 <SectionHeading
                     title="3. Address Details"
@@ -101,15 +111,38 @@ const RegistrationFormPage = () => {
         { type: 'text', name: 'addressLine1', label: 'Address Line 1', valid: { required: true, minLength: 5 } },
         { type: 'text', name: 'addressLine2', label: 'Address Line 2', descr: 'Optional' },
         { type: 'row', children: [
-                { type: 'dropdown', name: 'country', label: 'Country', options: countryOptions, valid: { required: true } },
-                { type: 'dropdown', name: 'state', label: 'State', options: stateOptions, valid: { required: true } },
-            ],
-        },
+            { 
+                type: 'country', 
+                name: 'country', 
+                label: 'Country', 
+                valid: { required: 'Country is required' } 
+            },
+            { 
+                type: 'state',   
+                name: 'state', 
+                label: 'State', 
+                valid: { required: 'State is required' } 
+            },
+        ],
+    },
         { type: 'row', children: [
-                { type: 'dropdown', name: 'city', label: 'City', options: cityOptions, valid: { required: true } },
-                { type: 'number', name: 'pincode', label: 'Pincode', valid: { required: true, min: 100000 } },
-            ],
-        },
+            { 
+                type: 'city',
+                name: 'city', 
+                label: 'City', 
+                valid: { required: 'City is required' } 
+            },
+            { 
+                type: 'number', 
+                name: 'pincode', 
+                label: 'Pincode / Zip Code', 
+                valid: { 
+                    required: 'Pincode is required',
+                    minLength: { value: 4, message: 'Too short' } 
+                } 
+            },
+        ],
+    },
         { type: 'custom', component: (
                 <SectionHeading
                     title="4. Academic Details"
@@ -144,10 +177,10 @@ const RegistrationFormPage = () => {
 
     const handleSubmit = (values) => {
         console.log('Registration form submitted', values);
+        console.log('Course from Context:', course);
+        console.log('Selected Program:', selectedProgram);
     };
 
-    console.log('Selected Program:', selectedProgram);
-    console.log('Course from Context:', course);
 
     return (
         <div  className={styles.registrationMainPage}>            
