@@ -3,29 +3,30 @@
 import { Fragment } from 'react' ;
 import { useForm } from 'react-hook-form';
 
-// import AvatarInput from './inputs/AvatarInput.js' ;
-import NumberInput from './inputs/NumberInput.js' ;
-import DateInput from './inputs/DateInput.js' ;
-import PdfInput from './inputs/PdfInput.js' ;
-import Range from './inputs/Range.js' ;
-import DropDown from './inputs/DropDown.js' ;
-import Color from './inputs/Color.js' ;
-import Checkbox from './inputs/Checkbox.js' ;
-import Text from './inputs/Text.js' ;
-import TextArea from './inputs/TextArea.js' ;
-import Btn from './inputs/Btn.js' ;
-import Submit from './inputs/Submit.js' ;
-import TagInput from './inputs/TagInput.js' ;
 import ArrayInput from './inputs/ArrayInput.js';
+// import AvatarInput from './inputs/AvatarInput.js';
+import Btn from './inputs/Btn.js';
+import Checkbox from './inputs/Checkbox.js';
+import CitySelect from './inputs/CitySelect.js';
+import Color from './inputs/Color.js';
+import CountrySelect from './inputs/CountrySelect.js';
+import DateInput from './inputs/DateInput.js';
+import DPInput from './inputs/DPInput.js';
+import DropDown from './inputs/DropDown.js';
+import ImageInput from './inputs/ImageInput.js';
+import IntlPhoneInput from './inputs/IntlInput.js';
+import NumberInput from './inputs/NumberInput.js';
 import ObjectInput from './inputs/ObjectInput.js';
+import PdfInput from './inputs/PdfInput.js';
+import Range from './inputs/Range.js';
+import SearchInput from './inputs/SearchInput.js';
+import StateSelect from './inputs/StateSelect.js';
+import Submit from './inputs/Submit.js';
+import TagInput from './inputs/TagInput.js';
+import Text from './inputs/Text.js';
+import TextArea from './inputs/TextArea.js';
 
-// Require External libraries
-import SearchInput from './inputs/SearchInput.js' ;
-import DPInput from './inputs/DPInput.js' ;
-import ImageInput from './inputs/ImageInput.js' ;
-
-import styles from './form.module.css' ;
-
+import styles from './form.module.css';
 const defaultFn = data => {
 	//eslint-disable-next-line
 	console.log(data) ;
@@ -69,7 +70,10 @@ const BasicForm = ({data, onFormSubmit=defaultFn, styleOR='', reset, defaultObj 
 				tags 		: <TagInput {...compObj2} />, 
 				array 		: <ArrayInput {...compObj2} />,
 				object 		: <ObjectInput {...compObj2}/>,
-				
+				phone       : <IntlPhoneInput {...compObj2} />,
+				city    : <CitySelect {...compObj2} />,
+				country : <CountrySelect {...compObj2} />,
+                state   : <StateSelect {...compObj2} />,
 				/* external libs */
 				search 		: <SearchInput {...compObj2} />,
 				dp 			: <DPInput {...compObj2} />,

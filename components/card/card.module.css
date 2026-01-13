@@ -1,3 +1,5 @@
+/* --- EXISTING STYLES (Unchanged) --- */
+
 .courseCard {
   display: flex;
   gap: 1em;
@@ -5,6 +7,8 @@
   border: 1px solid var(--medGray);
   border-radius: 1.5rem;
   padding: 1em;
+  background-color: #fff;
+  box-sizing: border-box; 
 }
 
 .courseCardImageCon {
@@ -12,11 +16,12 @@
   flex-basis: 45%;
   position: relative;
   overflow: hidden;
+  border-radius: 1.5rem; /* Moved radius here to crop image properly */
 }
 
 .courseCardImageCon img {
   width: 100%;
-  height: auto;
+  height: 100%; /* Changed to 100% to fill container */
   object-fit: cover;
   border-radius: 1.5rem;
 }
@@ -26,17 +31,20 @@
   flex-direction: column;
   gap: 1em;
   flex-basis: 50%;
+  justify-content: center; /* Vertically center content */
 }
 
 .cardHead p {
   font-size: 1rem;
   color: var(--second);
   font-weight: 600;
+  margin: 0; /* Reset default margins */
 }
 
 .cardIconCon {
   display: flex;
   gap: 1em;
+  flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
 }
 
 .cardIcon {
@@ -48,13 +56,14 @@
 .cardIcon svg {
   width: 20px;
   height: 20px;
-  color : var(--medGray)
+  color : var(--medGray);
 }
 
 .cardIcon p {
   font-size: .8rem;
   color: var(--medGray);
   font-weight: 500;
+  margin: 0;
 }
 
 .cardIconBar {
@@ -66,6 +75,7 @@
 .cardText p {
   font-size: .8rem;
   color: var(--medGray);
+  margin: 0;
   
   display: -webkit-box ;
   -webkit-line-clamp: 3;
@@ -77,39 +87,86 @@
 .cardBtnCon {
   display: flex;
   gap: 1em;
+  margin-top: auto; 
 }
 
-.cardBtnFirst {
+.cardBtnFirst, .cardBtnSecond {
   padding: .5em 1em;
   border: 1px solid var(--main);
   border-radius: 8px;
-  background-color: var(--main);
-  color: var(--white);
   font-size: .8rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ;
+  flex: 1; 
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cardBtnFirst {
+  background-color: var(--main);
+  color: var(--white);
 }
 
 .cardBtnFirst:hover {
   background-color: var(--white);
   color: var(--main);
-
 }
 
 .cardBtnSecond {
-  padding: .5em 1em;
-  border: 1px solid var(--main);
-  border-radius: 8px;
   background-color: var(--white);
   color: var(--main);
-  font-size: .8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ;
 }
 
 .cardBtnSecond:hover {
   background-color: var(--main);
   color: var(--white);
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+@media screen and (max-width: 1024px) {
+  .courseCard {
+    width: 100%; 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .courseCard {
+    flex-direction: column; 
+    height: auto;
+    padding: 0.75em;
+  }
+
+  .courseCardImageCon {
+    flex-basis: auto;
+    width: 100%;
+    height: 200px; 
+  }
+
+  .courseCardDetailsCon {
+    flex-basis: auto;
+    width: 100%;
+    gap: 0.75em;
+  }
+  
+  .cardIconCon {
+    gap: 0.5em; 
+  }
+
+  .cardIconBar {
+    display: none; 
+  }
+
+  .cardBtnCon {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cardBtnCon {
+    flex-direction: column;
+    gap: 0.5em;
+  }
 }
