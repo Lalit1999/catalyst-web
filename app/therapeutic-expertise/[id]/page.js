@@ -167,7 +167,7 @@ export default function TherapyDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel allServices={alltherapyData} variant="therapeutic"  />
+        <RightPanel  variants="therapeutic"  />
       </div>
     </main>
   );

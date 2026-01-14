@@ -3,7 +3,7 @@ import { Person, Principal, ActivityLine, Prog, StarLine, Doc } from "@icons";
 const programsDetailsArr = {
     'professional-diploma-in-clinical-research-pdcr': {
         id: 'professional-diploma-in-clinical-research-pdcr',
-        heading: "Professional Diploma in Clinical Research (PDCR)",
+        heading: "Professional Diploma in <br />Clinical Research (PDCR)",
         subHeading: "India's Largest Clinical Research Training Program",
         description: [
             "The Professional Diploma in Clinical Research (PDCR) is India's largest and widely recognized clinical research training program, designed to cultivate high-calibre professionals for the pharmaceutical, biotechnology, and healthcare research sectors.",
@@ -127,7 +127,7 @@ const programsDetailsArr = {
     },
     'professional-certificate-in-pharmacovigilance-pcpv': {
         id: 'professional-certificate-in-pharmacovigilance-pcpv',
-        heading: "Professional Certificate in Pharmacovigilance (PCPV)",
+        heading: "Professional Certificate in <br />Pharmacovigilance (PCPV)",
         subHeading: "Enhancing Drug Safety Through Skilled Professionals",
         description: [
             "The Professional Certificate in Pharmacovigilance (PCPV) is an industry-aligned drug safety training program that equips learners with essential skills in pharmacovigilance, case processing, signal detection, and global safety regulations. This comprehensive certification prepares professionals for growing career opportunities across pharmaceutical companies, CROs, and medical institutions.",
@@ -257,7 +257,7 @@ const programsDetailsArr = {
     },
     'advanced-certificate-program-in-scientific-writing-sw': {
         id: 'advanced-certificate-program-in-scientific-writing-sw',
-        heading: "Advanced Certificate Program in Scientific Writing (SW)",
+        heading: "Advanced Certificate Program in <br />Scientific Writing (SW)",
         subHeading: "Master the Art of Evidence-Based Scientific Communication",
         description: [
             "The Advanced Certificate Program in Scientific Writing is a comprehensive, competency-building training program designed to prepare participants for specialized roles in scientific and medical writing within the biopharmaceutical, healthcare, and clinical research industries. This program focuses on developing the core skills required to interpret scientific data, understand study designs, and prepare clear, accurate, and regulatory-compliant scientific documents.",
@@ -387,7 +387,7 @@ const programsDetailsArr = {
     },
     'advanced-certificate-program-in-project-management-pm': {
         id: 'advanced-certificate-program-in-project-management-pm',
-        heading: "Advanced Certificate Program in Project Management (PM)",
+        heading: "Advanced Certificate Program in <br />Project Management (PM)",
         subHeading: "From Planning to Delivery: Master Clinical Trial Project Management",
         description: [
             "The Advanced Certificate Program in Project Management (PM) is a structured, competency-building course designed to equip participants with the core skills, practical knowledge, and operational insight required for specialized clinical trial project management roles. The program is tailored for professionals seeking to develop end-to-end expertise in planning, execution, coordination, and oversight of clinical research projects.",
@@ -510,7 +510,7 @@ const programsDetailsArr = {
     },
     'advanced-certificate-program-in-clinical-trial-monitoring-ctm': {
         id: 'advanced-certificate-program-in-clinical-trial-monitoring-ctm',
-        heading: "Advanced Certificate Program in Clinical Trial Monitoring (CTM)",
+        heading: "Advanced Certificate Program in <br />Clinical Trial Monitoring (CTM)",
         subHeading: "Step into the Role of a Confident Clinical Trial Monitor",
         description: [
             "The Advanced Certificate Program in Clinical Trial Monitoring is a focused, competency-driven training designed to develop specialized expertise in the oversight and monitoring of clinical trials. The program equips participants with the practical knowledge, regulatory understanding, and hands-on skills required to perform the role of a Clinical Research Associate (CRA) or clinical trial monitor with confidence and accuracy.",

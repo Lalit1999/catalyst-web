@@ -9,7 +9,7 @@ import { pragramBanner, course, cardImage } from "@images";
 import { Card } from '@comps' ;
 import { AppContext } from '@ac' ;
 import { programsDetailsArr } from '@data' ;
-import { Call2, Whatsapp, Tick, Clock, Menu, Person, Website, Principal, Facebook, Twitter, Instagram, Li, Quote, Arrow } from "@icons";
+import { Call2, Whatsapp, Tick, Clock, Menu, Person, Website, Principal /*, Facebook, Twitter, Instagram, Li*/, Quote, Arrow } from "@icons";
 import styles from './page.module.css';
 
 const programsArr = [
@@ -82,24 +82,24 @@ const testimonialsArr = [
     }
 ] ;
 
-const socialArr = [
-    {
-        icon: <Facebook />,
-        link: 'https://facebook.com'
-    },
-    {
-        icon: <Twitter />,
-        link: 'https://x.com'
-    },
-    {
-        icon: <Instagram />,
-        link: 'https://instagram.com'
-    },
-    {
-        icon: <Li />,
-        link: 'https://linkedin.com'
-    }
-] ;
+// const socialArr = [
+//     {
+//         icon: <Facebook />,
+//         link: 'https://facebook.com'
+//     },
+//     {
+//         icon: <Twitter />,
+//         link: 'https://x.com'
+//     },
+//     {
+//         icon: <Instagram />,
+//         link: 'https://instagram.com'
+//     },
+//     {
+//         icon: <Li />,
+//         link: 'https://linkedin.com'
+//     }
+// ] ;
 
 const HomeSlider = ({ heading, id }) => {
     const { setCourse } = useContext(AppContext);
@@ -110,7 +110,7 @@ const HomeSlider = ({ heading, id }) => {
             <div className={styles.homeSliderMain}>
                 <div className={styles.homeSliderLeft}>
                     <div className={styles.sliderLeftText}>
-                        <p>{heading}</p>
+                        <p dangerouslySetInnerHTML={{ __html: heading }}></p>
                     </div>
                     <div className={styles.sliderLeftBtnCon}>
                         <Link href="/online-registration" onClick={()=>setCourse(id)} className={styles.homeSliderButton1}>Register Now</Link>
@@ -345,15 +345,17 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate, 
         <div className={styles.detailsRight}>
             <div className={styles.priceBox}>
                 <p className={styles.moneyBoxHead}>Program Fee</p>
-                <div className={styles.moneyBox}>
-                    <p className={styles.headPrice}>Indian Participants</p>
-                    <p className={styles.offerPrice}>₹{inr}</p>
-                    {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹{inr}</p> */}
-                </div>
-                <div className={styles.moneyBox}>
-                    <p className={styles.headPrice}>Foreign Nationals</p>
-                    <p className={styles.offerPrice}>${usd}</p>
-                    {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p> */}
+                <div className={styles.moneyBoxCon}>
+                    <div className={styles.moneyBox}>
+                        <p className={styles.headPrice}>Indian Participants</p>
+                        <p className={styles.offerPrice}><span>₹</span>{inr}</p>
+                        {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>₹9000</span>₹{inr}</p> */}
+                    </div>
+                    <div className={styles.moneyBox}>
+                        <p className={styles.headPrice}>Foreign Participants</p>
+                        <p className={styles.offerPrice}><span>$</span>{usd}</p>
+                        {/* <p className={styles.offerPrice}><span className={styles.cutPrice}>$100</span>${usd}</p> */}
+                    </div>
                 </div>
             </div>
             <div className={styles.registerBtnCon} onClick={()=>setCourse(id)}>
@@ -385,7 +387,7 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate, 
                 </div>
             </div>
             <div className={styles.shareCon}>
-                <div className={styles.shareIconsCon}>
+                {/* <div className={styles.shareIconsCon}>
                     {
                         socialArr.map((one,i) => {
                             return (
@@ -396,7 +398,7 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate, 
                         })
                     }
                 </div>
-                <div className={styles.borderLine}/>
+                <div className={styles.borderLine}/> */}
                 <div className={styles.contactCon}>
                     <p className={styles.contactText}>Contact for more details of the course</p>
                     <button className={styles.contactBtn}><Call2 />&nbsp; Call Us +91-9818356273</button>

@@ -1,5 +1,5 @@
 import myarth from '@p/logo-black.webp' ;
-import logo from '@p/logo.png' ; 
+import logo from '@p/logo.jpg' ; 
 import def from '@p/default.webp' ;
 
 import blogBannerImage from '@p/blogImage1.png' ;

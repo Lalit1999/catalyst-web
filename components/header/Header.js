@@ -35,7 +35,7 @@ const headerData = [
 		{	text: 'Overview',							link: '/therapeutic-expertise'		}, 
 		{	text: 'Robotic Assisted Surgery',			link: '/therapeutic-expertise/robotic-assisted-surgery'		}, 
 		{	text: 'Oncology',							link: '/therapeutic-expertise/oncology'		}, 
-		{	text: 'RWE Scientific Expertise',			link: '/therapeutic-expertise/rwe-scientific-expertise'		}, 
+		{	text: 'RWE',								link: '/therapeutic-expertise/rwe'		}, 
 		{	text: 'Endocrinology',						link: '/therapeutic-expertise/endocrinology'	},
 		{ 	text: 'Cardiology',  						link: '/therapeutic-expertise/cardiology'		},
 		{ 	text: 'Vaccines',  							link: '/therapeutic-expertise/vaccines'		},
@@ -136,7 +136,7 @@ const HeaderDropdown = ({text, children: dropdownItems}) => {
 
 	const scheduleClose = () => {
 		cancelClose();
-		closeTimerRef.current = setTimeout(() => setOpen(false), 500);
+		closeTimerRef.current = setTimeout(() => setOpen(false), 100);
 	};
 
 	useEffect(() => () => cancelClose(), []);

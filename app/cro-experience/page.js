@@ -50,9 +50,6 @@ const defaultApproach = [
 const defaultPrimaryCare = "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.";
 
 export default function CROExperiencePage() {
-
-  const allServices = Object.values(serviceDataObject);
-  const alltherapyData = Object.values(therapeuticExpertiseData);
   return (
     <main className={styles.main}>
       <Title 
@@ -124,7 +121,7 @@ export default function CROExperiencePage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel allServices={allServices} otherPageData={alltherapyData} />
+        <RightPanel  variants={['therapeutic', 'clinical', 'services']} />
       </div>
     </main>
   );

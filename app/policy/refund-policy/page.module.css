@@ -127,29 +127,6 @@
   font-weight: 400;
   margin: 0 !important;
 }
-.privacyhead {
-display: flex;
-flex-direction: column;
-gap: 1rem;
-}
-.policyList{
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  
-}
-.policyList ul {
-  padding-left: 0;      /* removes default left space */
-  margin-left: 0;
-}
-
-.policyList li {
-  list-style-position: inside; /* brings bullet to left */
-  padding-left: 0;             /* remove extra indent */
-}
-.space{
-  margin: 0 0.2em;
-}
 
 
 

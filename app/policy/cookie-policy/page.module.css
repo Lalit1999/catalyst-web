@@ -127,6 +127,8 @@
   font-weight: 400;
   margin: 0 !important;
 }
+
+
 .privacyhead {
 display: flex;
 flex-direction: column;
@@ -151,5 +153,11 @@ gap: 1rem;
   margin: 0 0.2em;
 }
 
-
+.headpara{
+  font-size: 1rem;
+  line-height: 25px;
+  color: var(--gray);
+  font-weight: 600;
+  margin: 0 !important;
+}
 

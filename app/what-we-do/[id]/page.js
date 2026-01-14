@@ -167,7 +167,7 @@ export default function ServiceDetailPage() {
         </div>
 
         {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel allServices={allServices} />
+        <RightPanel variants={'services'} />
       </div>
     </main>
   );
