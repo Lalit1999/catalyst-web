@@ -5,7 +5,7 @@
 	align-items: center ;
 	fill: var(--dark) ;
 	user-select: none ;
-	/* border-bottom: 1px solid var(--lightGray) ; */
+	border-bottom: 1px solid var(--lightGray) ;
 }
 
 .headerRight {
@@ -203,7 +203,7 @@
 		border: 1px solid var(--lightGray) ;
 		border-radius: 5px;
 		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-		min-width: 200px;
+		min-width: 220px;
 		gap: 5px ;
 		z-index: 10;
 		padding-bottom: .5em ;
@@ -213,19 +213,19 @@
 		display: flex ;
 		gap: 10px ;
 		align-items: center ;
-		padding: 5px 10px ;
 		margin: 0 ;
 		text-align: left ;
-		font-size: .8rem ;
+		font-size: .9rem ;
 		color: var(--gray) ;
 		transition: all 0.2s;
 		cursor: pointer;
 	}
-
+	
 	.dropdownLink, .dropdownLabel {
 		flex: 1 ;
 		text-decoration: none ;
 		color: inherit ;
+		padding: 8px 16px ;
 	}
 
 	.hasNested {

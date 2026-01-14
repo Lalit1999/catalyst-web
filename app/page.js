@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { ArrowLong, Tick } from "@icons";
 import { homePageData } from "@data";
-import { ResearchCard } from "@comps";
+import { ResearchCard, CountUp } from "@comps";
 
 import styles from "./page.module.css";
 
@@ -90,11 +90,9 @@ const SectionThree = () => {
                 </p>
               );
             })}
-            <Link
-              href={homePageData.sectionThree.box2.buttonLink || "#"}
-              className={styles.sectionThreeButton}
-            >
-              Read More
+            <Link href={homePageData.sectionThree.box2.buttonLink || "#"} className={styles.sectionThreeButton}>
+              <span>Read More</span>
+              <ArrowLong />
             </Link>
           </div>
           <div className={styles.sectionDark}>
@@ -108,11 +106,9 @@ const SectionThree = () => {
                 </p>
               );
             })}
-            <Link
-              href={homePageData.sectionThree.box2.buttonLink || "#"}
-              className={styles.sectionThreeButton2}
-            >
-              Read More
+            <Link href={homePageData.sectionThree.box2.buttonLink || "#"} className={styles.sectionThreeButton2} >
+              <span>Read More</span>
+              <ArrowLong />
             </Link>
           </div>
         </div>
@@ -182,7 +178,7 @@ const StatsSection = () => {
       {homePageData.statsArr.map(({ number, text1, text2 }) => {
         return (
           <div className={styles.statsBox} key={number}>
-            <p className={styles.statsNumber}>{number}</p>
+            <p className={styles.statsNumber}><CountUp value={number} />+</p>
             <p className={styles.statsText1}>{text1}</p>
             <p className={styles.statsText}>{text2}</p>
           </div>

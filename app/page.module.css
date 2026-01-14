@@ -259,10 +259,13 @@
 }
 
 .sectionThreeButton {
+	display: flex;
+	gap: 1em ;
+	align-items: center;
 	background-color: var(--white);
 	border: 1px solid var(--white) ;
 	padding: .5em 1em ;
-	border-radius: .5rem;
+	border-bottom-right-radius: .5rem;
 	font-size: .9rem ;
 	font-weight: 500 ;
 	color: var(--third2) ;
@@ -270,21 +273,47 @@
 	align-self: flex-start ;
 }
 
+.sectionThreeButton svg {
+	width: 14px ;
+	height: 14px ;
+	color: var(--third2) ;
+	transition: all .3s ;
+}
+
+.sectionThreeButton:hover svg{
+	color: var(--white) ;
+}
+
+
 .sectionThreeButton:hover {
 	color: var(--white) ;
 	background-color: var(--third2);
 }
 
 .sectionThreeButton2 {
+	display: flex;
+	gap: 1em ;
+	align-items: center;
 	background-color: var(--white);
 	border: 1px solid var(--white) ;
 	padding: .5em 1em ;
-	border-radius: .5rem;
+	border-bottom-right-radius: .5rem;
 	font-size: .9rem ;
 	font-weight: 500 ;
 	color: var(--second) ;
 	transition: all .3s ;
 	align-self: flex-start ;
+}
+
+.sectionThreeButton2 svg {
+	width: 14px ;
+	height: 14px ;
+	color: var(--second) ;
+	transition: all .3s ;
+}
+
+.sectionThreeButton2:hover svg{
+	color: var(--white) ;
 }
 
 .sectionThreeButton2:hover {
@@ -429,7 +458,7 @@
 	display: flex;
   	position: relative;
   	width: 40vw;
-	height: 50vw;
+	height: 40vw;
  	overflow: hidden;
 	object-fit: cover;
 	object-position: center;
@@ -467,7 +496,7 @@
 .statsNumber {
 	font-size: 2.5rem ;
 	font-weight: 600 ;
-	align-self: center;
+	/* align-self: center; */
 	color: var(--main) ;
 	line-height: 2.7rem ;
 }
@@ -476,15 +505,16 @@
 	font-size: 1.5rem ;
 	font-weight: 600 ;
 	color: var(--main) ;
-	align-self: center;
+	/* align-self: center; */
 	line-height: 1.8rem ;
 }
 
 .statsText {
 	color: var(--second) ;
+	margin-top: 1em !important;
 	font-size: .8rem ;
-	text-align: center;
-	align-self: center;
+	/* text-align: center; */
+	/* align-self: center; */
 	flex:1 ;
 }
 

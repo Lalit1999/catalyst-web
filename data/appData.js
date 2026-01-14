@@ -70,12 +70,12 @@ const homePageData = {
         ],
         box1: {
             head: 'Enabling Impactful Clinical Development',
-            text: 'through integrated trial solutions, deep therapeutic insight, and evidence-driven outcomes.',
+            text: 'Through integrated trial solutions, deep therapeutic insight, and evidence-driven outcomes.',
             icon: <Bullet />,
         },
         box2: {
             head: 'Accelerating Better Healthcare',
-            text: 'by enabling smarter studies, stronger data, and faster pathways from discovery to delivery.',
+            text: 'By enabling smarter studies, stronger data, and faster pathways from discovery to delivery.',
             icon: <Bullet />,
         },
         buttonText: 'Know More About Us',
@@ -88,22 +88,22 @@ const homePageData = {
     },
     statsArr: [
         {
-            number: '15,000+',
+            number: 15000,
             text1 : 'Patients',
             text2: 'engaged across clinical and RWE studies',
         },
         {
-            number: '10,000+',
+            number: 10000,
             text1 : 'Cases',
-            text2: 'generating evidence across robotic and other surgical techniques',
+            text2: 'generating evidence across robotic and other techniques',
         },
         {
-            number: '3,000+',
+            number: 3000,
             text1 : 'Cases',
             text2: 'driving precision oncology insight',
         },
         {
-            number: '100+',
+            number: 100,
             text1 : 'Publications',
             text2: 'across leading peer-reviewed Journals',
         }
@@ -131,12 +131,12 @@ const homePageData = {
                 image: exp2
             },
             {
-                title: 'RWE Scientific Expertise',
+                title: 'RWE',
                 descr: [
-                    `We possess deep, cross-therapeutic expertise in the conceptualization, design, and execution of real-world evidence (RWE) studies, supporting evidence generation across the entire research continuum.`,
-                    `Our experience encompasses prospective and retrospective study designs, including sponsor-initiated and investigator-initiated research, enabling the generation of evidence tailored to diverse scientific, regulatory, and market-access objectives.`,
+                    `We bring deep, cross-therapeutic expertise to the conceptualization, design, and execution of Real-World Evidence (RWE) studies - transforming real-world data into meaningful insights. `,
+                    `Across the entire research continuum, we support robust evidence generation through both prospective and retrospective study designs, including sponsor-initiated and investigator-initiated research. Our approach delivers tailored evidence that meets scientific rigor while supporting regulatory decisions and market-access success.`,
                 ],
-                link: '/therapeutic-expertise/rwe-scientific-expertise',
+                link: '/therapeutic-expertise/rwe',
                 image: exp3
             }
         ]

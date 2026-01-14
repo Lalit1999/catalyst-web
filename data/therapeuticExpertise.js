@@ -159,9 +159,9 @@ export const therapeuticExpertiseData = {
     ],
   },
 
-  "rwe-scientific-expertise": {
-    id: "rwe-scientific-expertise",
-    heading: "RWE Scientific Expertise",
+  "rwe": {
+    id: "rwe",
+    heading: "RWE",
     subHeading: "We help patients regain independence in daily activities by improving motor skills, coordination, and functional abilities tailored to individual needs.",
     img: Pharmacology,
     imgicon: P1,
