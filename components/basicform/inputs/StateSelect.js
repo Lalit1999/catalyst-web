@@ -4,7 +4,7 @@ import { Controller } from 'react-hook-form';
 import { State } from 'country-state-city';
 import styles from '../form.module.css';
 
-const StateSelect = ({ name, label, control, valid, errors, watch, setValue }) => {
+const StateSelect = ({ name, label, control, valid, errors, watch }) => {
     
     // 1. Watch the 'country' field value
     const selectedCountry = watch('country');
@@ -15,11 +15,10 @@ const StateSelect = ({ name, label, control, valid, errors, watch, setValue }) =
         return State.getStatesOfCountry(selectedCountry);
     }, [selectedCountry]);
 
-    useEffect(() => {
-
-        if (selectedCountry) {
-        }
-    }, [selectedCountry]);
+    // useEffect(() => {
+    //     if (selectedCountry) {
+    //     }
+    // }, [selectedCountry]);
 
     return (
         <div className={styles.inputWrapper}>

@@ -83,7 +83,7 @@
 .iconBadge {
   width: 60px;
   height: 60px;
-  background-color: var(--black);
+  background-color: var(--moderate);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   display: inline-block;
-  color: var(--black);
+  color: var(--second);
   transition: all ease 0.4s;
 }
 
@@ -128,7 +128,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   overflow: hidden;
-  color: var(--gray);
+  color: var(--medGray);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;

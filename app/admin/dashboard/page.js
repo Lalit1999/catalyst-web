@@ -41,11 +41,6 @@ export default function AdminDashboard() {
     setIsLoading(false);
   }, []);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    localStorage.setItem("adminLoggedIn", "true");
-    setIsAuthenticated(true);
-  };
 
   const handleLogout = () => {
     localStorage.removeItem("adminLoggedIn");

@@ -30,7 +30,6 @@ export default function ServiceDetailPage() {
     return notFound();
   }
 
-  const allServices = Object.values(serviceDataObject);
 
   // use like ( icons[value] || <DefaultIcon /> )
   // const icons = {

@@ -3,21 +3,9 @@ import React from "react";
 import styles from "./page.module.css";
 import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
-// Import Data and QuickLinks
-import {
-  serviceDataObject,
-  croPageHeader,
-  therapeuticExpertiseData,
-} from "@data";
-
-// Import Icons
-import { CheckIcon, ClockCircle, StarCircle, User } from "@icons";
-import Link from "next/link";
 
 export default function CROExperiencePage() {
-  const allServices = Object.values(serviceDataObject);
-  const alltherapyData = Object.values(therapeuticExpertiseData);
-  const description = "";
+
   return (
     <main className={styles.main}>
       <Title

@@ -13,7 +13,7 @@ export const researchPaperData = [
     id: "ai-medical-diagnosis",
     heading: "AI-Based Early Diagnosis of Cardiovascular Diseases",
     description:
-      "This paper explores machine learning models for early detection of cardiovascular diseases using patient vitals, ECG signals, and clinical data.",
+      "Surgical Outcomes of Open, Laparoscopic, and Robotic-Assisted Approaches for Stage I Endometrial Cancer: Insights From a Real-World Study by the Indian Gynecologic-Onco Study Group",
     image: Cardiomyopathy,
     link: "https://example.com/ai-medical-diagnosis.pdf",
   },
@@ -21,7 +21,7 @@ export const researchPaperData = [
     id: "neuro-rehab",
     heading: "Advancements in Neurological Rehabilitation Techniques",
     description:
-      "A systematic review of modern neuro-rehabilitation methods focusing on stroke recovery, neural plasticity, and assistive technologies.",
+      "Short‑term clinical outcomes of open, laparoscopic,and robotic‑assisted rectal resections: a multicenter real‑world evidence study from Indian collaborative group on rectal resections (ICGRR)",
     image: Neurology,
     link: "https://example.com/ai-medical-diagnosis.pdf",
   },
@@ -29,7 +29,7 @@ export const researchPaperData = [
     id: "ortho-implants",
     heading: "Biomechanical Analysis of Modern Orthopedic Implants",
     description:
-      "An analytical study on the durability, material science, and biomechanical performance of next-generation orthopedic implants.",
+      "Perioperative, Functional, and Oncological Outcomes of Robotic-Assisted Partial Nephrectomy in 1,267 Indian Patients: A Multicenter Analysis by the Indian Robotic Partial Nephrectomy (IRPN) Collaborative Group",
     image: Orthopedics,
     link: "https://example.com/ai-medical-diagnosis.pdf",
   },
@@ -37,7 +37,7 @@ export const researchPaperData = [
     id: "hematology-therapy",
     heading: "Targeted Therapy Approaches in Hematological Disorders",
     description:
-      "This research evaluates personalized treatment strategies in hematological diseases using genetic and molecular profiling.",
+      "A Real-World Experience of the Short-Term Clinical Outcomes of Laparoscopic and Robotic-Assisted Ventral Hernia Repairs",
     image: Hematology,
     link: "https://example.com/ai-medical-diagnosis.pdf",
   },
@@ -45,7 +45,7 @@ export const researchPaperData = [
     id: "drug-delivery",
     heading: "Nanotechnology in Controlled Drug Delivery Systems",
     description:
-      "An in-depth exploration of nanoparticle-based drug delivery mechanisms and their impact on treatment efficiency.",
+      "Perioperative and functional outcomes following robot‑assisted partial nephrectomy: Descriptive analysis of Indian study group on partial nephrectomy database ",
     image: Pharmacology,
     link: "https://example.com/ai-medical-diagnosis.pdf",
   },
@@ -53,7 +53,7 @@ export const researchPaperData = [
     id: "oral-health-study",
     heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
     description:
-      "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
+      "Long-Term 5-Year Response to Pembrolizumab, Bevacizumab, and Capecitabine Regimen in a Metastatic Colon Cancer Patient with MSI-High and KRAS Mutation: Case Report.",
     image: DentalClinic,
     link: "https://example.com/ai-medical-diagnosis.pdf",
   },
