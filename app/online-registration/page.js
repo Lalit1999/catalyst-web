@@ -172,10 +172,10 @@ const RegistrationFormPage = () => {
         { type: 'submit', text: 'Submit Registration', style: styles.submitBtn },
     ];
 
-    const handleSubmit = () => {
-        // console.log('Registration form submitted', values);
-        // console.log('Course from Context:', course);
-        // console.log('Selected Program:', selectedProgram);
+    const handleSubmit = (values) => {
+        console.log('Registration form submitted', values);
+        console.log('Course from Context:', course);
+        console.log('Selected Program:', selectedProgram);
     };
 
 

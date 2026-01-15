@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import styles from "./page.module.css";
 
 export default function AdminLogin() {
   const router = useRouter();
@@ -18,8 +19,6 @@ export default function AdminLogin() {
 
     if (email === adminEmail && password === adminPassword) {
       localStorage.setItem("adminLoggedIn", "true");
-
-      alert("Successfully logged in");
       router.push("/admin/dashboard");
     } else {
       setError("Invalid email or password");
@@ -27,11 +26,12 @@ export default function AdminLogin() {
   };
 
   return (
-    <div style={styles.container}>
-      <form onSubmit={handleLogin} style={styles.form}>
-        <h2>Admin Login</h2>
+    <div className={styles.main}>
+      <div className={styles.container}>
+      <form onSubmit={handleLogin} className={styles.form}>
+        <h2 className={styles.heading}>Admin Login</h2>
 
-        {error && <p style={styles.error}>{error}</p>}
+        {error && <p className={styles.error}>{error}</p>}
 
         <input
           type="email"
@@ -52,24 +52,6 @@ export default function AdminLogin() {
         <button type="submit">Login</button>
       </form>
     </div>
+    </div>
   );
 }
-
-const styles = {
-  container: {
-    height: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  form: {
-    width: "320px",
-    display: "flex",
-    flexDirection: "column",
-    gap: "1rem",
-  },
-  error: {
-    color: "red",
-    fontSize: "14px",
-  },
-};
