@@ -15,7 +15,7 @@ const poppins = Poppins({
 
 export const metadata = {
     title: "Catalyst Clinical Services",
-    description: "Web App created by Myarth Tech ( https://myarth.in )",
+    description: "Web app for Catalyst Clinical Services Pvt. Ltd.",
 };
 
 export default function RootLayout({ children }) {

@@ -52,6 +52,7 @@ module.exports = {
 				pathname: '/myarth-lts/**',
 			},
 		],
+		qualities: [70, 75, 100]
 	},
 	turbopack: {
 		rules: {
