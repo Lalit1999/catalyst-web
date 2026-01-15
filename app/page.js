@@ -293,10 +293,6 @@ const Home = () => {
       <ExpertiseSection />
       <PubSection />
       <ResultsSection />
-      {/* 
-		<PortfolioSection />
-		<BlogSection /> */}
-      {/* <FramesSection /> */}
     </div>
   );
 };

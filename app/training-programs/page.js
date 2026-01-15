@@ -3,15 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  pragramBanner,
-  awards,
-  placementLogos,
-  event1,
-  event2,
-  event3,
-  cardImage,
-} from "@images";
+import { pragramBanner, awards, placementLogos, event1, event2, event3, cardImage } from "@images";
 import { ArrowLong, Clock, Location } from "@icons";
 import { Card } from "@comps";
 
@@ -105,17 +97,6 @@ const awardsArr = [
   },
 ];
 
-// const placementsArr = [
-//     { logo: dummyLogo },
-//     { logo: dummyLogo },
-//     { logo: dummyLogo },
-//     { logo: dummyLogo },
-//     { logo: dummyLogo },
-//     { logo: dummyLogo },
-//     { logo: dummyLogo },
-//     { logo: dummyLogo },
-// ]
-
 const eventsCardArr = [
   {
     title: "The Future of Medical Science and Healthcare Solutions",
@@ -182,79 +163,6 @@ const CoursesComp = () => {
     </div>
   );
 };
-
-// const SectionFour = () => {
-// 	return (
-// 		<div className={styles.sectionFourMain}>
-//             <div className={styles.sectionFourMainFirst}>
-//                 <div className={styles.fourFirst}>
-//                     <p className={styles.fourSubHeading}>Our Story</p>
-//                     <div className={styles.fourHeadingCon}>
-//                         <p className={styles.fourHeading}>We Have the best and Expert Faculties</p>
-//                         <p className={styles.fourDescr}>Est ante in nibh mauris cursus mattis molestie a. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Tellus rutrum tellus pellentesque eu tincidunt tortor.</p>
-//                     </div>
-//                     <div className={styles.fourInfoCon}>
-//                         <div className={styles.fourInfoBox}>
-//                             <div className={styles.fourInfoIcon}>
-//                                 <School />
-//                             </div>
-//                             <div className={styles.fourInfoTextCon}>
-//                                 <p className={styles.fourInfoTextHead}>Lab Technicians</p>
-//                                 <p className={styles.fourInfoText}>Est ante in nibh mauris cursus mattis molestie a.</p>
-//                             </div>
-//                         </div>
-//                         <div className={styles.fourInfoBox}>
-//                             <div className={styles.fourInfoIcon}>
-//                                 <School />
-//                             </div>
-//                             <div className={styles.fourInfoTextCon}>
-//                                 <p className={styles.fourInfoTextHead}>Research Center</p>
-//                                 <p className={styles.fourInfoText}>Est ante in nibh mauris cursus mattis molestie a.</p>
-//                             </div>
-//                         </div>
-//                     </div>
-//                     <button className={styles.fourButton}>Know More About Us</button>
-//                 </div>
-//                 <div className={styles.fourSecond}>
-//                     <div className={styles.fourImageCon}>
-//                         <Image src={programs} alt="programs" />
-//                     </div>
-//                     <div className={styles.fourImageCon}>
-//                         <Image src={about3} alt="about-3" />
-//                     </div>
-//                 </div>
-//             </div>
-//             <div className={styles.sectionFourMainSecond}>
-//                 <div className={styles.fourStatBox}>
-//                     <div className={styles.statsCircleCon} style={{ "--percent": 90 }}>
-//                         <div className={styles.statsCircle}><p>90%</p></div>
-//                     </div>
-//                     <div className={styles.statsTextCon}>
-//                         <p>of novel drugs approved by the US Food and Drug Administration (FDA) including:</p>
-//                         <ul className={styles.statsTextList}>
-//                             <li><span>96%</span> of oncology drugs</li>
-//                             <li><span>89%</span> of central nervous system drugs</li>
-//                             <li><span>92%</span> of general medicine drugs</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//                 <div className={styles.fourStatBox}>
-//                     <div className={styles.statsCircleCon} style={{ "--percent": 70 }}>
-//                         <div className={styles.statsCircle}><p>70%</p></div>
-//                     </div>
-//                     <div className={styles.statsTextCon}>
-//                         <p>of novel products granted marketing authorization by the European Medicines Agency (EMA)</p>
-//                         <ul className={styles.statsTextList}>
-//                             <li><span>93%</span> of oncology drugs</li>
-//                             <li><span>83%</span> of central nervous system drugs</li>
-//                             <li><span>89%</span> of general medicine drugs</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </div>
-// 		</div>
-// 	) ;
-// }
 
 const Awards = () => {
   return (
