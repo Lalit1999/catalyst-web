@@ -18,6 +18,7 @@ import ProgressBar from './progressbar/ProgressBar.js' ;
 import ReportJob from './popup/pops/ReportJob.js' ;
 import ResearchCard from './card/ResearchCard.js';
 import RightPanel from './rightPanel/page.js' ;
+import ServiceCard from './card/ServiceCard.js';
 import SignIn from './popup/pops/SignIn.js' ;
 import SignUp from './popup/pops/SignUp.js' ;
 import Slider from './slider/Slider.js' ;
@@ -25,4 +26,4 @@ import Text from './formelements/Text.js' ;
 import Title from './title/Title.js' ;
 import ToolTip from './toolTip/ToolTip.js' ;
 
-export { AnimProgBar, BasicForm, Card, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, ResearchCard, RightPanel, SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip } ;
+export { AnimProgBar, BasicForm, Card, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, ResearchCard, RightPanel, ServiceCard,SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip } ;
