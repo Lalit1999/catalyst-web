@@ -30,7 +30,6 @@ export default function ServiceDetailPage() {
     return notFound();
   }
 
-  const allServices = Object.values(clinicalServicesData);
 
   return (
     <main className={styles.main}>

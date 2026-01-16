@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { notFound, useParams } from "next/navigation";
-import { serviceDataObject, clinicalServicesData } from '@data'; // Ensure this matches your export name
+import { serviceDataObject} from '@data'; // Ensure this matches your export name
 import styles from "./page.module.css";
 
 import {
@@ -27,7 +27,6 @@ export default function ServiceDetailPage() {
     return notFound();
   }
 
-  const allServices = Object.values(clinicalServicesData);
 
   return (
     <main className={styles.main}>

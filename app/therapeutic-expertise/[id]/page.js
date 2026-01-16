@@ -33,8 +33,6 @@ export default function TherapyDetailPage() {
     return notFound();
   }
 
-  const alltherapyData = Object.values(therapeuticExpertiseData);
-
   return (
     <main className={styles.main}>
       

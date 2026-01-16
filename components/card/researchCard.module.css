@@ -12,11 +12,11 @@
   flex-basis: 45%;
   position: relative;
   overflow: hidden;
+  width: auto;
+    height: 35vh;
 }
 
-.courseCardImageCon img {
-  width: 100%;
-  height: auto;
+.courseCardImageConimg {
   object-fit: cover;
   border-radius: 1.5rem;
 }
@@ -74,27 +74,42 @@
 
 }
 
+
 @media (max-width: 600px) {
   .courseCard {
-    gap: 1em;
+    display: flex;
+    flex-direction: column; 
     width: 100%;
-    padding: .5em;
+    height: auto;
+    gap: 1em;
+    padding: 1rem;
   }
 
   .courseCardImageCon {
-    flex-basis: 50%;
+    width: 100%; 
+    height: 200px; 
+    flex-basis: auto; 
     flex-shrink: 0;
   }
 
+  .courseCardDetailsCon {
+    flex-basis: auto; 
+    width: 100%;
+    gap: 0.8em; 
+  }
+
+  
   .cardHead p {
-    font-size: .9rem;
+    font-size: 1rem; 
+    -webkit-line-clamp: 2; 
   }
 
   .cardText p {
-    font-size: .7rem;
+    font-size: 0.85rem;
   }
 
   .cardBtnFirst {
-    font-size: .7rem;
+    width: 100%; 
+    text-align: center;
   }
 }

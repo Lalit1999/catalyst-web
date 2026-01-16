@@ -8,9 +8,6 @@ import { AppContext } from '@ac' ;
 import styles from './page.module.css';
 
 const genderOptions = ['Female', 'Male'];
-const countryOptions = ['India', 'United States', 'Singapore', 'United Arab Emirates'];
-const stateOptions = ['Delhi', 'Maharashtra', 'Karnataka', 'Tamil Nadu', 'New York', 'California', 'Texas'];
-const cityOptions = ['New Delhi', 'Mumbai', 'Bengaluru', 'Chennai', 'Hyderabad', 'New York City', 'San Francisco'];
 const participantCategoryOptions = ['Indian Participant', 'Foreign Nationals'];
 const qualificationOptions = [
     'High School / Diploma',
@@ -21,7 +18,7 @@ const qualificationOptions = [
 ];
 const divisionOptions = ['Distinction', 'First Division', 'Second Division', 'Third Division'];
 const yesNoOptions = ['Yes', 'No'];
-const phonePattern = /^[0-9+\-\s]{7,15}$/;
+
 const today = new Date().toISOString().split('T')[0];
 
 const SectionHeading = ({ title, subtitle }) => (

@@ -37,7 +37,7 @@ import Hematology from '@p/services/Hematology.png';
 import Neurology from '@p/services/Neurology.png';
 import Orthopedics from '@p/services/Orthopedics.png';
 import Pharmacology from '@p/services/Pharmacology.png';
-
+import serviceImg from '@p/newServiceImage.png'
 // services icon
 import d1 from '@p/services/d1.png';
 import c1 from '@p/services/c1.png';
@@ -80,6 +80,7 @@ export {
   Neurology,
   Orthopedics,
   Pharmacology,
+  serviceImg,
   contact,
   logo,
   homeBanner,

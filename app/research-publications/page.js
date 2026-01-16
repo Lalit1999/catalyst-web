@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import { researchPageHeader, researchPaperData } from "@data";
-import { Title, Card } from "@comps";
+import { Title, Card, ResearchCard } from "@comps";
 
 export default function Research() {
   return (
@@ -18,7 +18,7 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-              return <Card key={i} {...one} />;
+              return <ResearchCard key={i} {...one} />;
             })}
           </div>
         </div>
@@ -28,7 +28,7 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-              return <Card key={i} {...one} />;
+              return <ResearchCard key={i} {...one} />;
             })}
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-              return <Card key={i} {...one} />;
+              return <ResearchCard key={i} {...one} />;
             })}
           </div>
         </div>

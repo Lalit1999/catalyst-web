@@ -25,7 +25,7 @@ const CountrySelect = ({ name, label, control, valid, errors }) => {
                         <option value="">Select Country</option>
                         {countries.map((country) => (
                             <option key={country.isoCode} value={country.isoCode}>
-                                {country.flag} {country.name}
+                                {country.name} {country.flag} 
                             </option>
                         ))}
                     </select>
