@@ -1,7 +1,10 @@
 "use client";
 import styles from "./page.module.css";
 import { researchPageHeader, researchPaperData } from "@data";
+import { researchimages,researchpdf } from "../../data/researchpaperimagespdf";
 import { Title, Card } from "@comps";
+import { images } from "../../next.config";
+import { id } from "intl-tel-input/i18n";
 
 export default function Research() {
   return (
@@ -18,7 +21,13 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-              return <Card key={i} {...one} />;
+             return(
+                <Card
+                key={one.id}
+                image={researchimages[i]}
+                pdfs={researchpdf[i]}
+                />
+              )
             })}
           </div>
         </div>
@@ -28,8 +37,13 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-              return <Card key={i} {...one} />;
-            })}
+             return(
+                <Card
+                key={one.id}
+                image={researchimages[i]}
+                pdfs={researchpdf[i]}
+                />
+              ) })}
           </div>
         </div>
         <div className={styles.paper}>
@@ -38,7 +52,13 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-              return <Card key={i} {...one} />;
+             return(
+                <Card
+                key={one.id}
+                image={researchimages[i]}
+                pdfs={researchpdf[i]}
+                />
+              )
             })}
           </div>
         </div>

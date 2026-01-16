@@ -1,4 +1,4 @@
-import {images,pdfs} from "./researchpaperimagespdf";
+
 import { about1 } from "@images";
 import {
   DentalClinic,
@@ -12,164 +12,144 @@ import {
 
 export const researchPaperData = [
   {
-    id: "ai-medical-diagnosis",
-    heading: "AI-Based Early Diagnosis of Cardiovascular Diseases",
+    id: "1",
+    heading: "Surgical Outcomes of Open, Laparoscopic, and Robotic-Assisted Approach",
     description:
       "This paper explores machine learning models for early detection of cardiovascular diseases using patient vitals, ECG signals, and clinical data.",
-    image: images.img1,
-    link: pdfs.pdf1,
+   
   },
   {
-    id: "neuro-rehab",
-    heading: "Advancements in Neurological Rehabilitation Techniques",
+    id:  "2",
+    heading: "Short‑term clinical outcomes of open, laparoscopic,and robotic‑assiste",
     description:
       "A systematic review of modern neuro-rehabilitation methods focusing on stroke recovery, neural plasticity, and assistive technologies.",
-    image: images.img2,
-    link: pdfs.pdf2,
+   
   },
   {
-    id: "ortho-implants",
-    heading: "Biomechanical Analysis of Modern Orthopedic Implants",
+    id: '3',
+    heading: "Perioperative, Functional, and Oncological Outcomes of Robotic-Assiste",
     description:
       "An analytical study on the durability, material science, and biomechanical performance of next-generation orthopedic implants.",
-    image: images.img3,
-    link: pdfs.pdf3,
+   
   },
   {
-    id: "hematology-therapy",
-    heading: "Targeted Therapy Approaches in Hematological Disorders",
+    id: "4",
+    heading: "A Retrospective Study Comparing the Operative Outcomes of Extraperiton",
     description:
       "This research evaluates personalized treatment strategies in hematological diseases using genetic and molecular profiling.",
-    image: images.img4,
-    link: pdfs.pdf4,
+    
   },
   {
-    id: "drug-delivery",
-    heading: "Nanotechnology in Controlled Drug Delivery Systems",
+    id: '5'   ,
+    heading: " A Real-World Experience of the Short-Term Clinical Outcomes of Laparo",
     description:
       "An in-depth exploration of nanoparticle-based drug delivery mechanisms and their impact on treatment efficiency.",
-    image: images.img5,
-    link: pdfs.pdf5,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "6",
+    heading: "Perioperative and functional outcomes following robot‑assisted partial",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img6,
-    link: pdfs.pdf6,
+   
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "7",
+    heading: "Long-Term 5-Year Response to Pembrolizumab, Bevacizumab, and Capecitab",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img7,
-    link: pdfs.pdf7,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "8",
+    heading: "2/1 dose schedule of sunitinib is superior than the 4/2 regimen for th",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img8,
-    link: pdfs.pdf8,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "9",
+    heading: "Clinical Utility of a Digital Therapeutic Intervention in Indian Patie",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img9,
-    link: pdfs.pdf9,
+   
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "10",
+    heading: "Clinical Robotic Surgery Association (India Chapter) and Indian rectal",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img10,
-    link: pdfs.pdf10,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "11",
+    heading: "Clinical Characteristics and Outcome Trends of Adjuvant Anthracycline ",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img11,
-    link: pdfs.pdf11,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "12",
+    heading: "Adenoid cystic carcinoma of the prostate: an unusual subtype of prosta",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img12,
-    link: pdfs.pdf12,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "13",
+    heading: "Personalized Treatment Approach to Metastatic Castration-Resistant Pro",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img13,
-    link: pdfs.pdf13,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "14",
+    heading: "Incidence of ROS1-Rearranged Non-Small-Cell Lung Carcinoma in India an",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img14,
-    link: pdfs.pdf14,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "15",
+    heading: "Lifelong vegetarianism and breast cancer risk: a large multicentre cas",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img15,
-    link: pdfs.pdf15,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "16",
+    heading: "Efficacy and Safety of Mycobacterium indicus pranii as an adjunct ther",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img16,
-    link: pdfs.pdf16,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "17",
+    heading: "Clinical and epidemiological study of EGFR mutations and EML4-ALK fusi",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img17,
-    link: pdfs.pdf17,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "18",
+    heading: "Safety and immunogenicity of a live oral recombinant cholera vaccine V",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img18,
-    link: pdfs.pdf18,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "19",
+    heading: "Response assessment in solid tumours: a comparison of WHO, SWOG and RE",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img19,
-    link: pdfs.pdf19,
+    
   },
   {
-    id: "oral-health-study",
-    heading: "Long-Term Impact of Preventive Dental Care on Oral Health",
+    id: "20",
+    heading: "Prognostic Value of Epidermal Growth Factor Receptor i",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
-    image: images.img20,
-    link: pdfs.pdf20,
+    
   },
 ];
 

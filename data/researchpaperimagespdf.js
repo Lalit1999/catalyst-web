@@ -1,53 +1,56 @@
-const images = {
-  img1:  '/researchimage/p-1.jpg',
-  img2:  '/researchimage/p-2.jpg', 
-  img3:  '/researchimage/p-3.jpg',
-  img4:  '/researchimage/p-4.jpg',
-  img5:  '/researchimage/p-5.jpg',
-  img6:  '/researchimage/p-6.jpg',
-  img7:  '/researchimage/p-7.png',
-  img8:  '/researchimage/p-8.png',
-  img9:  '/researchimage/p-9.png',
-  img10: '/researchimage/p-10.png',
-  img11: '/researchimage/p-11.jpg',
-  img12: '/researchimage/p-12.jpg',
-  img13: '/researchimage/p-13.jpg',
-  img14: '/researchimage/p-14.jpg',
-  img15: '/researchimage/p-15.jpg',
-  img16: '/researchimage/p-16.jpg',
-  img17: '/researchimage/p-17.jpg',
-  img18: '/researchimage/p-18.jpg',
-  img19: '/researchimage/p-19.jpg',
-  img20: '/researchimage/p-20.jpg',
-};
+import img1 from '@p/researchimage/img1.jpg'
+import img2 from '@p/researchimage/img2.jpg'
+import img3 from '@p/researchimage/img3.jpg'
+import img4 from '@p/researchimage/img4.jpg'
+import img5 from '@p/researchimage/img5.jpg'
+import img6 from '@p/researchimage/img6.jpg'
+import img7 from '@p/researchimage/img7.png'
+import img8 from '@p/researchimage/img8.png'
+import img9 from '@p/researchimage/img9.png'
+import img10 from '@p/researchimage/img10.png'
+import img11 from '@p/researchimage/img11.jpg'
+import img12 from '@p/researchimage/img12.jpg'
+import img13 from '@p/researchimage/img13.jpg'
+import img14 from '@p/researchimage/img14.jpg'
+import img15 from '@p/researchimage/img15.jpg'
+import img16 from '@p/researchimage/img16.jpg'
+import img17 from '@p/researchimage/img17.jpg'
+import img18 from '@p/researchimage/img18.jpg'
+import img19 from '@p/researchimage/img19.jpg'
+import img20 from '@p/researchimage/img20.jpg'
 
-
-
-const pdfs = {
-  pdf1:  '/researchpdf/p1.pdf', 
-  pdf2:  '/researchpdf/p2.pdf',
-  pdf3:  '/researchpdf/p3.pdf',
-  pdf4:  '/researchpdf/p4.pdf',
-  pdf5:  '/researchpdf/p5.pdf',
-  pdf6:  '/researchpdf/p6.pdf',
-  pdf7:  '/researchpdf/p7.pdf',
-  pdf8:  '/researchpdf/p8.pdf',
-  pdf9:  '/researchpdf/p9.pdf',
-  pdf10: '/researchpdf/p10.pdf',
-  pdf11: '/researchpdf/p11.pdf',
-  pdf12: '/researchpdf/p12.pdf',
-  pdf13: '/researchpdf/p13.pdf',
-  pdf14: '/researchpdf/p14.pdf',
-  pdf15: '/researchpdf/p15.pdf',
-  pdf16: '/researchpdf/p16.pdf',
-  pdf17: '/researchpdf/p17.pdf',
-  pdf18: '/researchpdf/p18.pdf',
-  pdf19: '/researchpdf/p19.pdf',
-  pdf20: '/researchpdf/p20.pdf',
-};
+const researchimages=[img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19,img20]
 
 
 
 
+const researchpdf = [
+  '/researchpdf/pdf1.pdf',
+  '/researchpdf/pdf2.pdf',
+  '/researchpdf/pdf3.pdf',
+  '/researchpdf/pdf4.pdf',
+  '/researchpdf/pdf5.pdf',
+  '/researchpdf/pdf6.pdf',
+  '/researchpdf/pdf7.pdf',
+  '/researchpdf/pdf8.pdf',
+  '/researchpdf/pdf9.pdf',
+  '/researchpdf/pdf10.pdf',
+  '/researchpdf/pdf11.pdf',
+  '/researchpdf/pdf12.pdf',
+  '/researchpdf/pdf13.pdf',
+  '/researchpdf/pdf14.pdf',
+  '/researchpdf/pdf15.pdf',
+  '/researchpdf/pdf16.pdf',
+  '/researchpdf/pdf17.pdf',
+  '/researchpdf/pdf18.pdf',
+  '/researchpdf/pdf19.pdf',
+  '/researchpdf/pdf20.pdf',
+];
 
-export {images,pdfs}
+
+
+export  {researchpdf,researchimages};
+
+
+
+
