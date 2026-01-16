@@ -4,10 +4,8 @@ import Image from 'next/image' ;
 import Link from 'next/link' ;
 
 import { Twitter, Instagram, Facebook, Youtube, Email, Call2, History2, MapBold, Whatsapp, Linkedin, ArrowLong } from '@icons' ;
-import { /*myarth, */logo } from '@images' ;
+import { logo } from '@images' ;
 import styles from './downbar.module.css' ;
-// import { usePc } from '@utils';
-
 
 const pageData = {
 	email: 'info@catalystclinicalservices.com',
@@ -87,7 +85,7 @@ const Downbar = () => {
 			<div className={styles.downbar}>
 				<div className={styles.downbarMain}>
 					<div className={styles.dbLogo}>
-						<Image className={styles.downbarMainImage} src={logo} height={100} alt="brushroute-logo" quality={100} />
+						<Image className={styles.downbarMainImage} src={logo} height={100} alt="catalyst-logo" quality={100} />
 						<div className={styles.dbContentLeft}>
 							<div className={styles.dbText}>
 								<p>{descr}</p>
@@ -140,10 +138,6 @@ const Downbar = () => {
 				<div className={styles.dbCopyright}>
 					<p className={styles.downbarCrText}>
 						All Rights Reserved &copy;&nbsp;Copyright 2025&ensp;Catalyst Clinical Services Pvt. Ltd. 
-						{/* |&ensp;Website Design By&nbsp;&nbsp; */}
-						{/* <a href="https://myarth.in">
-							<Image  className={styles.downbarMyarth} src={myarth} height={pc?15:10} alt="myarth-logo" />
-						</a> */}
 					</p>
 				</div>
 			</div>
