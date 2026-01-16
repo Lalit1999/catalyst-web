@@ -58,6 +58,8 @@ import Round2 from '@p/About/round2.png';
 import Round3 from '@p/About/round3.png';
 import headIcon from '@p/About/headIcon.png';
 
+import radient from '@p/radiant-gradient.png' ;
+
 export {
   def,
   DentalClinic,
@@ -97,5 +99,6 @@ export {
   event2,
   event3,
   course,
-  placementLogos
+  placementLogos,
+  radient
 };
