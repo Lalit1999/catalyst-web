@@ -3,7 +3,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 
-import {therapeuticExpertiseData, therapeuticPageHeader} from "@data";
+import { therapeuticExpertiseData, therapeuticPageHeader } from "@data";
 import { ServiceCard, Title } from "@comps";
 
 export default function WhatWeDo() {
@@ -11,14 +11,25 @@ export default function WhatWeDo() {
 
   return (
     <main className={styles.main}>
-     <Title 
-        bread={therapeuticPageHeader.bread}  
-        heading={therapeuticPageHeader.heading} 
-        description={therapeuticPageHeader.description} 
-        image={therapeuticPageHeader.image} 
+      <Title
+        bread={therapeuticPageHeader.bread}
+        heading={therapeuticPageHeader.heading}
+        description={therapeuticPageHeader.description}
+        image={therapeuticPageHeader.image}
       />
-
-      <ServiceCard allServices={alltherapyData} path={'/therapeutic-expertise/'} />
+      <section className={styles.section}>
+        <div className={styles.container}>
+          {alltherapyData.map((service, i) => {
+            return (
+              <ServiceCard
+                key={i}
+                service={service}
+                path={"/therapeutic-expertise/"}
+              />
+            );
+          })}
+        </div>
+      </section>
     </main>
   );
 }
