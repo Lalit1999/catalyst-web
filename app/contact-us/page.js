@@ -6,12 +6,12 @@ import NewCard from "./newcard";
 
 const defaultFaqs = [
   {
-    question: "Can I know the doctors’ credentials?",
+    question: "Can I know the doctors' credentials?",
     answer:
       "Yes, absolutely. We provide full profiles, including board certifications and education.",
   },
   {
-    question: "If I’m taking a companion, when can he or she travel?",
+    question: "If I'm taking a companion, when can he or she travel?",
     answer:
       "Your companion can travel with you at any time. We assist with all arrangements.",
   },
