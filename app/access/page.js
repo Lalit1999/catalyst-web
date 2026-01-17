@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation"
 const AdminPage =()=>{
-return redirect('/admin/login')
+return redirect('/access/login')
 }
 export default AdminPage

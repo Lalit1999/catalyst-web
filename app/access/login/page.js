@@ -19,7 +19,7 @@ export default function AdminLogin() {
 
     if (email === adminEmail && password === adminPassword) {
       localStorage.setItem("adminLoggedIn", "true");
-      router.push("/admin/dashboard");
+      router.push("/access/dashboard");
     } else {
       setError("Invalid email or password");
     }
