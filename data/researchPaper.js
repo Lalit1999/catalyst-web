@@ -1,14 +1,5 @@
 
 import { about1 } from "@images";
-import {
-  DentalClinic,
-  Neurology,
-  Orthopedics,
-  Hematology,
-  Cardiomyopathy,
-  Pharmacology,
-} from "@images";
-
 
 export const researchPaperData = [
   {
@@ -20,7 +11,7 @@ export const researchPaperData = [
   },
   {
     id:  "2",
-    heading: "Short‑term clinical outcomes of open, laparoscopic,and robotic‑assiste",
+    heading: "Short-term clinical outcomes of open, laparoscopic,and robotic-assiste",
     description:
       "A systematic review of modern neuro-rehabilitation methods focusing on stroke recovery, neural plasticity, and assistive technologies.",
    
@@ -48,7 +39,7 @@ export const researchPaperData = [
   },
   {
     id: "6",
-    heading: "Perioperative and functional outcomes following robot‑assisted partial",
+    heading: "Perioperative and functional outcomes following robot-assisted partial",
     description:
       "A longitudinal study assessing preventive dental care practices and their role in reducing chronic oral diseases.",
    
