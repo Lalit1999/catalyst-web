@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import { researchPageHeader, researchPaperData } from "@data";
-import { Title, Card, ResearchCard } from "@comps";
+import { Title, ResearchCard } from "@comps";
 
 export default function Research() {
   return (
