@@ -3,12 +3,9 @@ import React from "react";
 import styles from "./page.module.css";
 import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
-// Import Data and QuickLinks
-import { serviceDataObject, therapeuticExpertiseData } from "@data";
+
 
 export default function Page() {
-  const allServices = Object.values(serviceDataObject);
-  const alltherapyData = Object.values(therapeuticExpertiseData);
   return (
     <main className={styles.main}>
       <Title

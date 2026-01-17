@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import { RightPanel, Title } from "@comps"; // Assuming this is your path
 
 // Import Data and QuickLinks
-import { serviceDataObject,  croPageHeader, therapeuticExpertiseData } from '@data';
+import {  croPageHeader } from '@data';
 
 // Import Icons
 import {

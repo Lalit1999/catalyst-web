@@ -1,10 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import { researchPageHeader, researchPaperData } from "@data";
-import { researchimages,researchpdf } from "../../data/researchpaperimagespdf";
-import { Title, Card } from "@comps";
-import { images } from "../../next.config";
-import { id } from "intl-tel-input/i18n";
+import { Title, Card, ResearchCard } from "@comps";
 
 export default function Research() {
   return (
@@ -21,13 +18,7 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-             return(
-                <Card
-                key={one.id}
-                image={researchimages[i]}
-                pdfs={researchpdf[i]}
-                />
-              )
+              return <ResearchCard key={i} {...one} />;
             })}
           </div>
         </div>
@@ -37,13 +28,8 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-             return(
-                <Card
-                key={one.id}
-                image={researchimages[i]}
-                pdfs={researchpdf[i]}
-                />
-              ) })}
+              return <ResearchCard key={i} {...one} />;
+            })}
           </div>
         </div>
         <div className={styles.paper}>
@@ -52,13 +38,7 @@ export default function Research() {
           </h1>
           <div className={styles.coursesTwo}>
             {researchPaperData.map((one, i) => {
-             return(
-                <Card
-                key={one.id}
-                image={researchimages[i]}
-                pdfs={researchpdf[i]}
-                />
-              )
+              return <ResearchCard key={i} {...one} />;
             })}
           </div>
         </div>

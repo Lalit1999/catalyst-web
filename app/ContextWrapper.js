@@ -5,7 +5,7 @@ import { useContext } from 'react' ;
 
 import { AppContext, AppContextProvider } from '@ac' ;
 import { Header, Downbar/*, Popup, SignIn, SignUp, ContactForm, ReportJob, CoinsPop*/ } from '@comps' ;
-import { usePathname } from 'next/navigation';
+
 
 // const Pop = () => {
 //     const { popOpen, setPopOpen, popContent } = useContext(AppContext) ;
@@ -43,7 +43,6 @@ const AppBody = ({isSpecial, children}) => {
 }
 
 const ContextWrapper = ({ children }) => {
-	const pathname = usePathname() ;
     // const isSpecial = pathname.startsWith('/dashboard') || pathname.startsWith('/org-dashboard'); 
 
     return (

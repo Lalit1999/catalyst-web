@@ -53,13 +53,17 @@
   border-radius: 16px;
   width: 100%;
 }
-.coursesTwo {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.coursesTwo > * {
+  width: 100%;
 }
+
+.coursesTwo {
+  display: grid;
+  grid-template-columns: repeat(3, 10fr);
+  gap: 2rem;
+  width: 100%;
+}
+
 .researchHead{
   display: flex;
   flex-direction: column;
@@ -87,5 +91,16 @@
   }
   .coursesTwo{
     gap: 1em;
+  }
+}
+@media (max-width: 900px) {
+  .coursesTwo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .coursesTwo {
+    grid-template-columns: 1fr;
   }
 }
