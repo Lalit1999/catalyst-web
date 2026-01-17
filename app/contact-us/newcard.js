@@ -52,7 +52,7 @@ const NewCard = () => {
         <ul className={styles.detailsList}>
           {contactData.map((items, idx) => (
             <li key={idx} className={styles.detailItem}>
-              <span className={styles.icon}> {items.icon}</span>
+                {items.icon}
               <a href={items.link} className={styles.detailText}>
                 {items.text}
               </a>

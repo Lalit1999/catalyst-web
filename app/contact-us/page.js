@@ -25,7 +25,6 @@ const defaultFaqs = [
   },
 ];
 
-const contactfaq = defaultFaqs;
 
 export default function ContactUs() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -64,7 +63,7 @@ export default function ContactUs() {
         </div>
 
         <div className={styles.faqList}>
-          {contactfaq?.map((faq, idx) => {
+          {defaultFaqs?.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
             return (
