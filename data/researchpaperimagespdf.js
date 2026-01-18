@@ -1,3 +1,5 @@
+import ResearchCard from '@c/card/ResearchCard'
+
 import img1 from '@p/researchimage/img1.jpg'
 import img2 from '@p/researchimage/img2.jpg'
 import img3 from '@p/researchimage/img3.jpg'
@@ -39,9 +41,22 @@ const researchpdf = [
   '/researchpdf/pdf15.pdf',
   '/researchpdf/pdf16.pdf',
   '/researchpdf/pdf17.pdf',
-  '/researchpdf/pdf18.pdf',
-  '/researchpdf/pdf19.pdf',
+  'https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099381',
+  'https://pubmed.ncbi.nlm.nih.gov/18316345/',
   '/researchpdf/pdf20.pdf',
 ];
+
+export const imgpdfrender =()=>{
+  
+  return researchimages.map((image,index)=>({
+    id:index,
+     image,
+    link:researchpdf[index] || '#'
+  }))
+  
+
+}
+
+
 
 export  {researchpdf,researchimages};
