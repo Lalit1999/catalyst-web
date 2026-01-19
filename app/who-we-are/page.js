@@ -45,8 +45,8 @@ const defaultCheckList = [
 
 
 const defaultApproach = [
-    "Our approach to CRO services is rooted in partnership. We don't just execute tasks; we align with your scientific and business objectives to navigate the complex pathway of drug development.",
-    "By integrating advanced technology with human expertise, we proactively identify risks before they become issues, ensuring your data remains robust and your timelines stay on track."
+    "Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence. ",
+    "Spanning the full clinical development continuum, from early-phase investigations to post-marketing evidence generation, our work integrates strategic oversight, regulatory compliance, and operational excellence. Through flexible engagement models, ranging from bespoke solutions to fully integrated services, we enable sponsors to optimize development pathways, manage complexity and risk, and advance therapeutic and technological innovations with confidence, precision, and integrity."
 ];
 const defaultPrimaryCare = "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.";
 

@@ -1,5 +1,5 @@
 import { radient, serviceImg } from "@images";
-import { Bullet } from "@icons"; // Using the bullet icon you mentioned
+import { Bullet, RadientSvgBg } from "@icons"; // Using the bullet icon you mentioned
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -40,7 +40,12 @@ const fullServicesList = [...servicesData, ...servicesData, ...servicesData];
 const HomeSlider = () => {
   return (
     <div className={styles.homeSlider}>
-      <Image src={radient} alt="Banner" />
+      <div className={styles.WrapperBg} >
+
+      <RadientSvgBg/>
+
+      </div>
+
       <div className={styles.homeSliderMain}>
         <h1 className={styles.homeSliderText}>Orthopedics</h1>
         <p className={styles.homeSliderDesc}>

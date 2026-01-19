@@ -15,7 +15,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     const auth = localStorage.getItem("adminLoggedIn");
-    if (auth !== "true") router.push("/admin/login");
+    if (auth !== "true") router.push("/access/login");
   }, [router]);
 
   const handleLogout = () => {

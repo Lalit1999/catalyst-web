@@ -47,6 +47,9 @@
   list-style: none;
   padding: 0 ;
   margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .menu li {
@@ -56,11 +59,13 @@
   transition: background 0.2s ease;
 }
 
-.menu li:hover,
-.active {
+.menu li:hover {
   background: var(--secondHalf);
 }
-
+.activePage{
+  color: var(--main) !important;
+  font-weight: 500;
+}
 /* =========================
    Table Header (Title + Search)
 ========================= */

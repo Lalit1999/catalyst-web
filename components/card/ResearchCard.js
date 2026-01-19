@@ -9,7 +9,7 @@ const ReaearchCard = ({ image, heading, description, link }) => {
     return (
         <div className={styles.courseCard}>
             <Link href={link ? link : ''} target="_blank" className={styles.courseCardImageCon}>
-                <Image fill src={image? image : ''} alt="Research Paper Cover" className={styles.courseCardImageConimg} />
+                {image && <Image fill src={image} alt="Research Paper Cover" className={styles.courseCardImageConimg} />}
             </Link>
             <div className={styles.courseCardDetailsCon}>
                 <Link href={link ? link : ''} target="_blank" className={styles.cardHead}>
