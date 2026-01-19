@@ -73,7 +73,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2em 0px; 
   max-width: 1200px;
-  margin: 80px auto;
+margin: 0 auto;
 }
 .serviceCard {
   padding: 20px 40px;
