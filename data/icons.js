@@ -77,7 +77,7 @@ import IconUmbrella from '../public/icons/IconUmbrella.svg';
 import Badge from '../public/icons/Badge.svg';
 import DoctorAbout from '../public/icons/DoctorAbout.svg';
 import Heart from '../public/icons/Heart.svg';
-
+import RadientSvgBg from '../public/icons/radient-gradient.svg'
 export {
   Arrow, ArrowLong, Badge, Bullet, DoctorAbout, Heart, UserCircle, CheckIcon,
   IconBookmark,
@@ -126,6 +126,7 @@ export {
   Minus,
   Person,
   Plus,
+  RadientSvgBg,
   Search,
   School,
   Twitter,

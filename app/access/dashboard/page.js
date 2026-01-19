@@ -15,12 +15,12 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     const auth = localStorage.getItem("adminLoggedIn");
-    if (auth !== "true") router.push("/admin/login");
+    if (auth !== "true") router.push("/access/login");
   }, [router]);
 
   const handleLogout = () => {
     localStorage.removeItem("adminLoggedIn");
-    router.push("/admin/login");
+    router.push("/access/login");
   };
 
   return (

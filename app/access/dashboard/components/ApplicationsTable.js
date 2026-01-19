@@ -142,7 +142,7 @@ export default function ApplicationsTable() {
   return (
     <>
       <div className={styles.tableHeader}>
-        <h1 className={styles.heading} >Admin Panel</h1>
+        <h1 className={styles.heading} >Dashboard</h1>
         <Input
           placeholder="Search by name or email..."
           className={styles.search}

@@ -85,6 +85,7 @@ gap: 3rem;
   flex-direction: column;
   gap: 3rem;
   min-width: 70%;
+  max-width: 70%;
 }
 
 .bodyImageContainer {
@@ -479,6 +480,7 @@ margin-top: 0.8rem;
   }
   .leftColumn{
     gap: 2em;
+    min-width: 100%;
   }
   /* DETAILS SECTION */
   .detailsContainer {
@@ -517,4 +519,9 @@ margin-top: 0.8rem;
   .sidebarList {
     margin: 0 1em; /* was 0 2rem */
   }
+}
+.leadershipSubheading{
+  font-weight: 600;
+  color: var(--medGray);
+  font-style: italic;
 }
