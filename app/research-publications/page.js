@@ -1,7 +1,9 @@
 "use client";
+
 import styles from "./page.module.css";
 import { researchPageHeader, researchPaperData } from "@data";
-import { Title, ResearchCard } from "@comps";
+import { Title, Card, ResearchCard } from "@comps";
+import { researchimages, researchpdf } from "@data";
 
 export default function Research() {
   return (
@@ -17,9 +19,14 @@ export default function Research() {
             robotic assisted surgery
           </h1>
           <div className={styles.coursesTwo}>
-            {researchPaperData.map((one, i) => {
-              return <ResearchCard key={i} {...one} />;
-            })}
+            {researchPaperData.map((one, index) => (
+              <ResearchCard
+                key={one.id}
+                image={researchimages[index]}
+                link={researchpdf[index]}
+                heading={one.heading}
+              />
+            ))}
           </div>
         </div>
         <div className={styles.paper}>
@@ -27,9 +34,14 @@ export default function Research() {
             oncology
           </h1>
           <div className={styles.coursesTwo}>
-            {researchPaperData.map((one, i) => {
-              return <ResearchCard key={i} {...one} />;
-            })}
+            {researchPaperData.map((one, index) => (
+              <ResearchCard
+                key={one.id}
+                image={researchimages[index]}
+                link={researchpdf[index]}
+                heading={one.heading}
+              />
+            ))}
           </div>
         </div>
         <div className={styles.paper}>
@@ -37,9 +49,14 @@ export default function Research() {
             other therapeutic areas
           </h1>
           <div className={styles.coursesTwo}>
-            {researchPaperData.map((one, i) => {
-              return <ResearchCard key={i} {...one} />;
-            })}
+            {researchPaperData.map((one, index) => (
+              <ResearchCard
+                key={one.id}
+                image={researchimages[index]}
+                link={researchpdf[index]}
+                heading={one.heading}
+              />
+            ))}
           </div>
         </div>
       </div>
