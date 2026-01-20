@@ -30,15 +30,12 @@
 }
 
 .cardHead p {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1vw, 1rem);
   color: var(--second);
   font-weight: 600;
-   display: -webkit-box ;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.4;
 }
+
 
 .cardText p {
   font-size: .8rem;
