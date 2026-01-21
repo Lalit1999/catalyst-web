@@ -1,5 +1,5 @@
-import { homeBanner, about1, about2, exp1, exp2, exp3, Cardiomyopathy, Neurology } from "@images";
-import { School, Bullet } from "@icons";
+import { homeBanner, about2, exp1, exp2, exp3 } from "@images";
+import { Clinical, Research, Therapy, Bullet } from "@icons";
 
 const homePageData = {
     homeSlider: {
@@ -13,23 +13,23 @@ const homePageData = {
         card: [
             {
                 title: 'Clinical Trials Solutions',
-                icon: <School />,
+                icon: <Clinical />,
                 descr: ['Excellence in clinical trials is never accidental, it is crafted. From study design to final submission, our teams bring seamless coordination, operational excellence, and real-time oversight. We ensure every trial runs with precision, helping you move from concept to clinical outcomes with confidence and speed.'],
                 btnText: 'See How We Partner',
                 link: '/what-we-do/clinical-development-services',
             },
             {
                 title: 'Therapeutic Expertise',
-                icon: <School />,
+                icon: <Therapy />,
                 descr: ['Our therapeutic strength comes from continuously evolving scientific understanding and close collaboration with subject-matter specialists. Every project is guided by experts who anticipate challenges, interpret data with precision, and tailor strategies that support smarter, faster clinical development across diverse disease areas.'],
                 btnText: 'Explore Our Therapeutic Expertise',
                 link: '/therapeutic-expertise',
             },
             {
                 title: 'Research Publications',
-                icon: <School />,
+                icon: <Research />,
                 descr: ['Our expert medical writers unlock deeper insights from your data. Powered by intelligent workflows, we accelerate evidence generation, enhance accuracy. Deliver high-impact manuscripts for publication in internationally recognized, peer-reviewed medical journals of repute.'],
-                btnText: 'See Our Peer-Reviewed Publications',
+                btnText: 'Our Peer-Reviewed Publications',
                 link: '/research-publications',
             }
         ]
@@ -62,12 +62,6 @@ const homePageData = {
         subTitle: 'Our Story',
         title: 'Your Trusted CRO Partner',
         descr: 'Catalyst was founded to redefine research standards through precision, integrity, and scientific excellence. We began with a conviction that clinical research must advance both science and humanity. ',
-        para: [
-            'We began with a conviction that clinical research must advance both science and humanity. ',
-            'Catalyst was founded to redefine research standards through precision, integrity, and scientific excellence. ',
-            'Today, we stand as a trusted CRO partner, enabling impactful clinical development through integrated trial solutions, deep therapeutic insight, and evidence-driven outcomes.',
-            'Our journey is guided by a singular vision - to accelerate better healthcare by enabling smarter studies, stronger data, and faster pathways from discovery to delivery.',
-        ],
         box1: {
             head: 'Enabling Impactful Clinical Development',
             text: 'Through integrated trial solutions, deep therapeutic insight, and evidence-driven outcomes.',
@@ -80,11 +74,7 @@ const homePageData = {
         },
         buttonText: 'Know More About Us',
         buttonLink: '/who-we-are',
-        imageArr: [
-            about1,
-            about2,
-        ],
-
+        image: about2,
     },
     statsArr: [
         {
@@ -115,8 +105,7 @@ const homePageData = {
             {
                 title: 'Robotic-Assisted Surgery',
                 descr: [
-                    'Our expertise in robotic-assisted surgery enables sponsors to advance next-generation surgical solutions with confidence. We support the entire clinical development pathway - from protocol design and feasibility assessment to multi-centre trial execution and post-market evidence generation.',
-                    'With deep understanding of robotic systems, performance metrics, and real-world surgical workflows, we help deliver high-quality data on precision, safety, and patient recovery outcomes. Our robust operational frameworks ensure faster study timelines and accelerated adoption of minimally invasive technologies. '
+                    'We are one of the largest players in robotic-assisted surgery research, supporting sponsors across the entire clinical development lifecycle - from protocol design and feasibility assessment to multi-centre trial execution and post-market evidence generation. With deep technical expertise in robotic systems, surgical performance metrics, and real-world operating workflows, we deliver high-quality, regulator-ready data that demonstrate precision, safety, and meaningful patient recovery outcomes.',
                 ],
                 link: '/therapeutic-expertise/robotic-assisted-surgery',
                 image: exp1
@@ -124,8 +113,7 @@ const homePageData = {
             {
                 title: 'Oncology',
                 descr: [
-                    'In oncology research, we combine scientific depth with operational excellence to manage some of the most complex and time-sensitive clinical trials. Our capabilities span solid tumours and haematological malignancies, immuno-oncology, precision medicine, and novel targeted therapies.',
-                    'Through strong investigator networks, biomarker-driven approaches, and patient-centric study designs, we help sponsors generate high-impact clinical evidence while navigating regulatory complexities. Our focus remains on accelerating breakthroughs that improve survival, quality of life, and global access to advanced cancer therapies.',
+                    'In oncology research, we deliver complex, time-sensitive clinical trials across solid tumours, haematological malignancies, immuno-oncology, precision medicine, and targeted therapies. Through strong investigator networks, biomarker-driven strategies, and patient-centric designs, we generate high-impact clinical evidence while navigating regulatory complexity - accelerating breakthroughs that improve survival, quality of life, and access to advanced cancer therapies.',
                 ],
                 link: '/therapeutic-expertise/oncology',
                 image: exp2
@@ -133,8 +121,7 @@ const homePageData = {
             {
                 title: 'RWE',
                 descr: [
-                    `We bring deep, cross-therapeutic expertise to the conceptualization, design, and execution of Real-World Evidence (RWE) studies - transforming real-world data into meaningful insights. `,
-                    `Across the entire research continuum, we support robust evidence generation through both prospective and retrospective study designs, including sponsor-initiated and investigator-initiated research. Our approach delivers tailored evidence that meets scientific rigor while supporting regulatory decisions and market-access success.`,
+                    `We bring deep, cross-therapeutic expertise to the conceptualization, design, and execution of Real-World Evidence (RWE) studies - transforming real-world data into meaningful insights. Across the entire research continuum, we support robust evidence generation through both prospective and retrospective study designs, including sponsor-initiated and investigator-initiated research. Our approach delivers tailored evidence that meets scientific rigor while supporting regulatory decisions and market-access success.`,
                 ],
                 link: '/therapeutic-expertise/rwe',
                 image: exp3
@@ -144,37 +131,16 @@ const homePageData = {
     publications: {
         subTitle: 'Latest Publications',
         title: 'Most Influential Publications',
-        descr: 'Our most influential work reflects the science that has defined our journey and strengthened our role as a trusted partner in clinical research. These studies have reshaped understanding and advanced innovation across complex therapeutic areas.',
-        buttonText: 'View All',
-        buttonLink: '/',
-        pubArr : [
-            {
-                id: "ai-medical-diagnosis",
-                heading: "AI-Based Early Diagnosis of Cardiovascular Diseases",
-                description:
-                "This paper explores machine learning models for early detection of cardiovascular diseases using patient vitals, ECG signals, and clinical data.",
-                image: Cardiomyopathy,
-                link: "https://example.com/ai-medical-diagnosis.pdf",
-            },
-            {
-                id: "neuro-rehab",
-                heading: "Advancements in Neurological Rehabilitation Techniques",
-                description:
-                "A systematic review of modern neuro-rehabilitation methods focusing on stroke recovery, neural plasticity, and assistive technologies.",
-                image: Neurology,
-                link: "https://example.com/ai-medical-diagnosis.pdf",
-            },
-        ]
+        descr: 'Some publications are not just evidence - they are breakthroughs. Our most influential work reflects studies that reshaped understanding, informed clinical decision-making, and advanced innovation across complex therapeutic areas.',
     },
     results: {
-        subTitle: 'Client Satisfaction is Our Top Goal',
         title: 'Advancing Therapies, Accelerating Impact.',
-        descr: 'Clinical research is most impactful when it reflects real-world patients. Our protocols prioritize inclusive recruitment and outcomes that are relevant across diverse populations and regions.',
+        descr: 'Clinical research delivers its greatest value when it reflects the people it is meant to serve. We at Catalyst lead with :',
         resultPointsArr: [
-            'Expertise in advanced medical technologies, including robotic-assisted surgery',
-            'Strong experience across complex therapeutic areas such as oncology',
-            'Balanced, patient-centric approach to study design and execution',
-            'Integration of innovation and compassion to accelerate patient access to therapies',
+            'Patient-centric study design ensuring relevance across diverse populations',
+            'Inclusive recruitment strategies that strengthen the validity and generalizability of clinical outcomes',
+            'Deep expertise in advanced medical technologies, and complex therapeutic areas',
+            'Balanced integration of scientific rigor and innovation to accelerate reliable delivery of transformative therapies',
         ]
     }
 };

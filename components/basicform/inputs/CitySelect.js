@@ -1,64 +1,64 @@
 "use client"
-import React, { useMemo, useEffect } from 'react';
-import { Controller } from 'react-hook-form';
-import { City } from 'country-state-city';
-import styles from '../form.module.css';
+import React, { useEffect, useMemo, useRef } from 'react' ;
+import { City } from 'country-state-city' ;
 
-const CitySelect = ({ name, label, control, valid, errors, watch, setValue }) => {
-    
-    // 1. Watch both Country and State
-    const selectedCountry = watch('country');
-    const selectedState = watch('state');
+import errMsg from '../errMsg.js' ;
+import styles from '../form.module.css' ;
 
-    // 2. Fetch cities based on Country AND State
+const CitySelect = ({name, label, descr, ph, valid = {}, register, errors, noPh = false, watch, setValue}) => {
+    const capName = name.replace(/\b\w/g, ch => ch.toUpperCase()) ;
+    const textLabel = label ? label : capName ;
+    const placeholder = ph ? ph : `Select ${textLabel}` ;
+
+    const selectedCountry = typeof watch === 'function' ? watch('country') : '' ;
+    const selectedState = typeof watch === 'function' ? watch('state') : '' ;
+
     const cities = useMemo(() => {
-        if (!selectedCountry || !selectedState) return [];
-        return City.getCitiesOfState(selectedCountry, selectedState);
-    }, [selectedCountry, selectedState]);
+        if(!selectedCountry || !selectedState)
+            return [] ;
+        return City.getCitiesOfState(selectedCountry, selectedState) ;
+    }, [selectedCountry, selectedState]) ;
 
-    // 3. Reset logic: If State changes, reset City
+    const didMountRef = useRef(false) ;
     useEffect(() => {
-    }, [selectedState, setValue, name]);
+        if(!setValue)
+            return ;
+        if(!didMountRef.current) {
+            didMountRef.current = true ;
+            return ;
+        }
+        setValue(name, '') ;
+    }, [selectedCountry, selectedState, setValue, name]) ;
+
+    const optionText = !selectedState
+        ? 'Select State First'
+        : cities.length === 0
+            ? 'No cities found (Type manually if needed)'
+            : placeholder ;
 
     return (
-        <div className={styles.inputWrapper}>
-            {label && <label className={styles.label}>{label}</label>}
-            
-            <Controller
-                name={name}
-                control={control}
-                rules={valid}
-                render={({ field }) => (
-                    <select 
-                        {...field} 
-                        className={styles.selectField} // Uses the same class we made for Country/State
-                        disabled={!selectedState || cities.length === 0}
-                    >
-                        <option value="">
-                            {!selectedState 
-                                ? "Select State First" 
-                                : cities.length === 0 
-                                    ? "No cities found (Type manually if needed)" 
-                                    : "Select City"
-                            }
-                        </option>
-                        
-                        {cities.map((city) => (
-                            <option key={city.name} value={city.name}>
-                                {city.name}
-                            </option>
-                        ))}
-                    </select>
-                )}
-            />
-
-            {errors && errors[name] && (
-                <span className={styles.errorMsg}>
-                    {errors[name]?.message || 'Required'}
+        <div className={`${styles.inputField} ${name}DropDown`}>
+            {textLabel.length > 1 && (
+                <label htmlFor={name}>
+                    {textLabel}&nbsp;{valid.required && <span className={styles.reqd}>*</span>}
+                </label>
+            )}
+            <select id={name} {...register(name, valid)} disabled={!selectedState || cities.length === 0}>
+                {!noPh && <option value="">{optionText}</option>}
+                {cities?.map(city => (
+                    <option key={city.name} value={city.name}>
+                        {city.name}
+                    </option>
+                ))}
+            </select>
+            {descr && <span className={styles.formDescr}> {descr} </span>}
+            {errors?.[name] && (
+                <span className={`${styles.formError} shakeHorizontal`}>
+                    {errMsg(errors[name].type, textLabel)}
                 </span>
             )}
         </div>
-    );
-};
+    ) ;
+} ;
 
-export default CitySelect;
+export default CitySelect ;

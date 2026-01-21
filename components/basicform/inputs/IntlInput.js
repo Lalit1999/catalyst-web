@@ -57,7 +57,7 @@ const IntlPhoneInput = ({ name, label, control, valid, errors, descr }) => {
             />
 
             {errors && errors[name] && (
-                <span className={styles.errorMsg}>
+                <span className={`${styles.formError} shakeHorizontal`}>
                     {errors[name]?.message || 'Invalid Phone Number'}
                 </span>
             )}

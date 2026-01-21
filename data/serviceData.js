@@ -1,28 +1,13 @@
-import { D1, H1, N1, O1, P1 } from "@icons";
-import {
-  about1,
-  DentalClinic,
-  Hematology,
-  Neurology,
-  Orthopedics,
-  Pharmacology,
-} from "@images";
+import { Research, Fsp, Clinical, Bag, Data } from "@icons";
+import { about1 } from "@images";
 
 // 1. Sidebar Links
 export const quickLinks = [
-  { heading: "What we do", icon: "bag", id: "/what-we-do" },
-  { heading: "Who we are", icon: "globe", id: "/who-we-are" },
-  {
-    heading: "Research Publications",
-    icon: "user",
-    id: "/research-publications",
-  },
-  {
-    heading: "Therapeutic Expertise",
-    icon: "flask",
-    id: "/therapeutic-expertise",
-  },
-  { heading: "Training Programs", icon: "money", id: "/training-programs" },
+  { heading: "What we do", id: "/what-we-do" },
+  { heading: "Who we are", id: "/who-we-are" },
+  { heading: "Research Publications", id: "/research-publications" },
+  { heading: "Therapeutic Expertise", id: "/therapeutic-expertise" },
+  { heading: "Training Programs", id: "/training-programs" },
 ];
 
 // 2. Header Data
@@ -36,20 +21,18 @@ export const servicePageHeader = {
 
 // 4. The Data Object
 export const serviceDataObject = {
-  "clinical-development-service": {
-    id: "clinical-development-service",
-    heading: "Clinical Development Service",
+  "clinical-development-services": {
+    id: "clinical-development-services",
+    heading: "Clinical Development Services",
     subHeading:
       "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-    img: DentalClinic,
-    imgicon: D1,
-    // Dynamic Fields using Default Data
+    imgicon: <Clinical />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -87,12 +70,12 @@ export const serviceDataObject = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -111,14 +94,13 @@ export const serviceDataObject = {
     heading: "FSP",
     subHeading:
       "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-    img: Pharmacology,
-    imgicon: P1,
+    imgicon: <Fsp />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -156,12 +138,12 @@ export const serviceDataObject = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -180,14 +162,13 @@ export const serviceDataObject = {
     heading: "Medical Writing",
     subHeading:
       "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-    img: Orthopedics,
-    imgicon: O1,
+    imgicon: <Research />,
    approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -225,12 +206,12 @@ export const serviceDataObject = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -249,14 +230,13 @@ export const serviceDataObject = {
     heading: "Regulatory Consulting",
     subHeading:
       "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-    img: Hematology,
-    imgicon: H1,
+    imgicon: <Bag />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -294,12 +274,12 @@ export const serviceDataObject = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -318,14 +298,13 @@ export const serviceDataObject = {
     heading: "Data Management & Biostatistics",
     subHeading:
       "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-    img: Neurology,
-    imgicon: N1,
+    imgicon: <Data />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -363,12 +342,12 @@ export const serviceDataObject = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },

@@ -1,23 +1,23 @@
 .courseCard {
   display: flex;
+  flex-direction: column ;
   gap: 1em;
-  width: 48%;
-  border: 1px solid var(--medGray);
+  border: 1px solid var(--lightGray);
   border-radius: 1.5rem;
   padding: 1em;
 }
 
 .courseCardImageCon {
   display: flex;
-  flex-basis: 45%;
   position: relative;
   overflow: hidden;
   width: auto;
-    height: 35vh;
+  height: 50vh;
 }
 
-.courseCardImageConimg {
+.courseCardImageCon img {
   object-fit: cover;
+  object-position: top;
   border-radius: 1.5rem;
 }
 
@@ -26,26 +26,14 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 1em;
-  flex-basis: 50%;
+  flex-grow: 1 ;
 }
 
-.cardHead p {
-  font-size: clamp(0.9rem, 1vw, 1rem);
+.cardHead {
+  font-size: .9rem;
   color: var(--second);
   font-weight: 600;
   line-height: 1.4;
-}
-
-
-.cardText p {
-  font-size: .8rem;
-  color: var(--medGray);
-  
-  display: -webkit-box ;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .cardBtnCon {
@@ -95,14 +83,8 @@
     gap: 0.8em; 
   }
 
-  
-  .cardHead p {
+  .cardHead {
     font-size: 1rem; 
-    -webkit-line-clamp: 2; 
-  }
-
-  .cardText p {
-    font-size: 0.85rem;
   }
 
   .cardBtnFirst {
