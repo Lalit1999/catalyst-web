@@ -1,19 +1,11 @@
-import { C1, D1, H1, N1, O1, P1 } from "@icons";
-import {
-  about1, // Ensure this is imported
-  Cardiomyopathy,
-  DentalClinic,
-  Hematology,
-  Neurology,
-  Orthopedics,
-  Pharmacology,
-} from "@images";
+import { Robotarm, Pill, Heart, Thyroid, Inject, Bag, Ribbon } from "@icons";
+import { about1 } from "@images";
 
 
 // 2. Page Header Data (The text you requested)
 export const therapeuticPageHeader = {
     bread: 'Therapeutic Expertise',
-    heading: 'Therapeutic Expertise by Catalyst',
+    heading: 'Our Therapeutic Expertise',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum bibendum dignissim. Sed quam eros, accumsan in velit a, placerat mollis nunc. Nulla at purus non leo condimentum pellentesque ut a mauris. Vivamus ut euismod nisi, quis laoreet nisl. Suspendi',
     image: about1, 
 };
@@ -24,15 +16,13 @@ export const therapeuticExpertiseData = {
     id: "robotic-assisted-surgery",
     heading: "Robotic Assisted Surgery",
     subHeading: "Our physiotherapy services focus on restoring movement, improving strength, and reducing pain through personalized exercise programs and hands-on therapy.",
-    img: DentalClinic,
-    imgicon: D1,
-    // Dynamic Arrays
+    imgicon: <Robotarm />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -70,12 +60,12 @@ export const therapeuticExpertiseData = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -94,14 +84,13 @@ export const therapeuticExpertiseData = {
     id: "oncology",
     heading: "Oncology",
     subHeading: "We help patients regain independence in daily activities by improving motor skills, coordination, and functional abilities tailored to individual needs.",
-    img: Pharmacology,
-    imgicon: P1,
+    imgicon: <Ribbon />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -139,12 +128,12 @@ export const therapeuticExpertiseData = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -163,14 +152,13 @@ export const therapeuticExpertiseData = {
     id: "rwe",
     heading: "RWE",
     subHeading: "We help patients regain independence in daily activities by improving motor skills, coordination, and functional abilities tailored to individual needs.",
-    img: Pharmacology,
-    imgicon: P1,
+    imgicon: <Bag />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -208,12 +196,12 @@ export const therapeuticExpertiseData = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -232,14 +220,13 @@ export const therapeuticExpertiseData = {
     id: "endocrinology",
     heading: "Endocrinology",
     subHeading: "Focused rehabilitation programs for bones, joints, and muscles to improve mobility and support long-term recovery after injuries or surgery.",
-    img: Orthopedics,
-    imgicon: O1,
+    imgicon: <Thyroid />,
    approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -277,12 +264,12 @@ export const therapeuticExpertiseData = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -301,14 +288,13 @@ export const therapeuticExpertiseData = {
     id: "cardiology",
     heading: "Cardiology",
     subHeading: "Specialized therapeutic care supporting patients with blood-related conditions through monitoring, recovery-focused care, and lifestyle guidance.",
-    img: Hematology,
-    imgicon: H1,
+    imgicon: <Heart />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -346,12 +332,12 @@ export const therapeuticExpertiseData = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -370,14 +356,13 @@ export const therapeuticExpertiseData = {
     id: "vaccines",
     heading: "Vaccines",
     subHeading: "Therapeutic programs designed to support recovery and functional improvement for patients with neurological conditions and nervous system disorders.",
-    img: Neurology,
-    imgicon: N1,
+    imgicon: <Inject />,
    approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -415,12 +400,12 @@ export const therapeuticExpertiseData = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },
@@ -439,14 +424,13 @@ export const therapeuticExpertiseData = {
     id: "others",
     heading: "Others",
     subHeading: "Structured rehabilitation and therapy programs aimed at improving heart health, endurance, and overall well-being after cardiac conditions.",
-    img: Cardiomyopathy,
-    imgicon: C1,
+    imgicon: <Pill />,
     approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It’s part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We’ve redesigned the doctor’s office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
+      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
     ],
     primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they’re not alone.",
+      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
     features: [
       {
         title: "Focused Customer",
@@ -484,12 +468,12 @@ export const therapeuticExpertiseData = {
     ],
     faqList: [
       {
-        question: "Can I know the doctors’ credentials?",
+        question: "Can I know the doctors' credentials?",
         answer:
           "Yes, absolutely. We provide full profiles, including board certifications and education.",
       },
       {
-        question: "If I’m taking a companion, when can he or she travel?",
+        question: "If I'm taking a companion, when can he or she travel?",
         answer:
           "Your companion can travel with you at any time. We assist with all arrangements.",
       },

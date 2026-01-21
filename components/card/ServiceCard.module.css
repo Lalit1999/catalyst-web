@@ -33,13 +33,12 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* Removed gap: 3rem; -> This was likely too large and unnecessary if there's only one child */
 }
 
 .card:hover {
   box-shadow: 0 10px 25px -5px var(--zaraBlack);
 }
-.card p{
+.card p {
   margin: 0;
 }
 .imageContainer {
@@ -47,13 +46,11 @@
   width: 100%;
   overflow: hidden;
   display: flex;
-  /* Changed from center to flex-start to stop content from floating in the middle */
   justify-content: flex-start; 
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  /* Added flex: 1 to ensure this container fills the card height */
   flex: 1; 
 }
 
@@ -68,24 +65,20 @@
   justify-content: center;
   z-index: 2;
   overflow: hidden;
-  /* Prevent the icon from shrinking when card height changes */
   flex-shrink: 0; 
 }
 
-.iconWrapper {
-  min-height: 25px;
-  min-width: 25px;
+.iconBadge svg {
+  height: 32px ;
+  width: 32px ;
+  color: var(--white) ;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  /* Changed from center to space-between. 
-     This pushes the Title/Desc to the top and the "Read More" to the bottom 
-     of the available space, effectively removing the "dead space" below the button. */
   justify-content: space-between; 
   width: 100%;
-  /* flex-grow makes this fill the remaining height of the imageContainer */
   flex-grow: 1; 
   gap: 0.5rem;
 }
@@ -107,12 +100,12 @@
   line-height: 1.6;
   overflow: hidden;
   color: var(--medGray);
+
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   -webkit-line-clamp: 2;
   margin: 0 !important;
-  /* Optional: Push the Read More down if you want space in the middle instead of below */
-  /* margin-bottom: auto !important;  */
 }
 
 .readMore {
@@ -129,6 +122,7 @@
   color: var(--main);
   text-decoration: underline;
 }
+
 @media (max-width:600px){
   .main {
     gap: 2em;

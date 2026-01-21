@@ -31,15 +31,6 @@ export default function ServiceDetailPage() {
   }
 
 
-  // use like ( icons[value] || <DefaultIcon /> )
-  // const icons = {
-  //   bag: <BagIcon />,
-  //   globe: <GlobeIcon />,
-  //   user: <UserIcon />,
-  //   flask: <FlaskIcon />,
-  //   money: <MoneyIcon />,
-  // }
-
   return (
     <main className={styles.main}>
       <Title 

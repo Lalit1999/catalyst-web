@@ -1,44 +1,50 @@
 "use client"
-import React, { useMemo } from 'react';
-import { Controller } from 'react-hook-form';
-import { Country } from 'country-state-city';
-import styles from '../form.module.css';
+import React, { useMemo } from 'react' ;
+import { Country } from 'country-state-city' ;
 
-const CountrySelect = ({ name, label, control, valid, errors }) => {
-    
-    // Get all countries efficiently
-    const countries = useMemo(() => Country.getAllCountries(), []);
+import errMsg from '../errMsg.js' ;
+import styles from '../form.module.css' ;
 
-    return (
-        <div className={styles.inputWrapper}>
-            {label && <label className={styles.label}>{label}</label>}
-            
-            <Controller
-                name={name}
-                control={control}
-                rules={valid}
-                render={({ field }) => (
-                    <select 
-                        {...field} 
-                        className={styles.selectField} 
-                    >
-                        <option value="">Select Country</option>
-                        {countries.map((country) => (
-                            <option key={country.isoCode} value={country.isoCode}>
-                                {country.name} {country.flag} 
-                            </option>
-                        ))}
-                    </select>
-                )}
-            />
+/* 	 PROPS NEEDED
 
-            {errors && errors[name] && (
-                <span className={styles.errorMsg}>
-                    {errors[name]?.message || 'Required'}
-                </span>
-            )}
-        </div>
-    );
-};
+name  	= name of component  		= required
+valid 	= validations 				= optional
+label 	= label text 				= optional
+ph 		= placeholder 				= optional
+descr 	= descr of field 			= optional
 
-export default CountrySelect;
+*/
+
+const CountrySelect = ({name, label, descr, ph, valid = {}, register, errors, noPh = false}) => {
+	const capName = name.replace(/\b\w/g, ch => ch.toUpperCase()) ;
+	const textLabel = label ? label : capName ;
+	const placeholder = ph ? ph : `Select ${textLabel}` ;
+
+	const countries = useMemo(() => Country.getAllCountries(), []) ;
+
+	return (
+		<div className={`${styles.inputField} ${name}DropDown`}>
+			{textLabel.length > 1 && (
+				<label htmlFor={name}>
+					{textLabel}&nbsp;{valid.required && <span className={styles.reqd}>*</span>}
+				</label>
+			)}
+			<select id={name} {...register(name, valid)}>
+				{!noPh && <option value="">{placeholder}</option>}
+				{countries?.map(country => (
+					<option key={country.isoCode} value={country.isoCode}>
+						{country.name} {country.flag}
+					</option>
+				))}
+			</select>
+			{descr && <span className={styles.formDescr}> {descr} </span>}
+			{errors?.[name] && (
+				<span className={`${styles.formError} shakeHorizontal`}>
+					{errMsg(errors[name].type, textLabel)}
+				</span>
+			)}
+		</div>
+	) ;
+} ;
+
+export default CountrySelect ;

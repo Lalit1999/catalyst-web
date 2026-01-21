@@ -1,4 +1,4 @@
-import { radient, serviceImg } from "@images";
+import { serviceImg } from "@images";
 import { Bullet, RadientSvgBg } from "@icons"; // Using the bullet icon you mentioned
 import Image from "next/image";
 import styles from "./page.module.css";

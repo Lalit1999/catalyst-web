@@ -1,59 +1,59 @@
 "use client"
-import React, { useMemo, useEffect } from 'react';
-import { Controller } from 'react-hook-form';
-import { State } from 'country-state-city';
-import styles from '../form.module.css';
+import { useEffect, useMemo, useRef } from 'react' ;
+import { State } from 'country-state-city' ;
 
-const StateSelect = ({ name, label, control, valid, errors, watch }) => {
-    
-    // 1. Watch the 'country' field value
-    const selectedCountry = watch('country');
+import errMsg from '../errMsg.js' ;
+import styles from '../form.module.css' ;
 
-    // 2. Fetch states based on the selected country
+const StateSelect = ({name, label, descr, ph, valid = {}, register, errors, noPh = false, watch, setValue}) => {
+    const capName = name.replace(/\b\w/g, ch => ch.toUpperCase()) ;
+    const textLabel = label ? label : capName ;
+    const placeholder = ph ? ph : `Select ${textLabel}` ;
+
+    const selectedCountry = typeof watch === 'function' ? watch('country') : '' ;
+
     const states = useMemo(() => {
-        if (!selectedCountry) return [];
-        return State.getStatesOfCountry(selectedCountry);
-    }, [selectedCountry]);
+        if(!selectedCountry)
+            return [] ;
+        return State.getStatesOfCountry(selectedCountry) ;
+    }, [selectedCountry]) ;
 
-    // useEffect(() => {
-    //     if (selectedCountry) {
-    //     }
-    // }, [selectedCountry]);
+    const didMountRef = useRef(false) ;
+    useEffect(() => {
+        if(!setValue)
+            return ;
+        if(!didMountRef.current) {
+            didMountRef.current = true ;
+            return ;
+        }
+        setValue(name, '') ;
+    }, [selectedCountry, setValue, name]) ;
+
+    const optionText = !selectedCountry ? 'Select Country First' : placeholder ;
 
     return (
-        <div className={styles.inputWrapper}>
-            {label && <label className={styles.label}>{label}</label>}
-            
-            <Controller
-                name={name}
-                control={control}
-                rules={valid}
-                render={({ field }) => (
-                    <select 
-                        {...field} 
-                        className={styles.selectField}
-                        disabled={!selectedCountry} 
-                    >
-                        <option value="">
-                            {!selectedCountry ? "Select Country First" : "Select State"}
-                        </option>
-                        
-                        {states.map((state) => (
-                            <option key={state.isoCode} value={state.isoCode}>
-                                {state.name}
-                            </option>
-                        ))}
-                    </select>
-                )}
-            />
-
-            {errors && errors[name] && (
-                <span className={styles.errorMsg}>
-                    {errors[name]?.message || 'Required'}
+        <div className={`${styles.inputField} ${name}DropDown`}>
+            {textLabel.length > 1 && (
+                <label htmlFor={name}>
+                    {textLabel}&nbsp;{valid.required && <span className={styles.reqd}>*</span>}
+                </label>
+            )}
+            <select id={name} {...register(name, valid)} disabled={!selectedCountry}>
+                {!noPh && <option value="">{optionText}</option>}
+                {states?.map(state => (
+                    <option key={state.isoCode} value={state.isoCode}>
+                        {state.name}
+                    </option>
+                ))}
+            </select>
+            {descr && <span className={styles.formDescr}> {descr} </span>}
+            {errors?.[name] && (
+                <span className={`${styles.formError} shakeHorizontal`}>
+                    {errMsg(errors[name].type, textLabel)}
                 </span>
             )}
         </div>
-    );
-};
+    ) ;
+} ;
 
-export default StateSelect;
+export default StateSelect ;

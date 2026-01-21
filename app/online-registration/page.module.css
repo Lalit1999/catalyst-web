@@ -111,6 +111,39 @@
     font-size: 0.95rem;
 }
 
+.formCard input[type="checkbox"] {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer ;
+  width: 20px ;
+  height: 20px ;
+  padding: 0 ;
+  border: 2px solid var(--main) ;
+  border-radius: 4px; 
+  background-color: var(--light) ;
+  flex-shrink: 0;
+}
+
+.formCard input[type='checkbox']:checked {
+  background-color: var(--halfMain) ;
+  border-color: var(--main) ;
+  position: relative ;
+}
+
+.formCard input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 .formCard input:focus,
 .formCard select:focus,
 .formCard textarea:focus {
@@ -120,23 +153,6 @@
 
 .sectionHeading {
     padding-top: 1.5rem;
-}
-
-.dualSection {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    padding-top: 1.5rem;
-}
-
-.dualSection > div {
-    flex: 1;
-    min-width: 240px;
-}
-
-.dualSection .sectionHeading {
-    border-top: none;
-    padding-top: 0;
 }
 
 .sectionEyebrow {
@@ -174,10 +190,17 @@
 }
 
 .disclaimer {
-    text-align: center;
     font-size: 0.85rem;
-    color: var(--medGray);
+    color: var(--gray);
     margin: 0;
+}
+
+ul.disclaimer {
+    padding-inline-start: 16px ;
+}
+
+.disclaimer li {
+    padding: .2em 0 ;
 }
 
 @media (max-width: 768px) {

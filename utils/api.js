@@ -5,9 +5,9 @@ import { remNotif, addNotif } from './notif.js' ;
 
 const cancelTokens = {};
 
-const fetchUrl = typeof window !== 'undefined' && window.location.hostname.includes('local')?'http://192.168.29.76:5001/':'https://api.purplehunt.io/' ;
-// const fetchUrl = typeof window !== 'undefined' && window.location.hostname.includes('local')?'http://localhost:5001/':'https://api.purplehunt.io/' ;
-// const fetchUrl = 'https://api.purplehunt.io/' ;
+// const fetchUrl = typeof window !== 'undefined' && window.location.hostname.includes('local')?'http://192.168.29.76:8001/':'https://api.catalystclinicalservices.com/' ;
+const fetchUrl = typeof window !== 'undefined' && window.location.hostname.includes('local')?'http://localhost:8001/':'https://api.catalystclinicalservices.com/' ;
+// const fetchUrl = 'https://api.catalystclinicalservices.com/' ;
 
 const handleError = (message, notif) => {
     console.error(message) ;
