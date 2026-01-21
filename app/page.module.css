@@ -661,11 +661,10 @@
 }
 
 .pubBoxesCon {
-	display: flex ;
-	justify-content: space-between ;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(3, 10fr);
+	gap: 2rem;
 	width: 100%;
-	gap: 1em ;
 }
 
 .pubBox {
