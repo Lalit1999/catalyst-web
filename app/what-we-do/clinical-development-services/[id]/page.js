@@ -1,175 +1,52 @@
-"use client";
-import { useState } from "react";
-import { notFound, useParams } from "next/navigation";
+'use client'
+import { serviceImg } from "@images";
+import { Bullet} from "@icons"; // Using the bullet icon you mentioned
+import Image from "next/image";
 import styles from "./page.module.css";
-import { RightPanel, Title } from "@comps";
+import { Cols, ServiceGrid, Title } from "@c/index";
+import { useParams } from "next/navigation";
+import { clinicalServicesData, serviceDataObject } from "@data";
 
-// 1. Import Data
-import { clinicalServicesData } from "@data";
-
-// 2. Import Icons
-import {
-  CheckIcon,
-  ClockCircle,
-  StarCircle,
-  User,
-} from "@icons";
-
-export default function ServiceDetailPage() {
-  const params = useParams();
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (idx) => {
-    setOpenIndex(openIndex === idx ? null : idx);
-  };
-
-  const serviceId = params.id || params.slug;
-  const service = clinicalServicesData[serviceId];
-
-  if (!service) {
-    return notFound();
-  }
+// Data for the grid
 
 
+
+// const ServiceGrid = () => {
+//   return (
+//     <div className={styles.gridContainer}>
+//       {fullServicesList.map((service, index) => (
+//         <div key={index} className={styles.serviceCard}>
+//           <div className={styles.iconWrapper}>
+//             <Bullet className={styles.svgIcon} />
+//           </div>
+//           <h3 className={styles.cardTitle}>{service.title}</h3>
+//           <ul className={styles.pointsList}>
+//             {service.points.map((point, i) => (
+//               <li key={i} className={styles.pointItem}>
+//                 {point}
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+const description = 'Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.'
+const Page = () => {
+    const params = useParams();
+    const serviceId = params.id || params.slug;
+    const service = clinicalServicesData[serviceId];
+    console.log(service);
+    
   return (
-    <main className={styles.main}>
-      <Title
-      bread={'Services'}
-        breadIn={'Clinical Development Services'}
-        breadIn_1={service.heading}
-        heading={service.heading}
-        description={service.subHeading}
-        image={service.img}
-      />
-      
-      <div className={styles.detailsContainer}>
-        <div className={styles.leftColumn}>
-          <div className={styles.leftpart_1}>
-            <div className={styles.leftpart}>
-              <h2 className={styles.heading}>
-                Our Approach to {service.heading}
-              </h2>
-              <div className={styles.leftContent}>
-                {/* Dynamic Approach Content */}
-                {service.approachContent && service.approachContent.map((paragraph, index) => (
-                    <p key={index} className={styles.paragraph}>
-                        {paragraph}
-                    </p>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          <div className={styles.leftpart_2}>
-            <h2 className={styles.heading}>Primary Care</h2>
-            <p className={styles.paragraph}>
-              {/* Dynamic Primary Care Text */}
-              {service.primaryCareText}
-            </p>
-
-            <div className={styles.featureGrid}>
-              {/* Dynamic Feature Cards */}
-              {service.features && service.features.map((card, idx) => (
-                <div
-                  key={idx}
-                  className={styles.featureCard}
-                  style={{ backgroundColor: card.color }}
-                >
-                  <div className={styles.featureIcon}>
-                    {card.icon === "user" && (
-                      <div className={styles.userIconBg}>
-                        <User />
-                      </div>
-                    )}
-                    {card.icon === "star" && <StarCircle />}
-                    {card.icon === "clock" && <ClockCircle />}
-                  </div>
-                  <h3>{card.title}</h3>
-                  <p>{card.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <section className={styles.extraSection}>
-            <div className={styles.extraContainer}>
-              
-              {/* Dynamic Checklist */}
-              {service.checkList && (
-                  <div className={styles.checkCard}>
-                    {service.checkList.map((item, idx) => (
-                      <div key={idx} className={styles.checkItem}>
-                        <CheckIcon />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-              )}
-              
-              <div className={styles.separator}></div>
-
-              {/* Dynamic Industry Expertise */}
-              <div className={styles.expertiseBlock}>
-                <h2>Our Industry Expertise</h2>
-                <p className={styles.subText}>
-                  Professional care from specialists who understand your
-                  specific needs.
-                </p>
-                <div className={styles.expertiseGrid}>
-                  {service.expertiseList && service.expertiseList.map((item, idx) => (
-                    <p key={idx} className={styles.expertiseItem}>
-                      {item}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              <div className={styles.separator}></div>
-
-              {/* Dynamic FAQ Section */}
-              <div className={styles.faqBlock}>
-                <div className={styles.faqBlockHead}>
-                  <h2>FAQs About The Service</h2>
-                  <p className={styles.subText}>
-                    Common questions regarding our {service.heading} services.
-                  </p>
-                </div>
-                <div className={styles.faqList}>
-                  {service.faqList && service.faqList.map((faq, idx) => {
-                    const isOpen = openIndex === idx;
-
-                    return (
-                      <div key={idx} className={styles.faqItem}>
-                        <div className={styles.faqInner}>
-                          <button
-                            className={styles.faqSummary}
-                            onClick={() => toggleFAQ(idx)}
-                            aria-expanded={isOpen}
-                          >
-                            <span className={styles.faqQuestion}>{faq.question}</span>
-                            <span className={styles.faqIcon}>
-                              {isOpen ? "−" : "+"}
-                            </span>
-                          </button>
-                        </div>
-
-                        <div className={`${styles.faqAnswer} ${isOpen ? styles.open : ""}`}>
-                          <div className={styles.faqAnswerInner}>
-                            {faq.answer}
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel  variants="clinical" />
-      </div>
-    </main>
+    <div className={styles.main}>
+      <Title heading={service.heading} desc={service.subHeading} />
+      <Cols  text={service.content} />
+      <ServiceGrid cards={service.capabilityCards} />
+    </div>
   );
-}
+};
+
+export default Page;

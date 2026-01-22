@@ -15,213 +15,106 @@ export const servicePageHeader = {
   bread: "Services",
   heading: "Services Offered by Catalyst",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempor tellus ante. Mauris vitae egestas massa, eget rutrum quam.",
+    "Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence. ",
   image: about1,
+  extra : "Spanning the full clinical development continuum, from early-phase investigations to post-marketing evidence generation, our work integrates strategic oversight, regulatory compliance, and operational excellence. Through flexible engagement models, ranging from bespoke solutions to fully integrated services, we enable sponsors to optimize development pathways, manage complexity and risk, and advance therapeutic and technological innovations with confidence, precision, and integrity.",
 };
 
-// 4. The Data Object
+
 export const serviceDataObject = {
   "clinical-development-services": {
     id: "clinical-development-services",
     heading: "Clinical Development Services",
     subHeading:
-      "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-    imgicon: <Clinical />,
-    approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
-    ],
-    primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
-    features: [
+      "Every clinical trial carries the responsibility to shape the future of patient care worldwide.",
+    content:
+      "We deliver integrated clinical development services designed to support sponsors across the full lifecycle of study execution. Our capabilities encompass strategic study design and start-up, efficient and ethical patient recruitment, and robust project management to ensure timelines, quality, and compliance are maintained. We provide comprehensive clinical site management and clinical trial monitoring, enabling consistent protocol adherence, data integrity, and regulatory readiness across single-centre and multicentre studies. Together, these services enable streamlined study conduct, reduced operational risk, and the generation of high-quality, reliable clinical evidence.",
+    sectionTitle: "Your Trusted Partner in Clinical Trial Optimization",
+    sectionSubtitle:
+      "Operational excellence delivered through focused, compliant, and scalable trial support.",
+      imgicon: <Clinical />,
+    capabilityCards: [
       {
-        title: "Focused Customer",
-        color: "var(--thodaBlue)",
-        icon: "user",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Project Management",
+        points: [
+          "End-to-end oversight to ensure timelines, quality, and stakeholder alignment",
+        ],
       },
       {
-        title: "24/7 Care",
-        color: "var(--thodaPink)",
-        icon: "star",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Clinical Site Management",
+        points: [
+          "Site activation, coordination, and ongoing operational support",
+        ],
       },
       {
-        title: "Timely Care",
-        color: "var(--thodaYellow)",
-        icon: "clock",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-    ],
-    checkList: [
-      "Pellentesque elementum purus nec venenatis hendrerit. Praesent eu ex sollicitudin.",
-      "Aliquam erat volutpat. Nunc consequat mattis egestas.",
-      "Sed dignissim in ex sit amet imperdiet.",
-    ],
-    expertiseList: [
-      "1. Cartilage Restoration",
-      "2. Avascular Necrosis",
-      "3. Carpal Tunnel Syndrome",
-      "4. Chronic Ligament instability",
-      "5. Developmental Dysplasia Of The Hip (DDH)",
-      "6. Dislocations",
-      "7. Forefoot And Toe Deformities",
-      "8. Femoroacetabular Impingement (FAI)",
-    ],
-    faqList: [
-      {
-        question: "Can I know the doctors' credentials?",
-        answer:
-          "Yes, absolutely. We provide full profiles, including board certifications and education.",
+        title: "Clinical Trial Monitoring",
+        points: [
+          "Risk-based and on-site monitoring to ensure protocol adherence and data integrity",
+        ],
       },
       {
-        question: "If I'm taking a companion, when can he or she travel?",
-        answer:
-          "Your companion can travel with you at any time. We assist with all arrangements.",
+        title: "Patient Recruitment",
+        points: [
+          "Ethical, efficient subject recruitment strategies tailored to study needs",
+        ],
       },
       {
-        question: "What happens if I need follow-up?",
-        answer: "We arrange follow-up video consultations with your doctor.",
-      },
-      {
-        question: "What Does Medical Tourism Corporation charge?",
-        answer: "Our coordination services are completely free for patients.",
-      },
-    ],
-  },
-  fsp: {
-    id: "fsp",
-    heading: "FSP",
-    subHeading:
-      "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-    imgicon: <Fsp />,
-    approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
-    ],
-    primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
-    features: [
-      {
-        title: "Focused Customer",
-        color: "var(--thodaBlue)",
-        icon: "user",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-      {
-        title: "24/7 Care",
-        color: "var(--thodaPink)",
-        icon: "star",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-      {
-        title: "Timely Care",
-        color: "var(--thodaYellow)",
-        icon: "clock",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-    ],
-    checkList: [
-      "Pellentesque elementum purus nec venenatis hendrerit. Praesent eu ex sollicitudin.",
-      "Aliquam erat volutpat. Nunc consequat mattis egestas.",
-      "Sed dignissim in ex sit amet imperdiet.",
-    ],
-    expertiseList: [
-      "1. Cartilage Restoration",
-      "2. Avascular Necrosis",
-      "3. Carpal Tunnel Syndrome",
-      "4. Chronic Ligament instability",
-      "5. Developmental Dysplasia Of The Hip (DDH)",
-      "6. Dislocations",
-      "7. Forefoot And Toe Deformities",
-      "8. Femoroacetabular Impingement (FAI)",
-    ],
-    faqList: [
-      {
-        question: "Can I know the doctors' credentials?",
-        answer:
-          "Yes, absolutely. We provide full profiles, including board certifications and education.",
-      },
-      {
-        question: "If I'm taking a companion, when can he or she travel?",
-        answer:
-          "Your companion can travel with you at any time. We assist with all arrangements.",
-      },
-      {
-        question: "What happens if I need follow-up?",
-        answer: "We arrange follow-up video consultations with your doctor.",
-      },
-      {
-        question: "What Does Medical Tourism Corporation charge?",
-        answer: "Our coordination services are completely free for patients.",
+        title: "Investigator’s Training Meetings",
+        points: [
+          "Planning and execution of investigator and site staff training programs",
+        ],
       },
     ],
   },
   "medical-writing": {
     id: "medical-writing",
-    heading: "Medical Writing",
+    heading: "Expert Medical Writing and Scientific Publication Services",
     subHeading:
-      "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
+      "Transforming complex clinical and real-world data into clear, credible, and publication-ready scientific evidence.",
+    content:
+      "Catalyst delivers high-quality medical writing and scientific publication services through a multidisciplinary team of senior medical professionals, scientific subject-matter experts, biostatisticians, and experienced medical writers. Working in close collaboration with investigators and sponsors, we translate complex clinical and real-world data into scientifically rigorous, regulator-ready, and publication-quality documentation. Our expertise spans the full continuum of evidence generation, including retrospective and prospective datasets, real-world evidence (RWE), observational and registry-based studies, and interventional clinical trials.",
+    sectionTitle: "Our Medical Writing Capabilities",
+    sectionSubtitle:
+      "Our protocols are designed to be scientifically robust, operationally executable, and defensible from both regulatory and ethics perspectives.",
     imgicon: <Research />,
-   approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
-    ],
-    primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
-    features: [
+      capabilityCards: [
       {
-        title: "Focused Customer",
-        color: "var(--thodaBlue)",
-        icon: "user",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Protocol Design and Development",
+        points: [
+          "Scientific and operational input into protocol design",
+          "Development of compliant study protocols and amendments",
+          "Alignment of endpoints, statistical considerations, and assessment schedules",
+          "Integration of patient-centric and real-world considerations",
+          "Close collaboration with investigators and sponsors",
+        ],
       },
       {
-        title: "24/7 Care",
-        color: "var(--thodaPink)",
-        icon: "star",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Clinical Study Reports (Phase I–IV)",
+        points: [
+          "Preparation of full CSRs, synopses, and appendices",
+          "Integration and interpretation of tables, listings, and figures (TLFs)",
+          "Clear presentation of efficacy, safety, and exploratory outcomes",
+          "Coordination with biostatisticians to ensure analytical consistency",
+          "Support for interim, final, and post-marketing study reports",
+        ],
       },
       {
-        title: "Timely Care",
-        color: "var(--thodaYellow)",
-        icon: "clock",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-    ],
-    checkList: [
-      "Pellentesque elementum purus nec venenatis hendrerit. Praesent eu ex sollicitudin.",
-      "Aliquam erat volutpat. Nunc consequat mattis egestas.",
-      "Sed dignissim in ex sit amet imperdiet.",
-    ],
-    expertiseList: [
-      "1. Cartilage Restoration",
-      "2. Avascular Necrosis",
-      "3. Carpal Tunnel Syndrome",
-      "4. Chronic Ligament instability",
-      "5. Developmental Dysplasia Of The Hip (DDH)",
-      "6. Dislocations",
-      "7. Forefoot And Toe Deformities",
-      "8. Femoroacetabular Impingement (FAI)",
-    ],
-    faqList: [
-      {
-        question: "Can I know the doctors' credentials?",
-        answer:
-          "Yes, absolutely. We provide full profiles, including board certifications and education.",
+        title: "Manuscript Development and Publication Support",
+        points: [
+          "Development of abstracts, full manuscripts, reviews, and conference materials",
+          "Compliance with CONSORT, STROBE, PRISMA, CARE, and GPP guidelines",
+          "Journal-specific manuscript formatting and submission packages",
+          "Coordination of peer-review responses, revisions, and resubmissions",
+          "Support through acceptance and publication",
+        ],
       },
       {
-        question: "If I'm taking a companion, when can he or she travel?",
-        answer:
-          "Your companion can travel with you at any time. We assist with all arrangements.",
-      },
-      {
-        question: "What happens if I need follow-up?",
-        answer: "We arrange follow-up video consultations with your doctor.",
-      },
-      {
-        question: "What Does Medical Tourism Corporation charge?",
-        answer: "Our coordination services are completely free for patients.",
+        title: "Scientific Integrity",
+        points: [
+          "Active intellectual partners in evidence dissemination",
+          "Ensuring scientific ownership, transparency, and ethical integrity",
+          "Maximizing scientific visibility and regulatory confidence",
+        ],
       },
     ],
   },
@@ -229,135 +122,143 @@ export const serviceDataObject = {
     id: "regulatory-consulting",
     heading: "Regulatory Consulting",
     subHeading:
-      "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
+      "Regulatory success lies not only in compliance, but in anticipation.",
+    content:
+      "At Catalyst Clinical Services, our regulatory affairs experts combine deep domain knowledge with hands-on experience to navigate complex local and global regulatory landscapes with precision and foresight. We proactively identify regulatory requirements and anticipate submission-stage challenges, enabling sponsors to address concerns early and achieve timely, seamless approvals. From early-phase planning through post-approval obligations, we provide end-to-end regulatory consulting and compliance support across the entire clinical trial lifecycle.",
+    sectionTitle: "End-to-End Regulatory Affairs and Compliance Solutions",
+    sectionSubtitle:
+      "We leverage strong India-based regulatory resources to seamlessly support pharmaceutical, biotechnology, and medical device regulatory requirements.",
     imgicon: <Bag />,
-    approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
+      capabilityCards: [
+      {
+        title: "Regulatory Dossier Preparation",
+        points: [
+          "Preparation of high-quality, submission-ready regulatory dossiers",
+          "Compliance with NDCTR 2019, ICH-GCP guidelines, and applicable local requirements",
+          "Review for completeness, accuracy, and regulatory consistency to support efficient approvals",
+        ],
+      },
+      {
+        title: "Regulatory Authority Coordination",
+        points: [
+          "Single point of contact for coordination with the Ministry of Health and Family Welfare (MoH) and regulatory authorities",
+          "Support for clinical trial approvals, regulatory queries, and follow-up submissions",
+          "Proactive engagement to facilitate timely regulatory decisions",
+        ],
+      },
+      {
+        title: "Import License Management",
+        points: [
+          "End-to-end coordination for issuance, amendment, and renewal of Import Licenses",
+          "Coverage for investigational products, comparators, and trial-related materials",
+          "Ensuring regulatory continuity and uninterrupted trial conduct",
+        ],
+      },
+      {
+        title: "Safety Reporting & Pharmacovigilance",
+        points: [
+          "Comprehensive safety reporting in accordance with Table 5, Third Schedule of NDCTR 2019",
+          "Support for SUSAR reporting, periodic safety updates, and annual safety submissions",
+          "Coordination with Ethics Committees and regulatory authorities to ensure timely compliance",
+        ],
+      },
+      {
+        title: "Regulatory Documentation",
+        points: [
+          "Collaboration between regulatory and medical writing teams",
+          "Preparation of regulator-ready CSRs and supporting documentation",
+          "Alignment with national and international submission standards",
+        ],
+      },
     ],
-    primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
-    features: [
+  },
+  "fsp": {
+    id: "fsp",
+    heading: "Tailored Clinical Operations FSP Models",
+    subHeading: "Precisely aligned to sponsor needs.",
+    content:
+      "Catalyst Clinical Services delivers customized Clinical Operations Functional Service Provider (FSP) models designed to align seamlessly with each sponsor’s development strategy, operational structure, and delivery objectives. We embed dedicated, role-aligned clinical operations professionals who function as a true extension of sponsor teams. Our resources integrate seamlessly with sponsor SOPs, systems, governance frameworks, and workflows—ensuring continuity, consistency, and operational efficiency from day one.",
+    sectionTitle: "Why Partner with Catalyst for FSP",
+    sectionSubtitle:
+      "Our clinical operations FSP models are structured to deliver immediate productivity and sustained performance.",
+      imgicon: <Fsp />,
+    capabilityCards: [
       {
-        title: "Focused Customer",
-        color: "var(--thodaBlue)",
-        icon: "user",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Governance-Driven Delivery",
+        points: [
+          "Clearly defined roles and responsibilities",
+          "Performance metrics and service-level expectations",
+          "Structured escalation and issue-management mechanisms",
+        ],
       },
       {
-        title: "24/7 Care",
-        color: "var(--thodaPink)",
-        icon: "star",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Why Partner with Catalyst",
+        points: [
+          "Customized, role-aligned clinical operations teams",
+          "Strong governance, oversight, and quality frameworks",
+          "Rapid onboarding and productivity",
+          "Flexible and scalable resource models",
+          "India-based expertise aligned with global standards",
+        ],
       },
       {
-        title: "Timely Care",
-        color: "var(--thodaYellow)",
-        icon: "clock",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-    ],
-    checkList: [
-      "Pellentesque elementum purus nec venenatis hendrerit. Praesent eu ex sollicitudin.",
-      "Aliquam erat volutpat. Nunc consequat mattis egestas.",
-      "Sed dignissim in ex sit amet imperdiet.",
-    ],
-    expertiseList: [
-      "1. Cartilage Restoration",
-      "2. Avascular Necrosis",
-      "3. Carpal Tunnel Syndrome",
-      "4. Chronic Ligament instability",
-      "5. Developmental Dysplasia Of The Hip (DDH)",
-      "6. Dislocations",
-      "7. Forefoot And Toe Deformities",
-      "8. Femoroacetabular Impingement (FAI)",
-    ],
-    faqList: [
-      {
-        question: "Can I know the doctors' credentials?",
-        answer:
-          "Yes, absolutely. We provide full profiles, including board certifications and education.",
-      },
-      {
-        question: "If I'm taking a companion, when can he or she travel?",
-        answer:
-          "Your companion can travel with you at any time. We assist with all arrangements.",
-      },
-      {
-        question: "What happens if I need follow-up?",
-        answer: "We arrange follow-up video consultations with your doctor.",
-      },
-      {
-        question: "What Does Medical Tourism Corporation charge?",
-        answer: "Our coordination services are completely free for patients.",
+        title: "Engagement Models",
+        points: [
+          "Scale resources up or down based on study demands",
+          "Transition smoothly across study phases",
+          "Optimize timelines and costs without disrupting operations",
+        ],
       },
     ],
   },
   "data-management-biostatistics": {
     id: "data-management-biostatistics",
-    heading: "Data Management & Biostatistics",
+    heading: "Data Management and Biostatistics",
     subHeading:
-      "Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.Medicenter offers comprehensive dental care for both adults and children from our office at Toronto.",
-    imgicon: <Data />,
-    approachContent: [
-      "From trouble sleeping to work stress to anxiety to depression, we all have difficulty managing our emotions at times. It's part of being human. And addressing these issues is a vital part of what we do as a primary care practice, because your emotional well-being is essential to your overall health and wellness.",
-      "We've redesigned the doctor's office experience to fit your life, put you at ease, and treat you as a whole person. We create safe and inviting spaces, ask meaningful questions, give you time to talk, and listen without judgment. Then we work with you on a plan to help you feel your best — whether you want to sleep better, feel calmer, worry less, or get a better handle on your mood.",
-    ],
-    primaryCareText:
-      "To continue shedding a light on mental health issues, we teamed up with the award-winning musicians from Bear and a Banjo to create a song showing people they're not alone.",
-    features: [
+      "Ensuring data integrity, analytical rigor, and regulatory confidence.",
+    content:
+      "At Catalyst Clinical Services, our Data Management and Biostatistics services are designed to deliver clean, consistent, and audit-ready datasets that support reliable decision-making and high-quality regulatory submissions. Our integrated approach ensures accuracy, traceability, and compliance across the entire data lifecycle—from collection to final analysis and reporting.",
+    sectionTitle: "Our Data & Biostatistics Capabilities",
+    sectionSubtitle:
+      "Independent quality checks and regulatory-aligned processes.",
+      imgicon: <Data />,
+    capabilityCards: [
       {
-        title: "Focused Customer",
-        color: "var(--thodaBlue)",
-        icon: "user",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Clinical Data Management",
+        points: [
+          "Standardized data collection using structured paper CRFs to ensure uniformity across sites",
+          "Accurate and complete data entry into a secure, controlled MS Excel–based database",
+          "Structured query management, including discrepancy identification and resolution",
+          "Ongoing data cleaning, validation, and consistency checks for critical variables",
+          "Independent data review with 100% verification to ensure accuracy",
+          "Coordination and execution of formal database lock procedures",
+          "Support for generating summary tables, listings, and descriptive/statistical outputs",
+          "Assistance with final reports, manuscripts, and audit-ready documentation",
+        ],
       },
       {
-        title: "24/7 Care",
-        color: "var(--thodaPink)",
-        icon: "star",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Biostatistics Services",
+        points: [
+          "Development of comprehensive Statistical Analysis Plans (SAPs)",
+          "Preparation, validation, and finalization of analysis-ready datasets",
+          "Execution of descriptive and inferential statistical analyses aligned with study objectives",
+          "Generation of high-quality Tables, Listings, and Figures (TLFs/TLGs)",
+          "Subgroup and exploratory analyses, as appropriate",
+          "Independent verification of statistical outputs to ensure accuracy",
+          "Interpretation of results in close collaboration with the Sponsor",
+          "Preparation of statistical sections for Clinical Study Reports (CSRs)",
+          "Delivery of complete, audit-ready analysis files, programs, and documentation",
+        ],
       },
       {
-        title: "Timely Care",
-        color: "var(--thodaYellow)",
-        icon: "clock",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-    ],
-    checkList: [
-      "Pellentesque elementum purus nec venenatis hendrerit. Praesent eu ex sollicitudin.",
-      "Aliquam erat volutpat. Nunc consequat mattis egestas.",
-      "Sed dignissim in ex sit amet imperdiet.",
-    ],
-    expertiseList: [
-      "1. Cartilage Restoration",
-      "2. Avascular Necrosis",
-      "3. Carpal Tunnel Syndrome",
-      "4. Chronic Ligament instability",
-      "5. Developmental Dysplasia Of The Hip (DDH)",
-      "6. Dislocations",
-      "7. Forefoot And Toe Deformities",
-      "8. Femoroacetabular Impingement (FAI)",
-    ],
-    faqList: [
-      {
-        question: "Can I know the doctors' credentials?",
-        answer:
-          "Yes, absolutely. We provide full profiles, including board certifications and education.",
-      },
-      {
-        question: "If I'm taking a companion, when can he or she travel?",
-        answer:
-          "Your companion can travel with you at any time. We assist with all arrangements.",
-      },
-      {
-        question: "What happens if I need follow-up?",
-        answer: "We arrange follow-up video consultations with your doctor.",
-      },
-      {
-        question: "What Does Medical Tourism Corporation charge?",
-        answer: "Our coordination services are completely free for patients.",
+        title: "Why Catalyst?",
+        points: [
+          "End-to-end data lifecycle management",
+          "Strong focus on data integrity and audit readiness",
+          "Independent quality checks and verification",
+          "Regulatory-aligned processes and documentation",
+          "Integrated medical writing and reporting support",
+        ],
       },
     ],
   },

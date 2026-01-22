@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect, useRef } from 'react';
 
 const CountUp = ({ value, duration = 500, className, prefix=null }) => {

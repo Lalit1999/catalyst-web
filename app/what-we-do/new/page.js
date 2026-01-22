@@ -1,7 +1,8 @@
 import { serviceImg } from "@images";
-import { Bullet, RadientSvgBg } from "@icons"; // Using the bullet icon you mentioned
+import { Bullet} from "@icons"; // Using the bullet icon you mentioned
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Title } from "@c/index";
 
 // Data for the grid
 const servicesData = [
@@ -37,25 +38,7 @@ const servicesData = [
 // Replicating the data to make 9 cards as seen in the image
 const fullServicesList = [...servicesData, ...servicesData, ...servicesData];
 
-const HomeSlider = () => {
-  return (
-    <div className={styles.homeSlider}>
-      <div className={styles.WrapperBg} >
 
-      <RadientSvgBg/>
-
-      </div>
-
-      <div className={styles.homeSliderMain}>
-        <h1 className={styles.homeSliderText}>Orthopedics</h1>
-        <p className={styles.homeSliderDesc}>
-          From trouble sleeping to work stress to anxiety to depression, we all
-          have difficulty managing our emotions at times.
-        </p>
-      </div>
-    </div>
-  );
-};
 
 const TextSection = () => {
   return (
@@ -111,10 +94,11 @@ const ServiceGrid = () => {
   );
 };
 
+const description = 'Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.'
 const Page = () => {
   return (
     <div className={styles.main}>
-      <HomeSlider />
+      <Title heading='What we do' desc={description} />
       <TextSection />
       <ServiceGrid />
     </div>

@@ -44,7 +44,7 @@
 }
 .separation{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  /* grid-template-columns: repeat(2,1fr); */
   gap: 2em;
 }
 .separation >*{
@@ -167,4 +167,7 @@ margin: 0 auto;
   display: inline-block;
   /* This makes the SVG stretch to fill the entire width of the screen */
   object-fit: cover; 
+}
+.leftpart p{
+  margin: 0;
 }
