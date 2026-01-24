@@ -1,9 +1,9 @@
 'use client'
-import { serviceImg } from "@images";
+import { about2, serviceImg } from "@images";
 import { Bullet} from "@icons"; // Using the bullet icon you mentioned
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Cols, ServiceGrid, Title } from "@c/index";
+import { Cols, ServiceGrid, Title } from "@comps";
 import { useParams } from "next/navigation";
 import { serviceDataObject } from "@data";
 
@@ -33,7 +33,7 @@ import { serviceDataObject } from "@data";
 //   );
 // };
 
-const description = 'Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.'
+// const description = 'Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.'
 const Page = () => {
   const params = useParams();
     const serviceId = params.id || params.slug;
@@ -43,7 +43,7 @@ const Page = () => {
   return (
     <div className={styles.main}>
       <Title heading={service.heading} desc={service.subHeading} />
-      <Cols  text={service.content} />
+      <Cols  text={service.content} img={about2} />
       <ServiceGrid cards={service.capabilityCards} />
     </div>
   );

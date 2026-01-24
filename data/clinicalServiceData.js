@@ -9,11 +9,10 @@ export const clinicalServicesData = {
       "Structured oversight to ensure compliant, efficient, and transparent clinical trial execution.",
     img: Neurology,
     imgicon: <Clinical />,
-    content:
-      "Project Management services are integral throughout the entire conduct of the study, beginning with pre-study planning, continuing through active study execution, and extending into post-study closeout activities. We provide structured, end-to-end oversight across the entire study lifecycle. From pre-study planning and regulatory coordination to data oversight, quality assurance, and final closeout. By serving as the central point of coordination among sponsors, investigators, and cross-functional teams, we ensure clear communication, regulatory compliance, timely execution, and robust data integrity.",
-    sectionTitle: "Our Project Management Capabilities",
-    sectionSubtitle:
-      "Our disciplined yet flexible approach enables efficient study conduct, proactive risk management, and audit-ready documentation.",
+    content: [
+      "<strong>Our Project Management Capabilities :</strong> Our disciplined yet flexible approach enables efficient study conduct, proactive risk management, and audit-ready documentation.",
+      "Project Management services are integral throughout the entire conduct of the study, beginning with pre-study planning, continuing through active study execution, and extending into post-study closeout activities. We provide structured, end-to-end oversight across the entire study lifecycle. From pre-study planning and regulatory coordination to data oversight, quality assurance, and final closeout. By serving as the central point of coordination among sponsors, investigators, and cross-functional teams, we ensure clear communication, regulatory compliance, timely execution, and robust data integrity."
+    ],
     capabilityCards: [
       {
         title: "Study Planning and Start-Up",
@@ -96,11 +95,10 @@ export const clinicalServicesData = {
       "Ensuring consistent, compliant, and well-coordinated study conduct across all participating sites.",
     img: Neurology,
     imgicon: <Clinical />,
-    content:
-      "Our Clinical Site Management services support seamless site operations through proactive coordination, regulatory compliance, and continuous performance oversight. We work closely with investigators and site teams to ensure uniform understanding of study requirements, timely execution, data quality, and audit readiness throughout the study lifecycle.",
-    sectionTitle: "Comprehensive Site Operations Support",
-    sectionSubtitle:
-      "Proactive coordination and performance oversight for seamless study execution.",
+    content: [
+      "<strong>Comprehensive Site Operations Support : </strong> Proactive coordination and performance oversight for seamless study execution.",
+      "Our Clinical Site Management services support seamless site operations through proactive coordination, regulatory compliance, and continuous performance oversight. We work closely with investigators and site teams to ensure uniform understanding of study requirements, timely execution, data quality, and audit readiness throughout the study lifecycle."
+    ],
     capabilityCards: [
       {
         title: "Investigator Onboarding and Training",
@@ -186,11 +184,10 @@ export const clinicalServicesData = {
       "Ensuring protocol adherence, data integrity, and regulatory compliance throughout study execution.",
     img: Neurology,
     imgicon: <Clinical />,
-    content:
-      "Our Clinical Study Monitoring services provide independent oversight to ensure that all participating sites operate in full compliance with study protocol, defined procedures, and applicable regulatory requirements. Through structured on-site monitoring, we support high-quality data collection, early identification of risks, and consistent study execution across sites.",
-    sectionTitle: "Clinical Study Monitoring Activities",
-    sectionSubtitle:
-      "Independent oversight for high-quality data and risk identification.",
+    content: [
+      "<strong>Clinical Study Monitoring Activities : </strong> Independent oversight for high-quality data and risk identification.",
+      "Our Clinical Study Monitoring services provide independent oversight to ensure that all participating sites operate in full compliance with study protocol, defined procedures, and applicable regulatory requirements. Through structured on-site monitoring, we support high-quality data collection, early identification of risks, and consistent study execution across sites."
+    ],
     capabilityCards: [
       {
         title: "Site Initiation Visits (SIVs)",
@@ -230,11 +227,10 @@ export const clinicalServicesData = {
       "Ethical, data-driven recruitment strategies to enroll the right patients, at the right time.",
     img: Neurology,
     imgicon: <Clinical />,
-    content:
-      "Catalyst delivers strategic, patient-centric recruitment solutions designed to identify and enroll eligible patients efficiently while maintaining the highest standards of ethics, compliance, and patient safety. Leveraging deep therapeutic expertise and a geographically diverse network of clinical sites, we ensure access to representative patient populations across regions, care settings, and demographics. Our recruitment strategies are grounded in real-world feasibility and regulatory requirements, minimizing recruitment risk without compromising data quality or participant welfare.",
-    sectionTitle: "Our Patient Recruitment Capabilities",
-    sectionSubtitle:
-      "Strategies grounded in real-world feasibility and regulatory requirements.",
+    content: [
+      "<strong>Our Patient Recruitment Capabilities : </strong>Strategies grounded in real-world feasibility and regulatory requirements.",
+      "Catalyst delivers strategic, patient-centric recruitment solutions designed to identify and enroll eligible patients efficiently while maintaining the highest standards of ethics, compliance, and patient safety. Leveraging deep therapeutic expertise and a geographically diverse network of clinical sites, we ensure access to representative patient populations across regions, care settings, and demographics. Our recruitment strategies are grounded in real-world feasibility and regulatory requirements, minimizing recruitment risk without compromising data quality or participant welfare."
+    ],
     capabilityCards: [
       {
         title: "Feasibility and Enrollment Planning",
@@ -293,11 +289,10 @@ export const clinicalServicesData = {
       "Equipping investigators and site teams with the knowledge and clarity required for consistent, compliant study execution.",
     img: Neurology,
     imgicon: <Clinical />,
-    content:
-      "We design and conduct structured Investigator Training Meetings (ITMs) to ensure investigators and site teams are fully prepared prior to study initiation. These meetings establish a strong operational foundation, reinforce protocol adherence, and promote standardized study conduct across all participating sites, reducing start-up risk and variability.",
-    sectionTitle: "Scope of Investigator Training Meetings",
-    sectionSubtitle:
-      "Establishing a strong operational foundation and reducing start-up risk.",
+    content: [
+      "<strong>Scope of Investigator Training Meetings : </strong> Establishing a strong operational foundation and reducing start-up risk.",
+      "We design and conduct structured Investigator Training Meetings (ITMs) to ensure investigators and site teams are fully prepared prior to study initiation. These meetings establish a strong operational foundation, reinforce protocol adherence, and promote standardized study conduct across all participating sites, reducing start-up risk and variability."
+    ],
     capabilityCards: [
       {
         title: "Training Planning and Execution",

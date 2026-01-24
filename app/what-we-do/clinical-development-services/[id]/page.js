@@ -1,5 +1,5 @@
 'use client'
-import { serviceImg } from "@images";
+import { about1, serviceImg } from "@images";
 import { Bullet} from "@icons"; // Using the bullet icon you mentioned
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -43,7 +43,7 @@ const Page = () => {
   return (
     <div className={styles.main}>
       <Title heading={service.heading} desc={service.subHeading} />
-      <Cols  text={service.content} />
+      <Cols  text={service.content} img={about1} />
       <ServiceGrid cards={service.capabilityCards} />
     </div>
   );

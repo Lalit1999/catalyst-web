@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 
 import { serviceDataObject, servicePageHeader } from "@data";
 import { Cols, ServiceCard, Title } from "@comps";
-import Image from "next/image";
+import { about1 } from "@images";
 
 export default function WhatWeDo() {
 	const allServices = Object.values(serviceDataObject);
@@ -16,7 +16,7 @@ export default function WhatWeDo() {
 				desc={servicePageHeader.description}
 			/>
 			{/* img={servicePageHeader.image} */}
-			<Cols text={servicePageHeader.extra}  />
+			<Cols text={servicePageHeader.extra} img={about1}  />
 			<section className={styles.section}>
 				<div className={styles.container}>
 					{	allServices.map((service, i) => <ServiceCard key={i} {...service} /> )}
