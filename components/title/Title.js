@@ -1,7 +1,4 @@
-import Image from 'next/image';
-
 import styles from './title.module.css';
-import { RadientSvgBg } from '@icons';
 
 // const Title = ({ bread, heading, description, image,breadIn,breadIn_1 }) => {
 //   return (
@@ -24,17 +21,17 @@ import { RadientSvgBg } from '@icons';
 //   );
 // };
 
-const Title = ({heading,desc,desc_1}) => {
+const Title = ({heading,desc}) => {
   return (
     <div className={styles.homeSlider}>
-     <div className={styles.WrapperBg} >
+
  <div className={styles.homeSliderMain}>
-        <h1 className={styles.homeSliderText}>{heading}</h1>
+        <p className={styles.homeSliderText}>{heading}</p>
         <p className={styles.homeSliderDesc}>
           {desc}
         </p>
       </div>
-     </div>
+
     </div>
   );
 };

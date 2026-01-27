@@ -1,7 +1,5 @@
 'use client'
-import { about2, serviceImg } from "@images";
-import { Bullet} from "@icons"; // Using the bullet icon you mentioned
-import Image from "next/image";
+import { about2 } from "@images";
 import styles from "./page.module.css";
 import { Cols, ServiceGrid, Title } from "@comps";
 import { useParams } from "next/navigation";
@@ -38,7 +36,6 @@ const Page = () => {
   const params = useParams();
     const serviceId = params.id || params.slug;
     const service = serviceDataObject[serviceId];
-    console.log(service);
     
   return (
     <div className={styles.main}>

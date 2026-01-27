@@ -1,7 +1,7 @@
 import AnimProgBar from './animprogbar/AnimProgBar.js';
 import BasicForm from './basicform/BasicForm.js' ;
 import Card from './card/Card.js' ;
-import Cols from './cols/Cols.js'
+import Cols from './gridBlock/gridBlock.js'
 import ContactBtn from './contact/ContactBtn.js';
 import ContactForm from './contact/ContactForm.js' ;
 import CountUp from './countup/CountUp.js';
@@ -20,7 +20,7 @@ import ReportJob from './popup/pops/ReportJob.js' ;
 import ResearchCard from './card/ResearchCard.js';
 import RightPanel from './rightPanel/page.js' ;
 import ServiceCard from './card/ServiceCard.js';
-import ServiceGrid from './card/ServiceGrid.js'
+import ServiceGrid from './ServiceSection/ServiceGrid.js'
 import SignIn from './popup/pops/SignIn.js' ;
 import SignUp from './popup/pops/SignUp.js' ;
 import Slider from './slider/Slider.js' ;

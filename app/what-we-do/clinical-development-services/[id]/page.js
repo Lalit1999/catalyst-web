@@ -1,15 +1,11 @@
 'use client'
-import { about1, serviceImg } from "@images";
-import { Bullet} from "@icons"; // Using the bullet icon you mentioned
-import Image from "next/image";
+import { about1 } from "@images";
 import styles from "./page.module.css";
 import { Cols, ServiceGrid, Title } from "@c/index";
 import { useParams } from "next/navigation";
-import { clinicalServicesData, serviceDataObject } from "@data";
+import { clinicalServicesData} from "@data";
 
 // Data for the grid
-
-
 
 // const ServiceGrid = () => {
 //   return (
@@ -33,12 +29,10 @@ import { clinicalServicesData, serviceDataObject } from "@data";
 //   );
 // };
 
-const description = 'Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.'
 const Page = () => {
     const params = useParams();
     const serviceId = params.id || params.slug;
     const service = clinicalServicesData[serviceId];
-    console.log(service);
     
   return (
     <div className={styles.main}>

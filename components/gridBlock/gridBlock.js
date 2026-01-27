@@ -1,6 +1,6 @@
 import  Image  from "next/image";
-import styles from './Cols.module.css'
-const TextSection = ({img,text,text_1}) => {
+import styles from './gridBlock.module.css'
+const TextSection = ({img,text}) => {
   return (
     <div className={styles.hero}>
       <div className={styles.separation}>

@@ -2,15 +2,15 @@
 
 import styles from "./page.module.css";
 
-import { clinicalServicesData, serviceDataObject, servicePageHeader } from "@data";
+import { clinicalServicesData, serviceDataObject } from "@data";
 import { Cols, ServiceCard, Title } from "@comps";
 import { usePathname } from "next/navigation";
+import { about2 } from "@images";
 
 export default function WhatWeDo() {
 	const allServices = Object.values(clinicalServicesData);
   let params = usePathname();
   params = params.slice(params.indexOf('c'),params.length)
-  console.log(params);
   const service = serviceDataObject[params];
 	return (
 		<main className={styles.main}>
@@ -18,7 +18,7 @@ export default function WhatWeDo() {
 				heading={service.heading}
 				desc={service.subHeading}
 			/>
-			<Cols text={service.content} />
+			<Cols text={service.content} img={about2} />
 			<section className={styles.section}>
 				<div className={styles.container}>
 					{	allServices.map((service, i) => <ServiceCard subPath={'clinical-development-services/'} key={i} {...service} /> )}

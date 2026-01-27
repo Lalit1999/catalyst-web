@@ -1,4 +1,4 @@
-import {  Bag,  Research, Data, Clinical, Fsp } from "@icons";
+import { Bag, Research, Data, Clinical, Fsp } from "@icons";
 import { about1 } from "@images";
 
 // 2. Page Header Data (The text you requested)
@@ -29,12 +29,36 @@ export const therapeuticExpertiseData = {
         points: [
           "From Precision Procedures to Complex Reconstructions.",
           "Our evidence portfolio spans benign and malignant conditions across major surgical disciplines, including:",
-          "**Urology:** Partial nephrectomy, bladder dissection",
-          "**Gastrointestinal and Colorectal Surgery:** Rectal resections, cholecystectomy, radical completion cholecystectomy",
-          "**Gynecology:** Malignant hysterectomy, myomectomy, endometriosis surgery, uterine niche repair",
-          "**Abdominal Wall and Metabolic Surgery:** Ventral and inguinal hernia repair, bariatric surgery",
-          "**Breast Surgery:** Nipple-sparing mastectomy",
-          "**Cardiothoracic Surgery:** Robotic minimally invasive thoracic procedures, mitral valve repair and replacement, bilateral internal mammary artery CABG",
+        ],
+      },
+      {
+        title: "Urology",
+        points: ["Partial nephrectomy, bladder dissection"],
+      },
+      {
+        title: "Gastrointestinal and Colorectal Surgery",
+        points: [
+          "Rectal resections, cholecystectomy, radical completion cholecystectomy",
+        ],
+      },
+      {
+        title: "Gynecology",
+        points: [
+          "Malignant hysterectomy, myomectomy, endometriosis surgery, uterine niche repair",
+        ],
+      },
+      {
+        title: "Abdominal Wall and Metabolic Surgery",
+        points: ["Ventral and inguinal hernia repair, bariatric surgery"],
+      },
+      {
+        title: "Breast Surgery",
+        points: ["Nipple-sparing mastectomy"],
+      },
+      {
+        title: "Cardiothoracic Surgery",
+        points: [
+          "Robotic minimally invasive thoracic procedures, mitral valve repair and replacement, bilateral internal mammary artery CABG",
         ],
       },
       {
@@ -67,7 +91,7 @@ export const therapeuticExpertiseData = {
       "Our mission is to enable evidence-based decision-making and support the responsible, data-driven integration of robotic technologies into contemporary surgical practice, ensuring scalability, clinical rigor, and confidence in real-world adoption.",
   },
 
-  "oncology-research": {
+  "oncology": {
     id: "oncology-research",
     heading: "Oncology Clinical Research and Precision Oncology Capabilities",
     subHeading: "From Molecules to Medicine. From Evidence to Impact.",
@@ -80,18 +104,34 @@ export const therapeuticExpertiseData = {
         title: "What We Do Best",
         points: [
           "Science-Driven. Clinically Relevant. Globally Aligned.",
-          "**Comprehensive Oncology Research:** Early- and late-phase interventional trials, investigator-initiated studies, and academically led collaborations conducted in strict adherence to international regulatory, ethical, and methodological standards.",
-          "**Precision Oncology and Genomics:** Deep expertise in NGS-based genomic profiling, encompassing comprehensive molecular characterization, biomarker discovery and validation, and genotype-phenotype correlation.",
-          "**Biomarker-Led Trial Design:** Enable biomarker-guided protocols, identification of clinically actionable alterations, patient stratification, and real-world assessment of molecularly informed therapies.",
-          "**Real-World Evidence Across Diverse Cohorts:** Multicentric programs evaluating novel anticancer therapeutics and outcomes across heterogeneous patient populations—translating data into decisions that matter.",
         ],
+      },
+      {
+        title: "Comprehensive Oncology Research",
+        points: [
+          "Early- and late-phase interventional trials, investigator-initiated studies, and academically led collaborations conducted in strict adherence to international regulatory, ethical, and methodological standards.",
+        ],
+      },
+      {
+        title: "Precision Oncology and Genomics",
+        points: [
+          "Deep expertise in NGS-based genomic profiling, encompassing comprehensive molecular characterization, biomarker discovery and validation, and genotype-phenotype correlation.",
+        ],
+      },
+      {
+        title: "Biomarker-Led Trial Design",
+        points: ["Enable biomarker-guided protocols, identification of clinically actionable alterations, patient stratification, and real-world assessment of molecularly informed therapies."],
+      },
+      {
+        title: "Real-World Evidence Across Diverse Cohorts",
+        points: ["Multicentric programs evaluating novel anticancer therapeutics and outcomes across heterogeneous patient populations—translating data into decisions that matter."],
       },
     ],
     missionStatement:
       "We collaborate with globally recognized academic partners to ensure scientific depth, methodological rigor, and strong translational relevance—transforming complex genomic data into actionable clinical insights and advancing personalized cancer care at scale. Our collaborations with leading institutions, including the University of Oxford and the National Cancer Centre, reflect our commitment to globally aligned, high-impact oncology research that bridges discovery and real-world clinical application.",
   },
 
-  "rwe-scientific-expertise": {
+  "rwe": {
     id: "rwe-scientific-expertise",
     heading: "Real-World Evidence (RWE) Scientific Expertise",
     subHeading: "From Real-World Data to Real-World Impact",
@@ -117,7 +157,7 @@ export const therapeuticExpertiseData = {
       "By translating routine clinical practice data into structured, interpretable, and scientifically defensible insights, we help stakeholders bridge the gap between controlled clinical trials and real-world patient care - supporting evidence-based decisions that drive better outcomes, smarter adoption of innovations, and more sustainable healthcare systems.",
   },
 
-  "endocrinology-expertise": {
+  "endocrinology": {
     id: "endocrinology-expertise",
     heading: "Endocrinology Therapeutic Expertise",
     subHeading: "Transforming Metabolic Science into Everyday Clinical Impact",
@@ -127,14 +167,39 @@ export const therapeuticExpertiseData = {
     ],
     capabilityCards: [
       {
-        title: "Our Endocrinology Capabilities",
+        title: "Broad Therapeutic Coverage",
         points: [
-          "**Broad Therapeutic Coverage:** Experience across diabetes (Type 1 and Type 2), obesity and metabolic syndrome, dyslipidemia, and other hormone-mediated conditions.",
-          "**Comprehensive Study Designs:** Support for interventional trials, observational studies, investigator-initiated research, and real-world evidence programs across diverse patient populations.",
-          "**Clinically Relevant Endpoints:** Integration of HbA1c, fasting and postprandial glucose, weight and cardiometabolic risk markers, patient-reported outcomes, and long-term safety and effectiveness measures.",
-          "**Real-World Evidence Generation:** Use of hospital records, laboratory databases, prescription and treatment logs, and longitudinal follow-up data to capture outcomes beyond controlled trial settings.",
-          "**Advanced Analytics and Scientific Rigor:** Application of robust epidemiological and biostatistical frameworks to address variability, adherence, durability of response, and healthcare utilization.",
-          "**Publication-Ready, Globally Aligned Outputs:** Evidence developed in alignment with international ethical, regulatory, and reporting standards to support publications, regulatory interactions, and guideline development.",
+          "Experience across diabetes (Type 1 and Type 2), obesity and metabolic syndrome, dyslipidemia, and other hormone-mediated conditions.",
+         ],
+      },
+      {
+        title: "Comprehensive Study Designs",
+        points: [
+          "Support for interventional trials, observational studies, investigator-initiated research, and real-world evidence programs across diverse patient populations.",
+        ],
+      },
+      {
+        title: "Clinically Relevant Endpoints",
+        points: [
+          "Integration of HbA1c, fasting and postprandial glucose, weight and cardiometabolic risk markers, patient-reported outcomes, and long-term safety and effectiveness measures.",
+        ],
+      },
+      {
+        title: "Real-World Evidence Generation",
+        points: [
+          "Use of hospital records, laboratory databases, prescription and treatment logs, and longitudinal follow-up data to capture outcomes beyond controlled trial settings.",
+         ],
+      },
+      {
+        title: "Advanced Analytics and Scientific Rigor",
+        points: [
+          "Application of robust epidemiological and biostatistical frameworks to address variability, adherence, durability of response, and healthcare utilization.",
+         ],
+      },
+      {
+        title: "Publication-Ready, Globally Aligned Outputs",
+        points: [
+        "Evidence developed in alignment with international ethical, regulatory, and reporting standards to support publications, regulatory interactions, and guideline development.",
         ],
       },
     ],
@@ -142,7 +207,7 @@ export const therapeuticExpertiseData = {
       "We aim to translate endocrine and metabolic innovation into sustainable glycemic control, improved treatment adherence, and meaningful long-term patient outcomes - enabling evidence-based therapeutic decisions, improved adherence, and lasting patient impact.",
   },
 
-  "cardiology-expertise": {
+  "cardiology": {
     id: "cardiology-expertise",
     heading: "Cardiology Therapeutic Expertise",
     subHeading: "Evidence That Strengthens Every Beat of Care",
@@ -151,24 +216,54 @@ export const therapeuticExpertiseData = {
       "We deliver comprehensive cardiology clinical research expertise that integrates deep cardiovascular science, rigorous study design, and real-world clinical insight. Our work supports the generation of robust, practice-informing evidence across the continuum of cardiovascular care - enabling confident, evidence-based decisions in both interventional and medical cardiology.",
     ],
     capabilityCards: [
-      {
-        title: "Our Cardiology Capabilities",
-        points: [
-          "**Broad Cardiovascular Coverage:** Experience across coronary artery disease (including CABG), valvular heart disease, hypertension, and preventive cardiology.",
-          "**Diverse Study Models:** Support for early- and late-phase interventional trials, device and procedural evaluations, observational studies, registries, investigator-initiated research, and real-world evidence programs.",
-          "**Clinically Relevant Endpoints:** Integration of major adverse cardiovascular events (MACE), survival and rehospitalization outcomes, functional status, imaging and hemodynamic parameters, quality-of-life measures, and long-term safety endpoints.",
-          "**Comparative Effectiveness and RWE:** Evaluation of medical therapy, interventional procedures, and surgical approaches using real-world data to inform treatment pathways and optimize patient selection.",
-          "**Advanced Analytics and Methodological Rigor:** Application of robust epidemiological methods and advanced biostatistics to address confounding, disease heterogeneity, longitudinal follow-up, and risk adjustment.",
-          "**End-to-End Research Execution:** Comprehensive support across protocol development, regulatory and ethics submissions, multicenter site coordination, data management, statistical analysis, and scientific publication.",
-          "**Globally Aligned, Publication-Ready Outputs:** Evidence developed in alignment with international ethical, regulatory, and reporting standards to support regulatory interactions, clinical guidelines, and high-impact publications.",
-        ],
-      },
+  {
+    title: "Broad Cardiovascular Coverage",
+    points: [
+      "Experience across coronary artery disease (including CABG), valvular heart disease, hypertension, and preventive cardiology.",
     ],
+  },
+  {
+    title: "Diverse Study Models",
+    points: [
+      "Support for early- and late-phase interventional trials, device and procedural evaluations, observational studies, registries, investigator-initiated research, and real-world evidence programs.",
+    ],
+  },
+  {
+    title: "Clinically Relevant Endpoints",
+    points: [
+      "Integration of major adverse cardiovascular events (MACE), survival and rehospitalization outcomes, functional status, imaging and hemodynamic parameters, quality-of-life measures, and long-term safety endpoints.",
+    ],
+  },
+  {
+    title: "Comparative Effectiveness and RWE",
+    points: [
+      "Evaluation of medical therapy, interventional procedures, and surgical approaches using real-world data to inform treatment pathways and optimize patient selection.",
+    ],
+  },
+  {
+    title: "Advanced Analytics and Methodological Rigor",
+    points: [
+      "Application of robust epidemiological methods and advanced biostatistics to address confounding, disease heterogeneity, longitudinal follow-up, and risk adjustment.",
+    ],
+  },
+  {
+    title: "End-to-End Research Execution",
+    points: [
+      "Comprehensive support across protocol development, regulatory and ethics submissions, multicenter site coordination, data management, statistical analysis, and scientific publication.",
+    ],
+  },
+  {
+    title: "Globally Aligned, Publication-Ready Outputs",
+    points: [
+      "Evidence developed in alignment with international ethical, regulatory, and reporting standards to support regulatory interactions, clinical guidelines, and high-impact publications.",
+    ],
+  },
+],
     missionStatement:
       "We aim to translate cardiovascular innovation into measurable clinical benefit - enabling safer interventions, more informed therapy choices, and improved long-term outcomes for patients with heart disease.",
   },
 
-  "vaccines-research": {
+  "vaccines": {
     id: "vaccines-research",
     heading: "Vaccines and Immunization Research Expertise",
     subHeading: "Advancing Prevention Through Evidence",
@@ -177,25 +272,55 @@ export const therapeuticExpertiseData = {
       "We deliver comprehensive vaccines and immunization research expertise by integrating immunological science, rigorous clinical development methodologies, and real-world evidence generation. Our work spans the full vaccine lifecycle - from clinical development and regulatory evaluation to post-licensure safety and effectiveness, across both routine and priority infectious diseases, including tuberculosis, cholera, and other endemic and emerging pathogens. We generate high-quality evidence that supports informed policy decisions, clinical practice, and population-level public health impact.",
     ],
     capabilityCards: [
-      {
-        title: "Our Vaccines and Immunization Capabilities",
-        points: [
-          "**Broad Vaccine Coverage:** Experience across prophylactic and therapeutic vaccines, including pediatric, adult, and special-population immunization programs.",
-          "**Diverse Study Designs:** Support for early- and late-phase clinical trials, post-marketing surveillance, observational studies, registries, and real-world evidence programs.",
-          "**Safety, Immunogenicity and Effectiveness Endpoints:** Evaluation of adverse events, reactogenicity, immune response markers, durability of protection, breakthrough infections, and population-level effectiveness.",
-          "**Real-World Evidence:** Use of healthcare records, immunization registries, surveillance systems, and longitudinal follow-up data to assess vaccine performance beyond controlled trial environments.",
-          "**Advanced Epidemiology and Biostatistics:** Application of robust epidemiological frameworks to address confounding, bias, and population heterogeneity, enabling reliable assessment of benefit–risk profiles.",
-          "**Public Health and Policy-Relevant Outputs:** Evidence generation aligned with national and international immunization guidelines to support regulatory submissions, programmatic decisions, and health system planning.",
-          "**End-to-End Research Execution:** Comprehensive support across study design, regulatory and ethics submissions, site and community coordination, data management, statistical analysis, and scientific dissemination.",
-        ],
-      },
+  {
+    title: "Broad Vaccine Coverage",
+    points: [
+      "Experience across prophylactic and therapeutic vaccines, including pediatric, adult, and special-population immunization programs.",
     ],
+  },
+  {
+    title: "Diverse Study Designs",
+    points: [
+      "Support for early- and late-phase clinical trials, post-marketing surveillance, observational studies, registries, and real-world evidence programs.",
+    ],
+  },
+  {
+    title: "Safety, Immunogenicity and Effectiveness Endpoints",
+    points: [
+      "Evaluation of adverse events, reactogenicity, immune response markers, durability of protection, breakthrough infections, and population-level effectiveness.",
+    ],
+  },
+  {
+    title: "Real-World Evidence",
+    points: [
+      "Use of healthcare records, immunization registries, surveillance systems, and longitudinal follow-up data to assess vaccine performance beyond controlled trial environments.",
+    ],
+  },
+  {
+    title: "Advanced Epidemiology and Biostatistics",
+    points: [
+      "Application of robust epidemiological frameworks to address confounding, bias, and population heterogeneity, enabling reliable assessment of benefit–risk profiles.",
+    ],
+  },
+  {
+    title: "Public Health and Policy-Relevant Outputs",
+    points: [
+      "Evidence generation aligned with national and international immunization guidelines to support regulatory submissions, programmatic decisions, and health system planning.",
+    ],
+  },
+  {
+    title: "End-to-End Research Execution",
+    points: [
+      "Comprehensive support across study design, regulatory and ethics submissions, site and community coordination, data management, statistical analysis, and scientific dissemination.",
+    ],
+  },
+],
     missionStatement:
       "We aim to generate trusted, high-quality evidence that strengthens immunization strategies, builds public confidence, and protects populations through science-driven prevention.",
   },
 
-  "multi-therapeutic-expertise": {
-    id: "multi-therapeutic-expertise",
+  "others": {
+    id: "others",
     heading: "Multi-Therapeutic Clinical Research Expertise",
     subHeading:
       "Hands-on experience across a wide spectrum of therapeutic areas.",
@@ -204,17 +329,37 @@ export const therapeuticExpertiseData = {
       "We bring hands-on clinical research experience across a wide spectrum of therapeutic areas, enabling the generation of high-quality, practice-relevant evidence across complex and diverse disease settings. Our multidisciplinary expertise allows us to design and execute studies that are scientifically rigorous, operationally efficient, and closely aligned with real-world clinical care.",
     ],
     capabilityCards: [
-      {
-        title: "Our Experience Spans:",
-        points: [
-          "**Psychiatry:** Research across mood disorders, psychotic disorders, and neurobehavioral conditions, with emphasis on safety, treatment response, and patient-reported outcomes.",
-          "**Critical Care:** Evidence generation in high-acuity settings, including ICU workflows, peri-interventional outcomes, safety endpoints, and resource utilization.",
-          "**Ophthalmology:** Clinical studies evaluating medical and procedural interventions, visual outcomes, and long-term disease progression.",
-          "**Urology:** Experience across benign and malignant urologic conditions, including procedural outcomes, functional recovery, and quality-of-life assessments.",
-          "**Additional Specialties:** Support across multiple allied medical and surgical domains, adapting study designs to specialty-specific clinical pathways.",
-        ],
-      },
+  {
+    title: "Psychiatry",
+    points: [
+      "Research across mood disorders, psychotic disorders, and neurobehavioral conditions, with emphasis on safety, treatment response, and patient-reported outcomes.",
     ],
+  },
+  {
+    title: "Critical Care",
+    points: [
+      "Evidence generation in high-acuity settings, including ICU workflows, peri-interventional outcomes, safety endpoints, and resource utilization.",
+    ],
+  },
+  {
+    title: "Ophthalmology",
+    points: [
+      "Clinical studies evaluating medical and procedural interventions, visual outcomes, and long-term disease progression.",
+    ],
+  },
+  {
+    title: "Urology",
+    points: [
+      "Experience across benign and malignant urologic conditions, including procedural outcomes, functional recovery, and quality-of-life assessments.",
+    ],
+  },
+  {
+    title: "Additional Specialties",
+    points: [
+      "Support across multiple allied medical and surgical domains, adapting study designs to specialty-specific clinical pathways.",
+    ],
+  },
+],
     missionStatement:
       "Across all therapeutic areas, we support interventional trials, observational studies, investigator-initiated research, and real-world evidence programs. Our focus remains consistent: to translate routine clinical practice into robust, publication-ready evidence that informs clinical decision-making, regulatory discussions, and improved patient care.",
   },

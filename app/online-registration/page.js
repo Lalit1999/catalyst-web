@@ -122,8 +122,8 @@ const RegistrationFormPage = () => {
         {   type: 'submit', text: 'Proceed to Payment', style: styles.submitBtn },
     ];
 
-    const handleSubmit = (values) => {
-        console.log('Registration form submitted', values, selectedProgram);
+    const handleSubmit = () => {
+        // console.log('Registration form submitted', values, selectedProgram);
     };
 
 

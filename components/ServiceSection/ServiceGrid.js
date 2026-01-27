@@ -11,7 +11,7 @@ const ServiceGrid = ({ cards }) => {
   return (
     <div className={styles.gridContainer}>
       {cards.map((service, index) => (
-        <div key={index} className={styles.serviceCard}>
+        <div key={index} className={styles.serviceCard}>  
           <div className={styles.iconWrapper}>
             <Bullet className={styles.svgIcon} />
           </div>
