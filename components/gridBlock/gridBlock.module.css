@@ -109,4 +109,7 @@
     height: 100%;
     width: 100%;
   }
+  .heroText{
+    font-size:  0.85em
+  }
 }
