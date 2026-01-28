@@ -2,27 +2,72 @@
 
 import { Button } from "antd";
 import styles from "../page.module.css";
-import Link from "next/link";
+// We no longer need next/link since we aren't changing URLs
+// import Link from "next/link"; 
 
-export default function Sidebar({ onLogout }) {
+export default function Sidebar({ onLogout, activeTab, setActiveTab }) {
+  
+  // Helper to determine class names
+  const getItemClass = (tabName) => {
+    return activeTab === tabName ? styles.activePage : "";
+  };
+
   return (
     <aside className={styles.sidebar}>
-
       <div>
-      <h2 className={styles.brand}>AdminPanel</h2>
+        <h2 className={styles.brand}>AdminPanel</h2>
         <ul className={styles.menu}>
-        <li className={styles.activePage} >Dashboard</li>
-        <Link href={'/what-we-do'} >Services</Link>
-        <Link href={'/therapeutic-expertise'}  >Therapeutic Expertise</Link>
-        <Link href={'/research-publications'} >Research Publications</Link>
-        <Link href={'/who-we-are'} >About us</Link>
-      </ul>
+          {/* Dashboard */}
+          <li 
+            className={getItemClass("dashboard")} 
+            onClick={() => setActiveTab("dashboard")}
+            style={{ cursor: "pointer" }}
+          >
+            Dashboard
+          </li>
+
+          {/* Services */}
+          <li 
+            className={getItemClass("services")} 
+            onClick={() => setActiveTab("services")}
+            style={{ cursor: "pointer" }}
+          >
+            Services
+          </li>
+
+          {/* Therapeutic Expertise */}
+          <li 
+            className={getItemClass("therapeutic")} 
+            onClick={() => setActiveTab("therapeutic")}
+            style={{ cursor: "pointer" }}
+          >
+            Therapeutic Expertise
+          </li>
+
+          {/* Research Publications */}
+          <li 
+            className={getItemClass("research")} 
+            onClick={() => setActiveTab("research")}
+            style={{ cursor: "pointer" }}
+          >
+            Research Publications
+          </li>
+
+          {/* Renamed About us to Training Programs */}
+          <li 
+            className={getItemClass("training")} 
+            onClick={() => setActiveTab("training")}
+            style={{ cursor: "pointer" }}
+          >
+            Training Programs
+          </li>
+        </ul>
       </div>
 
       <div>
         <Button danger type="primary" onClick={onLogout}>
-        Logout
-      </Button>
+          Logout
+        </Button>
       </div>
     </aside>
   );
