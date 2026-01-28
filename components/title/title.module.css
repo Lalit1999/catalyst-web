@@ -196,7 +196,7 @@
 .homeSliderMain {
   color: var(--white);
   display: flex;
-  padding: 4em;
+  padding: 3em 4em;
   width: 100%;
   z-index: 2;
   gap: 1em;

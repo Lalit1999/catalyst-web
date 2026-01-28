@@ -3,7 +3,7 @@
 import styles from "./page.module.css";
 
 import { serviceDataObject, servicePageHeader } from "@data";
-import { Cols, ServiceCard, Title } from "@comps";
+import   {GridBlock, ServiceCard, Title } from "@comps";
 import { about1 } from "@images";
 
 export default function WhatWeDo() {
@@ -16,7 +16,7 @@ export default function WhatWeDo() {
 				desc={servicePageHeader.description}
 			/>
 			{/* img={servicePageHeader.image} */}
-			<Cols text={servicePageHeader.extra} img={about1}  />
+			<GridBlock text={servicePageHeader.extra} img={about1}  />
 			<section className={styles.section}>
 				<div className={styles.container}>
 					{	allServices.map((service, i) => <ServiceCard key={i} {...service} /> )}

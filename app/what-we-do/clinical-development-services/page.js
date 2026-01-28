@@ -3,7 +3,7 @@
 import styles from "./page.module.css";
 
 import { clinicalServicesData, serviceDataObject } from "@data";
-import { Cols, ServiceCard, Title } from "@comps";
+import { GridBlock, ServiceCard, Title } from "@comps";
 import { usePathname } from "next/navigation";
 import { about2 } from "@images";
 
@@ -18,7 +18,7 @@ export default function WhatWeDo() {
 				heading={service.heading}
 				desc={service.subHeading}
 			/>
-			<Cols text={service.content} img={about2} />
+			<GridBlock text={service.content} img={about2} />
 			<section className={styles.section}>
 				<div className={styles.container}>
 					{	allServices.map((service, i) => <ServiceCard subPath={'clinical-development-services/'} key={i} {...service} /> )}
