@@ -1,172 +1,49 @@
-"use client";
-import React, { useState } from "react";
-import { notFound, useParams } from "next/navigation";
+'use client'
+import { about2 } from "@images";
 import styles from "./page.module.css";
-import { RightPanel, Title } from "@comps"; // Adjust path as needed
+import { Cols, ServiceGrid, Title } from "@comps";
+import { useParams } from "next/navigation";
+import { therapeuticExpertiseData } from "@data";
 
-// 1. Import Data
-import { 
-  therapeuticExpertiseData, 
-  therapeuticPageHeader
-} from "@data"; 
+// Data for the grid
 
-// 2. Import Icons
-import {
-  CheckIcon,
-  ClockCircle,
-  StarCircle,
-  User
-} from "@icons";
 
-export default function TherapyDetailPage() {
+
+// const ServiceGrid = () => {
+//   return (
+//     <div className={styles.gridContainer}>
+//       {fullServicesList.map((service, index) => (
+//         <div key={index} className={styles.serviceCard}>
+//           <div className={styles.iconWrapper}>
+//             <Bullet className={styles.svgIcon} />
+//           </div>
+//           <h3 className={styles.cardTitle}>{service.title}</h3>
+//           <ul className={styles.pointsList}>
+//             {service.points.map((point, i) => (
+//               <li key={i} className={styles.pointItem}>
+//                 {point}
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// const description = 'Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.'
+const Page = () => {
   const params = useParams();
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (idx) => {
-    setOpenIndex(openIndex === idx ? null : idx);
-  };
-
-  const therapyId = params.id || params.slug;
-  const therapy = therapeuticExpertiseData[therapyId];
-
-  if (!therapy) {
-    return notFound();
-  }
-
+    const serviceId = params.id || params.slug;
+    const service = therapeuticExpertiseData[serviceId];
+    
   return (
-    <main className={styles.main}>
-      
-      {/* 3. Title Component 
-          Uses Header Data for the main look, but passes therapy.heading 
-          to the 'breadIn' prop so the breadcrumb shows: Home -> Expert -> [Therapy Name] 
-      */}
-      <Title 
-        bread={therapeuticPageHeader.bread} 
-        breadIn={therapy.heading} 
-        heading={therapy.heading} 
-        description={therapy.subHeading} 
-        image={therapeuticPageHeader.image} 
-      />
-
-      <div className={styles.detailsContainer}>
-        <div className={styles.leftColumn}>
-          <div className={styles.leftpart_1}>
-            <div className={styles.leftpart}>
-              <h2 className={styles.heading}>
-                Our Approach to {therapy.heading}
-              </h2>
-              <div className={styles.leftContent}>
-                {/* Dynamic Approach Content */}
-                {therapy.approachContent && therapy.approachContent.map((para, i) => (
-                    <p key={i} className={styles.paragraph}>{para}</p>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          <div className={styles.leftpart_2}>
-            <h2 className={styles.heading}>Primary Care</h2>
-            <p className={styles.paragraph}>
-              {therapy.primaryCareText}
-            </p>
-
-            <div className={styles.featureGrid}>
-              {/* Dynamic Feature Cards */}
-              {therapy.features && therapy.features.map((card, idx) => (
-                <div
-                  key={idx}
-                  className={styles.featureCard}
-                  style={{ backgroundColor: card.color }}
-                >
-                  <div className={styles.featureIcon}>
-                    {card.icon === "user" && (
-                      <div className={styles.userIconBg}>
-                        <User />
-                      </div>
-                    )}
-                    {card.icon === "star" && <StarCircle />}
-                    {card.icon === "clock" && <ClockCircle />}
-                  </div>
-                  <h3>{card.title}</h3>
-                  <p>{card.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Dynamic Checklist */}
-          {therapy.checkList && (
-            <div className={styles.checkCard}>
-                {therapy.checkList.map((item, idx) => (
-                  <div key={idx} className={styles.checkItem}>
-                    <CheckIcon />
-                    <span>{item}</span>
-                  </div>
-                ))}
-            </div>
-          )}
-          
-          <div className={styles.separator}></div>
-
-          {/* Dynamic Industry Expertise */}
-          <div className={styles.expertiseBlock}>
-            <h2>Our Industry Expertise</h2>
-            <p className={styles.subText}>
-              Professional care from specialists who understand your specific needs.
-            </p>
-            <div className={styles.expertiseGrid}>
-              {therapy.expertiseList && therapy.expertiseList.map((item, idx) => (
-                <p key={idx} className={styles.expertiseItem}>
-                  {item}
-                </p>
-              ))}
-            </div>
-          </div>
-
-          <div className={styles.separator}></div>
-
-          {/* Dynamic FAQs */}
-          <div className={styles.faqBlock}>
-            <div className={styles.faqBlockHead}>
-              <h2>Frequently Asked Questions (FAQs)</h2>
-              <p className={styles.subText}>
-                Common questions regarding our {therapy.heading} therapies.
-              </p>
-            </div>
-            <div className={styles.faqList}>
-              {therapy.faqList && therapy.faqList.map((faq, idx) => {
-                const isOpen = openIndex === idx;
-
-                return (
-                  <div key={idx} className={styles.faqItem}>
-                    <div className={styles.faqInner}>
-                      <button
-                        className={styles.faqSummary}
-                        onClick={() => toggleFAQ(idx)}
-                        aria-expanded={isOpen}
-                      >
-                        <span className={styles.faqQuestion}>{faq.question}</span>
-                        <span className={styles.faqIcon}>
-                          {isOpen ? "−" : "+"}
-                        </span>
-                      </button>
-                    </div>
-
-                    <div className={`${styles.faqAnswer} ${isOpen ? styles.open : ""}`}>
-                      <div className={styles.faqAnswerInner}>
-                        {faq.answer}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        {/* RIGHT COLUMN: Sidebar */}
-        <RightPanel  variants="therapeutic"  />
-      </div>
-    </main>
+    <div className={styles.main}>
+      <Title heading={service.heading} desc={service.subHeading} />
+      <Cols  text={service.content} img={about2} />
+      <ServiceGrid cards={service.capabilityCards} />
+    </div>
   );
-}
+};
+
+export default Page;

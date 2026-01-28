@@ -11,10 +11,8 @@ export default function Page() {
 	return (
 		<main className={styles.main}>
 			<Title
-				bread={therapeuticPageHeader.bread}
 				heading={therapeuticPageHeader.heading}
 				description={therapeuticPageHeader.description}
-				image={therapeuticPageHeader.image}
 			/>
 			<section className={styles.section}>
 				<div className={styles.container}>

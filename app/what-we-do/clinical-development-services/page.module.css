@@ -1,512 +1,176 @@
+/* page.module.css */
+
 .main {
   display: flex;
   flex-direction: column;
-  color: var(--darkGray);
-gap: 3rem;
   position: relative;
-}
-
-.contentContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.downHead {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-}
-.main_bread {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0;
-  text-transform: capitalize;
-}
-.headparagraph{
-  font-size: 14px;
-  line-height: 25px;
-  color: var(--gray); 
-  font-weight: 400;
-  margin: 0 !important;
-  width: 70vw;
-}
-.head {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.titleLarge {
-  font-size: 1.5rem; 
-  font-weight: 600;
-  line-height: 1.1;
-  margin: 0;
-}
-.head_two {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 2.2em;
-}
-.heroImg {
-  object-fit: cover;
-  border-radius: 12px;
-  border: 4px solid var(--white);
-  width: 100%;
-  min-height: 70vh;
-}
-@media (max-width: 768px) {
-  .head {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .head_two {
-    width: 100%;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .titleLarge {
-    font-size: 2.5rem;
-  }
-}
-
-.detailsContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 3rem; 
-}
-.leftColumn {
-  display: flex;
-  flex-direction: column;
+   color: var(--darkGray);
   gap: 3rem;
-  min-width: 70%;
 }
-
-.bodyImageContainer {
-  width: 100%;
-  height: 55vh;
-  position: relative;
-}
-
-.leftpart{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.leftContent{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.leftpart_1{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.leftpart_2{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--darkGray);
-  margin: 0 !important;
-}
-
-.paragraph {
-  font-size: 1rem;
-  line-height: 25px;
-  color: var(--gray);
-  font-weight: 400;
-  margin: 0 !important;
-}
-
-/* --- RIGHT COLUMN (Sidebar) --- */
-.rightColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-}
-.sidebarNavLink {
-  display: block;
-  padding: 0.8rem 0;
-  color: var(--gray);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background-color 0.25s ease, 
-              color 0.25s ease, 
-              padding-left 0.25s ease;
-}
-
-.sidebarNavLink:hover {
-  background-color: var(--white);
-  color: var(--moderate);
- 
-}
-
-/* --- SIDEBAR CARDS --- */
-.sidebarCard {
-  border: 1px solid var(--lightGray);
-  border-radius: 20px;
-  overflow: hidden; /* Ensures header stays inside radius */
-  background: var(--white);
-}
-.sidebarCard_round {
-  padding: 6px;
-}
-.sidebarHeader {
-  background-color: var(--second); /* Dark Background like screenshot */
-  color: var(--white);
-  padding: 0.5rem 1.5rem;
-  font-weight: 500;
-  font-size: 20px;
-  border-radius: 20px;
-}
-
-.sidebarList {
-  list-style: none;
-  padding: 0;
-  margin: 0 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.sidebarItem {
-  border-bottom: 1px solid var(--lightGray);
-}
-
-.sidebarItem:last-child {
-  border-bottom: none;
-}
-
-
-/* Quick Links Style */
-.quickLinkRow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 1rem 0.4rem;
-  color: var(--darkGray);
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-   transition: background 0.2s, color 0.2s;
-}
-
-.quickLinkRow:hover {
-  background-color: var(--white);
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-  .detailsContainer {
-    flex-direction: column;
-  }
-
-  .rightColumn {
-    order: -1; /* Sidebar goes to top on mobile (optional, remove to keep at bottom) */
+/* Responsive Grid: 2 columns on tablet, 3 on desktop */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-/* --- EXTRA SECTION (Features, Expertise, FAQ) --- */
-.extraSection {
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.section {
   background-color: var(--white);
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.extraContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* 1. Feature Cards */
-.featureGrid {
+.container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  width: 100%;
 }
 
-.featureCard {
-  padding: 3rem 2rem;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  font-size: 1rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.userIconBg {
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid var(--darkWhite);
+  border-radius: 30px;
+  background-color: var(--white);
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px var(--thodaBlack);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Removed gap: 3rem; -> This was likely too large and unnecessary if there's only one child */
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px -5px var(--zaraBlack);
+}
+.card p{
+  margin: 0;
+}
+.imageContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  /* Changed from center to flex-start to stop content from floating in the middle */
+  justify-content: flex-start; 
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  /* Added flex: 1 to ensure this container fills the card height */
+  flex: 1; 
+}
+
+/* Container for the black circle */
+.iconBadge {
   width: 60px;
   height: 60px;
-  background-color: var(--darkGray); /* dark blue */
-  border-radius: 50%;
+  background-color: var(--moderate);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+  /* Prevent the icon from shrinking when card height changes */
+  flex-shrink: 0; 
 }
 
-.userIconBg svg {
-  width: 30px;
-  height: 30px;
-  color: var(--white); /* icon color */
-}
-.featureCard h3 {
-  font-size: 19px;
-  font-weight: 500;
-  color: var(--darkGray);
-  margin: 0;
+.iconWrapper {
+  min-height: 25px;
+  min-width: 25px;
 }
 
-.featureCard p {
-  font-size: 15px;
-  color: var(--gray);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* 2. Checklist Card */
-.checkCard {
-  background: var(--white);
-  border: 1px solid var(--lightGray);
-  border-radius: 20px;
+.content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem 2rem;
-  box-shadow: 0 4px 6px -1px var(--halfBlack);
-}
-
-.checkItem {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 1rem;
-  color: var(--gray);
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-.checkItem span{
-  font-size: 1rem;
-}
-
-.checkItem:last-child {
-  margin-bottom: 0;
-}
-
-/* Separator Line */
-.separator {
+  /* Changed from center to space-between. 
+     This pushes the Title/Desc to the top and the "Read More" to the bottom 
+     of the available space, effectively removing the "dead space" below the button. */
+  justify-content: space-between; 
   width: 100%;
-  height: 1px;
-  background-color: var(--lightGray);
+  /* flex-grow makes this fill the remaining height of the imageContainer */
+  flex-grow: 1; 
+  gap: 0.5rem;
 }
-.expertiseBlock{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-/* 3. Industry Expertise */
-.expertiseBlock h2 {
-  font-size: 1.5rem;
+
+.title {
+  font-size: 1.25rem;
   font-weight: 600;
-  color: var(--darkGray);
-  margin: 0 !important;
+  display: inline-block;
+  color: var(--second);
+  transition: all ease 0.4s;
 }
 
-.subText {
-  font-size: 15px;
-  line-height: 25px;
-  color: var(--gray);
+.title:hover {
+  color: var(--main);
+}
+
+.desc {
+  font-size: 0.95rem;
   line-height: 1.6;
-  max-width: 900px;
-  font-weight: 400;
+  overflow: hidden;
+  color: var(--medGray);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   margin: 0 !important;
+  /* Optional: Push the Read More down if you want space in the middle instead of below */
+  /* margin-bottom: auto !important;  */
 }
 
-.expertiseGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:1rem; /* Gap between rows and columns */
-}
-
-.expertiseItem {
+.readMore {
   font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--darkGray);
-  margin: 0 !important;
-}
-
-.faqBlock{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.faqBlockHead{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.faqBlockHead h2{
-  font-size: 1.5rem;
-  font-weight: 600;
-   margin: 0 !important;
-}
-.faqList{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.faqItem {
-  border: 1px solid var(--lightGray);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0 1rem;
-  background: var(--white);
-  transition: box-shadow 0.3s ease;
-}
-.faqInner{
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 0.8rem;
-}
-.faqItem:hover {
-  box-shadow: 0 4px 10px -1px var(--zaraBlack);
-}
-
-.faqSummary {
-  all: unset;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-}
-
-.faqQuestion {
-  font-size: 1.1rem;
   font-weight: 500;
-  line-height: 30px;
+  color: var(--second);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
 }
 
-.faqIcon {
-  font-size: 1.8rem;
-  line-height: 1;
+.readMore:hover {
+  color: var(--main);
+  text-decoration: underline;
 }
-
-.faqAnswer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 350ms ease;
-  border-top: 1px solid transparent; /* 👈 hidden separator */
-}
-
-
-.faqAnswerInner {
- overflow: hidden;
-  padding-top: 0;          /* 👈 no space when closed */
-  transition: padding-top 300ms ease; /* optional: breathing room */
-  color: var(--gray);
-  font-size: 15px;
-  line-height: 24px;
-}
-
-.faqAnswer.open {
-  grid-template-rows: 1fr;
-  border-top-color: var(--lightGray); 
-}
-
-.faqAnswer.open .faqAnswerInner {
-  padding: 0.8rem 0;     /* 👈 space appears on open */
-}
-
-.faqAnswer.open .faqAnswerInner {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .featureGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .expertiseGrid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .checkCard {
-    padding: 2rem;
-  }
-}
-@media (max-width: 600px) {
-
-  /* MAIN LAYOUT */
+@media (max-width:600px){
   .main {
-    gap: 2em; /* was 3rem */
+    gap: 2em;
   }
-
-  .contentContainer,
-  .head,
-  .leftpart,
-  .leftContent,
-  .leftpart_1,
-  .leftpart_2,
-  .extraContainer,
-  .expertiseBlock,
-  .faqBlock,
-  .faqBlockHead {
-    gap: 1em; /* was 1.5rem */
+  .container{
+    gap: 1em;
   }
-
-  /* DETAILS */
-  .detailsContainer {
-    gap: 2em; /* was 3rem */
-  }
-
-  .leftColumn {
-    gap: 2em; /* was 3rem */
-  }
-
-  /* FEATURE SECTION */
-  .featureGrid {
-    gap: 1em; /* was 1.5rem */
-  }
-
-  .featureCard {
-    padding: 2em 1.5em; /* was 3rem 2rem */
-  }
-
-  /* CHECKLIST */
-  .checkCard {
-    gap: 1em; /* was 1.5rem */
-    padding: 1.5em; /* was 2rem */
-  }
-
-  /* FAQ */
-  .faqList {
-    gap: 0.8em; /* was 1rem */
-  }
-
-  .faqItem {
-    gap: 0.8em; /* was 1rem */
-  }
+}
+.image{
+  width: 100%;
+  height: 65vh;
+  background-size: cover;
+  border-radius: 12px;
+}
+.extra{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.paragrapgh{
+  margin: 0;
+  
 }
