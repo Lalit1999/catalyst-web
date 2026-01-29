@@ -13,9 +13,9 @@ export default function Page() {
 		<main className={styles.main}>
 			<Title
 				heading={therapeuticPageHeader.heading}
-				desc={therapeuticPageHeader.description}
+				desc={therapeuticPageHeader.subHeading}
 			/>
-			<GridBlock img={about1} text={Array(therapeuticPageHeader.description)} />
+			<GridBlock img={about1} text={therapeuticPageHeader.description} />
 			<section className={styles.section}>
 				<div className={styles.container}>
 					{	alltherapyData.map((service, i) => <ServiceCard key={i} {...service} path="/therapeutic-expertise/" /> )}

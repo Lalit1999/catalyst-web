@@ -7,8 +7,6 @@ import { therapeuticExpertiseData } from "@data";
 
 // Data for the grid
 
-
-
 // const ServiceGrid = () => {
 //   return (
 //     <div className={styles.gridContainer}>
@@ -32,6 +30,8 @@ import { therapeuticExpertiseData } from "@data";
 // };
 
 // const description = 'Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.'
+
+
 const Page = () => {
   const params = useParams();
     const serviceId = params.id || params.slug;

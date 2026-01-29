@@ -137,6 +137,7 @@ const HomeSlider = () => {
   return (
     <div className={styles.homeSlider}>
       <Image src={homeBanner2} alt="Program Banner" />
+      <div className={styles.homeSliderOverlay} />
       <p className={styles.homeSliderText}>
         A Teacher as equally committed as you.
       </p>

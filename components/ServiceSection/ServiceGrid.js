@@ -20,9 +20,7 @@ const ServiceGrid = ({ cards }) => {
           {/* We now check for 'points' instead of 'description' */}
           <ul className={styles.pointsList}>
             {service.points && service.points.map((point, i) => (
-              <li key={i} className={styles.pointItem}>
-                {point}
-              </li>
+              <li key={i} className={styles.pointItem} dangerouslySetInnerHTML={{ __html: point }} />
             ))}
           </ul>
         </div>
