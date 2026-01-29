@@ -92,7 +92,7 @@ export const therapeuticExpertiseData = {
   },
 
   "oncology": {
-    id: "oncology-research",
+    id: "oncology",
     heading: "Oncology Clinical Research and Precision Oncology Capabilities",
     subHeading: "From Molecules to Medicine. From Evidence to Impact.",
     imgicon: <Research />,
@@ -132,7 +132,7 @@ export const therapeuticExpertiseData = {
   },
 
   "rwe": {
-    id: "rwe-scientific-expertise",
+    id: "rwe",
     heading: "Real-World Evidence (RWE) Scientific Expertise",
     subHeading: "From Real-World Data to Real-World Impact",
     imgicon: <Data />,
@@ -158,7 +158,7 @@ export const therapeuticExpertiseData = {
   },
 
   "endocrinology": {
-    id: "endocrinology-expertise",
+    id: "endocrinology",
     heading: "Endocrinology Therapeutic Expertise",
     subHeading: "Transforming Metabolic Science into Everyday Clinical Impact",
     imgicon: <Clinical />,
@@ -208,7 +208,7 @@ export const therapeuticExpertiseData = {
   },
 
   "cardiology": {
-    id: "cardiology-expertise",
+    id: "cardiology",
     heading: "Cardiology Therapeutic Expertise",
     subHeading: "Evidence That Strengthens Every Beat of Care",
     imgicon: <Clinical />,
@@ -264,7 +264,7 @@ export const therapeuticExpertiseData = {
   },
 
   "vaccines": {
-    id: "vaccines-research",
+    id: "vaccines",
     heading: "Vaccines and Immunization Research Expertise",
     subHeading: "Advancing Prevention Through Evidence",
     imgicon: <Bag />,

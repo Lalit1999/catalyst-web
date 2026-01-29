@@ -26,7 +26,7 @@
 ========================= */
 
 .sidebar {
-  width: 240px;
+  width: 100%;
   min-height: 100vh;
   background: var(--second);
   color: var(--white);
@@ -75,6 +75,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
+  margin: 0;
 }
 
 .tableHeader h1 {
@@ -170,4 +171,7 @@
 :global(.ant-btn-dangerous) {
   background: var(--main);
   border-color: var(--main);
+}
+:global(.ant-layout-sider-children){
+  background-color: none;
 }

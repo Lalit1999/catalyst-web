@@ -9,8 +9,6 @@ export default function CROExperiencePage() {
   return (
     <main className={styles.main}>
       <Title
-        breadIn={"Privacy Policy"}
-        bread={"Policy"}
         heading={"Privacy Policy"}
       />
 

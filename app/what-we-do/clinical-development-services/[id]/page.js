@@ -1,7 +1,7 @@
 'use client'
 import { about1 } from "@images";
 import styles from "./page.module.css";
-import { Cols, ServiceGrid, Title } from "@c/index";
+import {GridBlock, ServiceGrid, Title } from "@c/index";
 import { useParams } from "next/navigation";
 import { clinicalServicesData} from "@data";
 
@@ -37,7 +37,7 @@ const Page = () => {
   return (
     <div className={styles.main}>
       <Title heading={service.heading} desc={service.subHeading} />
-      <Cols  text={service.content} img={about1} />
+      <GridBlock  text={service.content} img={about1} />
       <ServiceGrid cards={service.capabilityCards} />
     </div>
   );

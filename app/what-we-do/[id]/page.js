@@ -1,14 +1,11 @@
 'use client'
 import { about2 } from "@images";
 import styles from "./page.module.css";
-import { Cols, ServiceGrid, Title } from "@comps";
+import { GridBlock, ServiceGrid, Title } from "@comps";
 import { useParams } from "next/navigation";
 import { serviceDataObject } from "@data";
 
 // Data for the grid
-
-
-
 // const ServiceGrid = () => {
 //   return (
 //     <div className={styles.gridContainer}>
@@ -40,7 +37,7 @@ const Page = () => {
   return (
     <div className={styles.main}>
       <Title heading={service.heading} desc={service.subHeading} />
-      <Cols  text={service.content} img={about2} />
+      <GridBlock  text={service.content} img={about2} />
       <ServiceGrid cards={service.capabilityCards} />
     </div>
   );
