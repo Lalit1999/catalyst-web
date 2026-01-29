@@ -1,5 +1,4 @@
 
-import { about1 } from "@images";
 import img1 from "@p/researchimage/img1.jpg";
 import img2 from "@p/researchimage/img2.jpg";
 import img3 from "@p/researchimage/img3.jpg";
@@ -184,9 +183,45 @@ export const researchPaperData = [
   },
 ];
 
-export const researchPageHeader = {
-  bread: "Research Publications",
-  heading: "Research Publications",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum bibendum dignissim. Sed quam eros, accumsan in velit a, placerat mollis nunc. Nulla at purus non leo condimentum pellentesque ut a mauris. Vivamus ut euismod nisi, quis laoreet nisl. Suspendi",
-  image: about1,
+export const researchPublicationData = {
+  "research-publications": {
+    id: "research-publications",
+    heading: "Research Publications",
+    subHeading:
+      "Scientific responsibility beyond dissemination.",
+    content: [
+      "At Catalyst Clinical Services, research publications represent scientific accountability—not merely output. We provide end-to-end publication support that transforms clinical and real-world data into credible, high-impact scientific evidence, grounded in methodological rigor, ethical integrity, and sustained intellectual engagement.",
+      "This page serves as a gateway to Catalyst’s scientific contributions, showcasing our role as active partners in evidence generation and dissemination.",
+      "We deliver comprehensive manuscript development across the full publication lifecycle, from early scientific framing through final acceptance.",
+    ],
+    capabilityCards: [
+      {
+        title: "Manuscript Development and Scientific Writing",
+        points: [
+          "Study framing and hypothesis articulation",
+          "Statistical analysis planning and data interpretation",
+          "Structured data visualization, tables, and figures",
+          "Manuscript drafting, critical revision, and scientific refinement",
+          "Development of abstracts, full-length manuscripts, and review articles",
+        ],
+      },
+      {
+        title: "Journal Strategy and Submission Management",
+        points: [
+          "Strategic journal identification and publication planning",
+          "Preparation of complete submission packages, including cover letters and author declarations",
+          "End-to-end submission management and coordination with journal editorial offices",
+          "Detailed responses to reviewer comments and support through revisions, resubmissions, and acceptance",
+        ],
+      },
+      {
+        title: "Conference and Scientific Communication Support",
+        points: [
+          "Abstract development for national and international conferences",
+          "Scientific poster and oral presentation content development",
+          "Data-driven scientific storytelling aligned with conference guidelines and target audiences",
+        ],
+      },
+    ],
+  },
 };

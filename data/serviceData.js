@@ -17,7 +17,10 @@ export const servicePageHeader = {
   description:
     "Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy.",
   image: about1,
-  extra : [" We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence. Spanning the full clinical development continuum, from early-phase investigations to post-marketing evidence generation, our work integrates strategic oversight, regulatory compliance, and operational excellence. Through flexible engagement models, ranging from bespoke solutions to fully integrated services, we enable sponsors to optimize development pathways, manage complexity and risk, and advance therapeutic and technological innovations with confidence, precision, and integrity."],
+  extra : [
+    " We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.",
+    "Spanning the full clinical development continuum, from early-phase investigations to post-marketing evidence generation, our work integrates strategic oversight, regulatory compliance, and operational excellence. Through flexible engagement models, ranging from bespoke solutions to fully integrated services, we enable sponsors to optimize development pathways, manage complexity and risk, and advance therapeutic and technological innovations with confidence, precision, and integrity."
+  ],
 };
 
 export const serviceDataObject = {
@@ -71,7 +74,7 @@ export const serviceDataObject = {
       "Transforming complex clinical and real-world data into clear, credible, and publication-ready scientific evidence.",
     content: [
       "<strong>Our Medical Writing Capabilities : </strong>Our protocols are designed to be scientifically robust, operationally executable, and defensible from both regulatory and ethics perspectives.",
-      "Catalyst delivers high-quality medical writing and scientific publication services through a multidisciplinary team of senior medical professionals, scientific subject-matter experts, biostatisticians, and experienced medical writers. Working in close collaboration with investigators and sponsors, we translate complex clinical and real-world data into scientifically rigorous, regulator-ready, and publication-quality documentation. Our expertise spans the full continuum of evidence generation, including retrospective and prospective datasets, real-world evidence (RWE), observational and registry-based studies, and interventional clinical trials."
+      "Catalyst delivers high-quality medical writing and scientific publication services through a multidisciplinary team of senior medical professionals, scientific subject-matter experts, biostatisticians, and experienced medical writers. Working in close collaboration with investigators and sponsors, we translate complex clinical and real-world data into scientifically rigorous, regulator-ready, and publication-quality documentation.", "Our expertise spans the full continuum of evidence generation, including retrospective and prospective datasets, real-world evidence (RWE), observational and registry-based studies, and interventional clinical trials."
     ],
     imgicon: <Research />,
     capabilityCards: [
@@ -122,7 +125,8 @@ export const serviceDataObject = {
       "Regulatory success lies not only in compliance, but in anticipation.",
     content: [
       "<strong>End-to-End Regulatory Affairs and Compliance Solutions : </strong>We leverage strong India-based regulatory resources to seamlessly support pharmaceutical, biotechnology, and medical device regulatory requirements.",
-      "At Catalyst Clinical Services, our regulatory affairs experts combine deep domain knowledge with hands-on experience to navigate complex local and global regulatory landscapes with precision and foresight. We proactively identify regulatory requirements and anticipate submission-stage challenges, enabling sponsors to address concerns early and achieve timely, seamless approvals. From early-phase planning through post-approval obligations, we provide end-to-end regulatory consulting and compliance support across the entire clinical trial lifecycle."
+      "At Catalyst Clinical Services, our regulatory affairs experts combine deep domain knowledge with hands-on experience to navigate complex local and global regulatory landscapes with precision and foresight. We proactively identify regulatory requirements and anticipate submission-stage challenges, enabling sponsors to address concerns early and achieve timely, seamless approvals.",
+      "From early-phase planning through post-approval obligations, we provide end-to-end regulatory consulting and compliance support across the entire clinical trial lifecycle. Our integrated, risk-aware approach minimizes delays, mitigates regulatory uncertainty, and ensures alignment with evolving regulatory frameworks."
     ],
     imgicon: <Bag />,
     capabilityCards: [
@@ -174,12 +178,13 @@ export const serviceDataObject = {
     subHeading: "Precisely aligned to sponsor needs.",
     content: [
       "<strong>Why Partner with Catalyst for FSP : </strong>Our clinical operations FSP models are structured to deliver immediate productivity and sustained performance.",
-      "Catalyst Clinical Services delivers customized Clinical Operations Functional Service Provider (FSP) models designed to align seamlessly with each sponsor’s development strategy, operational structure, and delivery objectives. We embed dedicated, role-aligned clinical operations professionals who function as a true extension of sponsor teams. Our resources integrate seamlessly with sponsor SOPs, systems, governance frameworks, and workflows—ensuring continuity, consistency, and operational efficiency from day one."
+      "Catalyst Clinical Services delivers customized Clinical Operations Functional Service Provider (FSP) models designed to align seamlessly with each sponsor’s development strategy, operational structure, and delivery objectives. Recognizing that no two clinical programs are alike, our FSP solutions are tailored to protocol complexity, study phase, therapeutic area, and geographic scope.",
+      "We embed dedicated, role-aligned clinical operations professionals who function as a true extension of sponsor teams. Our resources integrate seamlessly with sponsor SOPs, systems, governance frameworks, and workflows—ensuring continuity, consistency, and operational efficiency from day one."
     ],
     imgicon: <Fsp />,
     capabilityCards: [
       {
-        title: "Governance-Driven Delivery",
+        title: "Governance-Driven FSP Delivery",
         points: [
           "Clearly defined roles and responsibilities",
           "Performance metrics and service-level expectations",
@@ -197,7 +202,7 @@ export const serviceDataObject = {
         ],
       },
       {
-        title: "Engagement Models",
+        title: "Flexible, Scalable, and Cost-Effective Engagement Models",
         points: [
           "Scale resources up or down based on study demands",
           "Transition smoothly across study phases",

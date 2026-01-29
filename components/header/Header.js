@@ -17,11 +17,11 @@ const headerData = [
 	{	text: 'What we do',				children : [
 		{	text: 'Overview',							link: '/what-we-do'		}, 
 		{	text: 'Clinical Development Services',		children : [
-				{	text: 'Overview',					link: '/what-we-do/clinical-development-services'		}, 
-				{	text: 'Clinical Site Management',		link: '/what-we-do/clinical-development-services/clinical-site-management'		}, 
+			{	text: 'Overview',					link: '/what-we-do/clinical-development-services'		}, 
+			{	text: 'Project Management',			link: '/what-we-do/clinical-development-services/project-management'	    },
+			{	text: 'Clinical Site Management',		link: '/what-we-do/clinical-development-services/clinical-site-management'		}, 
+			{ 	text: 'Clinical Study Monitoring',  link: '/what-we-do/clinical-development-services/clinical-trial-monitoring'	},
 				{	text: 'Patient Recruitment',		link: '/what-we-do/clinical-development-services/patient-recruitment'		}, 
-				{	text: 'Project Management',			link: '/what-we-do/clinical-development-services/project-management'	    },
-				{ 	text: 'Clinical Trial Monitoring',  link: '/what-we-do/clinical-development-services/clinical-trial-monitoring'	},
 				{ 	text: 'Investigator Training',  		link: '/what-we-do/clinical-development-services/investigator-training'		}
 			]	
 		}, 

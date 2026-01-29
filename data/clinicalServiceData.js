@@ -11,7 +11,7 @@ export const clinicalServicesData = {
     imgicon: <Clinical />,
     content: [
       "<strong>Our Project Management Capabilities :</strong> Our disciplined yet flexible approach enables efficient study conduct, proactive risk management, and audit-ready documentation.",
-      "Project Management services are integral throughout the entire conduct of the study, beginning with pre-study planning, continuing through active study execution, and extending into post-study closeout activities. We provide structured, end-to-end oversight across the entire study lifecycle. From pre-study planning and regulatory coordination to data oversight, quality assurance, and final closeout. By serving as the central point of coordination among sponsors, investigators, and cross-functional teams, we ensure clear communication, regulatory compliance, timely execution, and robust data integrity."
+      "Project Management services are integral throughout the entire conduct of the study, beginning with pre-study planning, continuing through active study execution, and extending into post-study closeout activities.", "We provide structured, end-to-end oversight across the entire study lifecycle. From pre-study planning and regulatory coordination to data oversight, quality assurance, and final closeout. By serving as the central point of coordination among sponsors, investigators, and cross-functional teams, we ensure clear communication, regulatory compliance, timely execution, and robust data integrity."
     ],
     capabilityCards: [
       {
@@ -229,7 +229,8 @@ export const clinicalServicesData = {
     imgicon: <Clinical />,
     content: [
       "<strong>Our Patient Recruitment Capabilities : </strong>Strategies grounded in real-world feasibility and regulatory requirements.",
-      "Catalyst delivers strategic, patient-centric recruitment solutions designed to identify and enroll eligible patients efficiently while maintaining the highest standards of ethics, compliance, and patient safety. Leveraging deep therapeutic expertise and a geographically diverse network of clinical sites, we ensure access to representative patient populations across regions, care settings, and demographics. Our recruitment strategies are grounded in real-world feasibility and regulatory requirements, minimizing recruitment risk without compromising data quality or participant welfare."
+      "Catalyst delivers strategic, patient-centric recruitment solutions designed to identify and enroll eligible patients efficiently while maintaining the highest standards of ethics, compliance, and patient safety. Leveraging deep therapeutic expertise and a geographically diverse network of clinical sites, we ensure access to representative patient populations across regions, care settings, and demographics. Our recruitment strategies are grounded in real-world feasibility and regulatory requirements, minimizing recruitment risk without compromising data quality or participant welfare.",
+      "Our teams proactively monitor recruitment performance, address barriers in real time, and adapt strategies as needed to maintain momentum. Through this integrated approach, we help sponsors achieve inclusive, timely recruitment and generate evidence that is robust, generalizable, and reflective of real-world patient populations."
     ],
     capabilityCards: [
       {

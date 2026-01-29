@@ -5,7 +5,7 @@ import { useState, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { pragramBanner, course, cardImage } from "@images";
+import { course, cardImage } from "@images";
 import { Card } from '@comps' ;
 import { AppContext } from '@ac' ;
 import { programsDetailsArr } from '@data' ;
@@ -106,7 +106,6 @@ const HomeSlider = ({ heading, id }) => {
 
     return (
         <div className={styles.homeSlider}>
-            <Image src={pragramBanner} alt="Program Banner" />
             <div className={styles.homeSliderMain}>
                 <div className={styles.homeSliderLeft}>
                     <div className={styles.sliderLeftText}>
@@ -132,9 +131,9 @@ const DescrCon = ({subHeading, description}) => {
             <p className={styles.descrHead}>{subHeading}</p>
             <div className={styles.descrTextCon}>
             {
-                description.map((para, i) => {
+                description?.map((para, i) => {
                     return (
-                        <p className={styles.descrText} key={i}>{para}</p>
+                        <p className={styles.descrText} key={i} dangerouslySetInnerHTML={{__html: para}} />
                     ) ;
                 })
             }
@@ -149,7 +148,7 @@ const LearnSection = ({learnArr}) => {
             <p className={styles.descrHead}>What you&apos;ll learn</p>
             <div className={styles.learnCon}>
             {
-                learnArr.map((one,i) => {
+                learnArr?.map((one,i) => {
                     return (
                         <div className={styles.learnOne} key={i}>
                             <Tick />
@@ -169,7 +168,7 @@ const CourseSection = ({whyChooseArr}) => {
             <p className={styles.descrHead}>Why choose this Course?</p>
             <div className={styles.whyChooseCon}>
             {
-                whyChooseArr.map((one,i) => {
+                whyChooseArr?.map((one,i) => {
                     return (
                         <div className={styles.whyChooseOne} key={i}>
                             {one.icon}
@@ -229,7 +228,7 @@ const SectionCon = ({one}) => {
                     }
                     </div>
                 </div>
-                <div className={styles.courseDetailDescrChild}>
+                {one.skills&&(<div className={styles.courseDetailDescrChild}>
                     <p className={styles.courseDetailDescrHead}>Skills Acquired</p>
                     <div className={styles.courseDetailDescrContent2}>
                     {
@@ -240,7 +239,7 @@ const SectionCon = ({one}) => {
                         })
                     }
                     </div>
-                </div>
+                </div>)}
             </div> 
         </div>
     )
@@ -252,7 +251,7 @@ const CourseDetailSection = ({courseDetailArr}) => {
             <p className={styles.descrHead}>Course Details</p>
             <div className={styles.CourseSectionMain}>
             {
-                courseDetailArr.map((one,i) => {
+                courseDetailArr?.map((one,i) => {
                     return (
                         <SectionCon one={one} key={i} />
                     );
@@ -269,7 +268,7 @@ const ReqSection = ({courseSchedule}) => {
             <p className={styles.descrHead}>Course Schedule</p>
             <div className={styles.reqCon}>
             {
-                courseSchedule.map((one,i) => {
+                courseSchedule?.map((one,i) => {
                     return (
                         <div className={styles.reqOneBox} key={i}>
                             <p className={styles.reqOneNum}>{i+1}</p>
@@ -290,10 +289,10 @@ const RegProcessSection = ({regProcess}) => {
     return (
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>Registration Process</p>
-            <p className={styles.descrSubHead}>{regProcess.head}</p>
+            <p className={styles.descrSubHead}>{regProcess?.head}</p>
             <div className={styles.reqCon}>
             {
-                regProcess.steps.map((one,i) => {
+                regProcess?.steps.map((one,i) => {
                     return (
                         <div className={styles.reqOneBox} key={i}>
                             <p className={styles.reqOneNum}>{i+1}</p>
@@ -332,7 +331,7 @@ const SideBar = ({usd, inr, duration, lessons, students, language, certificate, 
         {
             icon: <Website />,
             text: 'Language',
-            value: language.join(", ")
+            value: language?.join(", ")
         },
         {
             icon: <Principal />,
@@ -413,7 +412,7 @@ const DetailMain = (data) => {
         <div className={styles.courseDetailMain}>
             <div className={styles.detailsLeft}>
                 <DescrCon {...data} />
-                <LearnSection {...data} />
+                {data?.learnArr&&(<LearnSection {...data} />)}
                 <CourseSection {...data} />
                 <CourseDetailSection {...data} />
                 <ReqSection {...data} />
@@ -486,7 +485,7 @@ const Program = () => {
 
     return (
         <div className={styles.courseMain}>
-            <HomeSlider heading={data.heading} id={decodedId}/>
+            <HomeSlider heading={data?.heading} id={decodedId}/>
             <div className={styles.courseDetails}>
                 <DetailMain {...data} id={decodedId}/>
                 <DetailBottom />

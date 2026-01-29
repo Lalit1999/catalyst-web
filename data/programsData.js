@@ -751,6 +751,233 @@ const programsDetailsArr = {
         language: ['English'],
         certificate: true 
     },
+    'workshops': {
+        id: 'workshops',
+        heading: "Workshop on Good Clinical Practice (GCP) and Clinical Research Methodology",
+        subHeading: "Program Overview",
+        description: [
+            "This one-day, workshop-based training program is designed to provide a strong foundation in clinical research principles and Good Clinical Practice (GCP) guidelines, with a practical, application-oriented approach. The program is ideal for professionals seeking structured exposure to the clinical research and drug development ecosystem, complemented by interactive learning and essential soft-skill development.", 
+            "<strong>A comprehensive, instructor-led workshop focused on:</strong>", 
+            `<ul>
+                <li>Core concepts of clinical research and drug development</li>
+                <li>Practical understanding of GCP guidelines and ethical conduct of clinical trials</li>
+                <li>Regulatory expectations and real-world trial execution</li>
+            </ul>`,
+            "<strong>A comprehensive, instructor-led workshop focused on:</strong>", 
+            `<ul>
+                <li>One-day intensive, hands-on workshop format</li>
+                <li>Expert-led live lectures and interactive discussions</li>
+                <li>Practical insights aligned with industry and regulatory expectations</li>
+            </ul>`,
+        ],
+        // learnArr: [
+        //     'Oncology trial fundamentals and ethics/consent',
+        //     'Cancer staging, endpoints, and assessment standards',
+        //     'Safety and efficacy evaluation using WHO/RECIST',
+        //     'Oncology-specific monitoring and SDV practices',
+        //     'IP accountability, SAE handling, and deviation control',
+        //     'Oncology site close-out with complete ISF/CRF quality',
+        // ],
+        whyChooseArr: [
+            {
+                icon: <ActivityLine />,
+                head: 'Self-Paced Learning',
+                text: 'Flexible format that fits around professional or academic schedules.'
+            },
+            {
+                icon: <Prog />,
+                head: '24/7 Expert Academic Support',
+                text: '24/7 faculty guidance for queries, feedback, and learning clarity.'
+            },
+            {
+                icon: <StarLine />,
+                head: 'Industry-Ready Content',
+                text: 'Curriculum mapped to current industry practices and GCP standards.'
+            },
+            {
+                icon: <Principal />,
+                head: 'A Standout Portfolio',
+                text: 'Assignments that showcase trial design and operational know-how.'
+            },
+            {
+                icon: <Doc />,
+                head: 'Real-World Projects & Case Studies',
+                text: 'Applied real-world case studies reflecting actual scenarios.'
+            },
+            {
+                icon: <Person />,
+                head: 'Placement Assistance',
+                text: 'Career guidance and interview readiness for industry roles.'
+            },
+        ],
+        brochureLink: "/",
+        courseDetailArr: [
+            {
+                title: 'Module 1: Introduction to Clinical Research',
+                duration: 'Duration: Self-Paced',
+                chapters: [
+                    'Training on topics such as principles of clinical research', 
+                    'Drug discovery', 
+                    'Clinical Trial Process', 
+                    'Phases of Clinical Trials', 
+                    'Regulatory Framework', 
+                    'Study Designs', 
+                ],
+                // skills: [
+                //     'Oncology trial fundamentals', 
+                //     'Ethics and EC processes', 'Cancer staging and assessment', 
+                //     'Safety and efficacy evaluation standards', 
+                //     'Clinical documentation essentials'
+                // ],
+            },
+            {
+                title: 'Module 2: Principles of Good Clinical Practices (GCP)',
+                duration: 'Duration: Self-Paced',
+                chapters: [
+                    'Training on principles of GCP', 
+                    'Applicable GCP guidelines', 
+                    'The evolution of GCP guidelines', 
+                    'Responsibilities of various stakeholders (Sponsor, CRO, Investigator, and Ethics Committee). ', 
+                ],
+                // skills: [
+                //     'Oncology trial fundamentals', 
+                //     'Ethics and EC processes', 'Cancer staging and assessment', 
+                //     'Safety and efficacy evaluation standards', 
+                //     'Clinical documentation essentials'
+                // ],
+            },
+            {
+                title: 'Module 3: Essential Clinical Trial Documents',
+                duration: 'Duration: Self-Paced',
+                chapters: [
+                    'Training on topics such as protocol', 
+                    'Informed consent document (ICD)', 
+                    'Investigator’s brochure (IB)', 
+                    'Case report form (CRF)', 
+                    'Source data/document (SD)', 
+                    'Regulatory and ethics approval', 
+                    'Clinical trial agreement (CTA)', 
+                    'Clinical trial liability insurance', 
+                    'Clinical study report (CSR)'
+                ],
+                // skills: [
+                //     'Oncology trial fundamentals', 
+                //     'Ethics and EC processes', 'Cancer staging and assessment', 
+                //     'Safety and efficacy evaluation standards', 
+                //     'Clinical documentation essentials'
+                // ],
+            },
+            {
+                title: 'Module 4: Ethical Review',
+                duration: 'Duration: Self-Paced',
+                chapters: [
+                    'Training on topics such as categories of review', 
+                    'Review documents', 
+                    'Quorum requirements', 
+                    'Notification of meeting and distribution of material ', 
+                    'Meeting procedure'
+                ],
+                // skills: [
+                //     'Oncology trial fundamentals', 
+                //     'Ethics and EC processes', 'Cancer staging and assessment', 
+                //     'Safety and efficacy evaluation standards', 
+                //     'Clinical documentation essentials'
+                // ],
+            },
+            {
+                title: 'Module 5: •	Informed Consent Process',
+                duration: 'Duration: Self-Paced',
+                chapters: [
+                    'Training on topics such as essential elements of patient information sheet and informed consent form', 
+                    'Regulatory requirements', 
+                    'Informed consent process'
+                ],
+                // skills: [
+                //     'Oncology trial fundamentals', 
+                //     'Ethics and EC processes', 'Cancer staging and assessment', 
+                //     'Safety and efficacy evaluation standards', 
+                //     'Clinical documentation essentials'
+                // ],
+            },
+            {
+                title: 'Module 6: Safety Reporting and Compensation',
+                duration: 'Duration: Self-Paced',
+                chapters: [
+                    'Training on topics such as adverse events', 
+                    'Serious adverse events', 
+                    'Reporting timelines', 
+                    'Compensation in case of clinical trial injury/death', 
+                    'Compensation formula Evaluation in Oncology Clinical Trials (WHO, SWOG, RECIST)', 
+                ],
+                // skills: [
+                //     'Oncology trial fundamentals', 
+                //     'Ethics and EC processes', 'Cancer staging and assessment', 
+                //     'Safety and efficacy evaluation standards', 
+                //     'Clinical documentation essentials'
+                // ],
+            },
+            {
+                title: 'Module 7: Regulatory Landscape',
+                duration: 'Duration: Self-Paced',
+                chapters: [
+                    'Training on topics such as recent regulatory changes ', 
+                    'Policy initiatives (New Drugs and Clinical Trials Rules, 2019).'
+                ],
+                // skills: [
+                //     'Oncology trial fundamentals', 
+                //     'Ethics and EC processes', 'Cancer staging and assessment', 
+                //     'Safety and efficacy evaluation standards', 
+                //     'Clinical documentation essentials'
+                // ],
+            },
+        ],
+        courseSchedule: [
+            {
+                head: 'Receive Study Material',
+                value: 'Upon registration, you will receive four comprehensive Learning Modules along with an Assignment Workbook.'
+            },
+            {
+                head: 'Study & Complete Assignments',
+                value: 'Go through the modules and complete the assignments within the standard 4.5-month duration.'
+            },
+            {
+                head: 'Option for Early Completion',
+                value: 'If you wish to finish sooner, you may submit your completed workbook with an early assessment request.'
+            },
+            {
+                head: 'Assessment',
+                value: 'Your Assignment workbook is evaluated based on the qualification criteria.'
+            },
+            {
+                head: 'Earn Your Certificate',
+                value: 'After successful assessment, you will be awarded a Certificate of Completion.'
+            },    
+        ],
+        regProcess: {
+            head: 'Three-step registration process:',
+            steps: [
+                {
+                    head: 'Get the Registration Link/QR',
+                    value: 'Receive the registration link and QR code from us.'
+                },
+                {
+                    head: 'Complete the Form & Payment',
+                    value: 'Fill out the registration form and pay the course fee using the QR code.'
+                },
+                {
+                    head: 'Receive Confirmation',
+                    value: 'Get an acknowledgement call confirming your successful registration.'
+                }, 
+            ],
+        },
+        usd: 350,
+        inr: 14000,
+        duration: 'Self-Paced',
+        lessons: 7,
+        students: `5000+`,
+        language: ['English', 'Hindi'],
+        certificate: true 
+    },
 } ;
 
 export default programsDetailsArr ;
