@@ -61,6 +61,14 @@ const programsArr = [
         description: "The Oncology Clinical Trials Training (OCTT) program is a specialized, competency-driven course designed to equip participants with the knowledge, skills, and practical expertise required to manage and oversee oncology clinical trials. ",
         id: 'oncology-clinical-trials-training-octt'
     },
+    {
+        image: cardImage, 
+        heading: "Workshops", 
+        lessons: 10, 
+        students: 100, 
+        description: "This one-day, workshop-based training program is designed to provide a strong foundation in clinical research principles and Good Clinical Practice (GCP) guidelines, with a practical, application-oriented approach.",
+        id: 'workshops'
+    },
 ] ;
 
 const testimonialsArr = [
@@ -448,16 +456,18 @@ const Testimonials = () => {
     ) ;
 }
 
-const RelatedCourseSection = () => {
+const RelatedCourseSection = ({ id }) => {
     return (
         <div className={styles.descrCon}>
             <p className={styles.descrHead}>Related Courses</p>
             <div className={styles.relatedCoursesCon}>
             {
-                programsArr.slice(0,4).map( (one, i) => {
-                    return (
-                        <Card key={i} {...one} />
-                    ) ;
+                programsArr.map( (one, i) => {
+                    if( one.id === id ) return null ;
+                    else
+                        return (
+                            <Card key={i} {...one} />
+                        ) ;
                 })
             }
             </div>
@@ -465,12 +475,12 @@ const RelatedCourseSection = () => {
     ) ;
 }
 
-const DetailBottom = () => {
+const DetailBottom = ({ id }) => {
     return (
         <div className={styles.courseDetailBottom}>
             <Testimonials />
             <div className={styles.borderLine} /> 
-            <RelatedCourseSection />
+            <RelatedCourseSection id={id}/>
         </div>
     ) ;
 }
@@ -488,7 +498,7 @@ const Program = () => {
             <HomeSlider heading={data?.heading} id={decodedId}/>
             <div className={styles.courseDetails}>
                 <DetailMain {...data} id={decodedId}/>
-                <DetailBottom />
+                <DetailBottom id={decodedId}/>
             </div>
         </div>
     ) ;

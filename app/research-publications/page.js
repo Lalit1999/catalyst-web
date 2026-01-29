@@ -2,7 +2,7 @@
 
 import { about1 } from "@images";
 import { researchPaperData, researchPublicationData } from "@data";
-import { Title, ResearchCard,GridBlock, ServiceGrid } from "@comps";
+import { Title, ResearchCard, GridBlock, ServiceGrid } from "@comps";
 import styles from "./page.module.css";
 
 export default function Research() {
@@ -27,7 +27,7 @@ export default function Research() {
                         oncology
                     </h1>
                     <div className={styles.coursesTwo}>
-                    {   researchPaperData.map(one => <ResearchCard key={one.id} {...one} />)    }
+                    {   researchPaperData.map((one,i) => <ResearchCard key={i} {...one} />)    }
                     </div>
                 </div>
                 <div className={styles.paper}>
@@ -35,7 +35,7 @@ export default function Research() {
                         other therapeutic areas
                     </h1>
                     <div className={styles.coursesTwo}>
-                        {researchPaperData.map(one => <ResearchCard key={one.id} {...one} />)}
+                        {researchPaperData.map((one,i) => <ResearchCard key={i} {...one} />)}
                     </div>
                 </div>
             </div>
