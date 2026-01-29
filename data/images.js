@@ -6,6 +6,7 @@ import about2 from '@p/about2.png';
 
 import contact from '@p/contact.png';
 import homeBanner from '@p/homeBanner.png';
+import homeBanner2 from '@p/homeBanner2.jpg';
 
 import exp1 from '@p/expertise/exp1.webp';
 import exp2 from '@p/expertise/exp2.webp';
@@ -60,6 +61,9 @@ import headIcon from '@p/About/headIcon.png';
 
 import radient from '@p/radient-gradient.png' ;
 
+// Keep videos as public URL strings (avoid importing .webm as a module).
+const videoHome = '/video_home.webm';
+
 export {
   def,
   DentalClinic,
@@ -86,6 +90,7 @@ export {
   contact,
   logo,
   homeBanner,
+  homeBanner2,
   about1,
   about2,
   exp1,
@@ -100,5 +105,6 @@ export {
   event3,
   course,
   placementLogos,
-  radient
+  radient,
+  videoHome,
 };

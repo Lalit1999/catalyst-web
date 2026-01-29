@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { pragramBanner, awards, placementLogos, event1, event2, event3, cardImage } from "@images";
+import { homeBanner2, awards, placementLogos, event1, event2, event3, cardImage } from "@images";
 import { ArrowLong, Clock, Location } from "@icons";
 import { Card } from "@comps";
 
@@ -136,7 +136,7 @@ const eventsCardArr = [
 const HomeSlider = () => {
   return (
     <div className={styles.homeSlider}>
-      <Image src={pragramBanner} alt="Program Banner" />
+      <Image src={homeBanner2} alt="Program Banner" />
       <p className={styles.homeSliderText}>
         A Teacher as equally committed as you.
       </p>

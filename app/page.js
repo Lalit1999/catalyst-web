@@ -12,7 +12,7 @@ import styles from "./page.module.css";
 const HomeSlider = () => {
 	return (
 		<div className={styles.homeSlider}>
-			<Image src={homePageData.homeSlider.image} alt="Home Banner" />
+			<video className={styles.homeSliderVideo} src={homePageData.homeSlider.image} autoPlay muted loop playsInline preload="metadata" />
 			<p className={styles.homeSliderText}>{homePageData.homeSlider.title}</p>
 		</div>
 	);

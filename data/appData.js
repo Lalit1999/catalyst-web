@@ -1,10 +1,10 @@
-import { homeBanner, about2, exp1, exp2, exp3 } from "@images";
+import { about2, exp1, exp2, exp3, videoHome } from "@images";
 import { Clinical, Research, Therapy, Bullet } from "@icons";
 
 const homePageData = {
     homeSlider: {
-        title: 'At Catalyst Clinical Services Private Limited',
-        image: homeBanner,
+        title: 'Accelerating clinical research to deliver life-changing therapies to patients, faster.',
+        image: videoHome,
     },
     sectionTwo: {
         subTitle: 'Precision at Every Step',
@@ -129,7 +129,7 @@ const homePageData = {
         ]
     },
     publications: {
-        subTitle: 'Latest Publications',
+        subTitle: 'Because Every Insight Has the Power to Improve Lives',
         title: 'Most Influential Publications',
         descr: 'Some publications are not just evidence - they are breakthroughs. Our most influential work reflects studies that reshaped understanding, informed clinical decision-making, and advanced innovation across complex therapeutic areas.',
     },
