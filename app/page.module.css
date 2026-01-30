@@ -468,10 +468,14 @@
   	position: relative;
   	width: 40vw;
 	height: 40vw;
- 	overflow: hidden;
+	overflow: hidden;
+ 	
+}
+.fourImageCon img {
 	object-fit: cover;
 	object-position: center;
 }
+
 /* section four ends */
 
 /* stats css */
@@ -741,6 +745,14 @@
 	background-image: url('../public/section.webp');
 	background-size: cover;	
 	justify-content: flex-end;
+  	position: relative;
+}
+
+.homeSliderOverlay {
+  position: absolute; 
+  inset: 0 ;
+  z-index: 3 ;
+  background: var(--halfBlack);
 }
 
 .resultInfoCon {
@@ -1062,6 +1074,7 @@
 	.fourImageCon {
 		width: 80vw;
 		height: 100vw;
+
 	}
 	/* section four ends */
 

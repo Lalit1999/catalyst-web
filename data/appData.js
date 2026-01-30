@@ -1,4 +1,4 @@
-import { about2, exp1, exp2, exp3, videoHome } from "@images";
+import { about2, videoHome, robotic, rwe, oncology } from "@images";
 import { Clinical, Research, Therapy, Bullet } from "@icons";
 
 const homePageData = {
@@ -108,7 +108,7 @@ const homePageData = {
                     'We are one of the largest players in robotic-assisted surgery research, supporting sponsors across the entire clinical development lifecycle - from protocol design and feasibility assessment to multi-centre trial execution and post-market evidence generation. With deep technical expertise in robotic systems, surgical performance metrics, and real-world operating workflows, we deliver high-quality, regulator-ready data that demonstrate precision, safety, and meaningful patient recovery outcomes.',
                 ],
                 link: '/therapeutic-expertise/robotic-assisted-surgery',
-                image: exp1
+                image: robotic
             },
             {
                 title: 'Oncology',
@@ -116,7 +116,7 @@ const homePageData = {
                     'In oncology research, we deliver complex, time-sensitive clinical trials across solid tumours, haematological malignancies, immuno-oncology, precision medicine, and targeted therapies. Through strong investigator networks, biomarker-driven strategies, and patient-centric designs, we generate high-impact clinical evidence while navigating regulatory complexity - accelerating breakthroughs that improve survival, quality of life, and access to advanced cancer therapies.',
                 ],
                 link: '/therapeutic-expertise/oncology',
-                image: exp2
+                image: oncology
             },
             {
                 title: 'RWE',
@@ -124,7 +124,7 @@ const homePageData = {
                     `We bring deep, cross-therapeutic expertise to the conceptualization, design, and execution of Real-World Evidence (RWE) studies - transforming real-world data into meaningful insights. Across the entire research continuum, we support robust evidence generation through both prospective and retrospective study designs, including sponsor-initiated and investigator-initiated research. Our approach delivers tailored evidence that meets scientific rigor while supporting regulatory decisions and market-access success.`,
                 ],
                 link: '/therapeutic-expertise/rwe',
-                image: exp3
+                image: rwe
             }
         ]
     },

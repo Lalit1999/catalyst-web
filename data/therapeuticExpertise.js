@@ -1,5 +1,5 @@
 import { Bag, Robotarm, Pill, Heart, Thyroid, Inject, Ribbon } from "@icons";
-import { about1 } from "@images";
+import { about1, robotic, rwe, oncology, endo, cardio, vaccine, others } from "@images";
 
 // 2. Page Header Data (The text you requested)
 export const therapeuticPageHeader = {
@@ -15,14 +15,13 @@ export const therapeuticPageHeader = {
 
 // 4. Main Data Object
 export const therapeuticExpertiseData = {
-  // --- Therapeutic Expertise ---
-
   "robotic-assisted-surgery": {
     id: "robotic-assisted-surgery",
     heading: "Leaders in Robotic-Assisted Surgery Research",
     subHeading:
       "Evidence that Accelerates Innovation. Data that Transforms Surgery.",
     imgicon: <Robotarm />,
+    image: robotic,
     content: [
       "We are at the forefront of robotic-assisted surgery (RAS) clinical research, supported by India’s largest real-world evidence base - data from 10,000+ patients across multiple centers. Our depth of experience enables sponsors and innovators to advance next-generation surgical technologies with confidence, clarity, and clinical credibility.",
       "From Precision Procedures to Complex Reconstructions.",
@@ -75,6 +74,7 @@ export const therapeuticExpertiseData = {
     heading: "Oncology Clinical Research and Precision Oncology Capabilities",
     subHeading: "From Molecules to Medicine. From Evidence to Impact.",
     imgicon: <Ribbon />,
+    image: oncology,
     content: [
       "We deliver end-to-end oncology clinical research capabilities that bridge molecular science and patient-centered clinical evidence. Our expertise spans solid tumors and hematological malignancies, integrating translational research with rigorously designed clinical studies to accelerate meaningful advances in cancer care.",
       "Science-Driven. Clinically Relevant. Globally Aligned.",
@@ -110,6 +110,7 @@ export const therapeuticExpertiseData = {
     heading: "Real-World Evidence (RWE) Scientific Expertise",
     subHeading: "From Real-World Data to Real-World Impact",
     imgicon: <Bag />,
+    image: rwe,
     content: [
       "We deliver high-quality, decision-grade real-world evidence through the seamless integration of clinical domain expertise, rigorous epidemiological study design, and advanced biostatistical analytics, supported by scalable, compliant, and audit-ready operational execution. Our approach is rooted in scientific rigor and practical relevance - ensuring that real-world data are transformed into credible evidence capable of informing clinical, regulatory, and policy decisions.",
       "We leverage a broad spectrum of heterogeneous real-world data sources, including hospital electronic medical records, patient case files, procedural and device registries, imaging and laboratory datasets, and longitudinal follow-up records. These data are curated, harmonized, and analyzed using robust methodological frameworks to address bias, confounding, and missingness - enabling reliable estimation of clinical outcomes, safety profiles, utilization patterns, and value-based endpoints.",
@@ -137,6 +138,7 @@ export const therapeuticExpertiseData = {
     heading: "Endocrinology Therapeutic Expertise",
     subHeading: "Transforming Metabolic Science into Everyday Clinical Impact",
     imgicon: <Thyroid />,
+    image: endo,
     content: [
       "We deliver high-quality endocrine and metabolic evidence by integrating deep clinical expertise, robust clinical research methodology, and real-world clinical insight. Our work reflects how diabetes and endocrine disorders are actually managed in routine practice, supporting evidence-based decision-making across the full lifecycle of therapies- from clinical development to real-world adoption.",
     ],
@@ -187,6 +189,7 @@ export const therapeuticExpertiseData = {
     heading: "Cardiology Therapeutic Expertise",
     subHeading: "Evidence That Strengthens Every Beat of Care",
     imgicon: <Heart />,
+    image: cardio,
     content: [
       "We deliver comprehensive cardiology clinical research expertise that integrates deep cardiovascular science, rigorous study design, and real-world clinical insight. Our work supports the generation of robust, practice-informing evidence across the continuum of cardiovascular care - enabling confident, evidence-based decisions in both interventional and medical cardiology.",
     ],
@@ -243,6 +246,7 @@ export const therapeuticExpertiseData = {
     heading: "Vaccines and Immunization Research Expertise",
     subHeading: "Advancing Prevention Through Evidence",
     imgicon: <Inject />,
+    image: vaccine,
     content: [
       "We deliver comprehensive vaccines and immunization research expertise by integrating immunological science, rigorous clinical development methodologies, and real-world evidence generation. Our work spans the full vaccine lifecycle - from clinical development and regulatory evaluation to post-licensure safety and effectiveness, across both routine and priority infectious diseases, including tuberculosis, cholera, and other endemic and emerging pathogens. We generate high-quality evidence that supports informed policy decisions, clinical practice, and population-level public health impact.",
     ],
@@ -300,6 +304,7 @@ export const therapeuticExpertiseData = {
     subHeading:
       "Hands-on experience across a wide spectrum of therapeutic areas.",
     imgicon: <Pill />,
+    image: others,
     content: [
       "We bring hands-on clinical research experience across a wide spectrum of therapeutic areas, enabling the generation of high-quality, practice-relevant evidence across complex and diverse disease settings. Our multidisciplinary expertise allows us to design and execute studies that are scientifically rigorous, operationally efficient, and closely aligned with real-world clinical care.",
     ],

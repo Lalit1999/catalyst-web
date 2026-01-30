@@ -151,7 +151,7 @@ const SectionFour = () => {
 			</div>
 			<div className={styles.fourSecond}>
 				<div className={styles.fourImageCon}>
-					<Image src={homePageData.sectionFour.image} alt="about-2" />
+					<Image src={homePageData.sectionFour.image} alt="about-2" fill/>
 				</div>
 			</div>
 		</div>
@@ -263,8 +263,9 @@ const ResultsSection = () => {
 					<ArrowLong />
 				</Link>
 			</div>
+			{/* <div className={styles.homeSliderOverlay} /> */}
 		</div>
-	);
+	);	
 };
 
 const Home = () => {

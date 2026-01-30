@@ -136,7 +136,7 @@
   .courseCard {
     flex-direction: column; 
     height: auto;
-    padding: 0.75em;
+    padding: 1em;
   }
 
   .courseCardImageCon {
@@ -148,7 +148,7 @@
   .courseCardDetailsCon {
     flex-basis: auto;
     width: 100%;
-    gap: 0.75em;
+    gap: 1em;
   }
   
   .cardIconCon {
@@ -161,12 +161,5 @@
 
   .cardBtnCon {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .cardBtnCon {
-    flex-direction: column;
-    gap: 0.5em;
   }
 }

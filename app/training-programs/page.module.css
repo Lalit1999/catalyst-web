@@ -608,4 +608,124 @@
   .programsMain {
     gap: 2em;
   }
+  .homeSlider  {
+    margin: 0 -1em ;
+  }
+  .homeSliderText {
+    font-size: 1rem ;
+  }
+
+  /* awards start */
+  .awardsMain {
+    margin: 0 -1em ;
+    padding: 1em ;
+    gap: 2em;
+  }
+
+  .awardsTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .awardsTopLeft {
+    display: flex;
+    flex-direction: column;
+    gap: .5em ;
+  }
+
+  .awardsTopCenter {
+    width: 90%;
+  }
+
+  .subDescr2 {
+    font-size: .9rem;
+    color: var(--medGray);
+  }
+
+  .awardsTopBtn {
+    display: flex;
+    font-size: .9rem ;
+    gap: 1em ;
+    align-items: center;
+  }
+
+  .awardsTopBtn svg {
+    width: 16px ;
+    height: 16px ;
+  }
+
+  .awardsBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .awardsBottomLeft {
+    display: flex;
+    width: 90vw;
+    height: 90vw;
+    flex-basis: unset;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .awardsBottomLeft img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .awardsBottomRight {
+    flex-basis: unset;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* awards ends */
+
+  /* Placements start*/
+  .placementsMain {
+    margin: 0 -1em ;
+    padding: 2em 1em ;
+  }
+
+  .placementsLogosCon {
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* Placements ends */
+
+  /* Event Start */
+
+  .eventHead {
+    flex-direction: column;
+    gap: 1em ;
+  }
+
+  .eventHeadText {
+    width: 100% ;
+  }
+
+  .eventHeadText .mainHead {
+    font-size: 1.5rem;
+  }
+
+  .eventHeadLink {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .eventCardCon {
+    display: flex;
+    flex-direction: column;
+    gap: 2em ;
+    justify-content: center;
+  }
+  /* Event End */
 }
+
+

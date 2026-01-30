@@ -47,6 +47,15 @@ import n1 from '@p/services/n1.png';
 import o1 from '@p/services/o1.png';
 import p1 from '@p/services/p1.png';
 
+//expertise 
+import robotic from '@p/exp1.webp';
+import rwe from '@p/rwe.jpg';
+import oncology from '@p/exp2.jpg';
+import endo from '@p/endo.jpg';
+import cardio from '@p/cardio.jpg';
+import vaccine from '@p/vaccine.jpg';
+import others from '@p/others.jpg';
+
 // services data images
 import Ortho from '@p/serviceContent/Orthopedics.jpg';
 
@@ -109,5 +118,12 @@ export {
   placementLogos,
   radient,
   videoHome,
-  map
+  map,
+  robotic,
+  rwe,
+  oncology, 
+  endo,
+  cardio,
+  vaccine,
+  others
 };
