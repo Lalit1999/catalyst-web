@@ -1,0 +1,4 @@
+:global(.ant-table-cell-row-hover){
+    transition: none;
+    color: var(--medGray);
+}

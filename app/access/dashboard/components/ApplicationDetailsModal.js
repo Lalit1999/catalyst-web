@@ -3,7 +3,7 @@
 import { Modal, Descriptions, Tag, Divider } from "antd";
 
 import { formatDate } from "@utils";
-import styles from "../page.module.css";
+import styles from "./page.module.css";
 
 export default function ApplicationDetailsModal({ record, onClose }) {
     return (
