@@ -37,7 +37,7 @@
   box-shadow: 0 0 0 2px var(--thodaMain);
 }
 
-.form button {
+.formBtn {
   padding: 0.6rem;
   background-color: var(--main);
   color: var(--white);
@@ -47,7 +47,7 @@
   font-weight: 600;
 }
 
-.form button:hover {
+.formBtn:hover {
   background-color: var(--dark);
 }
 

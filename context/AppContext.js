@@ -1,102 +1,72 @@
 "use client"
 
-import { createContext, useState/*, useRef*/ } from 'react' ;
-// import { createContext, useState, useEffect, useRef } from 'react' ;
+import { createContext, useState, useEffect } from 'react' ;
 
-// import { addNotif, get, remNotif } from '@utils' ;
+import { addNotif, get, remNotif } from '@utils' ;
 
 const AppContext = createContext() ;
 
 const AppContextProvider = ({children}) => {
-    // const [user, setUser] = useState({}) ; 
-    // const [userToken, setUserToken] = useState('') ; 
-    // const [userLoading, setUserLoading] = useState(true) ;
-	// const [popOpen, setPopOpen] = useState(false) ;
-	// const [popContent, setPopContent] = useState('') ;
+	const [adminToken, setAdminToken] = useState(false) ;
 	const [course, setCourse] = useState('') ;
-	// const conRef = useRef(null);
-
-    // useEffect(() => {
-	// 	const fn = async() => {
-	// 		const utk = localStorage.getItem('purpleUserToken') ;
-			
-	// 		if(utk) {
-	// 			let resp = await get('user/me', utk) ;
-	// 			if(resp?.error) {
-	// 				console.error(resp) ;
-	// 				addNotif('Session Expired. Please login again', 'error') ;
-	// 				loadUser({}) ;	
-	// 			} else {
-	// 				if(resp && resp.email)
-	// 					loadUser({user: resp, token: utk}) ;
-	// 				else {
-	// 					console.error(resp) ;
-	// 					loadUser({}) ;
-	// 				}
-	// 			}
-	// 		}
-	// 		else
-	// 			setUserLoading(false) ;
-	// 	}
-	// 	fn() ;
-	// }, [])
+	const [appData, setAppData] = useState({}) ;
 
 	// useEffect(() => {
-	// 	const fn = async () => {
-	// 		let resp = await get('app-data') ;
+    //     const fn = async() => {
+    //         const cachedData = localStorage.getItem(`catalyst-app-data`) ;
+    //         if (cachedData)
+    //             setAppData(JSON.parse(cachedData)) ;
 
-	// 		if(resp?.error) {
-	// 			console.error(resp) ;
-	// 			addNotif('Unable to load data', 'error') ;
-	// 		} else {
-	// 			if(resp?.status) {
-	// 				setListData(resp.data) ;
-	// 			}
-	// 			else {
-	// 				console.error(resp) ;
-	// 				remNotif() ;
-	// 			}
-	// 		}
-	// 	}
+    //         const resp = await get('app-data') ;
 
-	// 	fn() ;
-	// }, [])
+    //         if(resp?.error) {
+    //             console.error(resp) ;
+    //             addNotif('Error loading app data') ;
+    //         } else {
+    //             if(resp?.status) {
+    //                 setAppData(resp.data) ;
+    //                 localStorage.setItem(`catalyst-app-data`, JSON.stringify(resp.data)) ;
+    //             }
+    //             else
+    //                 console.error(resp, 'Context 61') ;
+    //         }
+    //     }
 
-	// const loadUser = data => {
-	// 	const {user, token} = data ;
-	// 	if(user) {
-	// 		setUser(user) ;
-	// 		setUserToken(token) ;
-	// 		localStorage.setItem('purpleUser', JSON.stringify(user) );
-	// 		localStorage.setItem('purpleUserToken', token);
-	// 		setUserLoading(false) ;
-	// 	}	
-	// 	else {
-	// 		setUser({}) ;
-	// 		setUserToken('') ;
-	// 		localStorage.clear() ;
-	// 		setUserLoading(false) ;
-	// 	}
-	// }
+    //     fn() ;
+    // }, [])
 
-	// const returnListData = str => {
-	// 	if (Object.keys(listData).length > 0)
-	// 		return listData[str] ;
-    //     else
-    //         return [] ;
-    // }
+	const loadAdmin = token => {
+        if(token) {
+            setAdminToken(token) ;
+			localStorage.setItem('catalystAdminToken', token);
+		}	
+		else {
+            setAdminToken('') ;
+			localStorage.clear() ;
+		}
+	}
 
-	const scrollToTop = () => {
-        // if (conRef.current) 
-            // conRef.current.scrollTo({ top: 0, behavior: "smooth" });
-    };
+	useEffect(() => {
+        const fn = async() => {
+            const utk = localStorage.getItem('catalystAdminToken') ;
+            
+            if(utk) 
+                loadAdmin(utk) ;
+            else 
+                loadAdmin() ;
+        }
+        fn() ;
+    }, [])
+
+    const getAppData = str => {
+        if (Object.keys(appData).length > 0)
+            return appData.filter(i => i.name === str)[0]?.items || [] ;
+        else
+            return [] ;
+    }
 
 	const value = {
-		course, setCourse,
-		// user, userToken, userLoading, loadUser,
-		// popOpen, setPopOpen, setPopContent, popContent,
-		scrollToTop,
-		// conRef, scrollToTop, returnListData,
+		course, setCourse, adminToken, loadAdmin, getAppData,
 	} ;
 	return <AppContext.Provider value={value}>{children}</AppContext.Provider> ;
 }

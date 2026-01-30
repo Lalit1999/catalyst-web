@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "react-toastify/dist/ReactToastify.css";
-// import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 import ContextWrapper from './ContextWrapper.js' ;
 import './globals.css' ;
@@ -23,7 +22,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={`body ${poppins.className}`}>
                 <ContextWrapper>{children}</ContextWrapper>
-                {/* <ToastContainer /> */}
+                <ToastContainer />
             </body>
         </html>
     );

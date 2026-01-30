@@ -1,10 +1,12 @@
 'use client';
 
 import { useMemo, useContext, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation' ;
 
 import { BasicForm, Title } from '@comps';
 import { programsDetailsArr } from '@data';
 import { AppContext } from '@ac' ;
+import { post, addNotif, remNotif } from '@utils' ;
 import styles from './page.module.css';
 
 const genderOptions = ['Female', 'Male'];
@@ -21,6 +23,8 @@ const SectionHeading = ({ title, subtitle }) => (
 
 const RegistrationFormPage = () => {
     const [today, setToday] = useState('') ;
+    const [errMsg, setErrMsg] = useState('') ;
+    const router = useRouter() ;
 
     useEffect(() => {
         setToday(new Date().toISOString().split('T')[0]) ;
@@ -33,9 +37,9 @@ const RegistrationFormPage = () => {
     const { course } = useContext(AppContext);
 
     const selectedProgram = useMemo(() => {
-                const heading = programsDetailsArr?.[course]?.heading ;
-                if(!heading)
-			return '' ;
+        const heading = programsDetailsArr?.[course]?.heading ;
+            if(!heading)
+                return '' ;
 		return heading.split('<br />').join('') ;
     }, [course]);
 
@@ -58,7 +62,7 @@ const RegistrationFormPage = () => {
             ],
         },
         {   type: 'row', children: [
-            { type: 'phone', name: 'phone', label: 'Phone Number', valid: { required: true } },
+            { type: 'phone', name: 'mobile', label: 'Phone Number', valid: { required: true } },
             { type: 'phone', name: 'whatsapp', label: 'WhatsApp Number', valid: { required: true } },
             ],
         },
@@ -72,14 +76,14 @@ const RegistrationFormPage = () => {
         },
         {   type: 'row', children: [
                 { type: 'city', name: 'city', valid: { required: true } },
-                { type: 'number', name: 'pincode', valid: { required: true, minLength: 4 } },
+                { type: 'number', name: 'pinCode', valid: { required: true, minLength: 4 } },
             ],
         },
 
         {   type: 'custom', component: <SectionHeading title="5. Academic Details" /> },
         {   type: 'row', children: [
                 { type: 'dropdown', name: 'qualification', label: 'Highest Qualification', options: qualificationOptions, valid: { required: true } },
-                { type: 'text', name: 'institution', label: 'Name of Institution', valid: { required: true, minLength: 3 } },
+                { type: 'text', name: 'institute', label: 'Name of Institution', valid: { required: true, minLength: 3 } },
             ],
         },
         {   type: 'row', children: [
@@ -117,22 +121,44 @@ const RegistrationFormPage = () => {
                 </div>
             ),
         },
-        {   type: 'checkbox', name: 'declaration', label: 'I understand' },
-
+        {   type: 'checkbox', name: 'understanding', label: 'I understand' },
+        
+        { type: 'custom', component: errMsg.length>0 && <span className="formError shakeHorizontal">{errMsg}</span>},
         {   type: 'submit', text: 'Proceed to Payment', style: styles.submitBtn },
     ];
 
-    const handleSubmit = () => {
-        // console.log('Registration form submitted', values, selectedProgram);
-    };
+    const onFormSubmit = async data => {
+        const { program, category, name, email, mobile, whatsapp, address, country, state, city, pinCode, qualification, institute, yearOfPassing, division, working, declaration, understanding, gender, dob } = data;
 
+        addNotif('Submitting Application...', 'loading') ;
+        setErrMsg('') ;
+        let resp = await post('apply', { program, category, name, email, mobile, whatsapp, address, country, state, city, pinCode, qualification, institute, yearOfPassing, division, working, declaration, understanding, gender, dob }) ;
+
+        if(resp?.error) {
+            console.error(resp) ;
+            remNotif() ;
+            setErrMsg(resp.error) ;
+        }
+        else {
+            if(resp?.status) {
+                remNotif() ;
+                addNotif('Application Submitted', 'success') ;
+                router.push('/training-programs') ;
+                // loadUser({ user: resp.data, token: userToken }) ;
+            }
+            else {
+                console.error(resp) ;
+                remNotif() ;
+            }
+        }
+    }
 
     return (
         <div  className={styles.registrationMainPage}>            
             <Title bread='Online Registration' heading='Online Registration Form' description='Fill out the information below and our academic counselors will reach out with the onboarding kit.' />
             <div className={styles.registrationPage}>
                 <div className={styles.formCard}>
-                    <BasicForm styleOR={styles.formGrid} data={registrationFormData} onFormSubmit={handleSubmit} defaultObj={{program:selectedProgram}} />
+                    <BasicForm styleOR={styles.formGrid} data={registrationFormData} onFormSubmit={onFormSubmit} defaultObj={{program:selectedProgram}} />
                 </div>
             </div>
         </div>
