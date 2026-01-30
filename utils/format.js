@@ -34,7 +34,7 @@ const formatDate = (str) => {
 	tomorrow.setDate(today.getDate() + 1);
 
 	const options = {
-		// year: "numeric",
+		year: "numeric",
 		month: "short",
 		day: "numeric",
 	};
