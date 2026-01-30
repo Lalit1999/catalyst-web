@@ -3,7 +3,7 @@
 import { useMemo, useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation' ;
 
-import { BasicForm, Title } from '@comps';
+import { BasicForm, Title, CcavenueRedirectForm } from '@comps';
 import { programsDetailsArr } from '@data';
 import { AppContext } from '@ac' ;
 import { post, addNotif, remNotif } from '@utils' ;
@@ -24,6 +24,7 @@ const SectionHeading = ({ title, subtitle }) => (
 const RegistrationFormPage = () => {
     const [today, setToday] = useState('') ;
     const [errMsg, setErrMsg] = useState('') ;
+    const [paymentData, setPaymentData] = useState(null) ;
     const router = useRouter() ;
 
     useEffect(() => {
@@ -38,10 +39,22 @@ const RegistrationFormPage = () => {
 
     const selectedProgram = useMemo(() => {
         const heading = programsDetailsArr?.[course]?.heading ;
-            if(!heading)
-                return '' ;
+        if(!heading)
+            return '' ;
 		return heading.split('<br />').join('') ;
     }, [course]);
+
+    // const getPricingByProgramHeading = (programHeading, category) => {
+    //     const normalizeHeading = (str) => String(str || '').split('<br />').join('').trim() ;
+
+    //     const entry = Object.values(programsDetailsArr).find((p) => normalizeHeading(p.heading) === normalizeHeading(programHeading)) ;
+    //     if (!entry) return { amount: null, currency: 'INR' } ;
+
+    //     const currency = category === 'Foreign Nationals' ? 'USD' : 'INR' ;
+    //     const amount = currency === 'USD' ? entry.usd : entry.inr ;
+
+    //     return { amount, currency } ;
+    // } ;
 
     const registrationFormData = [
         {   type: 'custom', component: <SectionHeading title="1. Select Program" /> },
@@ -132,6 +145,7 @@ const RegistrationFormPage = () => {
 
         addNotif('Submitting Application...', 'loading') ;
         setErrMsg('') ;
+        setPaymentData(null) ;
         let resp = await post('apply', { program, category, name, email, mobile, whatsapp, address, country, state, city, pinCode, qualification, institute, yearOfPassing, division, working, declaration, understanding, gender, dob }) ;
 
         if(resp?.error) {
@@ -141,16 +155,66 @@ const RegistrationFormPage = () => {
         }
         else {
             if(resp?.status) {
-                remNotif() ;
-                addNotif('Application Submitted', 'success') ;
+                // const { amount, currency } = getPricingByProgramHeading(program, category) ;
+                // if (!amount) {
+                //     remNotif() ;
+                //     setErrMsg('Unable to determine program fee. Please re-select the program and try again.') ;
+                //     return ;
+                // }
+
+                // addNotif('Redirecting to payment...', 'loading') ;
+
+                // const paymentResp = await post('payment/ccavenue/initiate', {
+                //     amount,
+                //     currency,
+                //     applicantId: resp?.data?._id,
+                //     program,
+                //     category,
+                //     billing_name: name,
+                //     billing_address: address,
+                //     billing_city: city,
+                //     billing_state: state,
+                //     billing_zip: pinCode,
+                //     billing_country: country,
+                //     billing_tel: mobile,
+                //     billing_email: email,
+                // }) ;
+
+                // if (paymentResp?.error) {
+                //     console.error(paymentResp) ;
+                //     remNotif() ;
+                //     setErrMsg(paymentResp.error) ;
+                //     return ;
+                // }
+
+                // if (paymentResp?.status && paymentResp?.data?.encRequest) {
+                //     remNotif() ;
+                //     setPaymentData(paymentResp.data) ;
+                //     return ;
+                // }
+
+                // console.error(paymentResp) ;
+                // remNotif() ;
+                // setErrMsg('Unable to start payment. Please try again.') ;
+
+                addNotif('Application Submitted Successfully!', 'success', 3000) ;
                 router.push('/training-programs') ;
-                // loadUser({ user: resp.data, token: userToken }) ;
             }
             else {
                 console.error(resp) ;
                 remNotif() ;
             }
         }
+    }
+
+    if (paymentData?.paymentUrl && paymentData?.encRequest && paymentData?.accessCode) {
+        return (
+            <CcavenueRedirectForm
+                paymentUrl={paymentData.paymentUrl}
+                encRequest={paymentData.encRequest}
+                accessCode={paymentData.accessCode}
+            />
+        ) ;
     }
 
     return (

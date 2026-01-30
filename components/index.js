@@ -27,5 +27,6 @@ import Slider from './slider/Slider.js' ;
 import Text from './formelements/Text.js' ;
 import Title from './title/Title.js' ;
 import ToolTip from './toolTip/ToolTip.js' ;
+import CcavenueRedirectForm from './payment/CcavenueRedirectForm.js' ;
 
-export { AnimProgBar, BasicForm, Card, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable,GridBlock, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, ResearchCard, RightPanel, ServiceGrid,ServiceCard,SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip } ;
+export { AnimProgBar, BasicForm, Card, ContactBtn, ContactForm, CountUp, DateInput, DropDown, Downbar, GeneralTable,GridBlock, Header, Loading, Location, Menu, Pagination, Popup, ProgressBar, ResearchCard, RightPanel, ServiceGrid,ServiceCard,SignIn, SignUp, Slider, ReportJob, Text, Title, ToolTip, CcavenueRedirectForm } ;
