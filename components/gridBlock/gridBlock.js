@@ -9,8 +9,8 @@ const TextSection = ({img,text}) => {
             return <p key={i} className={styles.heroText}  dangerouslySetInnerHTML={{ __html: item }} />
           })}
         </div>
-        <div className={styles.rightpart}>
-          {img && <Image src={img} className={styles.heroImg} alt="hero" />}
+        <div className={styles.rightPart}>
+          {img && <Image fill src={img} className={styles.heroImg} alt="hero" quality={100} sizes="50vw"/>}
         </div>
       </div>
     </div>

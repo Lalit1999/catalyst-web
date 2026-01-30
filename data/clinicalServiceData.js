@@ -1,5 +1,5 @@
 import { Clinical } from "@icons";
-import { Neurology } from "@images"; 
+import { pms, ctm, csm, meet, recruit } from "@images"; 
 
 export const clinicalServicesData = {
   "project-management": {
@@ -7,7 +7,7 @@ export const clinicalServicesData = {
     heading: "Project Management Services",
     subHeading:
       "Structured oversight to ensure compliant, efficient, and transparent clinical trial execution.",
-    img: Neurology,
+    img: pms,
     imgicon: <Clinical />,
     content: [
       "<strong>Our Project Management Capabilities :</strong> Our disciplined yet flexible approach enables efficient study conduct, proactive risk management, and audit-ready documentation.",
@@ -93,7 +93,7 @@ export const clinicalServicesData = {
     heading: "Clinical Site Management",
     subHeading:
       "Ensuring consistent, compliant, and well-coordinated study conduct across all participating sites.",
-    img: Neurology,
+    img: csm,
     imgicon: <Clinical />,
     content: [
       "<strong>Comprehensive Site Operations Support : </strong> Proactive coordination and performance oversight for seamless study execution.",
@@ -182,7 +182,7 @@ export const clinicalServicesData = {
     heading: "Clinical Study Monitoring",
     subHeading:
       "Ensuring protocol adherence, data integrity, and regulatory compliance throughout study execution.",
-    img: Neurology,
+    img: ctm,
     imgicon: <Clinical />,
     content: [
       "<strong>Clinical Study Monitoring Activities : </strong> Independent oversight for high-quality data and risk identification.",
@@ -225,7 +225,7 @@ export const clinicalServicesData = {
     heading: "Patient Recruitment",
     subHeading:
       "Ethical, data-driven recruitment strategies to enroll the right patients, at the right time.",
-    img: Neurology,
+    img: recruit,
     imgicon: <Clinical />,
     content: [
       "<strong>Our Patient Recruitment Capabilities : </strong>Strategies grounded in real-world feasibility and regulatory requirements.",
@@ -288,7 +288,7 @@ export const clinicalServicesData = {
     heading: "Organization of Investigator’s Training Meetings",
     subHeading:
       "Equipping investigators and site teams with the knowledge and clarity required for consistent, compliant study execution.",
-    img: Neurology,
+    img: meet,
     imgicon: <Clinical />,
     content: [
       "<strong>Scope of Investigator Training Meetings : </strong> Establishing a strong operational foundation and reducing start-up risk.",

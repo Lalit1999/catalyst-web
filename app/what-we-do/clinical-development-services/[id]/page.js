@@ -1,7 +1,6 @@
 'use client'
-import { about1 } from "@images";
 import styles from "./page.module.css";
-import {GridBlock, ServiceGrid, Title } from "@c/index";
+import { GridBlock, ServiceGrid, Title } from "@c/index";
 import { useParams } from "next/navigation";
 import { clinicalServicesData} from "@data";
 
@@ -30,15 +29,15 @@ import { clinicalServicesData} from "@data";
 // };
 
 const Page = () => {
-    const params = useParams();
-    const serviceId = params.id || params.slug;
-    const service = clinicalServicesData[serviceId];
+  const params = useParams();
+  const serviceId = params.id || params.slug;
+  const { heading, subHeading, content, img, capabilityCards } = clinicalServicesData[serviceId];
     
   return (
     <div className={styles.main}>
-      <Title heading={service.heading} desc={service.subHeading} />
-      <GridBlock  text={service.content} img={about1} />
-      <ServiceGrid cards={service.capabilityCards} />
+      <Title heading={heading} desc={subHeading} />
+      <GridBlock text={content} img={img} />
+      <ServiceGrid cards={capabilityCards} />
     </div>
   );
 };
