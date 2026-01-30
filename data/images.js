@@ -61,6 +61,8 @@ import headIcon from '@p/About/headIcon.png';
 
 import radient from '@p/radient-gradient.png' ;
 
+import map from '@p/map.png' ;
+
 // Keep videos as public URL strings (avoid importing .webm as a module).
 const videoHome = '/video_home.webm';
 
@@ -107,4 +109,5 @@ export {
   placementLogos,
   radient,
   videoHome,
+  map
 };

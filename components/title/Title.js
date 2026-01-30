@@ -24,8 +24,7 @@ import styles from './title.module.css';
 const Title = ({heading,desc}) => {
   return (
     <div className={styles.homeSlider}>
-
- <div className={styles.homeSliderMain}>
+      <div className={styles.homeSliderMain}>
         <p className={styles.homeSliderText}>{heading}</p>
         <p className={styles.homeSliderDesc}>
           {desc}
