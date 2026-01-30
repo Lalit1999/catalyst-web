@@ -1,5 +1,5 @@
 import { Research, Fsp, Clinical, Bag, Data } from "@icons";
-import { about1 } from "@images";
+import { about1, bios, med, fsp, rc } from "@images";
 
 // 1. Sidebar Links
 export const quickLinks = [
@@ -33,6 +33,7 @@ export const serviceDataObject = {
       "<strong>Your Trusted Partner in Clinical Trial Optimization : </strong>Operational excellence delivered through focused, compliant, and scalable trial support.",
       "We deliver integrated clinical development services designed to support sponsors across the full lifecycle of study execution. Our capabilities encompass strategic study design and start-up, efficient and ethical patient recruitment, and robust project management to ensure timelines, quality, and compliance are maintained. We provide comprehensive clinical site management and clinical trial monitoring, enabling consistent protocol adherence, data integrity, and regulatory readiness across single-centre and multicentre studies. Together, these services enable streamlined study conduct, reduced operational risk, and the generation of high-quality, reliable clinical evidence."
     ],
+    image : about1,
     imgicon: <Clinical />,
     capabilityCards: [
       {
@@ -76,6 +77,7 @@ export const serviceDataObject = {
       "<strong>Our Medical Writing Capabilities : </strong>Our protocols are designed to be scientifically robust, operationally executable, and defensible from both regulatory and ethics perspectives.",
       "Catalyst delivers high-quality medical writing and scientific publication services through a multidisciplinary team of senior medical professionals, scientific subject-matter experts, biostatisticians, and experienced medical writers. Working in close collaboration with investigators and sponsors, we translate complex clinical and real-world data into scientifically rigorous, regulator-ready, and publication-quality documentation.", "Our expertise spans the full continuum of evidence generation, including retrospective and prospective datasets, real-world evidence (RWE), observational and registry-based studies, and interventional clinical trials."
     ],
+    image : med,
     imgicon: <Research />,
     capabilityCards: [
       {
@@ -89,7 +91,7 @@ export const serviceDataObject = {
         ],
       },
       {
-        title: "Clinical Study Reports (Phase I–IV)",
+        title: "Clinical Study Reports (Phase I-IV)",
         points: [
           "Preparation of full CSRs, synopses, and appendices",
           "Integration and interpretation of tables, listings, and figures (TLFs)",
@@ -128,6 +130,7 @@ export const serviceDataObject = {
       "At Catalyst Clinical Services, our regulatory affairs experts combine deep domain knowledge with hands-on experience to navigate complex local and global regulatory landscapes with precision and foresight. We proactively identify regulatory requirements and anticipate submission-stage challenges, enabling sponsors to address concerns early and achieve timely, seamless approvals.",
       "From early-phase planning through post-approval obligations, we provide end-to-end regulatory consulting and compliance support across the entire clinical trial lifecycle. Our integrated, risk-aware approach minimizes delays, mitigates regulatory uncertainty, and ensures alignment with evolving regulatory frameworks."
     ],
+    image : rc,
     imgicon: <Bag />,
     capabilityCards: [
       {
@@ -181,6 +184,7 @@ export const serviceDataObject = {
       "Catalyst Clinical Services delivers customized Clinical Operations Functional Service Provider (FSP) models designed to align seamlessly with each sponsor’s development strategy, operational structure, and delivery objectives. Recognizing that no two clinical programs are alike, our FSP solutions are tailored to protocol complexity, study phase, therapeutic area, and geographic scope.",
       "We embed dedicated, role-aligned clinical operations professionals who function as a true extension of sponsor teams. Our resources integrate seamlessly with sponsor SOPs, systems, governance frameworks, and workflows—ensuring continuity, consistency, and operational efficiency from day one."
     ],
+    image : fsp,
     imgicon: <Fsp />,
     capabilityCards: [
       {
@@ -220,6 +224,7 @@ export const serviceDataObject = {
       "<strong>Our Data & Biostatistics Capabilities : </strong>Independent quality checks and regulatory-aligned processes.",
       "At Catalyst Clinical Services, our Data Management and Biostatistics services are designed to deliver clean, consistent, and audit-ready datasets that support reliable decision-making and high-quality regulatory submissions. Our integrated approach ensures accuracy, traceability, and compliance across the entire data lifecycle—from collection to final analysis and reporting."
     ],
+    image : bios,
     imgicon: <Data />,
     capabilityCards: [
       {

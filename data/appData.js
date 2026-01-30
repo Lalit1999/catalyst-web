@@ -1,4 +1,4 @@
-import { about2, videoHome, robotic, rwe, oncology } from "@images";
+import { croHome, videoHome, robotic, rwe, oncology } from "@images";
 import { Clinical, Research, Therapy, Bullet } from "@icons";
 
 const homePageData = {
@@ -74,7 +74,7 @@ const homePageData = {
         },
         buttonText: 'Know More About Us',
         buttonLink: '/who-we-are',
-        image: about2,
+        image: croHome,
     },
     statsArr: [
         {

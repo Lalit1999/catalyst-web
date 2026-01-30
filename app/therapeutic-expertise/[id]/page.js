@@ -1,5 +1,4 @@
 'use client'
-import { about2 } from "@images";
 import styles from "./page.module.css";
 import { GridBlock, ServiceGrid, Title } from "@comps";
 import { useParams } from "next/navigation";
@@ -31,17 +30,16 @@ import { therapeuticExpertiseData } from "@data";
 
 // const description = 'Catalyst provides comprehensive, end-to-end clinical trial management founded on scientific rigor, ethical governance, and a deeply patient-centred philosophy. We collaborate with pharmaceutical, biotechnology, and medical device organizations globally to conceptualize, design, and operationalize clinical studies that are methodologically robust, reflective of real-world patient populations, and capable of generating high-quality, generalizable evidence.'
 
-
 const Page = () => {
   const params = useParams();
-    const serviceId = params.id || params.slug;
-    const service = therapeuticExpertiseData[serviceId];
+  const serviceId = params.id || params.slug;
+  const { heading, content, subHeading, capabilityCards, image } = therapeuticExpertiseData[serviceId];
     
   return (
     <div className={styles.main}>
-      <Title heading={service.heading} desc={service.subHeading} />
-      <GridBlock  text={service.content} img={about2} />
-      <ServiceGrid cards={service.capabilityCards} />
+      <Title heading={heading} desc={subHeading} />
+      <GridBlock text={content} img={image} />
+      <ServiceGrid cards={capabilityCards} />
     </div>
   );
 };

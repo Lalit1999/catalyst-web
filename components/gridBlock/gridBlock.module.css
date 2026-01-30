@@ -1,32 +1,33 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-   color: var(--darkGray);
-  gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: var(--darkGray);
+    gap: 3rem;
 }
 
 .homeSlider {
-  display: flex;
-  position: relative;
-  height: 25vw;
-  overflow: hidden;
-  margin: 0 -4em ;
+    display: flex;
+    position: relative;
+    height: 25vw;
+    overflow: hidden;
+    margin: 0 -4em ;
 }
 
 .homeSliderText {
-	color: var(--white) ;
-	font-size: 2rem ;
-	font-weight: 600 ;
-	text-align: center ;
-	width: max-content;
+    color: var(--white) ;
+    font-size: 2rem ;
+    font-weight: 600 ;
+    text-align: center ;
+    width: max-content;
 }
+
 .homeSliderMain {
     position: absolute ;
-	top: 50% ;
-	left: 50% ;
-	transform: translate(-50%, -50%) ;
-	color: var(--white) ;
+    top: 50% ;
+    left: 50% ;
+    transform: translate(-50%, -50%) ;
+    color: var(--white) ;
     display: flex;
     padding: 2em 4em ;
     width: 100% ;
@@ -36,80 +37,92 @@
     justify-content: space-between;
 }
 
-.homeSliderDesc{
-  width: 50vw;
-}
-.hero{
-  display: flex;
-}
-.separation{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 2em;
-}
-.separation >*{
-  width: 100%;
-}
-.leftpart{
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.heroImg{
-  width: 45vw;
-  height: 45vh;
-  border-radius: 8px;
-  object-fit: cover;
-}
-.heroText{
-  font-weight: 400;
-  font-size: 1em;
-  color: var(--gray);
+.homeSliderDesc {
+    width: 50vw;
 }
 
+.hero {
+    display: flex;
+}
+
+.separation {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em;
+}
+
+.separation >* {
+    width: 100%;
+}
+
+.leftpart {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.rightPart {
+    position: relative ;
+    width: 45vw ;
+    height: 27vw ;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.heroImg {
+    object-fit: cover;
+}
+
+.heroText {
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--gray);
+}
 
 .pointsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 0.5em;
-  flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5em;
+    flex-direction: column;
 }
 
 .pointItem {
-  color: var(--medGray);
-  font-size: 0.85rem;
-  line-height: 1.6;
-  position: relative;
-  padding-left: 12px;
+    color: var(--medGray);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 12px;
 }
 
 .pointItem::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--medGray);
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--medGray);
 }
 
-
-.leftpart p{
-  margin: 0;
+.leftpart p {
+    margin: 0;
 }
-@media (max-width : 600px){
-  .separation {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .heroImg{
-    height: 100%;
-    width: 100%;
-  }
-  .heroText{
-    font-size:  0.85em
-  }
+
+@media (max-width : 600px) {
+    .separation {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroImg {
+        height: 100%;
+        width: 100%;
+    }
+
+    .heroText {
+        font-size:  0.85em
+    }
 }
