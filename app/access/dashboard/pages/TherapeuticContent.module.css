@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+   padding: 24px;
   margin: 0;
 }
 
@@ -114,4 +114,8 @@
 }
 :global(.ant-layout-sider-children){
   background-color: none;
+}
+.noHover:hover{
+  color: var(--main) !important;
+  transition: all ease-in 0.4s !important;
 }
