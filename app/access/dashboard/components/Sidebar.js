@@ -32,7 +32,7 @@ export default function Sidebar({ onLogout, activeTab, setActiveTab }) {
             onClick={() => setActiveTab("services")}
             style={{ cursor: "pointer" }}
           >
-            Services
+            What we do
           </li>
 
           {/* Therapeutic Expertise */}
@@ -45,13 +45,13 @@ export default function Sidebar({ onLogout, activeTab, setActiveTab }) {
           </li>
 
           {/* Research Publications */}
-          <li 
+          {/* <li 
             className={getItemClass("research")} 
             onClick={() => setActiveTab("research")}
             style={{ cursor: "pointer" }}
           >
             Research Publications
-          </li>
+          </li> */}
 
           {/* Renamed About us to Training Programs */}
           <li 

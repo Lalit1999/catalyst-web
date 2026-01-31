@@ -1,0 +1,117 @@
+/* Disable hover styles for ALL buttons inside AntD table */
+:global(.ant-table)
+  :global(.ant-btn:not(:disabled):hover),
+:global(.ant-table)
+  :global(.ant-btn:not(:disabled):active),
+:global(.ant-table)
+  :global(.ant-btn:not(:disabled):focus) {
+  background-color: inherit;
+  border-color: inherit;
+  color: inherit;
+  box-shadow: none;
+}
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  margin: 0;
+}
+
+.tableHeader h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--darkGray);
+}
+
+.search {
+  width: 260px;
+}
+
+/* =========================
+   Ant Design Table Overrides
+========================= */
+
+.fixing{
+  padding: 0 1em;
+}
+.view{
+  background-color: var(--second);
+  color: var(--white);
+  padding: 0.5em 1em;
+  border-radius: 12px;
+}
+.view:hover{
+  color: var(--white);
+}
+:global(.ant-table) {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+:global(.ant-table-thead > tr > th) {
+  background: var(--halfGray) !important;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+:global(.ant-table-tbody > tr:hover > td) {
+  background: var(--thodaMain) !important;
+}
+
+:global(.ant-pagination-item-active) {
+  border-color: var(--main) !important;
+}
+
+:global(.ant-pagination-item-active a) {
+  color: var(--main) !important;
+}
+
+/* =========================
+   Badges / Status
+========================= */
+
+.success {
+  color: var(--success);
+  font-weight: 600;
+}
+
+/* =========================
+   Modal Overrides
+========================= */
+
+:global(.ant-modal-content) {
+  border-radius: 10px;
+}
+
+:global(.ant-modal-title) {
+  font-weight: 600;
+}
+
+:global(.ant-descriptions-item-label) {
+  font-weight: 500;
+  color: var(--gray);
+}
+
+/* =========================
+   Buttons
+========================= */
+
+:global(.ant-btn-primary) {
+  background: var(--main);
+  border-color: var(--main);
+}
+
+:global(.ant-btn-primary:hover) {
+  background: var(--dark);
+  border-color: var(--dark);
+}
+
+:global(.ant-btn-dangerous) {
+  background: var(--main);
+  border-color: var(--main);
+}
+:global(.ant-layout-sider-children){
+  background-color: none;
+}

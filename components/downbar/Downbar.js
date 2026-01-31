@@ -31,11 +31,10 @@ const serviceLinks = [
 
 const pagesLinks = [
 	{	text: 'About Us',			link: '/who-we-are',	}, 
-	{	text: 'Terms & Conditions',	link: '/',	}, 
 	{	text: 'Privacy Policy',		link: '/policy/privacy-policy',	}, 
 	{	text: 'Cookie Policy',		link: '/policy/cookie-policy',	}, 
 	{	text: 'Refund Policy',		link: '/policy/refund-policy',	}, 
-	// {	text: 'Terms & Conditions',	link: '/policy/terms-and-conditions',	}, 
+	{	text: 'Terms & Conditions',	link: '/policy/terms-and-conditions',	}, 
 	// {	text: 'Privacy Policy',		link: '/policy/privacy-policy',			}, 
 	// {	text: 'Cookie Policy',		link: '/policy/cookie-policy',			}, 
 	// {	text: 'Refund Policy',		link: '/policy/refund-policy',			}, 
