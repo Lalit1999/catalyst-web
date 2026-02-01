@@ -38,7 +38,7 @@ export default function TermsAndConditionsPage() {
           <div className={styles.privacyhead}>
             <h1 className={styles.heading}>Use of the Website</h1>
             <h1 className={styles.paragraph}>
-              You agree to use the website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the website. Prohibited behavior includes harassing or causing distress or inconvenience to any person, transmitting obscene or offensive content, or disrupting the normal flow of dialogue within our Service.
+              You agree to use the website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else use and enjoyment of the website. Prohibited behavior includes harassing or causing distress or inconvenience to any person, transmitting obscene or offensive content, or disrupting the normal flow of dialogue within our Service.
             </h1>
           </div>
           

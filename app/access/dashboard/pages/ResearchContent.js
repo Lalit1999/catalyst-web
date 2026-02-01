@@ -16,7 +16,7 @@ export default function ResearchTable() {
       title: 'Actions',
       key: 'actions',
       width: 200,
-      render: (_, record) => (
+      render: () => (
         <Space>
           <Button icon={<EyeOutlined />}>View</Button>
           <Button type="primary" icon={<EditOutlined />}>Edit</Button>
