@@ -9,6 +9,8 @@ import { croPageHeader } from "@data";
 
 // Import Icons
 import { CheckIcon, ClockCircle, StarCircle, User } from "@icons";
+import Image from "next/image";
+import { about1, Attire, Company, TeamMembers, WorkingDesk } from "@images";
 
 // --- DATA CONFIGURATION ---
 
@@ -88,26 +90,40 @@ export default function CROExperiencePage() {
           <div className={styles.leftpart_1}>
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>Overview</h2>
-              <div className={styles.leftContent}>
+              <div className={styles.leftPartition} >
+                <div className={styles.leftContent}>
                 {dataOverview.map((paragraph, index) => (
-                  <p key={index} className={styles.paragraph}>
+               <>{index == 1 ?  <div className={styles.leftSide} >
+                   <p key={index} className={styles.paragraph}>
                     {paragraph}
                   </p>
+                   <Image src={Company} alt="overview image" />
+                  </div>: <p key={index} className={styles.paragraph}>
+                    {paragraph}
+                  </p> }
+               </>
                 ))}
+              </div>
               </div>
             </div>
 
             {/* SECTION 2: MISSION & VISION */}
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>Our Vision</h2>
-              <p className={styles.leadershipSubheading}>
-                {dataVisionMission.vision}
+              <div className={styles.rightSide}>
+                <Image src={TeamMembers} alt="Team Members" />
+                <p className={styles.leadershipSubheading}>
+                {`"${dataVisionMission.vision}"`}
               </p>
+              </div>
 
               <h2 className={styles.heading}>
                 Our Mission
               </h2>
-              <p className={styles.paragraph}>{dataVisionMission.mission}</p>
+              <div className={styles.leftSide} >
+                <p className={styles.paragraph}>{dataVisionMission.mission}</p>
+                <Image src={WorkingDesk} alt="People Working with Desk"  />
+              </div>
             </div>
           </div>
 
@@ -150,9 +166,14 @@ export default function CROExperiencePage() {
                 </span>
 
                 {dataLeadership.bio.map((paragraph, index) => (
-                  <p key={index} className={styles.paragraph}>
+                  <>{index == 0 ? <div  className={styles.leftSide}>
+                    <Image src={Attire} alt="attire" />
+                   <p key={index} className={styles.paragraph}>
                     {paragraph}
                   </p>
+                  </div> : <p key={index} className={styles.paragraph}>
+                    {paragraph}
+                  </p> }</>
                 ))}
               </div>
             </div>

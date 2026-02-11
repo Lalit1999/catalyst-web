@@ -104,10 +104,8 @@
   display: flex;
   justify-content: center;
   position: relative;
-  /* Use aspect-ratio for responsive sizing instead of fixed vw height */
-  aspect-ratio: 4 / 3;
   max-width: 450px;
-  min-height: 200px;
+  min-height: 250px;
   overflow: hidden;
   border: 5px solid var(--white);
   border-radius: 1.5rem;
@@ -145,9 +143,10 @@
     flex-basis: auto; 
     width: 80%;
     max-width: 350px;
+
   }
   .courseMain p{
-    font-size: 0.85em !important;
+    font-size: 0.85em;
     text-align: left;
   }
   .reqOneNum{
@@ -221,11 +220,17 @@
 @media (max-width : 600px){
     .courseDetailMain{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         position: static;
     }
     .detailsRight{
         position: static !important;
+    }
+    .descrHead{
+        font-size: 1.2em !important;
+    }
+    .learnCon{
+            flex-direction: column;
     }
 }
 .learnCon {
@@ -287,14 +292,14 @@
 .brochureBox {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border-radius: 1.2rem;
     padding: 1em;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .brochureTextCon {
-    flex-basis: 80%;
+    flex-basis: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -338,8 +343,8 @@
 }
 
 .brochureIcon svg {
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     color: var(--medGray);
 }
 

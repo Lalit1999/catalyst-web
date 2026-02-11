@@ -3,12 +3,19 @@ import def from '@p/default.webp';
 
 import about1 from '@p/about1.png';
 import about2 from '@p/about2.png';
-
+import about3 from '@p/about3.png'
 import contact from '@p/contact.png';
+import Company from '@p/Company.jpg'
+import TeamMembers from '@p/TeamMembers.jpg'
+import WorkingDesk from '@p/WorkingDesk.jpg'
+import Attire from '@p/Attire.jpg'
+
+
+
 import homeBanner2 from '@p/homeBanner2.jpg';
 import croHome from '@p/cro_home.webp';
 import map from '@p/map.png' ;
-
+import programs from '@p/programs.png'
 import cardImage from '@p/cardImage.png';
 import awards from '@p/awards.png';
 
@@ -54,7 +61,11 @@ export {
   def,
   about1,
   about2,
+  about3,
+  Attire,
   contact,
+  Company,
+  WorkingDesk,
   homeBanner2,
   croHome,
   map,
@@ -70,6 +81,7 @@ export {
   fsp,
   rc,
   pms,
+  programs,
   ctm,
   csm,
   meet,
@@ -81,5 +93,6 @@ export {
   cardio,
   vaccine,
   others,
+  TeamMembers,
   videoHome
 };

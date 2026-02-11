@@ -203,6 +203,7 @@
 	display: flex ;
 	flex-direction: column;
 	align-items: center;
+  gap: 1em;
 	justify-content: center ;
 }
 
@@ -727,5 +728,227 @@
   }
   /* Event End */
 }
+.section{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 
+}
+.testimonialSection {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
 
+}
+
+/* Header */
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.subtitle {
+  color: var(--third); /* Used your --third (Bright Green) */
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--black); /* Used your --black */
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Carousel */
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-width: 100%;
+}
+
+/* Navigation Buttons */
+.navButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--lightGray); /* Used your --lightGray */
+  background: transparent;
+  color: var(--third); /* Used your --third */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.navButton:hover {
+  border-color: var(--third);
+  background-color: var(--white);
+  color: var(--third2);
+}
+
+/* Wrapper for Stack Effect */
+.cardWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  padding: 10px;
+}
+
+/* Stacked Background Papers */
+.stackCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--lightGray);
+  z-index: 0;
+}
+
+.stack1 {
+  transform: rotate(1deg) translate(6px, 6px);
+  z-index: -100;
+}
+.stack2 {
+  transform: rotate(2deg) translate(12px, 12px);
+  z-index: -200;
+}
+
+/* Main Card */
+.card {
+  position: relative;
+  z-index: 10;
+  background: var(--white); /* Used your --white */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--zaraBlack); /* Used your --zaraBlack for shadow */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--darkWhite); /* Used your --darkWhite */
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    min-height: 380px;
+  }
+}
+
+/* Image Side */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: var(--darkWhite);
+}
+
+@media (min-width: 768px) {
+  .imageContainer {
+    width: 45%;
+    height: auto;
+  }
+}
+
+.mainImage {
+  object-fit: cover;
+}
+
+/* Content Side */
+.contentContainer {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .contentContainer {
+    width: 55%;
+    padding: 3rem;
+  }
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.cardBody {
+  color: var(--medGray); /* Used your --medGray */
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--darkWhite);
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background-color: var(--lightGray);
+}
+
+.authorName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.authorRole {
+  font-size: 0.8rem;
+  color: var(--medGray);
+  margin: 0;
+}
+
+/* Ratings */
+.rating {
+  display: flex;
+  gap: 2px;
+}
+
+.starFilled {
+  color: var(--golden); /* Used your --golden */
+  font-size: 1.2rem;
+}
+
+.starEmpty {
+  color: var(--lightGray); /* Used your --lightGray */
+  font-size: 1.2rem;
+  position: relative;
+  top: -1px;
+}

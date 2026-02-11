@@ -3,11 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { homeBanner2, awards, placementLogos, event1, event2, event3, cardImage } from "@images";
-import { ArrowLong, Clock, Location } from "@icons";
+import { homeBanner2, awards, placementLogos, event1, event2, event3, cardImage, logo, about1, about2, about3, programs } from "@images";
+import { ArrowLong, Clock, Location, School } from "@icons";
 import { Card } from "@comps";
 
 import styles from "./page.module.css";
+import { useState } from "react";
 
 const programsArr = [
   {
@@ -132,6 +133,249 @@ const eventsCardArr = [
     id: "event3",
   },
 ];
+const placementsArr = [
+    { logo: logo },
+    { logo: logo },
+    { logo: logo },
+    { logo: logo },
+    { logo: logo },
+    { logo: logo },
+    { logo: logo },
+    { logo: logo },
+]
+const SectionFour = () => {
+	return (
+		<div className={styles.sectionFourMain}>
+            <div className={styles.sectionFourMainFirst}>
+                <div className={styles.fourFirst}>
+                    <p className={styles.fourSubHeading}>Our Story</p>
+                    <div className={styles.fourHeadingCon}>
+                        <p className={styles.fourHeading}>We Have the best and Expert Faculties</p>
+                        <p className={styles.fourDescr}>Est ante in nibh mauris cursus mattis molestie a. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Tellus rutrum tellus pellentesque eu tincidunt tortor.</p>
+                    </div>
+                    <div className={styles.fourInfoCon}>
+                        <div className={styles.fourInfoBox}>
+                            <div className={styles.fourInfoIcon}>
+                                <School />
+                            </div>
+                            <div className={styles.fourInfoTextCon}>
+                                <p className={styles.fourInfoTextHead}>Lab Technicians</p>
+                                <p className={styles.fourInfoText}>Est ante in nibh mauris cursus mattis molestie a.</p>
+                            </div>
+                        </div>
+                        <div className={styles.fourInfoBox}>
+                            <div className={styles.fourInfoIcon}>
+                                <School />
+                            </div>
+                            <div className={styles.fourInfoTextCon}>
+                                <p className={styles.fourInfoTextHead}>Research Center</p>
+                                <p className={styles.fourInfoText}>Est ante in nibh mauris cursus mattis molestie a.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button className={styles.fourButton}>Know More About Us</button>
+                </div>
+                <div className={styles.fourSecond}>
+                    <div className={styles.fourImageCon}>
+                        <Image src={programs} alt="programs" />
+                    </div>
+                    <div className={styles.fourImageCon}>
+                        <Image src={about3} alt="about-3" />
+                    </div>
+                </div>
+            </div>
+            <div className={styles.sectionFourMainSecond}>
+                <div className={styles.fourStatBox}>
+                    <div className={styles.statsCircleCon} style={{ "--percent": 90 }}>
+                        <div className={styles.statsCircle}><p>90%</p></div>
+                    </div>
+                    <div className={styles.statsTextCon}>
+                        <p>of novel drugs approved by the US Food and Drug Administration (FDA) including:</p>
+                        <ul className={styles.statsTextList}>
+                            <li><span>96%</span> of oncology drugs</li>
+                            <li><span>89%</span> of central nervous system drugs</li>
+                            <li><span>92%</span> of general medicine drugs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className={styles.fourStatBox}>
+                    <div className={styles.statsCircleCon} style={{ "--percent": 70 }}>
+                        <div className={styles.statsCircle}><p>70%</p></div>
+                    </div>
+                    <div className={styles.statsTextCon}>
+                        <p>of novel products granted marketing authorization by the European Medicines Agency (EMA)</p>
+                        <ul className={styles.statsTextList}>
+                            <li><span>93%</span> of oncology drugs</li>
+                            <li><span>83%</span> of central nervous system drugs</li>
+                            <li><span>89%</span> of general medicine drugs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+		</div>
+	) ;
+}
+
+
+
+const TESTIMONIALS_DATA = [
+  {
+    id: 1,
+    title: "Grow Personal Financial Security Thinking & Principles",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget dolor sit.",
+    name: "Betsy Stanley",
+    role: "Teacher",
+    rating: 4, 
+    image: about1, 
+    avatar: about1      
+  },
+  {
+    id: 2,
+    title: "Learning to Code changed my professional career",
+    text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    name: "John Doe",
+    role: "Web Developer",
+    rating: 5,
+    image: about2, 
+    avatar: about2
+  },
+  {
+    id: 3,
+    title: "The best platform for academic growth",
+    text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+    name: "Sarah Smith",
+    role: "Graduate Student",
+    rating: 3,
+    image: about3, 
+    avatar: about3
+  }
+];
+
+const Testimonials = () => {
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const current = TESTIMONIALS_DATA[currentIndex];
+
+  const handlePrev = () => {
+    console.log('prev');
+    
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? TESTIMONIALS_DATA.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    console.log('next');
+    
+    setCurrentIndex((prevIndex) => 
+      prevIndex === TESTIMONIALS_DATA.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  return (
+    <section className={styles.testimonialSection}>
+      {/* Header Section */}
+      <div className={styles.header}>
+        <span className={styles.subtitle}>STUDENTS</span>
+        <h2 className={styles.title}>Testimonials</h2>
+      </div>
+
+      {/* Carousel Container */}
+      <div className={styles.carouselContainer}>
+        
+        {/* Left Navigation Button */}
+        <button 
+          className={styles.navButton} 
+          onClick={handlePrev}
+          aria-label="Previous testimonial"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        {/* Main Card Wrapper */}
+        <div className={styles.cardWrapper}>
+          {/* Decorative Background Stacks */}
+          <div className={`${styles.stackCard} ${styles.stack1}`}></div>
+          <div className={`${styles.stackCard} ${styles.stack2}`}></div>
+
+          {/* Actual Content Card */}
+          {/* We add key={currentIndex} so React knows to re-render the card animation when data changes */}
+          <div className={styles.card} key={currentIndex}>
+            
+            {/* Left: Image */}
+            <div className={styles.imageContainer}>
+              <Image 
+                src={current.image} 
+                alt="Student studying" 
+                fill
+                className={styles.mainImage}
+              />
+            </div>
+
+            {/* Right: Content */}
+            <div className={styles.contentContainer}>
+              <h3 className={styles.cardTitle}>
+                {current.title}
+              </h3>
+              
+              <p className={styles.cardBody}>
+                {current.text}
+              </p>
+
+              <div className={styles.footer}>
+                <div className={styles.authorInfo}>
+                  <div className={styles.avatarWrapper}>
+                    <Image 
+                      src={current.avatar} 
+                      alt={current.name} 
+                      width={40} 
+                      height={40} 
+                      className={styles.avatar}
+                    />
+                  </div>
+                  <div>
+                    <p className={styles.authorName}>{current.name}</p>
+                    <p className={styles.authorRole}>{current.role}</p>
+                  </div>
+                </div>
+
+                {/* Dynamic Star Rating */}
+                <div className={styles.rating}>
+                  {[...Array(5)].map((_, i) => {
+                    // Check if the current index is less than the rating
+                    const isFilled = i < current.rating;
+                    return (
+                      <span 
+                        key={i} 
+                        className={isFilled ? styles.starFilled : styles.starEmpty}
+                      >
+                        {isFilled ? '★' : '☆'}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Navigation Button */}
+        <button 
+          className={styles.navButton} 
+          onClick={handleNext}
+          aria-label="Next testimonial"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+  );
+}
 
 const HomeSlider = () => {
   return (
@@ -284,10 +528,11 @@ const TrainingPrograms = () => {
     <div className={styles.programsMain}>
       <HomeSlider />
       <CoursesComp />
-      {/* <SectionFour /> */}
+      <SectionFour />
       <Awards />
       <Placemnets />
       <Event />
+      <Testimonials/>
     </div>
   );
 };
