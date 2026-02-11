@@ -24,7 +24,6 @@ const ContactForm = ( ) => {
 
     const onFormSubmit = async data => {
         let resp = await post('message', data) ;
-console.log(data);
 
         if(resp?.error) {
             console.error(resp) ;

@@ -90,20 +90,25 @@ export default function CROExperiencePage() {
           <div className={styles.leftpart_1}>
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>Overview</h2>
-              <div className={styles.leftPartition} >
+              <div className={styles.leftPartition}>
                 <div className={styles.leftContent}>
-                {dataOverview.map((paragraph, index) => (
-               <>{index == 1 ?  <div className={styles.leftSide} >
-                   <p key={index} className={styles.paragraph}>
-                    {paragraph}
-                  </p>
-                   <Image src={Company} alt="overview image" />
-                  </div>: <p key={index} className={styles.paragraph}>
-                    {paragraph}
-                  </p> }
-               </>
-                ))}
-              </div>
+                  {dataOverview.map((paragraph, index) => (
+                    <>
+                      {index == 1 ? (
+                        <div className={styles.leftSide} key={index}>
+                          <p key={index} className={styles.paragraph}>
+                            {paragraph}
+                          </p>
+                          <Image src={Company} alt="overview image" />
+                        </div>
+                      ) : (
+                        <p key={index} className={styles.paragraph}>
+                          {paragraph}
+                        </p>
+                      )}
+                    </>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -113,16 +118,14 @@ export default function CROExperiencePage() {
               <div className={styles.rightSide}>
                 <Image src={TeamMembers} alt="Team Members" />
                 <p className={styles.leadershipSubheading}>
-                {`"${dataVisionMission.vision}"`}
-              </p>
+                  {`"${dataVisionMission.vision}"`}
+                </p>
               </div>
 
-              <h2 className={styles.heading}>
-                Our Mission
-              </h2>
-              <div className={styles.leftSide} >
+              <h2 className={styles.heading}>Our Mission</h2>
+              <div className={styles.leftSide}>
                 <p className={styles.paragraph}>{dataVisionMission.mission}</p>
-                <Image src={WorkingDesk} alt="People Working with Desk"  />
+                <Image src={WorkingDesk} alt="People Working with Desk" />
               </div>
             </div>
           </div>
@@ -158,22 +161,26 @@ export default function CROExperiencePage() {
             <div className={styles.leftpart}>
               <h2 className={styles.heading}>Our Leadership</h2>
               <div className={styles.leftContent}>
-                <h3 className={styles.heading} >
-                  {dataLeadership.name}
-                </h3>
-                <span className={styles.leadershipSubheading} >
+                <h3 className={styles.heading}>{dataLeadership.name}</h3>
+                <span className={styles.leadershipSubheading}>
                   {dataLeadership.role}
                 </span>
 
                 {dataLeadership.bio.map((paragraph, index) => (
-                  <>{index == 0 ? <div  className={styles.leftSide}>
-                    <Image src={Attire} alt="attire" />
-                   <p key={index} className={styles.paragraph}>
-                    {paragraph}
-                  </p>
-                  </div> : <p key={index} className={styles.paragraph}>
-                    {paragraph}
-                  </p> }</>
+                  <>
+                    {index == 0 ? (
+                      <div className={styles.leftSide}>
+                        <Image src={Attire} alt="attire" />
+                        <p key={index} className={styles.paragraph}>
+                          {paragraph}
+                        </p>
+                      </div>
+                    ) : (
+                      <p key={index} className={styles.paragraph}>
+                        {paragraph}
+                      </p>
+                    )}
+                  </>
                 ))}
               </div>
             </div>
