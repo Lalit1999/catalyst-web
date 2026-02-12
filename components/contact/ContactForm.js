@@ -10,6 +10,7 @@ const ContactForm = ( ) => {
     const { setPopOpen } = useContext(AppContext) ;
 
 	const formData = [
+                { type: 'textArea', name: "Company's name", label: "Company's name", ph: 'Write your Company name....', valid: {required: true, max: 50 } },
         { type: 'row', children: [
                 { type: 'text', name: 'name', label: 'Name', ph: 'Enter Name', valid: {required: true, pattern: /^[a-zA-Z ]*$/i } },
                 { type: 'tel', name: 'phone', label: 'Mobile', ph: 'Enter Phone No.', valid: {required: true, minLength: 8, pattern: /^\d{10}$/ } },
@@ -17,6 +18,7 @@ const ContactForm = ( ) => {
         },
         { type: 'email', name: 'email', label: 'E-mail', ph: 'Enter Email Id', valid: {required: true, pattern: /^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i } },
         { type: 'textArea', name: 'message', label: 'Message', ph: 'How may we help you?', valid: {required: true, max: 250 } },
+
         { type: 'submit', text: 'Send Message', style: styles.blackBtn },
     ] ;
 

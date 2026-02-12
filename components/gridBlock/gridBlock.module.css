@@ -116,10 +116,15 @@
         justify-content: center;
         align-items: center;
     }
-
+    .rightPart{
+        width: 100%;
+        min-height: 25vh;
+        height: 100%;
+    }
     .heroImg {
         height: 100%;
         width: 100%;
+        object-fit: cover;
     }
 
     .heroText {

@@ -31,8 +31,8 @@ export default function TrainingTable() {
       width: 200,
       render: (_, record) => (
         <Space>
-          <Button icon={<EyeOutlined />} onClick={()=> handleView(record)} >View</Button>
-          <Button type="primary" icon={<EditOutlined />}>Edit</Button>
+          <Button icon={<EyeOutlined />} onClick={()=> handleView(record)} className={styles.noHover}  >View</Button>
+          <Button type="primary" icon={<EditOutlined />} className={styles.noHover} >Edit</Button>
         </Space>
       ),
     },
@@ -40,7 +40,7 @@ export default function TrainingTable() {
 
   return (
     <div className={styles.tableContainer}>
-      <h2 className={styles.tableHeader}>Training Programs</h2>
+      <h2 className={styles.tableHeader}>Training Programs Pages</h2>
       <Card>
         <Table dataSource={data} columns={columns} pagination={false} bordered />
       </Card>

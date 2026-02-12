@@ -38,7 +38,7 @@ export default function ServicesTable() {
 
   return (
     <div className={styles.tableContainer}>
-      <h2 className={styles.tableHeader}>Our Services</h2>
+      <h2 className={styles.tableHeader}>What we Do Pages</h2>
       <Card>
         <Table dataSource={data} columns={columns} pagination={false} bordered />
       </Card>

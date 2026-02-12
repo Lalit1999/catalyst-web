@@ -441,7 +441,7 @@ const Testimonials = () => {
                 testimonialsArr.map((one,i) => {
                     return (
                         <div className={styles.testimonialOne} key={i}>
-                            <Quote />
+                            <Quote /> 
                             <p className={styles.testimonialFeedback}>{one.feedback}</p>
                             <div className={styles.testimonialNameCon}>
                                 <p className={styles.testimonialNameCircle}>{one.name.trim().split(" ").map(word => word.charAt(0)).join("")}</p>

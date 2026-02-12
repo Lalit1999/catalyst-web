@@ -2,14 +2,13 @@
 
 import { createContext, useState, useEffect } from 'react' ;
 
-import { addNotif, get, remNotif } from '@utils' ;
 
 const AppContext = createContext() ;
 
 const AppContextProvider = ({children}) => {
 	const [adminToken, setAdminToken] = useState(false) ;
 	const [course, setCourse] = useState('') ;
-	const [appData, setAppData] = useState({}) ;
+	const [appData] = useState({}) ;
 
 	// useEffect(() => {
     //     const fn = async() => {

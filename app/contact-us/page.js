@@ -39,24 +39,24 @@ export default function ContactUs() {
 
       <Title
         heading="Contact Us"
-        description="We'd love to hear from you. Reach out to our team anytime."
+        desc="We'd love to hear from you. Reach out to our team anytime."
       />
 
       {/* FORM SECTION  */}
 
-      <div className={styles.contactWrapper}>
+      {/* <div className={styles.contactWrapper}>
         <div className={styles.leftSection}>
           <NewCard />
-        </div>
+        </div> */}
 
         <div className={styles.rightSection}>
           <ContactForm />
         </div>
-      </div>
+      {/* </div> */}
 
       {/* FAQ SECTION */}
 
-      <div className={styles.faqBlock}>
+      {/* <div className={styles.faqBlock}>
         <div className={styles.faqBlockHead}>
           <h2>Frequently Asked Questions</h2>
           <p className={styles.subText}>Common questions about our services.</p>
@@ -86,7 +86,7 @@ export default function ContactUs() {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

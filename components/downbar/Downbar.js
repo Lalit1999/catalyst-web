@@ -9,7 +9,7 @@ import styles from './downbar.module.css' ;
 
 const pageData = {
 	email: 'info@catalystclinicalservices.com',
-	descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy',
+	descr: 'Accelerating clinical research to deliver life-changing therapies to patients, faster.',
 	socails: [
 		{	link : 'https://www.youtube.com/channel/UCavhIhqTyY4Pt-AiS-Hn1vw/videos', 	icon : <Youtube />		},
 		{	link : "https://api.whatsapp.com/send?phone=919818356273&text=&text=Hello%20Team%20Catalyst!%20Please%20call%20me%20back%20to%20discuss%20more.", 	icon : <Whatsapp />		},
@@ -73,6 +73,8 @@ const DownBarTop = () => {
 }
 
 const Downbar = () => {
+	let year = new Date();
+	year = year.getFullYear();
 	// const { orgToken } = useContext(AppContext) ;
 	// const pc = usePc();
 
@@ -136,7 +138,7 @@ const Downbar = () => {
 				</div>			
 				<div className={styles.dbCopyright}>
 					<p className={styles.downbarCrText}>
-						All Rights Reserved &copy;&nbsp;Copyright 2025&ensp;Catalyst Clinical Services Pvt. Ltd. 
+						All Rights Reserved &copy;&nbsp;Copyright {year}&ensp;Catalyst Clinical Services Pvt. Ltd. 
 					</p>
 				</div>
 			</div>
