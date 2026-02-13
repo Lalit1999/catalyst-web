@@ -544,10 +544,11 @@ margin-top: 0.8rem;
   flex-direction: row;
   justify-content: space-between;
   gap: 1em;
-  align-items: center;
+
 }
-.leftSide img {
-  height: 40vh;
+.attire {
+  height: 75vh;
+  min-width: 30vw;
   width: 40vw;
   border-radius: 8px;
 }
@@ -556,9 +557,53 @@ margin-top: 0.8rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
-.rightSide img{
-  height: 38vh;
-  width: 35vw;
+
+.textGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+.companyImg{
+  height: 45vh;
+  width: 45vw;
+  border-radius: 8px;
+}
+.guideImg{
+   height: 30vh;
+  width: 25vw;
+  border-radius: 8px;
+}
+.visionGroup{
+    display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-height: 100%;
+}
+.visionHeading{
+  color: var(--third) !important;
+    font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--darkGray);
+  margin: 0 !important;
+}
+.dataMissionparagraph{
+    font-size: 1.2rem;
+  line-height: 25px;
+  color: var(--gray);
+  font-weight: 400;
+  margin: 0 !important;
+}
+.teamImg{
+    height: 35vh;
+  width: 32vw;
+  border-radius: 8px;
+}
+.deskImg{
+   height: 35vh;
+  width: 32vw;
   border-radius: 8px;
 }

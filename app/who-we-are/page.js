@@ -10,7 +10,7 @@ import { croPageHeader } from "@data";
 // Import Icons
 import { CheckIcon, ClockCircle, StarCircle, User } from "@icons";
 import Image from "next/image";
-import { about1, Attire, Company, TeamMembers, WorkingDesk } from "@images";
+import { about1, Attire, Company, Guidance, TeamMembers, WorkingDesk } from "@images";
 
 // --- DATA CONFIGURATION ---
 
@@ -93,20 +93,24 @@ export default function CROExperiencePage() {
               <div className={styles.leftPartition}>
                 <div className={styles.leftContent}>
                   {dataOverview.map((paragraph, index) => (
-                    <>
+                    <div key={index}>
                       {index == 1 ? (
-                        <div className={styles.leftSide} key={index}>
+                        <div className={styles.leftSide}>
                           <p key={index} className={styles.paragraph}>
                             {paragraph}
                           </p>
-                          <Image src={Company} alt="overview image" />
+                          <Image
+                            src={Company}
+                            alt="overview image"
+                            className={styles.companyImg}
+                          />
                         </div>
                       ) : (
                         <p key={index} className={styles.paragraph}>
                           {paragraph}
                         </p>
                       )}
-                    </>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -114,18 +118,26 @@ export default function CROExperiencePage() {
 
             {/* SECTION 2: MISSION & VISION */}
             <div className={styles.leftpart}>
-              <h2 className={styles.heading}>Our Vision</h2>
               <div className={styles.rightSide}>
-                <Image src={TeamMembers} alt="Team Members" />
+                <Image src={TeamMembers} alt="Team Members" className={styles.teamImg} />
+              <div className={styles.visionGroup} >
+                <h2 className={styles.visionHeading}>Our Vision</h2>
                 <p className={styles.leadershipSubheading}>
                   {`"${dataVisionMission.vision}"`}
                 </p>
               </div>
+              </div>
 
-              <h2 className={styles.heading}>Our Mission</h2>
               <div className={styles.leftSide}>
-                <p className={styles.paragraph}>{dataVisionMission.mission}</p>
-                <Image src={WorkingDesk} alt="People Working with Desk" />
+             <div className={styles.visionGroup} >
+               <h2 className={styles.heading}>Our Mission</h2>
+                <p className={styles.dataMissionparagraph}>{dataVisionMission.mission}</p>
+             </div>
+                <Image
+                  className={styles.deskImg}
+                  src={WorkingDesk}
+                  alt="People Working with Desk"
+                />
               </div>
             </div>
           </div>
@@ -166,22 +178,41 @@ export default function CROExperiencePage() {
                   {dataLeadership.role}
                 </span>
 
-                {dataLeadership.bio.map((paragraph, index) => (
-                  <>
-                    {index == 0 ? (
-                      <div className={styles.leftSide}>
-                        <Image src={Attire} alt="attire" />
-                        <p key={index} className={styles.paragraph}>
-                          {paragraph}
-                        </p>
+                {dataLeadership.bio.map((paragraph, index) => {
+                  if (index === 0) {
+                    return (
+                      <div key="group-1-2" className={styles.leftSide}>
+                        <Image
+                          src={Attire}
+                          alt="attire"
+                          className={styles.attire}
+                        />
+
+                        <div className={styles.textGroup}>
+                          <p className={styles.paragraph}>
+                            {dataLeadership.bio[0]}
+                          </p>
+                          <p className={styles.paragraph}>
+                            {dataLeadership.bio[1]}
+                          </p>
+                        </div>
                       </div>
-                    ) : (
-                      <p key={index} className={styles.paragraph}>
-                        {paragraph}
-                      </p>
-                    )}
-                  </>
-                ))}
+                    );
+                  }
+                  if(index == 1) return null;
+                  if (index === 2){;
+                  return (
+                    <div key={index} className={styles.leftSide}>
+                      <p className={styles.paragraph}>{paragraph}</p>
+                      <Image src={Guidance} alt="Guiding its team" className={styles.guideImg} />
+                    </div>
+                  );
+                }
+                if(index == 3){
+
+                  return <p key={index} className={styles.paragraph}>{paragraph}</p>
+                }
+                })}
               </div>
             </div>
           </div>
