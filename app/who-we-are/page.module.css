@@ -543,6 +543,7 @@ margin-top: 0.8rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-width: 100%;
   gap: 1em;
 
 }
@@ -584,18 +585,19 @@ margin-top: 0.8rem;
   min-height: 100%;
 }
 .visionHeading{
-  color: var(--third) !important;
-    font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--darkGray);
-  margin: 0 !important;
+  	font-size: .9rem ;
+	color: var(--third) ;
+	text-transform: uppercase ;
+	font-weight: 600 ;
+  text-align: center;
 }
 .dataMissionparagraph{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   line-height: 25px;
   color: var(--gray);
   font-weight: 400;
   margin: 0 !important;
+  font-style: italic;
 }
 .teamImg{
     height: 35vh;
@@ -606,4 +608,18 @@ margin-top: 0.8rem;
    height: 35vh;
   width: 32vw;
   border-radius: 8px;
+}
+.visionSubheading{
+    font-weight: 600;
+  font-size: 1.2em;
+  color: var(--main);
+  margin: 0;
+  font-style: italic;
+}
+.leftSideLeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 100%;
+  gap: 1.5em;
 }

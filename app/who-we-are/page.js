@@ -53,7 +53,8 @@ const dataLeadership = {
   bio: [
     "Sanjay Gupta is a recognized luminary in clinical research, bringing over two decades of deep, hands-on experience across the global clinical development landscape. He has personally conducted and supervised more than 100 clinical trials, including global registration studies, Phase I trials, exploratory Phase II studies, and investigator-initiated research, spanning multiple therapeutic areas such as oncology, endocrinology, psychiatry, critical care, infectious diseases, and ophthalmology.",
     "His scientific work has been published and presented across leading international journals and conferences, including the American Society of Clinical Oncology, Seminars in Oncology, British Journal of Cancer, British Journal of Radiology, PLOS One, OncoTargets and Therapy, and Scientific Reports, among others, reflecting a sustained contribution to evidence-based medicine and global scientific discourse. An accomplished author, Sanjay has written 10 books on clinical research, including the widely acclaimed All You Need to Know About Clinical Research and The Big Book of Clinical Research, both of which are regarded as essential references by clinical research professionals, investigators, and regulators worldwide.",
-    "A strong advocate of ethics and capacity building, he has played a pivotal role in advancing clinical research training and education in India, contributing to curriculum development and serving as a faculty member for programs on bioethics, Good Clinical Practice (GCP), and regulatory compliance. He is a founder member of the Society for the Promotion of Ethical Clinical Trials (SPECT), India, and previously served as the National Coordinator for a cancer clinical trials network established by the University of Oxford. Sanjay has been appointed as an Independent Auditor and Co-Monitor by international sponsors and by the Department of Biotechnology, under the Ministry of Science and Technology, Government of India, to audit investigator sites and CROs across India. He has also advised multiple organizations on establishing and optimizing clinical research operations, governance frameworks, and quality systems. Prior to founding Catalyst, Sanjay spent six years with Eli Lilly and Company (India), a research-driven global pharmaceutical organization, where he held roles of increasing responsibility, gaining firsthand experience in sponsor-side clinical development and operational excellence.",
+    "A strong advocate of ethics and capacity building, he has played a pivotal role in advancing clinical research training and education in India, contributing to curriculum development and serving as a faculty member for programs on bioethics, Good Clinical Practice (GCP), and regulatory compliance. He is a founder member of the Society for the Promotion of Ethical Clinical Trials (SPECT), India, and previously served as the National Coordinator for a cancer clinical trials network established by the University of Oxford.",
+    " Sanjay has been appointed as an Independent Auditor and Co-Monitor by international sponsors and by the Department of Biotechnology, under the Ministry of Science and Technology, Government of India, to audit investigator sites and CROs across India. He has also advised multiple organizations on establishing and optimizing clinical research operations, governance frameworks, and quality systems. Prior to founding Catalyst, Sanjay spent six years with Eli Lilly and Company (India), a research-driven global pharmaceutical organization, where he held roles of increasing responsibility, gaining firsthand experience in sponsor-side clinical development and operational excellence.",
     "Through his leadership at Catalyst, Sanjay continues to shape ethical, patient-centric, and scientifically rigorous clinical research—bridging innovation, compliance, and real-world impact.",
   ],
 };
@@ -122,7 +123,7 @@ export default function CROExperiencePage() {
                 <Image src={TeamMembers} alt="Team Members" className={styles.teamImg} />
               <div className={styles.visionGroup} >
                 <h2 className={styles.visionHeading}>Our Vision</h2>
-                <p className={styles.leadershipSubheading}>
+                <p className={styles.visionSubheading}>
                   {`"${dataVisionMission.vision}"`}
                 </p>
               </div>
@@ -130,8 +131,8 @@ export default function CROExperiencePage() {
 
               <div className={styles.leftSide}>
              <div className={styles.visionGroup} >
-               <h2 className={styles.heading}>Our Mission</h2>
-                <p className={styles.dataMissionparagraph}>{dataVisionMission.mission}</p>
+               <h2 className={styles.visionHeading}>Our Mission</h2>
+                <p className={styles.dataMissionparagraph}>{`"${dataVisionMission.mission}"`}</p>
              </div>
                 <Image
                   className={styles.deskImg}
@@ -181,7 +182,7 @@ export default function CROExperiencePage() {
                 {dataLeadership.bio.map((paragraph, index) => {
                   if (index === 0) {
                     return (
-                      <div key="group-1-2" className={styles.leftSide}>
+                      <div key="group-1-2" className={styles.leftSideLeader}>
                         <Image
                           src={Attire}
                           alt="attire"
@@ -208,7 +209,7 @@ export default function CROExperiencePage() {
                     </div>
                   );
                 }
-                if(index == 3){
+                if(index => 3){
 
                   return <p key={index} className={styles.paragraph}>{paragraph}</p>
                 }

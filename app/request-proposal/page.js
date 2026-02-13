@@ -84,13 +84,16 @@ export default function RequestProposal() {
   return (
     <main className={styles.main}>
       <Title
-        heading="RFP/RFI Submission"
-        desc="Complete the RFP/RFI form below to submit a service proposal request."
-      />
-      <div className={styles.rightSection}>
+  heading="Request a Service Proposal"
+  desc="Fill out the form below and let us understand your business needs."
+/>
+
+      <div className={styles.center} >
+        <div className={styles.rightSection}>
         <div className={styles.contactForm}>
           <BasicForm data={formData} onFormSubmit={onFormSubmit} reset />
         </div>
+      </div>
       </div>
     </main>
   );
