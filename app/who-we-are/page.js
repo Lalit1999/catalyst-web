@@ -123,13 +123,13 @@ export default function CROExperiencePage() {
                 <Image src={TeamMembers} alt="Team Members" className={styles.teamImg} />
               <div className={styles.visionGroup} >
                 <h2 className={styles.visionHeading}>Our Vision</h2>
-                <p className={styles.visionSubheading}>
+                <p className={styles.visionSubheading_1}>
                   {`"${dataVisionMission.vision}"`}
                 </p>
               </div>
               </div>
 
-              <div className={styles.leftSide}>
+              <div className={styles.leftMissionSide}>
              <div className={styles.visionGroup} >
                <h2 className={styles.visionHeading}>Our Mission</h2>
                 <p className={styles.dataMissionparagraph}>{`"${dataVisionMission.mission}"`}</p>

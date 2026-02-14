@@ -558,6 +558,7 @@ margin-top: 0.8rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 2em;
   width: 100%;
 }
 
@@ -582,6 +583,8 @@ margin-top: 0.8rem;
     display: flex;
   flex-direction: column;
   gap: 1em;
+  justify-content: center;
+  align-items: center;
   min-height: 100%;
 }
 .visionHeading{
@@ -589,10 +592,11 @@ margin-top: 0.8rem;
 	color: var(--third) ;
 	text-transform: uppercase ;
 	font-weight: 600 ;
-  text-align: center;
+ 
+  /* text-align: center; */
 }
 .dataMissionparagraph{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   line-height: 25px;
   color: var(--gray);
   font-weight: 400;
@@ -601,20 +605,24 @@ margin-top: 0.8rem;
 }
 .teamImg{
     height: 35vh;
-  width: 32vw;
+  min-width: 32vw;
+  width: 40vw;
   border-radius: 8px;
 }
 .deskImg{
-   height: 35vh;
-  width: 32vw;
+   height: 31vh;
+  min-width: 29vw;
+  width: 36vw;
   border-radius: 8px;
 }
-.visionSubheading{
+.visionSubheading_1{
     font-weight: 600;
-  font-size: 1.2em;
+  font-size: 2em;
   color: var(--main);
+  text-align: center;
   margin: 0;
   font-style: italic;
+   display: block !important;
 }
 .leftSideLeader{
   display: flex;
@@ -622,4 +630,12 @@ margin-top: 0.8rem;
   justify-content: space-between;
   min-width: 100%;
   gap: 1.5em;
+}
+.leftMissionSide{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 100%;
+  gap: 2.4em;
+
 }
