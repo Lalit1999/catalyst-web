@@ -221,7 +221,7 @@ const SectionFour = () => {
 const TESTIMONIALS_DATA = [
   {
     id: 1,
-    title: "Grow Personal Financial Security Thinking & Principles",
+    title: "Grow Personal Financial Security Thinking",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget dolor sit.",
     name: "Betsy Stanley",
     role: "Teacher",
@@ -258,16 +258,12 @@ const Testimonials = () => {
   const current = TESTIMONIALS_DATA[currentIndex];
 
   const handlePrev = () => {
-    console.log('prev');
-    
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? TESTIMONIALS_DATA.length - 1 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
-    console.log('next');
-    
     setCurrentIndex((prevIndex) => 
       prevIndex === TESTIMONIALS_DATA.length - 1 ? 0 : prevIndex + 1
     );

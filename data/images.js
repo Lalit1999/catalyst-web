@@ -6,10 +6,10 @@ import about2 from '@p/about2.png';
 import about3 from '@p/about3.png'
 import contact from '@p/contact.png';
 import Company from '@p/Company.jpg'
-import TeamMembers from '@p/TeamMembers.jpg'
+import TeamMembers from '@p/TeamMembers.webp'
 import WorkingDesk from '@p/WorkingDesk.jpg'
 import Attire from '@p/Attire.jpg'
-
+import Guidance from '@p/Guidance.jpg'
 
 
 import homeBanner2 from '@p/homeBanner2.jpg';
@@ -65,6 +65,7 @@ export {
   Attire,
   contact,
   Company,
+  Guidance,
   WorkingDesk,
   homeBanner2,
   croHome,
